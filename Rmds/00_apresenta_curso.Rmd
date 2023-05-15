@@ -1,0 +1,163 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Apresentações"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+# header-includes:
+#   - \titlegraphic{\hfill\includegraphics[height=1.5cm]{logos/Logo-40-anos-estatistica.png}}
+---
+
+# O professor
+
+## Olá! {.allowframebreaks}
+
+\ttfamily
+
+- Desde __outubro de 2017__ eu sou Professor do __Departamento de Estatística__ e faço parte do Corpo Docente do __Programa de Pós Graduação em Epidemiologia__ da __Universidade Federal do Rio Grande do sul__ (UFRGS). 
+
+- Eu me formei __Bacharel em Estatística__ pelo Departamento de Estatística da UFRGS em __2007__, e __Mestre__ (__2010__) e __Doutor__ (__2014__) __em Estatística__ pelo __Programa de Pós Graduação em Estatística__ da __Universidade Federal de Minas Gerais__. 
+
+- Na graduação eu tenho me concentrado nas disciplinas de __Estatística Descritiva__, __Amostragem__ e __Modelos para dados correlacionados__.
+
+# A disciplina
+
+## Objetivos
+
+- Compreender os problemas demográficos da atualidade e suas inter-relações com as variáveis da dinâmica demográfica.
+- Discutir os principais indicadores demográficos.
+- Entender o uso e a necessidade de técnicas diretas e indiretas deanálise.
+- Avaliar e entender as principais metodologias de estimativas e projeções populacionais que estão à disposição.
+
+## Organização
+
+- __Disciplina:__ Estatística Demográfica I
+- __Turma:__ U
+- __Modalidade:__ Ensino presencial
+- __Professor:__ Rodrigo Citton Padilha dos Reis
+    + e-mail: `citton.padilha@ufrgs.br` ou `rodrigocpdosreis@gmail.com` 
+    + Sala: B215 do Instituto de Matemática e Estatística
+
+## Aulas e material didático
+
+- __Aulas__ (teóricas e práticas)
+    + Exposição e __discussão__ dos conteúdos
+        - __Faremos leituras semanais de artigos e capítulos de livros__
+    + Exemplos
+- __Notas de aula__
+    + Slides
+    + Arquivos de rotinas em `R/Excel`
+- __Exercícios__
+    + Listas de exercícios
+    + Para casa
+- __Canais de comunicação:__
+    + Durante as aulas
+    + Moodle: aulas, materiais, listas de exercícios e __fórum geral__
+    + e-mail do professor
+
+## Aulas e material didático
+
+- __Aulas:__ segundas e quartas, das 18hs 30min às 20hs 10min, na Sala ... do ... - Campus Centro
+
+## Aulas e material didático
+
+- Sempre que for possível, utilizaremos exemplos e exercícios com o apoio do computador:
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens','R-Excel.jpg'))
+
+```
+
+## Conteúdo programático {.allowframebreaks}
+
+\structure{Área 1}
+
++ TEMAS E CONCEITOS BÁSICOS DA DEMOGRAFIA
+    - DEMOGRAFIA, ESTATÍSTICA SOCIAL, GEOGRAFIA DE POPULAÇÃO E OUTRAS ABORDAGENS DO ESTUDO DA POPULAÇÃO
+    - A EVOLUÇÃO DEMOGRÁFICA NO MUNDO, NA AMÉRICA LATINA E NOS PAÍSES LUSÓFONOS
+    - A RELEVÂNCIA DOS FATORES DEMOGRÁFICOS PARA A DINÂMICA SOCIAL E AS
+POLÍTICAS PÚBLICAS
++ DADOS E PARA A ANÁLISE DEMOGRÁFICA
+    - O CENSO (RECENSEAMENTO) DEMOGRÁFICO
+    - OUTRAS FONTES DE DADOS DEMOGRÁFICOS
+
+\framebreak
+
+\structure{Área 2}
+
++ MÉTODOS BÁSICOS DA ANÁLISE DEMOGRÁFICA
+    + ASPECTOS ESTÁTICOS DA ANÁLISE DE POPULAÇÃO
+    + CARACTERÍSTICAS, EVENTOS, PROPORÇÕES, TAXAS E PROBABILIDADES
+    + MEDIDAS BÁSICAS DE MORTALIDADE E MORBIDADE
+    + A TÁBUA DE VIDA
+    + FECUNDIDADE E REPRODUÇÃO
+
+\structure{Área 3}
+
++ MÉTODOS AVANÇADOS DA ANÁLISE DEMOGRÁFICA
+    + MOBILIDADE ESPACIAL E MIGRAÇÃO
+    + PROJEÇÕES E CENÁRIOS DEMOGRÁFICOS
+
+## Avaliação
+
+- Serão realizadas quatro atividades de avaliação:
+    + três provas ($P_1$, $P_2$ e $P_3$) presenciais e individuais;
+    + serão realizados pequenos trabalhos ao longo do semestre (pelo menos um por área), de tal forma que a média destes trabalhos será considerada como a quarta atividade de avaliação ($M_T$).
+- Cada atividade de avaliação vale 10 pontos.
+- Será realizada uma prova presencial e individual como atividade de recuperação ($PR$):
+    + Para os(as) alunos(as) que não atingirem o conceito mínimo;
+    + __Esta prova abrange todo o conteúdo da disciplina__.
+
+## Avaliação
+
+$$
+MF = \frac{P_1 + P_2 + P_3 + M_T}{4}
+$$
+
++ __A:__ $9 \leq MF \leq 10$
++ __B:__ $7,5 \leq MF < 9$
++ __C:__ $6 \leq MF < 7,5$
++ __D:__ $MF < 6$
++ __FF:__ se o(a) aluno(a) tiver frequência inferior a 75% da carga horária prevista no plano da disciplina
+
+## Avaliação
+
++ Se $MF < 6$ e frequência mínima de 75%, o(a) aluno(a) poderá realizar a prova de recuperação e neste caso
+
+$$
+MF' = MF \times 0,4 + PR \times 0,6
+$$
+
+- __C:__ $MF' \geq 6$
+- __D:__ $MF' < 6$
+
+## Referências bibliográficas
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens','ctanlion.png'))
+```
+
+### Principal
+
+\footnotesize
+
+FOZ, Grupo de. __Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa__. São Paulo: Blucher, 2021.
+Link: \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}
+
+### Complementares
+
+\footnotesize
+
+Bandeira, M. D. __ESTATÍSTICA DEMOGRÁFICA__, Notas de aula, 2009.
+
+Carvalho, J. A. M., Sawyer, D. O. e Rodrigues, R. N. __INTRODUÇÃO A ALGUNS CONCEITOS BÁSICOS E MEDIDAS EM DEMOGRAFIA__, ABEP, 1998.
+
+Hakkert, R. __FONTES DE DADOS DEMOGRÁFICOS__, ABEP, 1996.
