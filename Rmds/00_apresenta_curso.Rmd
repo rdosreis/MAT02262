@@ -33,7 +33,7 @@ date: |
 
 - Compreender os problemas demográficos da atualidade e suas inter-relações com as variáveis da dinâmica demográfica.
 - Discutir os principais indicadores demográficos.
-- Entender o uso e a necessidade de técnicas diretas e indiretas deanálise.
+- Entender o uso e a necessidade de técnicas diretas e indiretas de análise.
 - Avaliar e entender as principais metodologias de estimativas e projeções populacionais que estão à disposição.
 
 ## Organização
@@ -64,7 +64,7 @@ date: |
 
 ## Aulas e material didático
 
-- __Aulas:__ segundas e quartas, das 18hs 30min às 20hs 10min, na Sala ... do ... - Campus Centro
+- __Aulas:__ segundas e quartas, das 18hs 30min às 20hs 10min, na __Sala 402 da FCE__ - Campus Centro
 
 ## Aulas e material didático
 
@@ -80,31 +80,30 @@ knitr::include_graphics(here::here('imagens','R-Excel.jpg'))
 
 \structure{Área 1}
 
-+ TEMAS E CONCEITOS BÁSICOS DA DEMOGRAFIA
-    - DEMOGRAFIA, ESTATÍSTICA SOCIAL, GEOGRAFIA DE POPULAÇÃO E OUTRAS ABORDAGENS DO ESTUDO DA POPULAÇÃO
-    - A EVOLUÇÃO DEMOGRÁFICA NO MUNDO, NA AMÉRICA LATINA E NOS PAÍSES LUSÓFONOS
-    - A RELEVÂNCIA DOS FATORES DEMOGRÁFICOS PARA A DINÂMICA SOCIAL E AS
-POLÍTICAS PÚBLICAS
-+ DADOS E PARA A ANÁLISE DEMOGRÁFICA
-    - O CENSO (RECENSEAMENTO) DEMOGRÁFICO
-    - OUTRAS FONTES DE DADOS DEMOGRÁFICOS
++ __Temas e conceitos básicos da demografia__
+    - Demografia, estatística social, geografia de população e outras abordagens do estudo da população
+    - A evolução demográfica no mundo, na américa latina e nos países lusófonos
+    - A relevância dos fatores demográficos para a dinâmica social e as políticas públicas
++ __Dados e para a análise demográfica__
+    - O censo (recenseamento) demográfico
+    - Outras fontes de dados demográficos
 
 \framebreak
 
 \structure{Área 2}
 
-+ MÉTODOS BÁSICOS DA ANÁLISE DEMOGRÁFICA
-    + ASPECTOS ESTÁTICOS DA ANÁLISE DE POPULAÇÃO
-    + CARACTERÍSTICAS, EVENTOS, PROPORÇÕES, TAXAS E PROBABILIDADES
-    + MEDIDAS BÁSICAS DE MORTALIDADE E MORBIDADE
-    + A TÁBUA DE VIDA
-    + FECUNDIDADE E REPRODUÇÃO
++ __Métodos básicos da análise demográfica__
+    + Aspectos estáticos da análise de população
+    + Características, eventos, proporções, taxas e probabilidades
+    + Medidas básicas de mortalidade e morbidade
+    + A tábua de vida
+    + Fecundidade e reprodução
 
 \structure{Área 3}
 
-+ MÉTODOS AVANÇADOS DA ANÁLISE DEMOGRÁFICA
-    + MOBILIDADE ESPACIAL E MIGRAÇÃO
-    + PROJEÇÕES E CENÁRIOS DEMOGRÁFICOS
++ __Métodos avançados da análise demográfica__
+    + Mobilidade espacial e migração
+    + Projeções e cenários demográficos
 
 ## Avaliação
 
