@@ -22,8 +22,8 @@ date: |
 
 \framebreak
 
-- Seja qual for o nome escolhido, existe certo consenso de que a demografia trata do estudo estatístico das \structure{populações humanas}, com maior ênfase nos conjuntos de pessoas do que nos indivíduos que as compõem.
-    + O termo "população" é interpretado aquie no sentido estatístico mais amplo de "coleção de elementos unificados por uma definição comum".
+- Seja qual for o nome escolhido, existe certo consenso de que a demografia trata do \structure{estudo estatístico das populações humanas}, com maior ênfase nos conjuntos de pessoas do que nos indivíduos que as compõem.
+    + O termo "população" é interpretado aqui no sentido estatístico mais amplo de "coleção de elementos unificados por uma definição comum".
 - Quais são as características quantitativas das populações humanas que formam o \structure{objeto da demografia}? 
 
 \framebreak
@@ -133,7 +133,7 @@ __Zeng (2010)__\footnote{Zeng, Yi (org.) (2010). \emph{Demography}. Oxford UK, E
 - A \structure{demografia atuarial} \alert{está focada na mortalidade e as suas consequências para os sistemas de seguro de vida e Previdência Social}. 
 - Além de aspectos demográficos e matemáticos, isso envolve considerações financeiras e jurídicas.
 - Uma questão típica que se coloca neste contexto é, por exemplo, \alert{quantos anos o assegurado médio da Previdência Social ainda vive depois de aposentar-se}.
-- Estas questões também são estudadas pelos demógrafos econômicos, embora a partir de uma visão econômica mais ampla do que o equilíbrio das contas previdenciárias.
+- Estas questões também são estudadas pelos demógrafos econômicos, embora a partir de uma visão econômica mais ampla do que do ponto de vista do equilíbrio das contas previdenciárias.
 
 \framebreak
 
