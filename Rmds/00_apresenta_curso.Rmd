@@ -82,7 +82,7 @@ knitr::include_graphics(here::here('imagens','R-Excel.jpg'))
 
 + __Temas e conceitos básicos da demografia__
     - Demografia, estatística social, geografia de população e outras abordagens do estudo da população
-    - A evolução demográfica no mundo, na américa latina e nos países lusófonos
+    - A evolução demográfica no mundo, na América Latina e nos países lusófonos
     - A relevância dos fatores demográficos para a dinâmica social e as políticas públicas
 + __Dados e para a análise demográfica__
     - O censo (recenseamento) demográfico
