@@ -1,0 +1,178 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Teoria da transição demográfica"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução {.allowframebreaks}
+
+\LARGE
+\begin{center}
+Fatores demográficos $\Rightarrow$ Questões sociais
+\end{center}
+
+\normalsize
+
+- Ou seja, questões sociais são influenciadas por fatores demográficos.
+    - Assim, políticas sociais precisam (deveriam) levar em conta estes fatores.
+    
+\framebreak
+
+- Talvez o uso mais comum de informação demográfica seja como \structure{indicador social}, que retrata alguma dimensão das condições de vida da população.
+    - Os exemplos mais conhecidos são a \alert{mortalidade infantil} e a \alert{esperança de vida ao nascer}, além da \alert{renda per capita}, que tem o tamanho da população como denominador.
+- Mais especificamente, a análise demográfica pode fornecer subsídios para dimensionar corretamente qual é a demanda por certos tipos de serviços sociais.
+
+\framebreak
+
+- Um uso mais sofisticado do conhecimento demográfico é a \structure{segmentação de mercados} onde as características do público alvo são associadas às suas características demográficas.
+- Em outros casos se trata do próprio \structure{desenho da política (pública)} que faz a sua viabilidade dependente de uma dinâmica demográfica que era favorável na época da sua formulação, mas que foi mudando ao longo do tempo.
+    - É o caso dos regimes de repartição de \structure{Previdência Social}, que foram formulados numa época em que o número de contribuintes era muito maior do que o número de beneficiários, mas que gradualmente começaram a enfrentar os efeitos do envelhecimento populacional.
+
+\framebreak
+
+- As \structure{projeções demográficas} têm uma importância especial por seu papel central nos exercícios de planejamento.
+- A evolução futura das variáveis demográficas é mais previsível do que a evolução de outros elementos do planejamento. 
+    - Por exemplo, o impacto do crescimento futuro da economia sobre o equilíbrio das contas da Previdência Social é muito difícil de ser previsto com precisão, ao passo que o crescente desequilíbrio do número de beneficiários e contribuintes tem um nível de incerteza significativamente menor. 
+
+\framebreak
+
+- Esta é uma das razões pelas quais as projeções demográficas costumam ser a espinha dorsal de qualquer exercício de planejamento do futuro, especialmente de políticas públicas formuladas e direcionadas para subgrupos populacionais específicos.
+- Essas projeções são feitas pautadas naquilo que denominamos de \structure{Teorias Demográficas}, que têm uma longa história.
+- Vamos discutir algumas destas teorias, iniciando pela \structure{Teoria de Thomas Robert Malthus}^[Ver no Fórum Geral do Moodle: breves informações sobre esse pensador.].
+
+# Teorias demográficas
+
+## Otimistas, pessimistas e Malthus {.allowframebreaks}
+
+- Já no século XVII, emergiram discussões que podem ser classificadas no âmbito dos estudos populacionais. 
+- As visões assumiam posições antagônicas a respeito de __como deveria se comportar a população__, resultando na formação de dois grupos de pensadores, \structure{os otimistas} e \alert{os pessimistas} (ou alarmistas).
+
+\framebreak
+
+- O grupo dos otimistas foi liderado pelo inglês \structure{Willian Godwin (1756-1836)} e pelo francês marquês de \structure{Condorcet (1743-1794)}, que acreditavam na perfeição humana e nos avanços científicos como sendo capazes de proverem os meios de subsistência necessários; e também acreditavam na racionalidade do indivíduo para regular a sua própria reprodução.
+- Segundo eles, a condição de pobreza poderia ser eliminada através de modificações nas instituições sociais, que poriam fim nas barreiras entre as classes sociais e redistribuiriam a riqueza.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='20%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'MalthusThomas300px.jpg'))
+
+```
+
+Entre os pessimistas, o principal expoente foi \structure{Thomas Robert Malthus (1766-1834)}, primeiro escritor a apresentar e desenvolver uma __teoria populacional__ compreensiva e consistente com as condições econômicas existentes na época - _Essay on the Principle of Population_ (__Um Ensaio sobre o Princípio da População__), publicado em 1798.
+
+
+# A teoria malthusiana
+
+## As proposições da teoria demográfica malthusiana {.allowframebreaks}
+
+A teoria populacional de Malthus baseava-se nas seguintes proposições:
+
+- A capacidade biológica do ser humano para se reproduzir é maior do que a sua capacidade para aumentar a oferta de alimentos;
+- As formas de controlar o crescimento populacional podem ser \structure{preventiva}, via diminuição do número de nascimentos, e \structure{positiva}, através do aumento do número de mortes, que se encontram continuamente em operação em uma sociedade dada;
+- O controle definitivo da capacidade reprodutiva do ser humano é dado pela limitação da oferta de alimentos.
+
+\framebreak
+
+- Malthus apresentou o problema específico de que se o \structure{crescimento da população} não fosse controlado, esta tenderia a dobrar de número a cada 25 anos; isto é, estaria crescendo a uma \structure{taxa geométrica}.
+- Por outro lado, a \alert{produção de alimentos}, na melhor das hipóteses, tenderia a crescer a uma \alert{taxa aritmética}. 
+
+\framebreak
+
+- Nesse sentido, a __disparidade entre crescimento populacional e crescimento de alimentos__ levaria a humanidade a ser envolvida em __problemas graves de fome, miséria, barbárie__ \structure{catástrofe malthusiana}.
+- O desafio seria controlar os nascimentos, adequando-os à capacidade produtiva, de maneira que garantisse a sobrevivência da população em uma situação aceitável, condição considerada quase impossível.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'teoria-malthusiana.png'))
+
+```
+
+\framebreak
+
+::: {.block}
+
+### O que fazer?
+
+- Para Malthus seria necessário __restringir os programas de assistência__ praticados pelos entes públicos, que tenderiam a amenizar os problemas enfrentados pelas populações mais carentes, o que estimularia a natalidade nessas camadas sociais, e estimular o controle da reprodução humana entre as pessoas das camadas menos abastadas, através da abstinência sexual.
+- Malthus acreditava que a __pobreza__ se constitui um __destino__ do qual o homem não pode fugir^[A inevitabilidade da pobreza e a futilidade das medidas assistencialistas constituiriam uma suposta "vontade divina".], sendo um problema que atinge a sociedade.
+- Dessa perspectiva de pensar, deriva a identificação da Teoria Malthusiana como pessimista.
+
+:::
+
+## Contextualizando as ideias de Malthus {.allowframebreaks}
+
+- Na transição entre o século XVIII e o XIX, a Inglaterra viveu o processo de substituição da manufatura pela maquinaria, chamado por alguns de \structure{Industrialismo}.
+- O surgimento de um sistema de produção apoiado em máquinas tornou a fábrica um espaço \structure{revolucionário}, que modificou a vida de milhares de trabalhadores, expulsando-os de seus empregos.
+    + Esse novo padrão de produção reduziu o número de trabalhadores, levando a camada excedente a compor uma massa de desempregados; em determinadas fases da produção, verificou-se a substituição do trabalho do homem adulto pelo da mulher e da criança.
+- Essas mudanças provocaram desemprego, movimentação do trabalhador de um lugar para outro, transformação de sua vida em família, aumento da mortalidade infantil, entre outros.
+
+\framebreak
+
+- Polemizando com os socialistas utópicos, que propunham uma sociedade igualitária como alternativa para a miséria enfrentada por segmentos da população, Malthus defendia que a __causa verdadeira da miséria humana__ não era a sociedade dividida entre proprietários e trabalhadores, ricos e pobres.
+- Na sua visão, a __miséria seria__ um obstáculo __positivo__, que atuou ao longo da história para reequilibrar a __desproporção natural__ entre o crescimento populacional e a produção dos meios de subsistência^[Mais uma vez se observa nas ideias de Malthus a tentativa de uma uma __lei natural__ sobre a qual os humanos tinham ou deviam ter pouca ou nenhuma influência.].
+- O fundamento de sua concepção estaria em uma lei natural, segundo a qual o crescimento da população ocorreria em um ritmo geométrico e a dos produtos de subsistência num ritmo aritmético.
+
+## Contextualizando as ideias de Malthus {.allowframebreaks}
+
+- Malthus considerava a miséria e o vício __obstáculos positivos__ ao crescimento da população, pois têm a capacidade de reequilibrar duas forças bastante desiguais: a multiplicação dos homens e a produção de alimentos.
+- Para ele, a miséria era necessária; aparecia na fome, no desemprego, no rebaixamento dos salários e, assim, provocava a morte, favorecia a doença, reduzia os matrimônios, já que era mais difícil sustentar os filhos.
+- Por outro lado, ela estimula os cultivadores a ampliar o emprego da mão de obra, a abrir novas terras ao cultivo, a re-harmonizar a relação produção/recursos.
+- A ampliação dos meios de subsistência levaria a população a crescer novamente.
+
+## A teoria de Malthus estava certa? {.allowframebreaks}
+
+- Nos dois séculos posteriores à divulgação da Teoria Malthusiana, o que as dinâmicas socioeconômica, cultural e tecnológica revelaram é que __houve uma diminuição do crescimento populacional__ em quase todas as partes do planeta, exceto na África;
+- As políticas de bem-estar social voltadas para a saúde, habitação, saneamento e garantias trabalhistas, difundidas mundialmente, com destaque para a Europa, não foram responsáveis pelo crescimento populacional;
+    + Pelo contrário, contribuíram para a sua estabilização e/ou recuo;
+
+\framebreak
+
+- A __produção de alimentos__, a partir do desenvolvimento tecnológico, possibilitou o __aumento da produtividade__, de modo que, atualmente, há condições técnicas para se produzir alimentos em quantidade suficiente para suprir as necessidades da população mundial.
+- Desse modo, as previsões malthusianas não se confirmaram.
+- Contudo, características marcantes da época de Malthus ainda permanecem no contexto atual, assumindo as especificidades de seu tempo, dentre as quais se destacam a pobreza, a miséria, as guerras, as desigualdades sociais entre os diversos espaços geográficos.
+
+\framebreak
+
+- Nesse sentido, as ideias de Malthus ainda precisam ser estudadas para que tenhamos parâmetros de explicação mais consistentes para elucidar os fenômenos populacionais contemporâneos.
+- Na medida em que conhecemos os argumentos elaborados para explicar situações pretéritas e comparamos o que foi dito com a atualidade, temos as condições para ampliar e consubstanciar a explicação dos fenômenos ou variáveis, com base em teorias e ideias mais articuladas ao contexto vivido.
+- Além do mais, após a Segunda Guerra Mundial (1939-1945), a Teoria de Malthus foi retomada sob a identificação de \structure{Neomalthusianismo}, objeto de análise da próxima aula.
+
+## Para casa
+
++ Ler o capítulo 3 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Teorias pós-malthusianas.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'teorias_demograficas.jpg'))
+
+```
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras.jpg'))
+
+```
+
