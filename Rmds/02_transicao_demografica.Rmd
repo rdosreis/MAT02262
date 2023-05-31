@@ -80,7 +80,7 @@ XVIII e o começo do século XX.
 - Mas logo ficou evidente que não havia nenhuma razão intrínseca por que a fecundidade deveria parar de cair quando se equilibrasse com a mortalidade. 
     - Efetivamente se observou que em vários países europeus, assim como no Japão e na Coreia do Sul, o número médio de filhos por casal caiu significativamente abaixo do número mínimo necessário para repor as gerações.
     - O mesmo também aconteceu na China, embora por razões um pouco diferentes, já que na China foi o próprio governo que obrigou os casais a ter menos filhos. 
-     -Na América Latina, o principal exemplo de um país onde a fecundidade caiu muito abaixo do nível de reposição (o nível em que cada geração tem um tamanho igual à geração anterior) já faz algum tempo é Cuba.
+     - Na América Latina, o principal exemplo de um país onde a fecundidade caiu muito abaixo do nível de reposição (o nível em que cada geração tem um tamanho igual à geração anterior) já faz algum tempo é Cuba.
 
 \framebreak
 
@@ -105,7 +105,7 @@ knitr::include_graphics(here::here('imagens', 'transicao_demografica_5_estagios_
 
 ```
 
-## A transição demográfica: esquema de cinco fases {.allowframebreaks}
+## A transição demográfica: críticas {.allowframebreaks}
 
 - A primeira crítica se refere ao fato de que o esquema mostrado no gráfico anterior é uma idealização de um processo que em realidade aconteceu com \structure{variações significativas entre países}.
 - Além disso, uma teoria propriamente dita deveria não apenas descrever as tendências observadas, mas também \structure{explicá-las}. 
@@ -120,7 +120,7 @@ knitr::include_graphics(here::here('imagens', 'transicao_demografica_5_estagios_
 
 ## TD: situação atual em termos das fases de transição {.allowframebreaks}
 
-- Para ter uma ideia aproximada de onde se encontra a população mundial atual, usaram-se aqui os limites de 35 e 15 por mil, para caracterizar a primeira e a quarta fase da transição demográfica.
+- Para ter uma ideia aproximada de onde se encontra a população mundial atual, usaram-se aqui os limites de mortalidade 35 e 15 por mil, para caracterizar a primeira e a quarta fase da transição demográfica.
 - A quinta fase é caracterizada - um pouco arbitrariamente - por países onde o número médio de filhos e filhas que as mulheres têm ao longo da sua vida é menor de 1,75. 
 
 \framebreak
@@ -227,7 +227,7 @@ knitr::include_graphics(here::here('imagens', 'td_br.png'))
 - Nas décadas de 1950 e 1960, o declínio da mortalidade combinado com a manutenção de níveis elevados de natalidade.
 - Foi a partir de 1970 que o Brasil experimentou uma verdadeira revolução demográfica. Os indicadores de fecundidade e mortalidade para 1980 revelaram essas grandes mudanças: todos eles tiveram seus níveis drasticamente reduzidos.
 - Na década de 1980, as tendências de queda da fecundidade e da mortalidade foram ainda mais acentuadas.
-- Nas duas décadas seguintes, entre 1991 e 2010, os níveis de mortalidade e fecundidade reduziram- se ainda mais.
+- Nas duas décadas seguintes, entre 1991 e 2010, os níveis de mortalidade e fecundidade reduziram-se ainda mais.
 
 \framebreak
 
