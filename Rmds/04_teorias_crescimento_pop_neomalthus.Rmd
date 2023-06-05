@@ -1,0 +1,189 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Teorias demográficas"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# (Relembrando) A teoria Malthusiana
+
+## As proposições da teoria demográfica Malthusiana {.allowframebreaks}
+
+A teoria populacional de Malthus baseava-se nas seguintes proposições:
+
+- A capacidade biológica do ser humano para se reproduzir é maior do que a sua capacidade para aumentar a oferta de alimentos;
+- As formas de controlar o crescimento populacional podem ser \structure{preventiva}, via diminuição do número de nascimentos, e \structure{positiva}, através do aumento do número de mortes, que se encontram continuamente em operação em uma sociedade dada;
+- O controle definitivo da capacidade reprodutiva do ser humano é dado pela limitação da oferta de alimentos.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'teoria-malthusiana.png'))
+
+```
+
+# Introdução
+
+## A crítica Marxiana à Teoria Malthusiana {.allowframebreaks}
+
+- Apesar da grande influcência dos escritos de Malthus, a reação a eles logo se fez sentir.
+- Naquilo que diz especificamente respeito à fecundidade suas ideias sofrem reparos já mesmo de seus contemporâneos da escola econômica clássica.
+
+\framebreak
+
+- Autores da época argumentam assistematicamente que a fecundidade tendia historicamente a cair devido:
+    - ao controle moral \structure{(Hazlitt, 1807)}^[Hazlitt, William. A Reply to the Essay on Population, by the Rev. T. R. Malthus, London: Longman, Hurst, Rees, and Orme, 1807.];
+    - ao "progresso da civilização" \structure{(Hamilton, 1830)}^[Hamilton, Robert. The progress of society. London: J. Murray, 1830.];
+    - à possibilidade de ascensão social aberta às classes baixas \structure{(Moreton, 1836)}^[Moreton, Augustus Henry. Civilization: Or, a Brief Analysis of the Natural Laws That Regulate the Numbers and Condition of Mankind. London: Saunders and Otley, 1836.];
+    - à urbanização \structure{(Weyland, 1816)}^[Weyland, John. The Principles Of Population And Production As They Are Affected By The Progress Of Society: With A View To Moral And Politicial Consequences. London, Baldwin, Cradock and Joy, 1816.];
+    - à superação do capitalismo e à reorganização mais equalitária da sociedade, especialmente à mudança de _status_ da mulher nas sociedades capitalista e socialista\structure{(Blanc, Proudhon, Nitti e Bebel)}.
+
+## A crítica Marxiana à Teoria Malthusiana {.allowframebreaks}
+
+Entretanto, os que mais se dedicaram ao problema da fecundidade criticaram Malthus sem abandonar uma postura biológica, procurando as "verdadeiras" leis naturais da população mas usando para isso inúmeros pressupostos sociais.
+
+- \structure{Sadler (1830)}^[Sadler, Michael T. The Law of Population: A Treatise, in Six Books; in Disproof of the Superfecundity of Human Beings, and Developing of the Real Principle of Their Increase. London: J. Murray, 1830.]: a fecundidade varia inversamente com a densidade populacional e diretamente com a mortalidade;
+    + o progresso da riqueza, equivalendo ao aumento da densidade, afetaria adversamente a capacidade biológica de reprodução.
+- \structure{Doubleday (1853)}^[Doubleday, Thomas. The True Law of Population. Shewn as connected with the Food of the People. London: Smith, Elder, 1847.]: as variações da fecundidade refletem variações de fertilidade decorrentes, por sua vez, do tipo de alimentação e do modo de vida mais árduo ou mais confortável, sendo menor com a melhoria dessas condições.
+
+## A crítica Marxiana à Teoria Malthusiana {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='20%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'karl_marx.jpg'))
+
+```
+
+Dentro desse panaroma a crítica mais radical às ideias de Malthus provém de Marx, que se __não chega a formular uma teoria da população__, nem a desenvolver as sugestões que lança sobre o modo de conformação social da fecundidade, assume uma perspectiva histórica ante os fenômenos do homem que destrói os fundamentos da interpretação Malthusiana.
+
+\framebreak
+
+1. Marx refuta a possibilidade de uma lei natural de população para afirmar a existência de leis de população específicas a cada modo histórico de produção.
+    + Isto significa que, embora as causas da fecundidade repousem sempre na produção, suas tendências e seu sentido social podem diferir no tempo e no espaço.
+2. Sob o modo de procução capitalista, Marx aponta diferenças de fecundidade entre as classes, tomadas como setores sociais opostamente situados perante o processo produtivo, o que torna tais diferencças o resultado não apenas das condições de consumo de cada classe mas, principalmente, de suas condições de trabalho.
+3. Subordinando sua teoria de classes à lógica da expansão do capital, Marx indiretamente subordina a esta lógica todo o tratamento da dinâmica populacional moderna, incluindo-se nisto aspectos relativos à fecundidade.
+
+\framebreak
+
+- Portanto, o teor das colocações de Marx deixava já bem claro que a \structure{fecundidade constitui um fenômeno} de caráter \structure{social e histórico}.
+- Não obstante, foi preciso que a investigação empírica, feita a partir de __dados censitários__ e __estatísticas vitais__, evidenciasse um declínio secular e diferenças intergrupais de fecundidade para que esta passasse a ser vista teoricamente daqueles ângulos.
+
+# A vertente Neomalthusiana e a vertente Reformista {.allowframebreaks}
+
+## A teoria Neomalthusiana {.allowframebreaks}
+
+Agora vamos estudar outras vertentes que, partindo das abordagens anteriores, reorganizam ideias visando esclarecer a realidade que se configura \structure{após a Segunda Guerra Mundial}.
+
+- Após esse acontecimento, verifica-se um \structure{crescimento populacional acelerado}, que pode ser considerado uma explosão demográfica **(_baby boom_)**.
+- Esse momento é diferente do que havia ocorrido anteriormente na Europa.
+- Essa nova configuração se realiza em um quadro de desenvolvimento das forças produtivas bastante elevado, com repercussões nas áreas de interesse social como saneamento, saúde, habitação e trabalho.
+- Verifica-se a reorganização das relações de trabalho no campo e na cidade, o que gera um contingente populacional excedente, configurando-se como um problema a ser enfrentado.
+
+- Esse aumento populacional reanima as ideias já há algum tempo adormecidas de Malthus.
+
+\framebreak
+
+- Apesar de não preservarem integralmente o pensamento de Malthus, tendo em vista a necessidade de considerar os novos problemas sociais e econômicos historicamente evidenciados, os \structure{neomalthusianos} analisam esses problemas a partir da correlação entre a \structure{quantidade de habitantes} (crescimento natural) e as possibilidades de \alert{abastecimento e recursos vitais} de um território.
+
+## O Clube de Roma {.allowframebreaks}
+
+Um grupo de industriais, cientistas, economistas e estadistas de 10 países publicou "Os Limites do Crescimento” em 1972. Eles examinaram cinco fatores que determinam e limitam o crescimento do planeta. Estes incluem recursos naturais, produção industrial, poluição industrial, produção agrícola e população.
+
+Eles argumentaram que a maioria desses fatores cresceu exponencialmente. A conclusão básica do Clube de Roma foi que:
+
+- Se as atuais tendências de crescimento da população mundial continuarem e se a industrialização associada, a poluição, a produção de alimentos e o esgotamento de recursos continuarem inalterados, os limites do crescimento neste planeta serão alcançados em 2070. O resultado mais provável será o declínio súbito e incontrolável da população e capacidade industrial.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'clube_roma.jpg'))
+
+```
+
+## A teoria Neomalthusiana {.allowframebreaks}
+
+- Conforme \structure{Damiani (1998)}^[Damiani, Amelia. População e geografia. São Paulo: Contexto, 1998.], o neomalthusianismo constitui uma ideologia que se traduz em estratégias políticas reais e fundamentaações e reações imperialistas, por vezes forjando argumentos semelhantes usados em situações opostas para justificar, por exemplo, a intervenção fascista no mundo. 
+    - Por exemplo, o fascismo italiano procurou legitimar sua participação na Segunda Guerra Mundial pela necessidade de "espaço vital", decorrente da alta natalidade e formação de uma superpopulação em seu território.
+    - Os alemães, contrariamente, justificaram o empenho na ampliação do "espaço vital" em função da luta contra a extinção
+de sua população, que registrava uma baixa natalidade.
+
+## A teoria Neomalthusiana {.allowframebreaks}
+
+- No âmbito da corrente neomalthusiana, emergem concepções que revelam conteúdo ideológico, dentre as quais destacam-se:
+    - as de cunho racista, que proclamam o progresso diferenciado das raças, procurando justificar agressões e colonização como processo civilizatório, além de subjugações; existia um pavor da proliferação de raças ditas inferiores (o “perigo amarelo” e o “perigo comunista”);
+    - e as que explicam o subdesenvolvimento de países da Ásia, África e América Latina a partir da existência de uma população excedente às possibilidades do desenvolvimento econômico.
+
+\framebreak
+
+- Esse contingente populacional constituiria um obstáculo ao desenvolvimento por apresentar uma estrutura etária com maior número de jovens e crianças, o que requisitaria investimentos não produtivos (hospitais, escolas etc.), desviando recursos que poderiam ser diretamente produtivos, como construção de fábricas, estradas e pontes.
+- Além disso, ao aumentar os efetivos da força de trabalho, poderia ser provocado um desequilíbrio cada vez maior entre oferta e procura de empregos, repercutindo em termos de redução de salários e marginalização de amplas camadas de população do mercado de trabalho.
+
+\framebreak
+
+- A teoria neomalthusiana evidenciava o receio de que o crescimento da população dos países subdesenvolvidos comprometesse os recursos naturais mundiais e que esse contingente passasse a ser uma fonte de pressão e ameaça política, em um período em que o socialismo estava em expansão. 
+- Nesse contexto em que também se discutia o custo social dessa população adicional, as políticas públicas demográficas desembocavam em estratégias precisas: controle de natalidade, planejamento familiar.
+
+\framebreak
+
+- Para \structure{Damiani (1998)}, a teoria neomalthusiana apega-se aos argumentos da superpopulação e da escassez de recursos, insistindo em manter intacto o modo de produção capitalista.
+- Paradoxalmente, milhares de toneladas de alimentos são destruídos ou, em busca da valorização dos preços, são estocados ou deslocados de um país para outro.
+
+## A Teoria Reformista {.allowframebreaks}
+
+- Se a Teoria Neomalthusiana busca fundamentação em Malthus, a \structure{Teoria Reformista} procura suporte nas ideias da "Teoria Marxista".
+
+- Contemporânea da neomalthusiana, a Reformista considera que a miséria da população é responsável pelo crescimento populacional. 
+- Dessa perspectiva, \structure{controlar o crescimento demográfico} __supõe implementar reformas socioeconômicas__ que possibilitem a elevação do padrão de vida da população, através da distribuição de renda, de alimentos e melhoria do nível de escolaridade da população.
+
+\framebreak
+
+- É na confluência dessas medidas que se teria, ao invés de um controle familiar, um planejamento familiar em que a redução do número de filhos ocorre por decisão do casal e não por imposição do governo e de suas políticas oficiais.
+- Na medida em que as reformas se estendem e atingem as camadas mais baixas da população, acelera-se o ritmo de desenvolvimento das nações menos desenvolvidas, auxiliando-as no seu processo de superação das desigualdades sociais.
+
+## Para casa {.allowframebreaks}
+
+1. __"Pequeno trabalho" 1__ (a contar na nota da avaliação $M_T$); __data de entrega:__ 12/06/2023 pelo \structure{Moodle}.
+
+Para fazer essa atividade, siga as orientações a seguir:
+
+a) tome a sua família como modelo a ser analisado;
+b) identifique o número de filhos, tendo por referência a seguinte evolução: avós, pais e irmãos;
+c) analise a evolução encontrada, tomando uma das teorias demográficas estudadas por você em aula (teorias da transição, Malthusiana, Reformista e/ou NeoMalthusiana);
+d) para a análise, construa um texto contendo: descrição da situação familiar encontrada, em sua perspectiva histórica e evolutiva; articulação da descrição às bases conceituais da teoria selecionada; considerações finais conclusivas sobre a validade da teoria para os estudos populacionais contemporâneos.
+
+\framebreak
+
+2. Ler o capítulo 3 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Fontes de dados: o censo.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', '17census-superJumbo.jpg'))
+
+```
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras01.jpg'))
+
+```
+
