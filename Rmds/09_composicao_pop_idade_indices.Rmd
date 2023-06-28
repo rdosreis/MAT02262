@@ -1,0 +1,274 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Aspectos estáticos da análise de população: a idade"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Algumas caracterizações da distribuição por idade {.allowframebreaks}
+
+- A __pirâmide etária__ retrata a estrutura detalhada da distribuição por idades, mas para fins práticos pode ser mais interessante analisar esta distribuição de uma __forma mais agregada__. 
+- Os __grupos de idades__ mais comumente usados são os de:
+    + crianças;
+    + juventude;
+    + pessoas em idade economicamente ativa;
+    + idosos.
+
+\framebreak
+
+- As definições destes grupos variam.
+- As \structure{Nações Unidas} definem as crianças como pessoas de até 14 anos completos, a juventude como pessoas na faixa de 15-24 anos e as pessoas idosas como pessoas maiores de 60 anos (em países em desenvolvimento) ou 65 anos (em países menos desenvolvidos). 
+- Entretanto, existem propostas para elevar a idade oficial que marca a terceira idade para 75 anos.
+- A faixa de pessoas em idade ativa é comumente definida como 15-64 anos.
+    + Alguns autores usam 20 anos como o limite inferior.
+    + As estatísticas do trabalho tendem a usar limites superiores mais altos ou inclusive nenhum limite superior.
+
+- Para dimensionar a importância de cada um desses grupos existem alguns __índices padrão__ como os seguintes, ilustrados como os dados do Censo de Angola de 2014.
+
+## Razão de dependência {.allowframebreaks}
+
+- A população total fica dividida em dois grupos: aqueles em idade de trabalhar e aqueles com idade fora dos limites do grupo anterior.
+- Este segundo grupo é composto de pessoas muito jovens e idosas e, por isso, a população que o compõe é denominada, em termos de produção, isto é, processo econômico, \structure{``população dependente''}.
+
+\framebreak
+
+- A \structure{razão de dependência (total)} $(RDT)$ é, então, definida pelo quociente entre a "população dependente" e a "população potencialmente ativa":
+
+\scriptsize
+
+$$
+\color{black}{\frac{(\mbox{número de pessoas de menos de 15 anos}) + (\mbox{número de pessoas com 65 anos ou mais})}{(\mbox{número de pessoas de 15 a 64 anos})}\times 100.}
+$$
+
+\normalsize
+
+- Na notação introduzida na aula passada, temos:
+
+$$
+RDT = \frac{_{15}P_{0} + P_{65^{+}}}{_{50}P_{15}} \times 100.
+$$
+
+\framebreak
+
+- As razões de dependência com valores elevados são vistas como refletindo desvantagens econômicas uma vez que se supõe que os menores de 15 anos e as pessoas mais idosas contribuam muito pouco para o processo econômico.
+- Mas, para os países menos desenvolvidos a razão de dependência, como definida, pode não ser um indicador real porque superestima a dependência por não levar em consideração a entrada prematura dos jovens na força de trabalho e a saída tardia dos mais velhos, que se dá, em geral, devido à mortalidade.
+
+- De acordo com os dados do Censo de Angola de 2014:
+
+$$
+RDT = \frac{12.196.496 + 612.430}{12.980.098} \times 100 = 98,68.
+$$
+
+\framebreak
+
+- A $RDT$ pode ser decomposta em duas partes.
+- A primeira é chamada a \structure{razão de dependência dos jovens} $(RDJ)$:
+
+\footnotesize
+
+$$
+\color{black}{\frac{(\mbox{número de pessoas de menos de 15 anos})}{(\mbox{número de pessoas de 15 a 64 anos})}\times 100.}
+$$
+
+\normalsize
+
+- Ou em notação:
+
+$$
+RDJ = \frac{_{15}P_{0}}{_{50}P_{15}} \times 100.
+$$
+
+\framebreak
+
+- A segunda parte se chama a \structure{razão de dependência dos idosos} $(RDI)$ 
+
+\footnotesize
+
+$$
+\color{black}{\frac{(\mbox{número de pessoas com 65 anos ou mais})}{(\mbox{número de pessoas de 15 a 64 anos})}\times 100.}
+$$
+
+\normalsize
+
+- Utilizando a notação:
+
+$$
+RDI = \frac{P_{65^{+}}}{_{50}P_{15}} \times 100.
+$$
+
+\framebreak
+
+- No caso de Angola, diferentemente do Brasil, a carga de dependência quase inteiramente vem por
+conta da sua população extremamente jovem.
+    + $RDJ = 100\times 12.196.496/12.980.098 = 93,96$.
+    + $RDI = 100\times 612.430/12.980.098 = 4,72$.
+- Já no caso de Portugal, que possui uma estrutura etária mais envelhecida, a divisão entre as duas partes da razão de dependência é mais equilibrada.
+    - Em 2015, a $RDJ$ estimada pela Divisão de População das Nações Unidas era 21,57 e a sua $RDI$ 22,81.
+
+## Índice de envelhecimento {.allowframebreaks}
+
+- Parecido com a razão de dependência é o \structure{índice de envelhecimento} da população, definido da seguinte maneira:
+
+\footnotesize
+
+$$
+\color{black}{\frac{(\mbox{número de pessoas com 60 anos ou mais})}{(\mbox{número de pessoas de menos de 15 anos})}\times 100.}
+$$
+
+\normalsize
+
+- Utilizando a notação:
+
+$$
+IE = \frac{P_{60^{+}}}{_{15}P_{0}} \times 100.
+$$
+
+- Para os dados do Censo de Angola 2014, temos $IE = 100\times 100.968.584/12.196.496 = 7,94$.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'piramide_brasil_2010_IE.png'))
+
+```
+
+\framebreak
+
+- A relação existente entre a população com 75 e mais anos e a população com 65 e mais anos, muitas vezes chamada de \structure{índice de longevidade}, é um indicador adicional para medir o envelhecimento de uma população.
+- Dois outros indicadores da estrutura etária que serão discutidos mais adiante são as \structure{razões (ou percentagens) de juventude} que expressam o peso do grupo etário de 15-24 anos como porcentagem da população total ou alternativamente da população com 15 anos ou mais.
+
+\framebreak
+
+- O envelhecimento da população também pode ser caracterizado de outras maneiras, como a \structure{idade média ou mediana} da população. 
+    + Como a idade mediana é mais fácil de calcular, geralmente é a medida preferida.
+- Como todas as medianas, ela é calculada dividindo a população total por 2 e acumulando as populações das faixas etárias a partir de 0 até chegar neste valor.
+
+- Se o valor é alcançado no meio de um intervalo, se interpola linearmente^[$x = x_0 + (x_1 - x_0)\frac{y - y_0}{y_1 - y_0}$.]. 
+
+## Índice de envelhecimento {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'idade_mediana_tab.png'))
+
+```
+
+\framebreak
+
++ Por exemplo, no caso da população de Angola, a metade da população total é $25.789.024 / 2 = 12.894.512$.
++ A população acumulada até os 16 anos é $12.757.091$ e a acumulada até os 17 anos é $13.294.451$. Portanto, a idade mediana é igual a:
+    
+\footnotesize
+
+$$
+\mbox{idade mediana} = 16 + (12.894.512 - 12.757.091) / (13.294.451 - 12.757.091) = 16,26\ \mbox{anos}.
+$$
+
+- Esta é uma idade mediana muito baixa que implica que a metade da população tem menos de 16,26 anos. 
+    - Poucos países alcançam valores tão baixos.
+- Hoje em dia, as idades medianas da maioria dos países se encontram entre 25 e 35 anos.
+- Alguns países com estruturas etárias muito envelhecidas, tais como o Japão, têm idades medianas de mais de 40 anos. 
+- Portugal, por exemplo, tinha uma idade mediana de 41,99 anos no Censo de 2011.
+
+\framebreak
+
+- Uma alternativa para a idade mediana é a idade média, que é um pouco mais difícil de calcular e sofre uma influência muito grande do tamanho da população idosa^[A média é influenciada pelos valores extremos da distribuição.]. 
+- Ela normalmente é maior do que idade mediana.
+    + No caso de Angola (2014), ela foi calculada como 20,6 anos, contra 16,26 anos para a idade mediana.
+
+## Razão crianças / mulheres {.allowframebreaks}
+
+- A baixa idade mediana de Angola está relacionada com a alta natalidade no país, embora a relação não seja direta e também passe por outros fatores. 
+- Uma medida que expressa esta relação de uma forma um pouco mais direta é a \structure{razão de crianças / mulheres} $(RCM)$, que se calcula da seguinte forma:
+
+\footnotesize
+
+$$
+\color{black}{\frac{(\mbox{população de 0-4 anos})}{(\mbox{número de mulheres de 15 a 49 anos})}.}
+$$
+
+\normalsize
+
+- Utilizando a notação^[Estamos convencionando que $_{n}P_{x}^{M}$ representa a população de mulheres na faixa de amplitudo $n$ que começa na idade $x$.]:
+
+$$
+RCM = \frac{_{5}P_{0}}{_{35}P^{M}_{15}}.
+$$
+
+- Para os dados do Censo de Angola 2014, temos $RCM = 4.982.427 / 5.995.923 = 0,831$.
+
+## Razão crianças / mulheres {.allowframebreaks}
+
+- Portugal, com a sua natalidade muito menor, tinha uma razão de 0,192 no Censo de 2011.
+- Em discussões futuras, serão apresentadas outras medidas, mais refinadas, para expressar a natalidade e o nível de reprodução de uma população, mas na ausência destas medidas a $RCM$ pode dar __uma aproximação__ bastante razoável do __número típico de filhos por mulher__. 
+    - A razão é próxima (com certo viés para baixo) a 4,5 vezes a \structure{Taxa de Fecundidade Geral} $(TFG)$.
+
+## Comentários gerais {.allowframebreaks}
+
+- Isto mostra que a pirâmide etária ou a distribuição da população por idade e sexo, em que ela se baseia, embora sejam estatísticas de estoque, podem ser usadas para derivar estimativas de certas quantidades de fluxo, como a natalidade, no passado.
+- Toda a pirâmide etária é, de certa forma, um retrato da história demográfica do país durante as últimas cinco, seis ou sete décadas.
+
+\framebreak
+
+- A "falta de população" em certas faixas etárias pode indicar uma queda conjuntural da natalidade -- talvez devido a uma recessão econômica -- ou uma sobremortalidade devido à guerra ou ainda uma emigração forte durante um período relativamente curto.
+- Entretanto, como todos estes três processos (natalidade, mortalidade e migração) atuam simultaneamente, a pirâmide etária por si só geralmente não é suficiente para reconstruir toda a história, sem a ajuda de elementos adicionais, como séries históricas de taxas de natalidade e/ou mortalidade.
+
+\framebreak
+
+Um exemplo é a distribuição por idades da população de Cabo Verde no Censo de 2010 que
+mostra uma falta bastante acentuada de população na faixa dos 60-69 anos:
+
+| Idade | Homens | Mulheres | Total  |
+|-------|--------|----------|--------|
+| 50-54 | 8.162  | 9.999    | 18.161 |
+| 55-59 | 7.196  | 7.196    | 12.143 |
+| 60-64 | 2.613  | 3.580    | 6.193  |
+| 65-69 | 2.499  | 3.716    | 6.215  |
+| 70-74 | 3.437  | 5.229    | 8.666  |
+| 75-79 | 2.980  | 4.454    | 7.434  |
+
+\framebreak
+
+- Ao comparar o Censo de 2010 com censos anteriores, nota-se uma falta semelhante de população na faixa de __50-59 em 2000__, na faixa de __40-49 em 1990__ e assim para trás.
+- Na raiz do fenômeno está a conjuntura fortemente adversa que Cabo Verde passou na __década de 40__, quando a economia local estagnou como consequência da Guerra, a população total diminuiu de 181 mil (1940) para 148 mil (1950), a natalidade caiu num terço e houve crises de fome em 1940-43 e 1946-48, sendo que esta última eliminou \alert{65\% da população} da Ilha de Santiago.
+
+- Embora os detalhes dos acontecimentos daquela época não possam ser reconstruídos apenas com a informação da pirâmide etária, esta sim transmite sinais claros da calamidade que atingiu o país naqueles anos.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'idade_indices.png'))
+
+```
+
+## Próxima aula
+
+- Caracterização da distribuição por sexo;
+
+## Para casa {.allowframebreaks}
+
+- Com base nos resultados do Censo de 2010 no site do SIDRA (Tabela 1378), calcule os índices $RDT$, $RDJ$, $RDI$, $IE$, idade mediana e $RCM$ da população brasileira e do Rio Grande do Sul; apresente no Fórum Geral do Moodle os seus resultados.
+- Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-bolha.jpg'))
+
+```
+
