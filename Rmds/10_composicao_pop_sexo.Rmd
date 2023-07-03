@@ -1,0 +1,251 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Aspectos estáticos da análise de população: sexo"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Caracterização da distribuição por sexo {.allowframebreaks}
+
+- Junto com a idade, o \structure{sexo} é a outra característica básica que define uma população num __momento específico no tempo__.
+- Uma questão conceitual que precisa ser mencionada aqui se refere à __distinção entre as palavras "sexo" e "gênero"__.
+- Dado o crescimento do número de estudos sobre temas de gênero, nota-se certa tendência a substituir o termo "sexo" pela terminologia supostamente mais atualizada de "gênero".
+- Esta tendência é ainda mais forte na língua inglesa, já que a palavra inglesa _"gender"_ sempre teve um significado mais próximo a _"sexo"_ do que os termos
+correspondentes em português.
+    - Entretanto, se trata de uma prática equivocada. 
+
+\framebreak
+
+- Dentro da análise de gênero, as palavras sexo (_"sex"_) e gênero (_"gender"_) possuem significados claramente diferenciados.
+- O sexo de uma pessoa é uma __característica biológica__.
+- O gênero é uma __construção social__ que descreve como as categorias biológicas de masculino ou feminino são representadas como identidades sociais.
+- O gênero pode determinar o que é esperado, permitido e valorizado numa mulher ou num homem num determinado contexto^[Ver: UNWomen - http://www.un.org/womenwatch/osagi/conceptsandefinitions.htm.]. 
+    + Por exemplo, os homens da cultura clássica grega biologicamente eram do sexo masculino tanto como os homens africanos de hoje. 
+    + Mas a identidade de gênero, ou seja, o significado social de ser homem numa cultura ou na outra era bastante diferente. 
+- A análise de gênero se baseia em dados que tipicamente estão organizados por sexo, mas usa esta informação e a combina com outros elementos para desvendar o conceito de gênero dentro de um determinado contexto sociocultural.
+
+## Razão de sexos total {.allowframebreaks}
+
+- Como a distribuição por idades, a \structure{distribuição da população por sexo} também pode ser caracterizada por meio de vários __índices resumidos__.
+- A \structure{razão de sexos}^[Também conhecida com razão ou índice de masculinidade.] para o total $(RS_t)$ da população:
+
+\scriptsize
+
+$$
+RS_t = \frac{(\mbox{número de pessoas do sexo masculino})}{(\mbox{número de pessoas do sexo feminino})}\times 100.
+$$
+
+\normalsize
+
+- Para os dados do Censo 2014 de Angola, temos que $RS_t = 12.499.041 / 13.289.983 = 94,05$.
+
+## Razão de sexos total {.allowframebreaks}
+
+- Aqui a razão foi calculada para a população como um todo.
+- Além de informar sobre o relativo equilíbrio populacional segundo sexo, este indicador tem, em princípio, pouco poder explicativo.
+
+- Grandes variações na $RS_t$ requerem explicações adicionais; 
+    + a migração seletiva por sexo, uma excessiva mortalidade por causas maternas entre mulheres ou por causas violentas entre os homens, por exemplo, costumam afetar este indicador.
+
+## $RS_t$: exemplos  {.allowframebreaks}
+
+A tabela a seguir ilustra algumas particularidades da $RS_t$ em difentes países, por exemplo aquelas associadas à \structure{migração internacional}.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_total.png'))
+
+```
+
+\framebreak
+
+Este é o caso da Argentina no início do século XX e Austrália do XXI.
+
++ A Argentina com $RS_t$ altas, inclusive atingiu uma razão de sexos de 115,5 em 1914. 
+    + Com o fim desta política, $RS_t$ declina constantemente e quase um século depois situa-se abaixo de 95.
++ A Austrália segue um padrão semelhante, se diferenciando por ter, ainda em 2010, um afluxo migratório masculino de importância o que justificaria, em parte, $RS_t$ maior que a Argentina nos tempos mais recentes.
++ Já o caso de Cabo Verde nos anos 70, com uma RSt de 107,7 (de iure), estaria relacionada com a entrada maciça de mão de obra angolana e nos anos mais recentes à diáspora que tem caracterizado o país.
+
+\framebreak
+
+Também há o caso de países com práticas de valoração do sexo masculino em detrimento das mulheres.
+
+- Seria o caso da China, onde estas práticas, impactariam mais a razão de sexos entre crianças e que explicaria os altos valores para a RSt. 
+    + Já para os anos mais recentes, com a guinada das políticas de população a $RS_t$ tenderia igualmente a declinar até que, num futuro próximo, se aproxime de 95,0. 
+- Países como Portugal, França e Japão possuem razões relativamente baixas devido a sua estrutura etária envelhecida e o fato de que existem mais mulheres do que homens nas idades mais avançadas.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_total_graf.png'))
+
+```
+
+\framebreak
+
+- O Gráfico 6.4 apresenta as $RS_t$ estimada pela Divisão de População para os PALOP^[Países Africanos de Língua Oficial Portuguesa.], total mundial e para os países mais desenvolvidos e em desenvolvimento (1975-2015). 
+- As médias replicam as tendências mencionadas anteriormente: nos países menos desenvolvidos a $RS_t$ apresentou tendência à diminuição, embora menos acentuada para datas mais recentes. 
+- No caso das populações de países desenvolvidos, a $RS_t$ está em aumento, com o que a média mundial se situa, para 2015, em torno de 102,0. 
+- O maior desvio se verifica no caso da Guiné Equatorial que a partir dos anos 90 começou a ter uma $RS_t$ muito elevada em função dos trabalhadores migrantes masculinos.
+
+# Razão de Sexos ao Nascer (à Nascença) {.allowframebreaks}
+
+- De todas as adaptações que podem ser feitas ao conceito de razão de sexos, a mais importante provavelmente é a \structure{razão de sexos ao nascer} ou \structure{à idade de 0 anos} $(RS_0)$.
+- Na composição por sexo ao nascimento da espécie humana, há uma ligeira tendência ao predomínio do sexo masculino.
+- A razão de sexo natural ao nascer, utilizando o termo da OMS, é geralmente considerada como sendo cerca de 105^[http://www.searo.who.int/entity/health_situation_trends/data/chi/sex-ratio/en/.];
+    + haveria, em média, ao nascer, em torno de 105 homens por cada 100 mulheres. 
+
+## Razão de Sexos ao Nascer (à Nascença) {.allowframebreaks}
+
+Valores fora do intervalo de 103-107 possuem qualidade deficiente ou são resultado, principalmente de intervenções de ordem:
+
+- Cultural e seletivas por sexo, como a valoração de filhos do sexo masculino seja, provocando interrupção da gravidez, seja omitindo o registro de nascimentos de filhas.
+- Sanitária: por corresponder ao sexo masculino maiores riscos de mortalidade, inclusive antes de nascer, avanços médicos que levam a gravidez de risco até um nascido vivo (nado vivo), produziriam, proporcionalmente, mais nascimentos masculinos e $RS_0$ maiores.
+
+\framebreak
+
+- Há variações de origem biológica entre países e grupos sociais cuja origem não é bem entendida pela ciência genética. 
+    - A literatura apresenta algumas evidências baseadas em séries históricas para os países escandinavos entre 1865 e 1914 que sugerem uma influência do
+clima: em anos mais frios, $RS_0$ tende a ser mais baixa.
+
+- A tabela a seguir apresenta a $RS_0$ para o período 2015-19, em países selecionados da Europa, América Latina e Ásia.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_0.png'))
+
+```
+
+\framebreak
+
+- Na região latino-americana, chama a atenção Cuba pelo valor mais alto, de 105,7.
+- Entretanto, o único país no continente com uma $RS_0$ definitivamente anómala é Suriname $(RS_0 = 108)$.
+
+- No caso dos países asiáticos os valores parecem atípicos; por um lado, na Coreia do Sul, e em menor medida, no Japão, parece haver uma tendência de aproximação do indicador à marca de 105, enquanto há um claro excesso de nascimentos masculinos na China e na Índia. 
+    + O valor de Macau parece normal, mas é difícil de saber por certo, devido ao número reduzido de nascimentos.
+
+\framebreak
+
+- O comportamento da RS0 pode ser retratado também considerando sua tendência por idade da mãe ou ainda pela ordem do nascimento. 
+- Países sem notado intervencionismo no controle do comportamento reprodutivo têm mostrado uma tendência de leve, mas constante diminuição da razão de sexo ao nascer segundo a idade da mãe, tendendo a ser menor de 105 mas sempre acima de 100.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_0_idade_mae.png'))
+
+```
+
+
+\framebreak
+
+- Ainda sobre a razão de sexos e características da mãe, ao poder associar a idade à parturição (o número de filhos que as mulheres têm), seria de esperar que nascimentos de ordem superior tenham uma $RS_0$ igualmente tendendo a diminuir. 
+- Uma tendência oposta é indicativa de qualidade deficiente da informação ou da seletividade por sexo das gestações levadas a termo.
+    + O fenômeno é ilustrado no Gráfico 6.6, com a $RS_0$ da China, onde se pode perceber uma sequência razoavelmente próxima de 105 no caso de primeiros filhos, mas consideravelmente mais alta no caso de segundos e principalmente terceiros filhos.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_0_ordem_parto.png'))
+
+```
+
+# Razão de Sexos por idade {.allowframebreaks}
+
+- A razão de sexos também pode ser \structure{calculada por idade} da própria pessoa o que define um índice denotado por $RS_x$.
+
+- Na Índia, por exemplo, se costuma calcular esta razão para crianças menores de 6 anos $(RS_{0-5})$, para expressar o deficit além do esperado de meninas em comparação com os meninos, devido ao aborto seletivo e os maus tratos de meninas.
+    - Esta é uma alternativa para o uso de $RS_0$, já que este pode ser mais difícil de calcular, devido às deficiências do sistema de registro civil. 
+
+- No caso do Censo de Angola de 2014, a razão de sexos para a faixa etária de 0-4 anos $(RS_{0-4})$ foi $2.484.583 / 2.513.566 = 98,85$, um valor muito baixo considerando que normalmente nascem mais meninos do que meninas.
+- No Censo de Portugal de 2011, o valor encontrado foi 104,29, bem mais próximo do esperado.
+
+\framebreak
+
+- A $RS_0$ é afetada essencialmente por fatores de ordem biológica com pouca intervenção do ser humano.
+- A mortalidade tem um papel mais explícito nas idades seguintes, pois a mortalidade masculina geralmente é maior do que a feminina.
+- Desta forma, à medida que se avança na idade e, em se tratando de uma população fechada às migrações __(sem imigrantes ou emigrantes)__, o número de homens, segundo a idade tenderá a ser proporcionalmente menor em relação às mulheres e a $RS_x$, também.
+- O padrão de $RS_x$ assemelhar-se-ia, consequentemente, ao apresentado no Gráfico 6.7 para o total da população mundial.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_idade.png'))
+
+```
+
+\framebreak
+
+- Tem se constatado, ademais, uma associação com os níveis da mortalidade.
+- Embora em condições sociais mais favoráveis às probabilidades de morte sejam relativamente menores, tanto para homens como para mulheres, estas últimas acabam se beneficiando proporcionalmente mais das melhoras que a diminuição da mortalidade traz. 
+    + Isso explicaria em parte porque nos países desenvolvidos o desequilíbrio na $RS_x$ é bem maior.
+
+- Países socialmente mais vulneráveis (menos desenvolvidos) a $RS_x$ diminui, efetivamente, com a idade, mas num ritmo mais lento: ao passo que nestas sociedades, ao fim da vida, haveria pouco mais de 75 homens por 100 mulheres, nos países desenvolvidos a razão equivalente é bem mais baixa que 30.
+
+\framebreak
+
+- Perfis diferentes ao apresentado no gráfico anterior costumam ocorrer. 
+
+- O Gráfico 6.8 descreve duas situações que ilustram bem situações atípicas dentro dos países PALOP na virada do século XXI: Guiné-Bissau e Moçambique, países que, além de __sabidas dificuldades com a qualidade dos dados__, experimentaram no passado recentes __turbulências sociais__ de variada intensidad.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%'}
+
+knitr::include_graphics(here::here('imagens', 'razao_sexos_idade_ano.png'))
+
+```
+
+\framebreak
+
+- Em ambos países nota-se uma $RS_0$ próxima de 100, o que indicaria níveis de mortalidade infantil bastante altos e coerentes com o que se sabe deste indicador.
+- A hipótese de subdeclaração de crianças do sexo masculino seria pouco plausível, uma vez que no geral da população africana, prevalece a preferência de por crianças deste sexo.
+
+- O equilíbrio populacional por sexo é atingido a idades relativamente precoces, sendo esta característica, mais acentuada, ainda, em Moçambique. 
+- Todavia, neste último, observa-se uma anormal diminuição da $RS$ já antes da idade 15, cuja causa está relacionada com os conflitos sociais dos anos 90 que ocasionou morte e deslocamento, para fora do país, da população jovem predominantemente masculina.
+
+## Comentários finais
+
+Em síntese, na ausência de movimentos migratórios ou efeitos perturbadores na sociedade, uma $RS$ por idade livre de erros ou omissões, deve apresentar, aproximadamente os seguintes aspectos:
+
+- Valores acima de 100 e próximos de 105 ao nascer;
+- Tendência monotonamente declinante com a idade até atingir o equilíbrio entre sexos, o que deve ocorrer depois da idade 25-30, dados os níveis de mortalidade do século XXI;
+- Nas idades avançadas, 60 e mais, por exemplo, espera-se que a $RS$ seja definitivamente inferior a 90;
+- A tendência temporal esperada é, por um lado, o adiamento da idade do equilíbrio da $RS$ e diminuição cada vez mais acentuada nas idades extremas, por exemplo 70 anos e mais.
+
+## Próxima aula
+
+- Métodos de padronização direta e indireta.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Com base nos resultados do Censo de 2010 no site do SIDRA (Tabela 1378), calcule os índices $RDT$, $RDJ$, $RDI$, $IE$, idade mediana e $RCM$ da população brasileira e do Rio Grande do Sul; apresente no Fórum Geral do Moodle os seus resultados. -->
+
+- Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-capediem.jpg'))
+
+```
+
