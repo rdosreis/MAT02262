@@ -1,0 +1,247 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Características, eventos, proporções, taxas e probabilidades: o diagrama de Lexis"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução
+
+## Relembrando
+
+\begin{mybox}{Uma coorte}
+é um grupo de pessoas que passaram por um mesmo evento demográfico durante o mesmo período.
+\end{mybox}
+
+## Wilhelm Lexis
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='20%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'Wilhelm_Lexis.jpg'))
+
+```
+
+\structure{Wilhelm Lexis} (Eschweiler, 17 de julho de 1837 -- Göttingen, 25 de outubro de 1914) foi um __economista__ e __estatístico__ alemão. Desenvolveu o \structure{diagrama de Lexis} e apresentou grandes contribuições à indústria do seguro, sendo considerado o fundador do estudo interdisciplinar do seguro.
+
+## Idade, período e coorte {.allowframebreaks}
+
+A situação de um indivíduo ou de um grupo de indivíduos dentro da evolução demográfica de um país ou região pode ser caracterizada em termos de três características: 
+
+1. Tempo ou ano, mês e dia do calendário;
+2. Idade exata ou intervalo de idade;
+3. Coorte ou data de nascimento.
+
+$\color{black}{\rightarrow}$ Estas características são dependentes entre elas: _sabendo duas delas pode-se calcular a terceira._
+
+\framebreak
+
+- Por exemplo, as pessoas que compõem a coorte de nascimentos de 1995-1999 (3) no 1º de janeiro de 2008 (1) tinham 13-17 anos completos de idade (2).
+
+- A situação se complica um pouco se ambas as características determinantes são dadas em termos de intervalos e não de números exatos. 
+    + Por exemplo, durante o período de 2010-2014 (1), a coorte nascida em 1985-1989 (3) tinha entre 20 e 30 anos de idade (2). 
++ Mas não todas as pessoas que em algum momento deste período tiveram entre 20 e 30 anos de idade pertenciam à coorte de nascimentos de 1985-1989. 
+    + Por exemplo, uma pessoa que no 1º de janeiro de 2011 tinha 28 anos nasceu em 1982 e, portanto, pertencia a uma coorte de nascimentos diferente.
+
+# O diagrama de Lexis {.allowframebreaks}
+
+Para visualizar melhor as diferentes __relações entre tempo, idade e coorte__ no que toca a características e fluxos de população usa-se na demografia um recurso chamado o \structure{diagrama de Lexis}. 
+
+- O __eixo horizontal__ do diagrama __representa o tempo__. 
+- O __eixo vertical representa a idade__. 
+- Cada vez que passa um ano calendário no tempo, uma pessoa fica um ano mais velha.
+    + Portanto, a __trajetória da vida__ ou __linha vital__ de cada pessoa é uma __linha diagonal ascendente__. 
+    + A __representação de uma coorte__ é __um conjunto de linhas vitais__ que formam __uma banda diagonal__ no diagrama.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis.png'))
+
+```
+
+\framebreak
+
+- O problema básico da análise demográfica consiste na circunstância de que é extremamente difícil monitorar os três processos básicos __(nascimentos, óbitos e migrações)__ de mudança simultaneamente em tempo contínuo.
+- Embora seja perfeitamente legítimo representar a evolução de uma população desta maneira, não é a forma como o diagrama de Lexis normalmente é usado.
+- Na prática, a maioria das fontes de dados não permite conhecer e desenhar todas as linhas vitais individualmente.
+
+\framebreak
+
+$\color{black}{\rightarrow}$ Publicar a informação num formato que permitisse isso traria _problemas de confidencialidade_, além de gerar uma quantidade de detalhe que para a grande maioria dos usuários das estatísticas seria pouco funcional.
+
+- Mesmo os Registros Civis mais sofisticados não publicam dados diários sobre todos os eventos, mas os agregam em intervalos de 1 ano calendário e intervalos etários de 1 ou 5 anos.
+
+\framebreak
+
+- Por outro lado, as características da população geralmente não são dadas num intervalo de tempo como o período 2010-2014 no gráfico anterior, mas como uma __sequência de momentos discretos__, por exemplo o 1º de janeiro de 2000, de 2005, de 2010 e de 2015. 
+- Nos espaços entre as linhas verticais __(momentos no tempo)__ ou horizontais __(idades exatas)__ são colocadas as quantidades de fluxo que levam às mudanças das características retratadas nas linhas. 
+    - Neste contexto, é suficiente saber __quantas linhas começam ou terminam numa determinada área__ e __quantas cruzam determinadas barreiras__ como o limite entre dois anos (linha vertical) ou entre duas idades (linha horizontal).
+    
+\framebreak
+
+- O gráfico a seguir mostra um exemplo deste tipo de uso do diagrama, ilustrado com dados da Guiné-Bissau no período de 1980 a 2015.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='85%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis_02.png'))
+
+```
+
+\framebreak
+
+$\color{black}{\rightarrow}$ É importante assinalar que se trata de _estimativas e interpolações_ baseadas em diferentes fontes e não em números diretamente observados nos censos.
+
+- Aqui as linhas são verticais, indicando o 1º de janeiro do primeiro ano de cada quinquênio e os __números de eventos__ se referem aos paralelogramos (losangos) entre quinquênios sucessivos da mesma coorte.
+
+\framebreak
+
+- As quantidades de fluxo retratadas aqui são simplesmente mudanças nos efetivos de população, sem distinção entre óbitos e migrações. 
+    + Por exemplo, havia 196.569 pessoas com idades entre 10 e 14 anos no 1º de janeiro de 2010, das quais sobraram 193.003 no 1º de janeiro de 2015 quando tiveram entre 15 e 19 anos de idade. 
+    + As demais 3.566 morreram ou migraram entre a primeira data e a segunda.
+- Na parte inferior do diagrama, na idade exata 0, aparecem os nascimentos ocorridos nos períodos de 1980-84 (213.202), 1985-89 (231.208), 1990-94 (248.492),
+1995-99 (261.338) e 2000-04 (278.447).
+
+\framebreak
+
+- Seria possível construir um diagrama semelhante com linhas horizontais, indicando __idades exatas__ e __números de eventos__ em paralelogramos entre as idades exatas. 
+- Ou ainda seria possível (se os dados existem) fazer as duas coisas simultaneamente, com:
+    + linhas horizontais para indicar idades exatas,
+    + linhas verticais para indicar datas exatas
+    + e triângulos para indicar o número de eventos entre uma idade exata e uma data exata. 
+
+\framebreak
+
+- O gráfico a seguir mostra uma parte do gráfico anterior com dados hipotéticos para sugerir qual poderia ser a configuração de um diagrama deste tipo.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis_03.png'))
+
+```
+
+\framebreak
+
+- Como o gráfico anterior, o diagrama mostra que __261.338 pessoas nasceram entre 1995 e 1999__ e que destes __220.088 ainda estavam presentes no 1º de janeiro de 2000__ e __202.956 no 1º de janeiro de 2005__. 
+- Mas além disso, este último gráfico mostra que __10.808 pessoas desta coorte morreram ou migraram antes do seu quinto aniversário__, de modo que se celebraram 209.280 quintos aniversários. 
+    + Os demais __6.324 morreram ou migraram antes do 1º de janeiro de 2005__, mas já tendo mais de 5 anos.
+
+\framebreak
+
+- Para construir um diagrama como este último gráfico, em princípio é preciso dispor de um __sistema de dupla classificação__ das pessoas em que os indivíduos são identificados tanto pela sua idade como pelo seu ano de nascimento. 
+    + Poucos países publicam esta informação de forma sistemática e Guiné-Bissau não é um deles.
+- Por isso, a construção das quantidades de fluxo nos triângulos geralmente passa pela aplicação de frações teóricas, para aproximar a divisão correta dos quadrados ou dos losangos em triângulos. 
+    + Foi assim que o último gráfico foi construído.
+
+\framebreak
+
+$\color{black}{\rightarrow}$ O exemplo nos dois últimos gráficos é um pouco _atípico_ no sentido de que a variável de fluxo retratada aqui nada mais é do que o aumento ou a diminuição da população das coortes entre duas datas ou duas idades exatas em função da mortalidade ou migração. 
+
+- Formulado desta maneira, o esquema cumpre com a __equação de consistência para coortes__.
+- Mas normalmente este não é o caso porque a variável de fluxo geralmente é outra.
+- Por exemplo, os números dentro dos triângulos poderiam referir-se só a óbitos e não a migrações. 
+
+\framebreak
+
+- Esta situação é mostrada no gráfico a seguir.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='85%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis_04.png'))
+
+```
+
+\framebreak
+
+$\color{black}{\rightarrow}$ Entretanto, os números nas linhas horizontais e verticais continuariam sendo influenciados pela migração de modo que a equação de consistência não se aplicaria mais.
+
+- Os __eventos retratados dentro dos triângulos poderiam, inclusive, ser de um tipo que não afeta o tamanho da população da coorte, como o número de anos completos que as crianças passam na escola__.
+- Uma criança que morre ou emigra sai da população e não consta mais dos efetivos de população na próxima data ou na próxima idade de referência. 
+    - Mas isso não acontece com anos de escolaridade completada. 
+- Uma criança que completa um ano continua formando parte da população e depois pode completar um
+outro ano.
+
+\framebreak
+
+- \structure{Eventos} deste tipo chamam-se \structure{renováveis} e, como se verá na próxima aula, a sua interpretação no cálculo de taxas é um pouco diferente do tratamento de \structure{eventos não renováveis}, como óbitos. 
+- Em muitos casos é possível redefinir o processo de tal forma que se torne não renovável. 
+    - Por exemplo, ter um filho é um evento renovável na vida de uma coorte de mulheres já que elas podem ter vários filhos durante um determinado período e continuam formando parte da coorte. 
+    - Mas se o evento for definido como ter o primeiro filho e a coorte for de mulheres que ainda não passaram por esta experiência, o processo vira não renovável já que o nascimento do primeiro filho retira a mãe da coorte de mulheres nulíparas (que nunca tiveram filhos).
+
+\framebreak
+
+$\color{black}{\rightarrow}$ Com a introdução do diagrama de Lexis dispõe-se agora dos elementos para quantificar a \structure{intensidade dos processos demográficos}.
+
+Olhando o seguinte gráfico
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis_05.png'))
+
+```
+
+\framebreak
+
+é preciso reconhecer que o número de eventos demográficos -- sejam eles renováveis ou não renováveis -- que ocorrem num determinado período a pessoas de uma determinada idade pode ser caracterizado de três maneiras distintas:
+
+1. É possível analisar um determinado período (2000-2004) e um determinado grupo etário (5-9 anos) e somar os eventos $(3863 + 6324)$. Mas estes eventos pertencem a duas coortes diferentes, nascidas em 1990-1994 e 1995-1999, respectivamente.
+2. É possível analisar um determinado período (2000-2004) e uma determinada coorte (os nascidos em 1995-1999) e somar os eventos assim $(10808 + 6324)$. Mas estes eventos caracterizam dois grupos etários diferentes, de 0-4 e de 5-9 anos, respectivamente.
+3. A terceira possibilidade é analisar um determinado grupo etário (5-9) e uma determinada coorte (nascidos em 1995-1999) e somar os $6324 + 2880$ eventos assim. Mas estes eventos se dividem entre dois períodos diferentes, de 2000-2004 e de 2005-2009, respectivamente.
+
+## Considerações finais {.allowframebreaks}
+
+- Não há nenhuma maneira para analisar uma coorte única numa faixa etária única dentro de um período único. 
+- Entre as três alternativas possíveis, as mais usadas são a primeira, conhecida como \structure{análise de período}, e a terceira, conhecida como \structure{análise de coorte}. 
+    - A segunda é pouco usada, por misturar diferentes grupos etários. 
+- Análises que acompanham uma coorte também são chamadas \structure{longitudinais}, especialmente quando fazem este acompanhamento durante vários períodos. 
+- Análises que misturam diferentes coortes são chamadas \structure{transversais}, especialmente quando abrangem uma sequência de grupos etários.
+
+\framebreak
+
+- Ao analisar a __evolução dos processos demográficos__ faz todo o sentido distinguir entre efeitos:
+    + de idade _(ao envelhecer, o risco de morte aumenta)_,
+    + de período _(certos períodos históricos foram caracterizados por uma mortalidade mais alta)_
+    + e de coorte _(certas coortes são menos resistentes porque estiveram expostas a eventos traumáticos na infância)_.
+
+\framebreak
+
+$\color{black}{\rightarrow}$ Entretanto, essa análise em três componentes se confronta com o fato de que elas não são independentes, pois
+
+$$
+\mbox{Período} - \mbox{Idade} = \mbox{Coorte (de Nascimento)},
+$$
+
+o que impossibilita certos tipos de análise estatística como a regressão múltipla.
+
+- O problema é conhecido como o _problema de identificação_ e existem diferentes técnicas para lidar com ele.
+
+## Próxima aula
+
+- Taxas e probabilidades.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Refaça o exemplo da padronização direta considerando Rondônia como a população padrão. -->
+- Pequeno Trabalho 02: será postado no Moodle.
+- Ler o capítulo 7 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-ff.jpg'))
+
+```
+

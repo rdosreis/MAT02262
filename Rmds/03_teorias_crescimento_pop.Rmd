@@ -71,7 +71,6 @@ knitr::include_graphics(here::here('imagens', 'MalthusThomas300px.jpg'))
 
 Entre os pessimistas, o principal expoente foi \structure{Thomas Robert Malthus (1766-1834)}, primeiro escritor a apresentar e desenvolver uma __teoria populacional__ compreensiva e consistente com as condições econômicas existentes na época - _Essay on the Principle of Population_ (__Um Ensaio sobre o Princípio da População__), publicado em 1798.
 
-
 # A teoria malthusiana
 
 ## As proposições da teoria demográfica malthusiana {.allowframebreaks}
