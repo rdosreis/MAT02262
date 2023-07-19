@@ -1,0 +1,104 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Características, eventos, proporções, taxas e probabilidades: taxas e probabilidades"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução
+
+## Relembrando {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height="50%"}
+
+knitr::include_graphics(here::here('imagens', 'diagrama_lexis_03.png'))
+
+```
+
+\framebreak
+
+- Como o gráfico anterior, o diagrama mostra que __261.338 pessoas nasceram entre 1995 e 1999__ e que destes __220.088 ainda estavam presentes no 1º de janeiro de 2000__ e __202.956 no 1º de janeiro de 2005__. 
+- Mas além disso, este último gráfico mostra que __10.808 pessoas desta coorte morreram ou migraram antes do seu quinto aniversário__, de modo que se celebraram 209.280 quintos aniversários. 
+    + Os demais __6.324 morreram ou migraram antes do 1º de janeiro de 2005__, mas já tendo mais de 5 anos.
+
+## Taxas e probabilidades {.allowframebreaks}
+
+$\looparrowright$ A contagem do número de eventos relevantes para quantificar a intensidade de uma variável de fluxo.
+
+- Para construir um indicador de intensidade, esta quantidade de eventos precisa ser relacionada com __um denominador__ que de alguma forma representa o \structure{número potencial de eventos} que poderiam ter acontecido.
+- O conceito mais correto para expressar este número potencial é o \structure{número de anos-pessoa}^[Também chamado de __número pessoas-ano__.] vividos pela população dentro da área relevante do diagrama de Lexis, ou seja, __o comprimento conjunto__, dentro da área, __de todas as linhas vitais__ que cruzam a área de forma completa ou parcial.
+    + Ou seja, é __soma dos tempos vividos__ (em anos) por cada componente da população.
+
+\framebreak
+
+$\rightsquigarrow$ Esta ideia é mais fácil de entender no caso de uma coorte como a __coorte de nascimentos de 1995-1999__ no gráfico a seguir. 
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height="50%"}
+
+knitr::include_graphics(here::here('imagens', 'pessoas-ano_01.png'))
+
+```
+
+\framebreak
+
+- No losango que define a vivência desta coorte para as idades de 5-9 anos, inicialmente houve 209.280 pessoas, das quais no final sobraram 200.076.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height="50%"}
+
+knitr::include_graphics(here::here('imagens', 'pessoas-ano_02.png'))
+
+```
+
+$\looparrowright$ Cada uma destas pessoas contribuiu __5 anos__ ao conjunto de __anos-pessoa__ vividos pela coorte, ou seja, um total de $5 \times 200.076 = 1.000.380$ anos.
+
+\framebreak
+
+- Mas também houve $6.324 + 2.880 = 9.204$ pessoas que __não completaram o intervalo__ e cujas linhas vitais pararam em algum lugar intermediário, seja porque morreram ou porque emigraram.
+- Muitas vezes se supõe que estas pessoas contribuíram a metade do período, ou seja $2,5$ anos cada uma, de modo que o número total de anos-pessoa acaba sendo a média da população inicial e final vezes o tamanho do intervalo. 
+    + Mas isso nem sempre é correto. 
+- Sabe-se, por exemplo, que as crianças que morrem no primeiro ano de vida tendem a morrer muito mais no início (o primeiro mês) do que mais tarde.
+    - Portanto, o comprimento médio das linhas vitais destas crianças seria bem menos do que a metade do período.
+
+\framebreak
+
+- Em teoria, seria possível calcular todas as contribuições feitas por todas as pessoas que saíram da população durante o período, mas na prática raramente dispõe-se de dados suficientemente detalhados para fazer isso. 
+- Quando não se pode supor que cada pessoa que não completa o intervalo contribui a metade do mesmo, a solução geralmente adotada na prática é a aplicação de \structure{fatores de separação}, baseados na experiência, para quantificar a contribuição das linhas vitais incompletas. 
+
+\framebreak
+
+- Neste caso o fator de separação para o intervalo de 5 a 9 anos provavelmente seria bem próximo a 0,5, talvez 0,48. Sendo assim, o número de anos-pessoa seria
+
+$$
+\mbox{Anos-pessoa} = 5 \times 200.076 + 0,48 \times 5 \times 9.204 = 1.022.469,6\ \mbox{anos}.
+$$
+
+## Próxima aula
+
+- Medidas Básicas de Mortalidade.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Refaça o exemplo da padronização direta considerando Rondônia como a população padrão. -->
+- Pequeno Trabalho 02: será postado no Moodle.
+- Ler o capítulo 7 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final01.jpg'))
+
+```
+
