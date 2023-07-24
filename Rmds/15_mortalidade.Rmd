@@ -1,0 +1,268 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Medidas básicas de mortalidade"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução {.allowframebreaks}
+
+- Nas próximas aulas serão operacionalizados para cada uma das três componentes básicas da dinâmica demográfica: __mortalidade__, __natalidade/fecundidade__ e __migração__.
+
+$\looparrowright$ Vamos começar com a mortalidade, a componente menos complexa.
+
+- As medidas básicas de mortalidade trarão uma ideia da intensidade (nível) e da estrutura desses fenômenos num dado período de tempo.
+- será privilegiada a apresentação dos indicadores a partir de uma análise transversal (por períodos).
+
+\framebreak
+
+- No caso da mortalidade, os eventos de interesse são os óbitos ocorridos num determinado período de tempo.
+- A análise se concentra em nascidos vivos e os óbitos fetais e nascidos mortos não são considerados no cálculo da maioria dos indicadores. 
+- O número total de óbitos ocorridos numa população varia segundo três fatores:
+    + O tamanho da população;
+    + O risco de ocorrência do óbito;
+    + A estrutura por idade e sexo sobre a qual incide o risco.
+    
+# A taxa bruta de mortalidade {.allowframebreaks}
+
+- Para eliminar o efeito do tamanho da população, a primeira medida a ser apresentada é a \structure{taxa bruta de mortalidade (``\emph{Crude Death Rate}'' ou CDR, em inglês)}, que será denotada por $TBM$. 
+    + A mesma taxa também é conhecida, na área da saúde, como \structure{Coeficiente Geral de Mortalidade (CGM)}.
+- Conforme a definição de uma taxa, a $TBM$ é calculada relacionando-se o __número total de óbitos ocorridos no período__ com o __tempo total de exposição daqueles que estiveram expostos ao risco de morrer naquele mesmo período__ ou o número total de anos-pessoa vividos em exposição ao risco no período.
+    + Para fins de apresentação, multiplica-se o resultado por mil.
+
+\framebreak
+
+\footnotesize
+
+\begin{eqnarray*}
+TBM &=& 1000 \times \frac{\mbox{Número total de óbitos ocorridos no período}}{\mbox{Tempo total de exposição ao risco no período}} =\\
+&=& 1000 \times \frac{\mbox{Número total de óbitos ocorridos no período}}{\mbox{Total de anos de pessoa vividos em exposição ao risco no período}}.
+\end{eqnarray*}
+
+\normalsize
+
+\framebreak
+
+\begin{mybox}{anos-pessoa}
+
+O cálculo de uma taxa traz o conceito de anos-pessoa vividos em exposição ao risco no período de interesse. Para o seu cálculo, tem-se que considerar todas as frações de tempo vividas em exposição, no período considerado, pelos indivíduos daquela população que estiveram expostos ao risco.
+
+\end{mybox}
+
+- Como esse cálculo é difícil de ser realizado, utiliza-se como medida aproximada, a __população total média no período__.
+
+\framebreak
+
+A população total média no período pode ser obtida como a média aritmética das estimativas populacionais totais no início e final do período, ou como a estimativa populacional total à metade do período:
+
+$$
+\overline{P}= (P_{\mbox{início}} + P_{\mbox{fim}}) / 2 \approx P_{\mbox{meio do período}}.
+$$
+
+\framebreak
+
+A partir dessas considerações sobre o denominador, pode-se reescrever a fórmula de cálculo da $TBM$ da seguinte maneira:
+
+$$
+TBM = 1000 \times \frac{\mbox{Número total de óbitos ocorridos no período}}{\mbox{População média no período}}.
+$$
+
+\framebreak
+
+$\looparrowright$ É usual considerar no numerador a __média aritmética do número de óbitos de três anos consecutivos__ $(t-1, t\ \mbox{e}\ t+1)$, onde $t$ é o ano de referência da $TBM$. 
+
+- Essa estratégia tem como finalidade obter uma estimativa mais estável e robusta para o indicador, evitando-se assim flutuações aleatórias no número de óbitos observados num dado período.
+
+$$
+TBM = 1000 \times \frac{D(t-1,t) + D(t, t+1) + D(t+1, t+2)}{3\overline{P}}.
+$$
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='55%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade01.png'))
+
+```
+
+\framebreak
+
+- Esses valores parecem contradizer a relação conhecida entre níveis de mortalidade e níveis de desenvolvimento socioeconômico. 
+    + Espera-se que quanto mais desenvolvido o país, menor será o nível da mortalidade. 
+    + Assim, seria natural que os menores valores fossem apresentados pelos países europeus. 
+- Esses valores contraditórios nos levam a concluir que a $TBM$ __não é um bom indicador para o nível de mortalidade de uma região ou país__. 
+- Isso é explicado pela influência que a estrutura por idade da população exerce sobre esse indicador.
+    + Quanto mais envelhecida a estrutura etária da população, espera-se um número maior de óbitos o que leva a uma $TBM$ mais elevada.
+
+\framebreak
+
+- Por isso não se podem comparar TBMs entre localidades (regiões/países) que tenham diferentes estruturas etárias ou uma mesma localidade em diferentes momentos no tempo. 
+- Para comparar níveis de mortalidade, deve-se \structure{padronizar} ou \structure{ajustar} esses níveis observados a uma estrutura etária comum, ou seja, buscar eliminar ou reduzir o efeito das estruturas etárias das populações envolvidas na comparação.
+- Para tanto, é necessário obter níveis de mortalidade específicos para cada idade.
+
+# Taxas específicas de mortalidade por sexo e idade
+
+## TEMs por sexo e idade {.allowframebreaks}
+
+- Como o risco de morte varia segundo a idade e o sexo dos indivíduos, é fundamental obter medidas que descrevam esse comportamento. 
+- O cálculo das \structure{taxas específicas de mortalidade} $(TEMs)$ por idade e sexo $({}_{n}M_{x,s})$, relaciona-se o número de óbitos ocorridos no período com o tempo total de exposição ao risco daqueles que estiveram expostos ao risco de morrer naquele mesmo período ou o número total de anos-pessoa vividos em exposição ao risco no período, considerando tanto no numerador como no denominador __as características de idade e sexo__ dos indivíduos (idades entre $x$ e $x+n$ e sexo $s$).
+
+\framebreak
+
+Mais especificamente, pode-se escrever a fórmula de cálculo das TEMs por sexo e idade como:
+
+\footnotesize
+
+$$
+{}_{n}M_{x,s} = \frac{\mbox{Número de óbitos com idades entre}\ x\ \mbox{e}\ x+n\ \mbox{ocorridos no período}}{\mbox{População média com idades entre}\ x\ \mbox{e}\ x+n\ \mbox{do sexo}\ s\ \mbox{no período}} = \frac{{}_{n}D_{x,s}}{{}_{n}\overline{P}_{x,s}},
+$$
+
+\normalsize
+
+em que ${}_{n}D_{x,s}$ é o número de óbitos com idades entre $x$ e $x+n$ e sexo $s$ ocorridos no período; e ${}_{n}\overline{P}_{x,s}$ é a população média com idades entre $x$ e $x+n$ e sexo $s$ no período.
+
+- É comum calcular as TEMs por idade e sexo, considerando no numerador a média aritmética do número de óbitos em três anos consecutivos.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade02.png'))
+
+```
+
+\framebreak
+
+- A Tabela 8.2 apresenta os dados de óbitos por sexo e idade para o Brasil em 2014, 2015 e 2016, captados pelo \structure{Sistema de Informações sobre Mortalidade (SIM)} do __Ministério da Saúde__, que serão utilizados para o cálculo das $TEMs$ por idade e sexo, __em 2015__.
+- É importante ressaltar que a taxa de mortalidade específica em menores de um ano __não é equivalente à taxa de mortalidade infantil__, como pode ser visto mais à frente neste capítulo.
+
+\framebreak
+
+- Além dos óbitos, necessita-se dos dados sobre a população por sexo e idade para o ano de referência. 
+- Os dados populacionais para o Brasil em 2015 foram extraídos da __projeção de população feita pelo IBGE em 2013__.
+- A __Tabela 8.3__ traz os dados populacionais e os resultados para o cálculo das Taxas Específicas de Mortalidade.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade03.png'))
+
+```
+
+\framebreak
+
+- O risco de morte decresce nas primeiras idades até o grupo etário de 5-9 anos, e a partir de então aumenta até a idade aberta final. 
+- O risco de morte é mais elevado entre homens do que entre mulheres.
+
+\framebreak
+
+$\looparrowright$ O comportamento do risco de morte por idade apresenta um formato em U ou J.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade04.png'))
+
+```
+
+\framebreak
+
+- Contrariamente às $TBMs$, cuja comparação é dificultada pelas diferenças nas estruturas etárias subjacentes, as $TEMs$ sim podem ser comparadas.
+- Mas como são muitas, nem sempre é claro qual é o critério mais adequado para a comparação $({}_{4}M_{1}?\ {}_{5}M_{15}?\ {}_{5}M_{40}?)$ e dependendo da escolha os resultados podem variar.
+- A mortalidade na população pode ser mais baixa do que na população B em algumas idades, mas em outras, o resultado pode ser o oposto. 
+
+
+$\looparrowright$ A padronização fornece um instrumento para resumir estas comparações num único número.
+
+# Padronização {.allowframebreaks}
+
+- A __Tabela 8.4__ compara os óbitos por grupos etários, totais de população, taxas específicas de mortalidade e o que aqui se chamou de estrutura, ou seja, a proporção da população por grupos etários.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade05.png'))
+
+```
+
+\framebreak
+
+O fato de a TBM de __São Tomé & Príncipe__ ser mais elevada que a do __Brasil__ poderia levar a pensar que as condições de vida em São Tomé & Príncipe são piores e, por isso, morre-se mais naquele país. 
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='30%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade06.png'))
+
+```
+
+\framebreak
+
+Mas alguns detalhes devem ser observados:
+
+- No primeiro grupo etário, dos menores de 1 ano de idade, a $TEM$ de São Tomé & Príncipe é quase o dobro da $TEM$ do Brasil.
+- No segundo grupo etário, das crianças de 1-4 anos de idade, a $TEM$ de São Tomé & Príncipe é seis vezes a $TEM$ do Brasil.
+- Mais em geral, em todos os grupos etários as $TEMs$ de São Tomé & Príncipe são mais elevadas que as do Brasil.
+- Em todos os grupos etários até a faixa de 20-24 anos, São Tomé & Príncipe apresenta maiores percentuais de população; a partir do grupo de 25-29 anos até o grupo etário aberto final de 80 anos ou mais, o Brasil apresenta maiores percentuais de população.
+
+\framebreak
+
+- São Tomé & Príncipe apresenta uma $TBM$ mais elevada que a do Brasil, mesmo tendo uma estrutura etária mais jovem.
+- __Cabe perguntar:__ como seria a $TBM$ de São Tomé & Príncipe se o país tivesse a mesma estrutura etária do Brasil?
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade07.png'))
+
+```
+
+
+\framebreak
+
+A __Tabela 8.5__ mostra de que forma a padronização dos óbitos é feita. 
+
+- A $TBM$ de São Tomé & Príncipe em 2012 foi de __7,18 óbitos por 1.000 habitantes__.
+    - Porém, se o país tivesse a estrutura etária brasileira, a $TBM$ seria de __11,5__.
+- Já no caso do Brasil, a $TBM$ observada foi de __5,88 por 1.000 habitantes__.
+    - Se tivesse a estrutura etária de São Tomé & Príncipe, essa taxa seria de __3,69__.
+
+$\looparrowright$ Ou seja, os resultados da padronização direta mostram que, independentemente de qual população seja escolhida como padrão, a $TBM$ padronizada de São Tomé & Príncipe seria ainda mais elevada que a brasileira e que só não o é em razão da composição etária.
+
+\framebreak
+
+- A padronização pode ser usada não apenas para comparação entre localidades distintas, mas também quando se pretende estudar um mesmo local em vários pontos no tempo. 
+- __Por exemplo:__ comparar a TBM no Brasil em 1980 e 2010. 
+    + A estrutura etária no país muda ao longo do tempo, de forma que a comparação sem a padronização das taxas pode levar a interpretações equivocadas.
+
+## Próxima aula
+
+- Medidas Básicas de Mortalidade __(continuação)__.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Refaça o exemplo da padronização direta considerando Rondônia como a população padrão. -->
+<!-- - Pequeno Trabalho 02: será postado no Moodle. -->
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final02.jpg'))
+
+```
+
