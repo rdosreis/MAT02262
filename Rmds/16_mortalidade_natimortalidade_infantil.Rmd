@@ -1,0 +1,241 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Medidas básicas de mortalidade: natimortalidade e mortalidade infantil"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Taxa de natimortalidade {.allowframebreaks}
+
+$\looparrowright$ Com a exceção da Guiné-Bissau, todos os países de língua portuguesa exigem o __registro de natimortos__ (nados mortos, óbitos fetais), mas as definições operacionais do termo variam. 
+
+- Convém consultar algumas definições da \structure{OMS}.
+
+\framebreak
+
+\begin{mybox}{Óbito fetal (perda fetal ou morte fetal)} 
+é ``a morte de um produto da concepção, antes da expulsão ou da extração completa do corpo da mãe, independente da duração da gestação: indica o óbito o fato de o feto, depois da separação, não respirar nem apresentar nenhum outro sinal de vida, como batimentos do coração, pulsações do cordão umbilical ou movimentos efetivos dos músculos de contração voluntária.'' Em 1996, com a entrada em vigor a 10ª Revisão da Classificação Internacional de Doenças (CID-10), passou-se a considerar como \textbf{limite inferior} ``os produtos de gestação extraídos ou eliminados do corpo da mãe a \textbf{partir de 22 semanas de gestação (peso equivalente a 500 g)}''.
+\end{mybox}
+
+\framebreak
+
+\begin{mybox}{Natimorto} 
+é o produto do nascimento de um feto morto. No Brasil, considera-se feto morto aquele que nasce pesando mais de 500 g e que não tem evidência de vida depois de nascer.
+\end{mybox}
+
+\begin{mybox}{Aborto espontâneo}
+O produto da gestação extraído ou eliminado antes das 22 semanas.
+\end{mybox}
+
+\framebreak
+
+- No caso brasileiro, o __Conselho Federal de Medicina determinou__, mediante a Resolução 1601 de 2000, que "em caso de morte fetal os médicos que prestaram assistência à mãe ficam obrigados a __fornecer a declaração de óbito do feto__, quando a __gestação tiver duração igual ou superior a 20 semanas__ ou o feto tiver peso corporal igual ou superior a 500 (quinhentos) gramas e/ou estatura igual ou superior a 25 cm."
+    - Entretanto, nem todos os países adotam a mesma definição. 
+- Prazos de 22, 24 e particularmente 28 semanas também são comuns e alguns países adotam o critério de 1000 gramas, em vez de 500 gramas.
+
+\framebreak
+
+Só o Brasil e Portugal têm condições de usar estes dados para publicar estimativas diretas da \structure{taxa de natimortalidade} ou \structure{taxa de mortalidade fetal} $(TMF)$, que é definida da seguinte forma:
+
+$$
+TMF = 1000 \times \frac{\mbox{Número de nascidos mortos}}{\mbox{Nascidos vivos e nascidos mortos no período}}.
+$$
+
+\framebreak
+
+$\looparrowright$ Como o conceito usado no Brasil é relativamente abrangente, a sua TMF tende a aumentar em comparação com outros países que usam definições mais restritivas.
+- Fora do âmbito dos países mais desenvolvidos, onde existem boas estatísticas a respeito, as estimativas existentes geralmente se baseiam em informação obtida por meio de pesquisas amostrais.
+- Em 2016, a revista \structure{Lancet} publicou um levantamento das melhores estimativas disponíveis com base nos dados existentes.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'natimortalidade.png'))
+
+```
+
+# Medidas de mortalidade infantil {.allowframebreaks}
+
+- As medidas de mortalidade na infância recebem destaque por sua relevância como \structure{indicadores de saúde} e \structure{qualidade de vida} utilizados em comparações internacionais e em metas globais como os Objetivos de Desenvolvimento do Milênio (ODM) entre 1990 e 2015, e os Objetivos do Desenvolvimento Sustentável (ODS) entre 2015 e 2030 (United Nations, 2015).
+- A __infância compreende o período entre o nascimento e o quinto aniversário__, e as medidas, *diferentemente das taxas específicas*, têm em seu __denominador os nascimentos ocorridos no ano de referência__.
+
+\framebreak
+
+A mortalidade na infância pode ser desagregada nas seguintes __componentes__ segundo o tempo vivido ou idade no momento do óbito:
+
+1. Mortalidade em crianças de 1-4 anos completos
+2. Mortalidade infantil (menores de 1 ano), por sua vez desagregada em:
+    - Mortalidade Neonatal (0-27 dias)
+        +  Mortalidade Neonatal Precoce (0-6 dias)
+        +  Mortalidade Neonatal Tardia (7-27 dias)
+    - Mortalidade Pós-neonatal (28-364 dias)
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', out.height="40%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil.png'))
+
+```
+
+\framebreak
+
+$\looparrowright$ Ao detalhar a mortalidade na infância, tem-se uma das medidas mais conhecidas de mortalidade, a \structure{taxa de mortalidade infantil} $(TMI)$.
+
+- A TMI representa o __risco de morte entre o nascimento e o primeiro aniversário__.
+- Como uma probabilidade de morte no primeiro ano de vida, é uma medida que deve ser calculada no __sentido longitudinal__.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil02.png'))
+
+```
+
+\framebreak
+
+- No diagrama apresentado no __Gráfico 8.3__, a TMI correspondente aos anos 2014-2015 seria dada por $(D1 + D4)/N1$ e a correspondente aos anos 2015-2016 por $(D6 + D8)/N2$.
+    + Mas esta forma de cálculo tem dois inconvenientes.
+- Por um lado, com a exceção de alguns países como a França que possuem um __sistema de dupla classificação__ que permite conhecer os óbitos $D1$, $D4$, $D6$ e $D8$ separadamente, a maioria dos países só dispõe de números totais por ano calendário, ou seja $D4+D6$ ou $D8+D9$, de modo que não é possível calcular as referidas taxas diretamente.
+- Por outro lado, mesmo que elas pudessem ser calculadas, as taxas se refeririam a dois anos calendário consecutivos, o que tampouco é conveniente.
+
+\framebreak
+
+- Por esses motivos, muitas vezes se prefere uma estimativa para um período específico, o que requer uma abordagem transversal. Portanto, estima-se a mortalidade infantil em 2015 como $(D4+D6)/N2$ e em 2016 como $(D8+D9)/N3$.
+- Em situações onde $N1$, $N2$ e $N3$ são mais ou menos iguais, as diferenças introduzidas dessa forma não são muito relevantes, mas em casos onde, por exemplo, houver uma diminuição muito acentuada do número de nascimentos entre 2014 e 2015 $(N2 \ll N1)$, a TMI construída desse modo pode não ser inteiramente realista.
+
+\framebreak
+
+- Sendo assim, a TMI pode ser calculada a partir da seguinte fórmula:
+
+$$
+TMI = 1000 \times {}_{1}q_{0} = 1000 \times \frac{\mbox{Número de óbitos em menores de 1 ano no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+
+\framebreak
+
+- Tendo o número de nascimentos no denominador, a medida mais comum para estimar o risco de morte na infância é dada pela probabilidade de morte entre o nascimento e o quinto aniversário, denotada por ${}_{5}q_{0}$. 
+- Para tanto, constrói-se uma coorte hipotética a partir dos nascimentos observados no período e os óbitos ocorridos em menores de 5 anos naquele mesmo período.
+- Essa medida é também conhecida como \structure{taxa de mortalidade na infância}.
+- Como no caso da mortalidade infantil, usa-se o número de óbitos do período, mesmo sabendo que alguns dos óbitos de crianças menores de 5 anos registrados no período se referem a crianças nascidas nos 5 anos anteriores ao período.
+
+\framebreak
+
+- Tendo em conta essas ressalvas, a fórmula de cálculo para a \structure{taxa de mortalidade na infância} é dada por:
+
+$$
+{}_{5}q_{0} = 1000 \times \frac{\mbox{Número de óbitos em menores de 5 anos no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+
+\framebreak
+
+Como os óbitos não se distribuem de maneira uniforme nesse primeiro ano de vida, e as causas de morte expressam necessidades de diferentes políticas públicas e de saúde, em particular, a __TMI é desagregada nas suas componentes__:
+
+- Taxa de mortalidade neonatal $(TMNeo)$:
+
+\footnotesize
+
+$$
+TMNeo = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 0 a 27 dias no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+
+\normalsize
+
+- Taxa de mortalidade pós-neonatal $(TMPos)$:
+
+\footnotesize
+
+$$
+TMPos = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 28 a 364 dias no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+
+\normalsize
+
+\framebreak
+
+A __mortalidade neonatal__ é, por sua vez, __decomposta em__:
+
+- Taxa de mortalidade neonatal precoce $(TMNeoPrec)$
+
+\footnotesize
+
+$$
+TMNeoPrec = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 0 a 6 dias no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+\normalsize
+
+- Taxa de mortalidade neonatal tardia $(TMNeoTar)$
+
+\footnotesize
+
+$$
+TMNeoTar = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 7 a 27 dias no período}}{\mbox{Nascimentos ocorridos no período}}.
+$$
+\normalsize
+
+\framebreak
+
+- A distribuição dos óbitos infantis ao longo do primeiro ano de vida está associada ao nível da mortalidade.
+    + Em geral, observa-se que quanto mais elevada a mortalidade infantil, maior será a proporção de óbitos no período pós-neonatal.
+- A expressiva queda da mortalidade infantil observada em vários países em desenvolvimento está associada à redução, sobretudo, da componente pós-neonatal.
+- A essa componente estão associadas causas evitáveis por vacinação precoce ou por melhorias das condições nutricionais, de habitação e saneamento. 
+    + Ou seja, causas estreitamente relacionadas às condições de vida precárias e de pobreza.
+
+\framebreak
+
+$\looparrowright$ Para o cálculo da TMI e das suas componentes, recorre-se aos __dados das estatísticas vitais__, com o detalhamento do tempo vivido no primeiro ano para os óbitos infantis. 
+
+- No Brasil, os dados provenientes do \structure{Sistema de Informações de Mortalidade (SIM)} e do \structure{Sistema de Nascidos Vivos (SINASC)} permitem calcular de maneira direta as medidas da mortalidade na infância para algumas Unidades da Federação e municípios.
+- A cobertura deficiente das estatísticas vitais implica na necessidade de correção dos dados de óbitos e nascimentos para a obtenção de estimativas mais fidedignas.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil04.png'))
+
+```
+
+\framebreak
+
+\structure{?}
+
+## Próxima aula
+
+- Medidas Básicas de Mortalidade __(continuação)__.
+
+## Para casa {.allowframebreaks}
+
+- Com os dados da Tab. 8.8, refaça o cálculo das taxas de mortalidade na infância, mortalidade infantil e suas componentes.
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final03.jpg'))
+
+```
+
