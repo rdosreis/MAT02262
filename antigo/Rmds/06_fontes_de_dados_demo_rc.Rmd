@@ -1,0 +1,236 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Fontes de dados demográficos"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução {.allowframebreaks}
+
+- O censo, como visto na aula anterior, é a fonte por excelência para o estudo da situação demográfica de uma população em países em desenvolvimento e com sistemas estatísticos incompletos.
+- Há, no entanto, \structure{outras fontes de dados} igualmente importantes e complementares.
+- Vamos considerar as \structure{estatísticas contínuas de eventos vitais}.
+    + Ao tratar-se do cálculo de taxas e probabilidades associadas a certos processos demográficos, os censos costumam fornecer o \structure{denominador (a população sujeita ao risco de sofrer um evento)};
+    + já no caso das estatísticas vitais, sua função primordial -- e que justifica sua importância -- é fornecer o \structure{numerador (o evento demográfico)}.
+
+<!-- \framebreak -->
+
+- Apesar da enorme variedade de eventos que são recolhidos num sistema de estatísticas contínuas, vamos nos concentrar principalmente nos \alert{nascimentos}, com especial referência ao nascido vivo, e os \alert{óbitos}. 
+<!-- - Em segundo lugar, vamos fazer referência aos \structure{registros contínuos de população}. -->
+<!-- - E por último, às \structure{pesquisas amostrais}, de temporalidade variada, que servem, fundamentalmente, para complementar as informações já disponíveis a partir dos censos e das estatísticas contínuas. -->
+
+# O registro civil {.allowframebreaks}
+
+\begin{mybox}{Censo}
+levanta informação sobre \structure{todos os indivíduos de uma população} em \structure{momentos preestabelecidos}.
+\end{mybox}
+
+\begin{mybox}[colframe=purple, coltitle=purple]{Sistemas de estatísticas contínuas}
+como o \alert{registro civil}, visam documentar e legitimar as ocorrências de \alert{eventos que modificam o tamanho ou a composição da população ao longo do tempo}. 
+\end{mybox}
+
+- A \alert{unidade de enumeração do registro civil}, portanto, é o \alert{evento demográfico} enquanto a \structure{unidade de enumeração do censo} é o \structure{indivíduo}.
+
+\framebreak
+
+- Os registros civis são importante fonte para o estudo da \structure{dinâmica demográfica} de uma população.
+    - Ela é usada em vários terrenos, desde o puramente __jurídico__ até a preparação de __diagnósticos em saúde__ e __demografia__, tanto para o próprio __governo__ como para __agências privadas__.
+- Entretanto, a execução de análise demográfica com dados do registro civil é __dificultada pela baixa cobertura dos registros__ em muitos países e pelo __número__ muito __limitado de informações__ levantadas.
+
+## Sobre os dados registrados {.allowframebreaks}
+
+- Além das suas finalidades estatísticas, o registro civil cumpre uma função legal, uma vez que os eventos registrados modificam a situação das pessoas perante a lei;
+    - Está a cargo de instâncias burocráticas legais denominadas __cartórios__, __notariados__, __conservatórias de registo civil__ ou similares. 
+- O registro civil assegura o acesso a documentos fundamentais para o exercício da cidadania:
+    + Registro de identidade;
+    + Título de eleitor;
+    + Formalização de uniões;
+    + Adoções;
+    + Transmissão de heranças, etc.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='7%', out.height='15%'}
+
+knitr::include_graphics(here::here('imagens', 'documentos_rc.jpeg'))
+
+```
+
+\framebreak
+
+Em termos da sua função administrativa e legal:
+
+- Os registros de nascimentos, de óbitos e de casamentos __constituem uma prova legal do fato vital__, da __data__ e do __lugar onde o evento se produziu__ e têm diversas utilidades.
+
+\begin{mybox}{registro de nascimento}
+é o documento principal para a identidade do indivíduo, para a prova de grau de parentesco, da idade e de nacionalidade.
+\end{mybox}
+
+\begin{mybox}{registro de óbito}
+serve essencialmente para a obtenção da permissão para enterrar, mas serve também para o pagamento de seguros de vida, pensões e a regulamentação de sucessões.
+\end{mybox}
+
+\begin{mybox}{registro de casamento}
+serve para provar o local e data do casamento; regulamenta as posses materiais dos cônjuges, os direitos de herança ou pensão, a legitimidade ou ainda, a ascendência ou descendência.
+\end{mybox}
+
+\begin{mybox}{registro de divórcio ou anulação}
+aparte de regulamentar mudanças em alguns dos aspectos mencionados no registro de casamentos, é requisito para o direito a um novo casamento.
+\end{mybox}
+
+\framebreak
+
+- As leis que regem a função legal do registro civil variam no tempo e de país para país.
+- É ideal que, com a evolução das práticas sociais e sua regulamentação legal, as formas de registro também mudem. 
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='70%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'leis_rc.png'))
+
+```
+
+\framebreak
+
+- Em alguns países, como Portugal, a autoridade legal que controla o sistema de Registro Civil também está encarregada da emissão de documentos de identidade. 
+    + Isso facilita o cruzamento de dados entre os dois sistemas. 
+- No Brasil, 
+    + o \structure{Registro Civil} pertence aos cartórios, sob o controle do \structure{Ministério da Justiça};
+    + os __registros vitais__ são feitos pelos hospitais, sob o controle do Departamento de Informática do Sistema Único de Saúde (DATASUS), do __Ministério da Saúde__;
+    + a emissão de \alert{documentos de identidade} é feita pela \alert{Polícia Federal e/ou Secretarias de Segurança Pública} dos Estados;
+    + o \textcolor{darkgreen}{Cadastro da Pessoa Física (CPF)} pela \textcolor{darkgreen}{Receita Federal};
+    + e a \textcolor{darkpastelblue}{Carteira de Trabalho e Previdência Social (CTPS)} é emitida pelo \textcolor{darkpastelblue}{Ministério do Trabalho e Emprego}. 
+
+- Embora a integração desses sistemas esteja avançando, a fragmentação institucional e
+reorganizações de ministérios constantes dificultam o processo.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'dados_rc_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'dados_rc_02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'dados_rc_03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'dados_rc_04.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'dados_rc_05.png'))
+
+```
+
+## Sistemas de informação {.allowframebreaks}
+
+- No Brasil, uma melhoria importante nas estatísticas de nascimentos foi a introdução em 1990,
+pelo Ministério da Saúde, o
+
+\begin{mybox}{Sistema de Informação sobre Nascidos Vivos (SINASC)}
+com base na Declaração de Nascido Vivo (DN). O formato deste documento permite a anotação tanto de informações que dizem respeito ao registro legal do recém-nascido, como daquelas que possibilitam avaliar o processo gestacional, e a situação da mãe e da criança na época do nascimento. O registro do SINASC expandiu consideravelmente a abrangência das informações outrora recolhidas pelo Registro Civil.
+\end{mybox}
+
+\framebreak
+
+- Em relação às estatísticas de óbitos, no Brasil, o Ministério da Saúde mantém o 
+
+\begin{mybox}{Sistema de Informações sobre Mortalidade (SIM)}
+com mais informações do que as recolhidas pelo IBGE junto aos cartórios, principalmente no que se refere à causa de morte. Neste caso, a informação não é remetida por meio de mapas estatísticos já preenchidos, mas sim, diretamente pela primeira via do atestado de óbito. A segunda via permanece no cartório. Todas as primeiras vias são enviadas para o órgão responsável pelo processamento em cada estado. Estes órgãos preparam os mapas e anualmente fornecem a informação, em formato eletrônico, para o Ministério da Saúde. Os resultados finais são publicados anualmente na série Estatísticas de Mortalidade.
+\end{mybox}
+
+## Possíveis erros nos registros {.allowframebreaks}
+
+Os erros mais comuns contidos nos registros podem ser:
+
+- \structure{relativos à definição dos eventos:} causa da morte, estado civil, declaração incorreta da idade.
+- \structure{relativos às informações registradas:} _natimorto_ quando deveria ser _óbito infantil_, subregistro de nascimentos.
+- Além disso, é possível que as informações apresentem um atraso de registro "natural".
+    + Essas falhas irão refletir-se nos dados publicados.
+
+## Resultados {.allowframebreaks}
+
+- No site do \alert{\underline{\href{https://www.ibge.gov.br/}{IBGE}}}, no menu principal selecione \alert{Estatísticas > Sociais > População} e clique em \alert{\underline{\href{https://www.ibge.gov.br/estatisticas/sociais/populacao/26176-estimativa-do-sub-registro.html}{Sistema de Estatísticas Vitais}}}.
+    + Gráficos, tabelas, \alert{\underline{\href{https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=7135}{publicações}}}, entre outros.
+- O \alert{\underline{\href{https://registrocivil.org.br/}{Portal do Registro Civil}}} também apresenta algumas análises e arquivos de dados para _download_.
+
+## Estatísticas do Registro Civil 2021 {.allowframebreaks}
+
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%'}
+
+knitr::include_graphics(here::here('imagens', 'ev_21_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='85%'}
+
+knitr::include_graphics(here::here('imagens', 'ev_21_02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='85%'}
+
+knitr::include_graphics(here::here('imagens', 'ev_21_03.png'))
+
+```
+
+## Para casa {.allowframebreaks}
+
+- Explore as Estatísticas Vitais no site do IBGE e os dados do Portal do Registro Civil; apresente no Fórum Geral do Moodle os destaques em termos dos resultados que você encontrou.
+- Ler o capítulo 5 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Levantamentos por amostragem: PNAD, POF, etc.
+- Fotes de dados não convencionais.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'sample_survey.png'))
+
+```
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras03.jpg'))
+
+```
+

@@ -1,0 +1,137 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução {.allowframebreaks}
+
+- Nas aulas anteriores vários indicadores para quantificar a \structure{mortalidade} foram introduzidos, tais como:
+    + \structure{Taxa Bruta de Mortalidade (TBM)};
+    + \structure{Taxas Específicas de Mortalidade (TEMs)} por idade e sexo.
+
+- Entretanto, os indicadores introduzidos até agora, que quantificam o risco de morte em diferentes idades, não respondem todas as perguntas relevantes para caracterizar a mortalidade.
+
+\framebreak
+
+Por exemplo, 
+
+- Qual é a probabilidade de que uma pessoa da idade $x$ que está viva hoje ainda estará viva em 20 anos?
+- De todas as pessoas que nascem, quantas chegarão à idade de 65 anos?
+- Prevalecendo as condições atuais de mortalidade, qual é o número esperado de óbitos de mulheres entre 15-49 anos de idade, de uma coorte hipotética de 100.000 nascimentos?
+- Quantos anos as pessoas vivem em média?
+
+\framebreak
+
+- Para muitas aplicações práticas da análise demográfica são estas as perguntas que importam e uma mera sequência de \structure{TEMs} não é suficiente para respondê-las.
+- É preciso dispor de um instrumento mais abrangente que quantifica diversos aspectos ou diversas funções da mortalidade que interessam do ponto de vista das principais aplicações. 
+- Este instrumento é conhecido como a \structure{tábua de vida}, também chamada \structure{tabela de vida}, \structure{tábua de mortalidade} ou \structure{tabela de sobrevivência}.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='60%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'john_graunt.jpg'))
+
+```
+
+Considera-se que a primeira tábua de vida, da __Cidade de Londres__, foi publicada por \structure{John Graunt}, em 1662. No seu livro *__Natural and Political Observations Made upon the Bills of Mortality__*, Graunt apresentou o cálculo de uma coorte inicial de 100 pessoas, de que 64 chegaram à idade de 6 anos, 40 à idade de 16 e apenas 25 à idade de 26 anos exatos. 
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='20%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'edmond_halley.jpg'))
+
+```
+
+Em 1693, \structure{Edmond Halley} aperfeiçoou a técnica, com base nas estatísticas da Cidade de Breslau, na Alemanha, e apresentou um mecanismo de cálculo muito parecido com a forma como se calcula a tábua de vida hoje em dia.
+
+## Tipos de tábuas de vida {.allowframebreaks}
+
+- As tábuas de vida podem ser \structure{completas} (para idades 0, 1, 2, 3, 4, 5 etc.) ou \structure{abreviadas} (para idades 0, 1, 5, 10, 15 etc.). 
+    + As tábuas abreviadas são mais comuns. 
+- Uma tábua completa exige muita informação cuja qualidade precisa ser muito boa; as exigências de dados para as tábuas abreviadas são menores. 
+- Por outro lado, as tábuas completas são muito grandes e fornecem mais informação do que a maioria dos usuários precisa.
+
+$\looparrowright$ Devido às diferenças consideráveis que costumam existir entre a mortalidade masculina e feminina, __as tábuas de vida normalmente são divididas por sexo__.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%', fig.cap="Uma tábua de vida completa."}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%', fig.cap="Uma tábua de vida abreviada."}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='55%', out.height='75%'}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_03.png'))
+
+```
+
+## Funções do tempo de vida {.allowframebreaks}
+
+- A maioria das tábuas de vida começa com uma sequência de \structure{TEMs} ${}_{n}M_{x}$ e deriva o resto da tábua a partir daí.
+- A opção pela construção da tábua de vida a partir de ${}_{n}M_{x}$ se baseia em considerações práticas, já que em muitos casos a informação estatística de base vem neste formato. 
+- Mas em realidade, as \structure{funções da tábua de vida são equivalentes}, no sentido de que qualquer uma delas pode ser construída a partir de qualquer outra. 
+    + Em teoria seria possível (embora pouco usual) construir uma tábua de vida inteira a partir da série de dados que descrevem o __tempo médio__ que um indivíduo de idade exata $x$ ($x = 0, 1, 5, 10, 15, 20, 25$ etc. anos) ainda tem por viver (a função da tábua de vida conhecida como $e_x$).
+
+\framebreak
+
+Já foram mencionadas algumas das funções da tábua de vida. A seguir se mostra uma lista
+mais completa:
+
+- ${}_{n}m_{x}$: A Taxa Específica de Mortalidade da tábua de vida (ou da população estacionária) do intervalo etário de $x$ a $x+n$ anos exatos (ou $x$ a $x+n-1$ anos completos).
+- ${}_{n}M_{x}$: A Taxa Específica de Mortalidade correspondente na população observada, geralmente próxima mas não exatamente igual a ${}_{n}m_{x}$.
+- ${}_{n}q_{x}$: A probabilidade de morte do intervalo etário de $x$ a $x+n-1$ anos completos, ou seja, a probabilidade de que uma pessoa de $x$ anos exatos morra antes de alcançar a idade de $x+n$ anos exatos.
+- ${}_{n}p_{x}$: O complemento de ${}_{n}q_{x}$, ou seja ${}_{n}p_{x} = 1 - {}_{n}q_{x}$, a probabilidade de sobrevivência do intervalo etário de $x$ a $x+n-1$ anos completos.
+- $\ell_x$: O número de sobreviventes de uma coorte de $\ell_0$ nascidos vivos depois de $x$ anos. No caso onde $\ell_0 = 1$, nota-se que $\ell_x$ é equivalente com ${}_{x}p_{0}$, embora essa notação seja raramente usada.
+- ${}_{n}d_{x}$: O número de óbitos esperado entre uma coorte de $\ell_0$ nascidos vivos entre as idades de $x$ e $x+n-1$ anos completos.
+- ${}_{n}L_{x}$: O número de anos-pessoa vivido pela coorte de $\ell_0$ pessoas nascidas vivas e ainda vivas na idade de $x$ anos no intervalo de $x$ até $x+n$ anos exatos. Se todo o mundo sobrevive dos $x$ até os $x+n$ anos, este número será simplesmente $n \ell_x$, mas como algumas pessoas morrem durante o intervalo, o número efetivo será menor: $n \ell_x+n + {}_{n}a_{x} {}_{n}d_{x}$, onde ${}_{n}a_{x}$ é:
+    - ${}_{n}a_{x}$: Um fator de separação que expressa o número médio de anos vividos entre as idades $x$ e $x+n$ por pessoas vivas em $x$, mas que morrem antes de $x+n$. Normalmente este número é aproximadamente $n/2$, mas pode se afastar deste valor se há variações fortes da intensidade da mortalidade ao longo do intervalo.
+- ${}_{n}S_{x}$: A razão de sobrevivência do intervalo etário $(x,x+n)$ ou seja a proporção de pessoas com idades entre $x$ e $x+n$ anos exatos na população estacionária que sobreviverão até o próximo intervalo: ${}_{n}L_{x+n} / {}_{n}L_{x}$.
+- $T_x$: O número de anos-pessoa vivido pela coorte de $\ell_0$ pessoas nascidas vivas e ainda vivas na idade de $x$ anos até a extinção completa da coorte, ou seja, até a morte do último sobrevivente.
+- $e_x$: O número médio de anos vividos a partir da idade exata $x$. Em particular, $e_0$ simboliza a esperança de vida (também chamada expectativa de vida) ao nascer.
+
+## Próxima aula
+
+- Tábuas de vida: continuação.
+
+## Para casa {.allowframebreaks}
+
+- Verificar os dados disponíveis em: https://www.ibge.gov.br/estatisticas/sociais/populacao/9126-tabuas-completas-de-mortalidade.html
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final04.jpg'))
+
+```
+

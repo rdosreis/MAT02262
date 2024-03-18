@@ -1,0 +1,38 @@
+---
+title: "MAT02262 - Formulário Prova Área 2"
+output: pdf_document
+---
+
+## Caracterizações da distribuição por idade
+
+- $RDT = \frac{_{15}P_{0} + P_{65^{+}}}{_{50}P_{15}} \times 100$.
+- $RDJ = \frac{_{15}P_{0}}{_{50}P_{15}} \times 100$.
+- $RDI = \frac{P_{65^{+}}}{_{50}P_{15}} \times 100$.
+- $IE = \frac{P_{60^{+}}}{_{15}P_{0}} \times 100$.
+- $RCM = \frac{_{5}P_{0}}{_{35}P^{M}_{15}}$, em que $_{n}P_{x}^{M}$ representa a população de mulheres na faixa de amplitudo $n$ que começa na idade $x$.
+
+## Caracterização da distribuição por sexo
+
+- $RS_t = \frac{(\mbox{número de pessoas do sexo masculino})}{(\mbox{número de pessoas do sexo feminino})}\times 100$.
+    + $RS_x$ é a razão de sexos calculada por idade (ou faixa etária) $x$.
+
+## O crescimento da população
+
+\begin{eqnarray*}
+\mbox{Taxa Anual:}\quad && r = \left(\frac{P(t + \Delta t)}{P(t)}\right)^{1/\Delta t} - 1,\\
+\mbox{Taxa Instantânea:}\quad && r =  \frac{\mbox{ln}\left(P(t + \Delta t)/P(t)\right)}{\Delta t}.
+\end{eqnarray*}
+
+- $r_{inst.} = \mbox{ln}(1 + r_{anual})$.
+- $\mbox{Tempo de Duplicação} = \frac{\log(2)}{\log(1 + r_{anual})} \approx \frac{\mbox{ln}(2)}{r_{inst.}} = 0,6931/r_{inst.}$.
+
+## Medidas básicas de mortalidade
+
+- $TBM = 1000 \times \frac{\mbox{Número total de óbitos ocorridos no período}}{\mbox{População média no período}}$.
+- $TMF = 1000 \times \frac{\mbox{Número de nascidos mortos}}{\mbox{Nascidos vivos e nascidos mortos no período}}$.
+- *(mortalidade infantil)* $TMI = 1000 \times \frac{\mbox{Número de óbitos em menores de 1 ano no período}}{\mbox{Nascimentos ocorridos no período}}$.
+- *(mortalidade na infância)* ${}_{5}q_{0} = 1000 \times \frac{\mbox{Número de óbitos em menores de 5 anos no período}}{\mbox{Nascimentos ocorridos no período}}$.
+- $TMNeo = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 0 a 27 dias no período}}{\mbox{Nascimentos ocorridos no período}}$.
+- $TMPos = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 28 a 364 dias no período}}{\mbox{Nascimentos ocorridos no período}}$.
+- $TMNeoPrec = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 0 a 6 dias no período}}{\mbox{Nascimentos ocorridos no período}}$.
+- $TMNeoTar = 1000 \times \frac{\mbox{Número de óbitos com tempo de vida de 7 a 27 dias no período}}{\mbox{Nascimentos ocorridos no período}}$.

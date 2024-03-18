@@ -1,0 +1,180 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Medidas básicas de mortalidade: mortalidade por causas, mortalidade materna, morbidade e bases de informação"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Mortalidade por causas {.allowframebreaks}
+
+- Como foi discutido na Área 1, todos os países do mundo passaram (ou ainda estão passando) por um processo de __Transição Epidemiológica__, ou seja, a melhoria das condições de vida fez com que as pessoas deixassem de morrer por determinadas causas que eram comuns no passado, sobrevivessem por mais tempo e passassem a morrer em idades mais avançadas em razão de outras causas.
+- À medida que as condições de vida melhoram, a morte devido a causas relacionadas à fome, desnutrição e às doenças infectocontagiosas se torna menos frequente e começam a predominar as mortes por doenças do aparelho circulatório, neoplasias (causas endógenas) e causas externas. 
+- Medindo a distribuição dos óbitos por causas de morte, é possível analisar as condições de saúde, condições socioeconômicas da população e a qualidade dos serviços públicos, entre outros fatores, permitindo a elaboração de políticas públicas para prevenção e tratamento voltadas especificamente para enfermidades que mais levam a óbito.
+
+\framebreak
+
+- Só é possível fazer uma análise dos óbitos por causas porque existe uma \structure{Classificação Internacional de Doenças (CID)}.
+- Sob responsabilidade da Organização Mundial de Saúde desde 1948, a CID é revisada periodicamente.
+
+\framebreak
+
+- A __primeira possibilidade de análise__ para se mensurar o impacto de determinada causa de mortalidade numa população é realizar o cálculo de taxas específicas de mortalidade por essa causa, usando-se a população no meio do período estudado como denominador. 
+- Essas taxas são calculadas por 100.000 habitantes. 
+- **Alguns exemplos são:**
+    + taxa de mortalidade específica por AIDS (SIDA);
+    + taxa de mortalidade específica por acidentes de trânsito;
+    + taxa de mortalidade específica;
+    + taxa de mortalidade específica por doenças do aparelho circulatório.
+
+\framebreak
+
+- Outra possibilidade é a mensuração da mortalidade proporcional por grupos de causas.
+- Para o cálculo da **mortalidade proporcional por causas** deve-se **dividir o número de óbitos de residentes por causas definidas pelo número total de residentes**, sendo excluídas as mortes por causas mal definidas. O resultado é multiplicado por 100.
+
+\tiny
+
+$$
+\mbox{Mortalidade proporcional} = 100 \times\frac{\mbox{Númeor de óbitos de residentes por grupo de causas definidas}}{\mbox{Total de óbidos de residentes, sem mortes por causas mal definidas}}.
+$$
+\normalsize
+
+- É indicado que o cálculo seja feito separadamente para homens e mulheres.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_causas.png'))
+
+```
+
+# Mortalidade materna {.allowframebreaks}
+
+\begin{mybox}{Mortalidade materna}
+Segundo a definição da Organização Mundial de Saúde (OMS), a morte materna é ``a morte de uma mulher durante a gestação ou em até 42 dias após o término da gestação, independentemente da duração e da localização da gravidez, por causas relacionadas ou agravadas pela gravidez ou por medidas relacionadas a ela, mas não por causas acidentais ou incidentais''.
+\end{mybox}
+
+\framebreak
+
+- Trata-se se de um importante indicador de qualidade da saúde de um país, pois grande parte desses óbitos pode ser evitada com adequada atenção durante o período pré-natal, cuidados durante o parto e acompanhamento adequado durante o período de puerpério (período de 42 dias após o nascimento do bebê). 
+- Entretanto, em termos puramente numéricos se trata de um evento muito raro. Por exemplo, Cabo Verde só teve 1 morte materna em 2014, 5 em 2015 e 2 em 2016.
+- O número mundial de mortes maternas em 2017 foi 295.000, sendo que 196.000 ocorreram na África Subsaariana e apenas 7.800 na América Latina e 740 na Europa \structure{(WHO / UNICEF / UNFPA / World Bank Group / Population Division, 2019)}.
+
+\framebreak
+
+- Existem vários indicadores para a mortalidade materna, mas o principal é a \structure{Razão de Mortalidade Materna (RMM)}.
+- Nos países onde existe informação adequada, esta razão é calculada como o quociente entre o total de óbitos maternos (classificados de acordo com os códigos referidos) e o número de nascidos vivos; a RMM é sempre expressa por 100.000. 
+
+- A informação sobre crianças nascidas vivas é uma aproximação do número de mulheres grávidas e que, portanto, estariam expostas ao risco de morrer em razão da gravidez, parto e puerpério. 
+
+\framebreak
+
+- Um outro indicador de mortalidade materna que é usado às vezes quantifica o risco de morte por causas maternas ao longo da vida de uma mulher (Risco Vitalício de Mortalidade Materna ou RVMM) e que pode ser calculado como
+
+$$
+RVMM = 1 - (1 - RMM / 100.000)^{TFT},
+$$
+em que, TFT representa o número médio total de filhos que as mulheres têm ao longo das suas vidas.
+
+\framebreak
+
+- Há dois principais fatores que dificultam o monitoramento da mortalidade materna (Ministério da Saúde, 2009). O primeiro é o sub-registro das declarações de óbito em geral, que se caracteriza pela ausência do registro em cartórios. 
+- O segundo, mais específico, é a subinformação das causas de óbito, ou seja, o preenchimento inadequado da Declaração de Óbito dentro do serviço de atendimento hospitalar. 
+- Muitos óbitos que deveriam ser considerados maternos acabam sendo atribuídos a outras causas, seja porque não se sabia que a mulher estava grávida, porque ela morreu como consequência de um aborto clandestino inseguro ou porque o hospital preferiu atribuir a morte a outra causa já que uma morte materna sempre reflete mal na qualidade do serviço prestado.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height="60%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_materna.png'))
+
+```
+
+# Medidas básicas de morbidade {.allowframebreaks}
+
+- Para o estudo das condições de saúde de uma população é importante mensurar não apenas as causas de morte e os grupos populacionais mais afetados por essas causas, mas também as doenças que atingem a população -- podendo levar a óbito ou não.
+- Dois conceitos são essenciais quando se fala em mensurar de que forma as doenças afetam a população: \structure{incidência} e \structure{prevalência}.
+
+\framebreak
+
+\begin{mybox}{Incidência}
+se refere a casos novos de uma determinada doença registrados num período específico de tempo.
+\end{mybox}
+
+\begin{mybox}{Prevalência}
+se refere ao número total de casos de uma determinada doença, sejam eles novos ou velhos, num ponto no tempo.
+\end{mybox}
+
+\framebreak
+
+- Uma doença pode ter baixa incidência e alta prevalência, como é o caso do diabetes. 
+    + Embora o número de diagnósticos por ano seja relativamente baixo, é alto o número "acumulado" de pessoas com essa doença na população.
+- Por outro lado, no caso do resfriado comum, ocorre o contrário. 
+    + É alta a incidência e baixa a prevalência.
+
+\framebreak
+
+Fazendo uso desses conceitos é possível construir dois indicadores:
+
+- \structure{Taxa de prevalência:} calculada a partir da divisão do número de pessoas com a doença dividido pela população em risco, multiplicado por 100 ou 1.000 pessoas.
+- \structure{Taxa de incidência:} calculada a partir da divisão do número de pessoas que adoeceram no período dividido pelas pessoas-ano em risco multiplicado por por 100 ou 1.000 pessoas.
+
+\framebreak
+
+- Outro conceito importante é o de \structure{letalidade}, que mede a gravidade das doenças.
+- Ele é calculado a partir da divisão do número de mortes por uma doença específica num período de tempo determinado dividido pelo número de doentes por aquela doença no mesmo período multiplicado por 100.
+- Ainda que essas medidas sejam extremamente úteis para se avaliar as condições de saúde de uma população, elas são mais usadas na área de epidemiologia do que na demografia, propriamente, onde a mortalidade recebe maior atenção.
+
+# Bases de informação sobre mortalidade e morbidade {.allowframebreaks}
+
+- Existe uma grande variedade de bases de dados sobre os diferentes aspectos da mortalidade e morbidade, muitas das quais podem ser acessadas via internet. 
+- Além do \structure{SIM} e \structure{SINASC}, o \structure{DATASUS} fornece acesso a uma série de outras informações administrativas sobre saúde no site  http://datasus.saude.gov.br que podem ser processadas com o \structure{aplicativo TABNET}.
+
+\framebreak
+
+- Uma fonte de dados de interesse particular é o \structure{Sistema de Informações Hospitalares (SIH)}.
+    - Recolhe as informações da **Autorização de Internação Hospitalar (AIH)** da rede conveniada ao Sistema Único de Saúde (SUS) e permite estudos do perfil da morbidade (processo de saúde, enfermidades e morte).
+    - Cobre cerca de 70% das internações hospitalares do país. 
+    - As informações principais dizem respeito à idade, sexo, local de residência, local de internação, diagnóstico principal da internação etc. 
+    - A limitação principal do sistema é que não acompanha o indivíduo, mas a internação. Assim, permite múltiplos registros **(sobre-enumeração)**.
+
+\framebreak
+
+- Para o caso do Brasil, deve ser mencionada a \structure{Rede Interagencial de Informações para a Saúde (RIPSA)}, constituída em 1996, com apoio da **Organização Panamericana de Saúde (OPAS)**, que tem como propósito promover a disponibilidade adequada e oportuna de dados básicos, indicadores e análises sobre as condições de saúde e suas tendências, visando aperfeiçoar a capacidade de formulação, gestão e avaliação de políticas e ações públicas pertinentes.
+
+- Os produtos da Rede baseiam-se nos dados e informações gerados em parceria e referem-se tanto ao estado de saúde da população, quanto aos aspectos de natureza econômica e social que condicionam e influenciam a situação de saúde. 
+
+\framebreak
+
+- Parte significativa dessas instituições formalizou sua concordância em estabelecer parcerias para aperfeiçoar informações de interesse comum. 
+- Os \structure{Indicadores e Dados Básicos para a Saúde (IDB)} são produto dessa ação integrada, diretamente trabalhado pelas instituições responsáveis pelos principais sistemas de informação de base nacional utilizados -- Ministério da Saúde, IBGE, IPEA e Ministério da Previdência Social.
+- Também existe uma variedade de outras bases de dados \structure{(SISPRENATAL, SINAN, SISCAM/SISCOLO, SIAB)} sobre temas específicos na área da saúde.
+
+## Próxima aula
+
+- Exercícios de revisão da Área 2.
+
+## Para casa {.allowframebreaks}
+
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final04.jpg'))
+
+```
+

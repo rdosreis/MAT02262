@@ -1,0 +1,273 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Fontes de dados demográficos"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Introdução {.allowframebreaks}
+
+- Como brevemente discutido anteriormente, os dados mais usados pelos demógrafos dizem respeito aos \structure{fatos vitais:} __uniões__, __nascimentos__, __óbitos__ e __movimentos da população__.
+- A própria natureza desses dados, entre outras razões, dificulta o registro acurado dos mesmos.
+
+Segundo publicação especializada das \structure{Nações Unidas}^[Principles and Recommendations for a Vital Statistics System, Rev. 3 (2014).] um \structure{sistema de estatísticas vitais} deveria compreender:
+
+1. o registro oficial dos fatos vitais e demográficos \alert{(óbito, nascimento vivo, casamento, divórcio, adoção, migração, etc.)};
+2. a preparação dos informes estatísticos respectivos;
+3. a sua reunião e sistematização (consolidação);
+4. a elaboração, apresentação e divulgação das Estatísticas referentes àqueles fatos vitais.
+
+## Introdução {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'sistema_estat_vitais.png'))
+
+```
+
+\framebreak
+
+- Se esse sistema envolvesse de fato um registro contínuo, permanente e obrigatório dos fenômenos vitais e de suas características, nem haveria necessidade de censos.
+- Mas o que na prática existe é algo diverso e a seqüência acima raramente prevalece.
+- Por esse motivo, os demógrafos se vêem obrigados a utilizar \structure{vários tipos de fontes de dados} aplicando-lhes __técnicas diretas ou indiretas de análise__.
+
+\framebreak
+
+As fontes mais utilizadas são:
+
+a) os Registros Civis;
+b) os Censos;
+c) os Resultados de pesquisas de campo por amostragem.
+
+Pontos importantes:
+
+- disponibilidade;
+- regularidade;
+- qualidade dos dados demográficos.
+
+\framebreak
+
+### Levantamentos por amostragem
+
+- Estes fornecem interessantes informações qualitativas e quantitativas, particularmente se baseadas em __amostras representativas__ e __passíveis de expansão__.
+    - Elas são especialmente importantes para __complementar os censos e/ou registros civis__, preenchendo lacunas existentes nos dados, nas medidas, e na explicação de alguns achados.
+    - De maneira geral objetivam corrigir falhas dos censos e registros quanto à parte numérica, bem como sugerir explicações e interpretações dos aspectos demográficos da população pesquisada.
+
+## Dados demográficos: estoque/fluxo {.allowframebreaks}
+
+- Embora os estudiosos da população hoje em dia usem uma variedade de informações, o dado propriamente demográfico normalmente pode ser classificado como \structure{estatística de estoque} ou \structure{de fluxo}. 
+
+\begin{mybox}{estatística de estoque}
+características estáticas de uma população num determinado momento -- como se fosse uma fotografia: tamanho da população, a sua distribuição territorial, por sexo, por idade ou por características socioeconômicas.
+
+{\bf Fontes de dados:} censos ou inquéritos amostrais (``\emph{surveys}'').
+
+\end{mybox}
+
+\begin{mybox}{estatística de fluxo}
+trata da dinâmica populacional, ou seja, dos eventos que transformam essas características -- como se fosse um filme: nascimentos, óbitos, migração e mobilidade entre categorias socioeconômicas.
+
+{\bf Fontes de dados:} sistema de registro de eventos ou, mais raramente, um levantamento de passagens repetidas (``\emph{multi-round survey}'').
+
+\end{mybox}
+
+# Censo demográfico
+
+## Conceito
+
+Segundo a definição das \structure{Nações Unidas}^[United Nations (2017). Principles and Recommendations for Population and Housing Censuses, Revision 3. Statistical Papers, 67/Rev.3.], um
+
+\begin{mybox}{censo} 
+
+é ``o processo total de coleta (recolha), processamento, avaliação, análise e publicação ou divulgação de dados demográficos, econômicos e sociais referentes a todas as pessoas dentro de um país ou de uma parte bem definida de um país num momento específico até o menor nível geográfico considerado apropriado''.
+
+\end{mybox}
+
+## Conceito {.allowframebreaks}
+
+- __Critérios de um Censo Demográfico:__
+    1. Respaldo legal com especificação dos fins, orçamento, administração, sigilo e similares;
+    2. Periodicidade definida, de preferência de cinco ou dez anos;
+    3. Simultaneidade de todo o levantamento, com um tempo de referência predefinido;
+    4. Referência territorial pré-fixada. Normalmente, o território nacional;
+    5. Universalidade da enumeração dentro deste território;
+    6. Enumeração individual de todas as pessoas;
+    7. Disponibilidade dos resultados dentro de prazos compatíveis;
+    8. Capacidade de produzir estatísticas de pequenas áreas.
+    
+\framebreak
+
+- __No Brasil:__
+    + __Órgão responsável:__ Instituto Brasileiro de Geografia e Estatística (IBGE).
+    + __Periodicidade:__ decenal (com algumas exceções: Censos 1991, 2022). Veja aqui sobre a história dos censos demográficos no Brasil: \alert{\underline{\href{https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/33495-em-150-anos-conheca-a-historia-que-o-censo-conta}{Em 150 anos, conheça a história que o Censo conta}}}.
+    + __Simultaneidade:__ Data de referência do Censo de 2022 --- a investigação das características dos domicílios e das pessoas neles residentes terá como data de referência a meia-noite do dia 31 de julho para 1º de agosto de 2022. Portanto, de acordo com este critério, as pessoas nascidas após esta data serão excluídas do Censo, pois não farão parte do conjunto de moradores do domicílio na data de referência. Já as pessoas falecidas após esta data serão incluídas, pois eram moradoras do domicílio na data de referência.
+    + __Universalidade:__ Cobertura total (do território e da população).
+
+## Etapas do censo demográfico
+
+1. Pré-recenseamento
+    + Levantamento cartográfico;
+    + Definição do calendário;
+    + Recrutamento e treinamento da equipe de agentes censitários.
+2. Recenseamento:
+    + Aplicação dos questionários e supervisão técnica.
+3. Pós-Recenseamento:
+    + Revisão e avaliação crítica dos dados;
+    + Processamento (tabulação) e publicação.
+
+## Informações censitárias básicas
+
+1. Nome e sobrenome;
+2. Idade e sexo;
+3. Relação de parentesco com o chefe do domicílio;
+4. Estado civil;
+5. Ocupação e condição socioeconômica;
+6. Alfabetização e condição educacional;
+7. Lugar de nascimento e/ou nacionalidade;
+8. Lugar de residência;
+
+- Além destas, há muitas outras também importantes: local da última residência, parentes residindo no exterior, condições do entorno do domicílio, situação da residência, entre outras.
+
+## Questionários do Censo 2022 {.allowframebreaks}
+
+- O \alert{\underline{\href{https://censo2022.ibge.gov.br/np_download/censo2022/questionario_basico_completo_CD2022_atualizado_20220906.pdf}{Questionário Básico}}} da pesquisa conta com __26 questões__ e investiga as \structure{principais características do domicílio e dos moradores}. 
+- Além disso, uma parcela dos domicílios é selecionada para responder ao \alert{\underline{\href{https://censo2022.ibge.gov.br/np_download/censo2022/questionario_amostra_completo_CD2022_atualizado_20220906.pdf}{questionário da Amostra}}}, que conta com __77 questões__. 
+    + Inclui quesitos sobre temas específicos: características dos domicílios, identificação étnico-racial, nupcialidade, núcleo familiar, fecundidade, religião ou culto, deficiência, migração interna ou internacional, educação, deslocamento para estudo, trabalho e rendimento, deslocamento para trabalho, mortalidade e autismo.
+
+\framebreak
+
++ No Censo 2022, foram (serão) investigados cerca de 75 milhões de domicílios particulares permanentes do País. 
+    + O Questionário da Amostra foi (será) aplicado em aproximadamente __11%__ desse contingente, ou seja, cerca de 8,5 milhões de domicílios.
+
+::: {.block}    
+
+### Por que uma amostra?
+
+1. Para se disponibilizar determinações informações mais rapidamente;
+2. Para evitar a aplicação de um questionário excessivamente longo a toda a população recenseada (amostragem já na fase de coleta de dados);
+3. Para avaliação e conferência da qualidade das informações  do questionário universal.
+
+:::
+
+\framebreak
+
+A representatividade territorial das informações do universo e da amostra é diferente!
+
+- __Para o universo:__ Grande regiões, Meso e Microrregiões, Unidades Federativas, Municípios, Distritos e  \structure{Setor Censitário}.
+- __Amostra:__ Grande regiões, Meso e Microrregiões, Unidades Federativas, Municípios e \structure{Áreas de Ponderação}.
+
+\framebreak
+
+\begin{mybox}{Setor Censitário} 
+
+É a unidade territorial, formada por área contígua, respeitando-se os limites da divisão político-administrativa, do quadro urbano e rural legal e de outras estruturas territoriais de interesse, além dos parâmetros de dimensão mais adequados à operação de coleta.
+
+É a menor unidade de disseminação dos dados do conjunto Universo.
+
+\end{mybox}
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width='60%'}
+
+knitr::include_graphics(here::here('imagens', 'setor_censitario.png'))
+
+```
+
+\framebreak
+
+\begin{mybox}{Área de Ponderação} 
+
+Uma unidade geográfica, formada por um agrupamento de setores censitários, para a aplicação dos procedimentos de calibração das estimativas com as informações conhecidas para a população como um todo.
+
+O tamanho dessas áreas não pode ser muito reduzido (número de domicílios e população), sob pena de perda de precisão de suas estimativas.
+
+É a menor unidade geográfica para identificação dos microdados da amostra, de maneira a preservar o sigilo em relação aos informantes da pesquisa.
+
+\end{mybox}
+
+\framebreak
+
+\begin{mybox}{Expansão da Amostra}
+
+Em pesquisas por amostragem probabilística, cada unidade selecionada na amostra representa, também, outras unidades que fazem parte da população- alvo.
+
+Assim, para cada unidade domiciliar selecionada na amostra do Censo é associado um {\bf fator de expansão} ou {\bf peso}. 
+
+O peso obtido para uma determinada unidade domiciliar foi atribuído também a cada um de seus moradores.
+
+\end{mybox}
+
+## Resultados {.allowframebreaks}
+
+- Para o Censo de 2022: \alert{\underline{\href{https://censo2022.ibge.gov.br/etapas/divulgacao-dos-resultados.html}{Divulgação dos resultados (Prévia)}}}
+- Para os censos em geral o IBGE realiza publicações, como por exemplo a publicação \alert{\underline{\href{https://biblioteca.ibge.gov.br/visualizacao/periodicos/93/cd_2010_caracteristicas_populacao_domicilios.pdf}{Censo demográfico 2010: características da população e dos domicílios - resultados do universo}}}
+- Também é possível consultar os resultados através de tabelas pelo \alert{\underline{\href{https://sidra.ibge.gov.br/home/abate/brasil}{Sistema IBGE de Recuperação Automática - SIDRA}}}
+
+## Resultados (SIDRA) {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%'}
+
+knitr::include_graphics(here::here('imagens', 'sidra_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='85%'}
+
+knitr::include_graphics(here::here('imagens', 'sidra_02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%'}
+
+knitr::include_graphics(here::here('imagens', 'sidra_03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%'}
+
+knitr::include_graphics(here::here('imagens', 'sidra_04.png'))
+
+```
+
+## Para casa {.allowframebreaks}
+
+- Explore os resultados do Censo de 2010 no site do SIDRA; apresente no Fórum Geral do Moodle os destaques em termos das característica da população brasileira que você encontrou.
+- Ler o capítulo 4 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Fontes de dados: registro civil e PNAD.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'registro_civil.png'))
+
+```
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras02.jpg'))
+
+```
+

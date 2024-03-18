@@ -10,7 +10,7 @@ institute: |
   | \textsc{Instituto de Matemática e Estatística}
   | \textsc{Departamento de Estatística}
 date: |
-  | Porto Alegre, 2023
+  | Porto Alegre, 2024
 # header-includes:
 #   - \titlegraphic{\hfill\includegraphics[height=1.5cm]{logos/Logo-40-anos-estatistica.png}}
 ---
@@ -23,7 +23,7 @@ date: |
 
 - Desde __outubro de 2017__ eu sou Professor do __Departamento de Estatística__ e faço parte do Corpo Docente do __Programa de Pós Graduação em Epidemiologia__ da __Universidade Federal do Rio Grande do sul__ (UFRGS). 
 
-- Eu me formei __Bacharel em Estatística__ pelo Departamento de Estatística da UFRGS em __2007__, e __Mestre__ (__2010__) e __Doutor__ (__2014__) __em Estatística__ pelo __Programa de Pós Graduação em Estatística__ da __Universidade Federal de Minas Gerais__. 
+- Eu me formei __Bacharel em Estatística__ pelo Departamento de Estatística da UFRGS em __2008__, e __Mestre__ (__2010__) e __Doutor__ (__2014__) __em Estatística__ pelo __Programa de Pós Graduação em Estatística__ da __Universidade Federal de Minas Gerais__. 
 
 - Na graduação eu tenho me concentrado nas disciplinas de __Estatística Descritiva__, __Amostragem__ e __Modelos para dados correlacionados__.
 
@@ -44,10 +44,11 @@ date: |
 - __Professor:__ Rodrigo Citton Padilha dos Reis
     + e-mail: `citton.padilha@ufrgs.br` ou `rodrigocpdosreis@gmail.com` 
     + Sala: B215 do Instituto de Matemática e Estatística
+- __Monitora:__ Rafaela Gomes
 
 ## Aulas e material didático
 
-- __Aulas__ (teóricas e práticas)
+- __Aulas__ (teóricas e práticas^[Sempre que possível.])
     + Exposição e __discussão__ dos conteúdos
         - __Faremos leituras semanais de artigos e capítulos de livros__
     + Exemplos
@@ -64,7 +65,7 @@ date: |
 
 ## Aulas e material didático
 
-- __Aulas:__ segundas e quartas, das 18hs 30min às 20hs 10min, na __Sala 402 da FCE__ - Campus Centro
+- __Aulas:__ segundas e quartas, das 18h 30 às 20h 10, na __Sala 041 do Prédio 11209, Pavimento 04__ - Campus Centro
 
 ## Aulas e material didático
 
@@ -78,32 +79,27 @@ knitr::include_graphics(here::here('imagens','R-Excel.jpg'))
 
 ## Conteúdo programático {.allowframebreaks}
 
-\structure{Área 1}
-
-+ __Temas e conceitos básicos da demografia__
-    - Demografia, estatística social, geografia de população e outras abordagens do estudo da população
-    - A evolução demográfica no mundo, na América Latina e nos países lusófonos
-    - A relevância dos fatores demográficos para a dinâmica social e as políticas públicas
-+ __Dados e para a análise demográfica__
-    - O censo (recenseamento) demográfico
-    - Outras fontes de dados demográficos
-
-\framebreak
-
-\structure{Área 2}
-
-+ __Métodos básicos da análise demográfica__
-    + Aspectos estáticos da análise de população
-    + Características, eventos, proporções, taxas e probabilidades
-    + Medidas básicas de mortalidade e morbidade
-    + A tábua de vida
-    + Fecundidade e reprodução
-
-\structure{Área 3}
-
-+ __Métodos avançados da análise demográfica__
-    + Mobilidade espacial e migração
-    + Projeções e cenários demográficos
+1. Conceitos e definições
+2. Uma breve história da demografia
+    + Períodos pré-estatístico, protoestatístico e estatístico
+3. Algumas teorias
+    + Malthusiana, reformista, da explosão demográfica e da transição demográfica
+4. Fontes de dados demográficos
+    + Censo, registro civil e levantamentos por amostragem
+5. Fatores estáticos
+    + Estrutura por sexo, idade, sexo e idade (pirâmides etárias), indicadores de envelhecimento
+6. Fatores dinâmicos
+    + Crescimento e distribuição populacionais
+7. Medidas de mortalidade
+    + Taxas de mortalidade geral e específica por idade
+8. Medidas de fecundidade
+    + Taxas de fecundidade, natalidade e reprodução
+9. Técnicas de padronização
+    + Métodos de padronização direta e indireta
+10. Tábuas de vida
+    + Construção e interpretação de tábuas de vida, indicadores derivados da tábua de vida
+11. Métodos de projeção
+    + Linear, exponencial e logístico
 
 ## Avaliação
 
@@ -144,12 +140,15 @@ $$
 knitr::include_graphics(here::here('imagens','ctanlion.png'))
 ```
 
-### Principal
+### Principais
 
 \footnotesize
 
-FOZ, Grupo de. __Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa__. São Paulo: Blucher, 2021.
-Link: \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}
+FOZ, Grupo de. __Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa__. São Paulo: Blucher, 2021. Link: \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}
+
+SANTOS, Jair Lício Ferreira e LEVY, Maria Stella Ferreira e SZMRECSÁNYI, Tamás. __Dinâmica da população: teoria, métodos e técnicas de análise__. São Paulo: T.A. Queiroz, 1980.
+
+SOUZA, Luiz Eduardo Simões e PREVIDELLI, Maria de Fátima Silva do Carmo __Estudos populacionais: elementos de teoria e história__. Curitiba: IterSaberes, 2020.
 
 ### Complementares
 
@@ -160,3 +159,233 @@ Bandeira, M. D. __ESTATÍSTICA DEMOGRÁFICA__, Notas de aula, 2009.
 Carvalho, J. A. M., Sawyer, D. O. e Rodrigues, R. N. __INTRODUÇÃO A ALGUNS CONCEITOS BÁSICOS E MEDIDAS EM DEMOGRAFIA__, ABEP, 1998.
 
 Hakkert, R. __FONTES DE DADOS DEMOGRÁFICOS__, ABEP, 1996.
+
+# Estatística Demográfica
+
+## Uma notícia: crise demográfica {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-01.png'))
+```
+
+\scriptsize
+
+A Deutsche Welle (DW) é a rede internacional de notícias da Alemanha.
+
+\framebreak
+
+\normalsize
+
+Alguns especialistas alertam por uma **\alert{bomba relógio demográfica}** na Europa.
+
+- Os europeus estão **\alert{vivendo cada vez mais}** e **\alert{tendo cada vez menos filhos}** 
+    - Continente possui a **\alert{população mais velha do mundo}**
+- Problemas que vão desde uma **\alert{sobrecarga no sistema de saúde}** quem vai pagar as **\alert{aposentadorias}** mas também afeta o **\alert{mercado de trabalho}** e até o **\alert{crescimento da economia}**
+- O problema é sério e requer mudanças profundas.
+    + O que fazer? Trazer emigrantes? Criar política de incentivos à natalidade?
+
+\framebreak
+
+- Em 2022 a **\alert{população da Europa encolheu}** pelo segundo ano seguido.
+    + O número de europeus que morreram ultrapassou a quantidade de nascimentos e de pessoas que emigraram para o continente.
+- Isso é uma **\alert{tendência}** na região.
+- A **\alert{média de idade}** na Europa é de **\alert{44 anos}**.
+    + Isso é 14 anos a mais do que o resto do mundo;
+    + A média no Brasil é de 33 anos.
+- nesse momento mais de **\alert{445 milhões de pessoas}** vivem na União Europeia. 
+
+\framebreak
+
+Vamos ver como a **\alert{pirâmide demográfica}** da região mudou no tempo;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-02.png'))
+```
+
+\framebreak
+
+A base que (crianças e jovens) foi ficando cada vez mais estreita;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-03.png'))
+```
+
+\framebreak
+
+O corpo foi engordando e o topo também;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-04.png'))
+```
+
+\framebreak
+
+O que mostra que cada vez mais pessoas estão na terceira idade.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-05.png'))
+```
+
+\framebreak
+
+E por que isso tem acontecido?
+
+- Os europeus têm vivido mais.
+    + Avanços na qualidade de vida e na saúde/medicina.
+- Ao mesmo tempo a **\alert{taxa de fertilidade}** tem caído e atualmente está em **\alert{1,53}** (cada mulher tem na média 1,53 filho).
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='50%', out.width='70%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-06.png'))
+```
+
+\framebreak
+
+- Muitos países europeus têm **\alert{políticas}** para incentivar pessoas a terem filhos.
+    + Na Alemanha, o estado paga aos pais **\alert{250 euros por cada filho}** e após o nascimento os pais têm **\alert{14 meses de licença}** que eles podem dividir entre eles.
+    - Mas mesmo assim a taxa de fertilidade alemã está em 1,53.
+- O país europeu com a **\alert{taxa mais alta}** é a França com **\alert{1,86}**.
+    + A taxa necessária para **\alert{manter a população do mesmo tamanho}** é **\alert{2,1}**.
+
+\framebreak
+
+Mas por que uma **\alert{população em queda}** é um problema?
+
+- Alguns veêm isso como algo muito ruim que **\alert{desacelera o crescimento}** e se transforma em um **\alert{problema para economia}** de todo um país.
+- Outros veêm um certo alarmismo nessa abordagem já que **\alert{mais cedo ou mais tarde}** não só a Europa, mas **\alert{todas as populações vão começar a encolher}**.
+    - Também e para o meio ambiente pode até ter um lado positivo; **\alert{menos pessoas}** significa que são necessários **\alert{menos recursos naturais}** e menos impacto no planeta.
+
+\framebreak
+
+Mas o **\alert{fato}** é que os **\alert{europeus estão vivendo mais tempo do que nunca}** e a população tem envelhecido.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-07.jpg'))
+```
+
+\framebreak
+
+Isso representa um desafio para o qual a sociedade tem que se preparar e se adaptar em vários aspectos.
+
+- Uma população mais velha e menos nascimentos significam uma queda na quantidade de pessoas com idade de trabalhar, a chamada **\alert{população economicamente ativa}** (entre 15 e 64 anos).
+    + Na Alemanha eles são somente **\alert{55\%}** da população.
+- Essa parcela da sociedade **é quem paga os impostos para manter o sistema** funcionando.
+
+\framebreak
+
+Ao mesmo tempo a **\alert{expectativa de vida}** tem crescido.
+
+- Significa que as pessoas vão viver mais tempo como aposentados.
+    + Uma trabalhadora francesa deve **\alert{em média viver 27 anos da vida como aposentada}**
+    + Em termos de qualidade de vida isso é genial, mas é preciso adaptar o sistema para **essa conta fechar**.
+
+\framebreak
+
+Quais são as soluções?
+
+- Se as pessoas estão vivendo mais e melhor então **é natural**^[(?)] que ela se aposenta em mais tarde.
+    + Mas mexer na aposentadoria é sempre um assunto super polêmico que tem gerado discussões em todo o continente.
+    
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='50%', out.width='80%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-08.png'))
+```
+
+## Uma notícia: crise demográfica {.allowframebreaks}
+
+- Alguns países já vincularam a idade da aposentadoria a expectativa de vida como é o caso da Finlândia.
+    - A expectativa de vida cresce e automaticamente a idade da aposentadoria aumenta também.
+    
+\framebreak
+
+Mas e a **\alert{imigração}**?
+
+- A imigração pode ajudar.
+    + Com imigração ucraniana, a população alemã deve chegar a **\alert{84 milhões}** esse ano.
+    + Mas as **\alert{estimativas}** do Departamento de Estatística Alemão são que **\alert{se 290 mil pessoas emigrarem}** para Alemanha todos os anos, a **\alert{população deve crescer}** para **\alert{85 milhões em 2031}**, mas no longo prazo, **\alert{em 2060}**, **\alert{cairia}** novamente para **\alert{83 milhões}**.
+
+- Estudos mostram que ao contrário do que se pensava tanto a imigração quanto a fertilidade não resolvem o problema. **(!)**
+
+## Uma outra notícia: crise demográfica {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='50%', out.width='80%', paged.print=FALSE}
+knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-09.png'))
+```
+
+## Estatística Demográfica
+
+Algumas questões:
+
+- Como calcular quantidades que caracterizam a população no tempo e espaço, tais como: tamanho da população; distribuição etária; expectativa de vida; taxas de natalidade/fertilidade/mortalidade; tendências de (de)crescimento populacional; estimativas/projeções; etc.?
+
+- Quais os dados utilizados para calcular tais quantidades?
+
+- Quais os fatores que influenciam estas quantidades?
+
+- Qual o impacto que estas quantidades causam nos sistemas econômicos, de saúde, de ensino, entre outros de um estado-nação?
+
+Estas são questões que pretendemos responder ao longo do semestre.
+
+## Veja também
+
+- https://www.dw.com/pt-br/brasil-envelhece-como-a-europa/a-68194603
+- https://www.dw.com/pt-br/dw-revista-a-bomba-rel%C3%B3gio-demogr%C3%A1fica-na-europa/audio-65103565
+- https://www.dw.com/pt-br/todos-os-pa%C3%ADses-europeus-t%C3%AAm-taxas-de-natalidade-insuficientes/a-3938486
+
+<!-- a -->
+
+<!-- Alemanha nesse momento busque migrantes -->
+<!-- qualificados revelo recentemente até um -->
+<!-- plano para atrair mão de obra seria a -->
+<!-- criação de tipo um Green Card alemão a -->
+<!-- gente fez um vídeo sobre esse assunto e -->
+<!-- vale a pena dar uma olhada -->
+<!-- mas você deve lembrar que a entrada de -->
+<!-- imigrantes principalmente refugiados na -->
+<!-- Europa tem gerado debate sempre -->
+<!-- acalorados né E tem criado o contexto -->
+<!-- para que grupos ultranacionalistas -->
+<!-- cresçam a Polônia é Hungria por exemplo -->
+<!-- são dois países governados por Ultra -->
+<!-- nacionalistas tem tentado criar -->
+<!-- políticas radicais contra a imigração e -->
+<!-- de incentivo a pessoas a ter filho a -->
+<!-- Polônia tem a segunda pior taxa de -->
+<!-- natalidade do continente só fica atrás -->
+<!-- de Portugal os números têm melhorado mas -->
+<!-- não são suficientes e tem sido ofuscados -->
+<!-- por uma migração de poloneses para -->
+<!-- Europa ocidental mas tem muitos outros -->
+<!-- países que já fazem isso há décadas com -->
+<!-- auxílio sociais para as mães e para os -->
+<!-- pais a gente já falou das Políticas de -->
+<!-- incentivo a fertilidade na Alemanha -->
+<!-- agora olha só essa curiosidade -->
+<!-- descoberta por especialistas o fato dos -->
+<!-- homens se envolverem mais nas tarefas de -->
+<!-- criar filhos como na Escandinávia por -->
+<!-- exemplo isso tem um impacto Positivo na -->
+<!-- taxa de natalidade dos países porque -->
+<!-- Claro tira o peso da criação do filho -->
+<!-- das costas só da mãe -->
+
+<!-- Elas podem até amortecer mas não mudam a -->
+<!-- tendência de que a população europeia -->
+<!-- está envelhecendo e vai diminuir Mas e -->
+<!-- se eu te disser que algumas pessoas têm -->
+<!-- visto uma oportunidade para crescimento -->
+<!-- nisso muita gente associa profissionais -->
+<!-- mais velhos com maiores custos e -->
+<!-- lentidão mas existem estudos aqui na -->
+<!-- Europa que mostram que é exatamente o -->
+<!-- contrário criar uma mão de obra que -->
+<!-- mistura e gerações diferentes tem um -->
+<!-- efeito direto na produtividade da -->
+<!-- empresa e é um bom caminho até para -->
+<!-- inovação existem diversos programas para -->
+<!-- integração de mão de obra mais velha nas -->
+<!-- empresas e cada vez mais é possível ver -->
+<!-- iniciativas contra velhofobia e -->
+<!-- incentivos para inserir pessoas mais -->
+<!-- velhas no mercado de trabalho e assim -->
+<!-- permite que elas possam continuar -->
+<!-- trabalhando e contribuindo por muito -->
+<!-- mais tempo -->

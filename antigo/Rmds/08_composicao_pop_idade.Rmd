@@ -1,0 +1,206 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Aspectos estáticos da análise de população: a idade"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# A idade como conceito demográfico central
+
+## Estatísticas demográficas {.allowframebreaks}
+
+\begin{mybox}{Quantidades de estoque}
+descrevem uma característica ou situação existente num determinado momento.
+\end{mybox}
+
+\begin{mybox}{fluxo}
+quantificam os processos que mudam tal situação.
+\end{mybox}
+
+\framebreak
+
+- A maior parte da análise demográfica se ocupa com a \structure{dinâmica da população}.
+    + Como as variáveis de fluxo, tais como \structure{nascimentos, óbitos e migrações}, afetam as variáveis de estoque.
+- Mas antes de entrar nesta análise, vale a pena primeiro olhar alguns \structure{conceitos descritivos de população} que se baseiam nas variáveis de estoque.
+
+## A centralidade do conceito de "idade" {.allowframebreaks}
+
+- Quase não existe qualquer indicador na demografia cujo significado não seja condicionado pelo fator idade.
+- A pergunta \alert{``qual é a probabilidade de que uma pessoa atualmente viva continue viva por mais 10 anos?''} tem pouco sentido sem saber a idade (e o sexo) atual da pessoa.
+- Da mesma forma, a pergunta \alert{``qual é a probabilidade de que uma mulher tenha um filho durante o próximo ano?''} é difícil de responder sem saber a sua idade.
+
+\framebreak
+
+- O conceito de \structure{idade exata} se refere a um número matemático que não permite nenhuma ambiguidade.
+    + 15 anos __é exatamente__ 15,0000000 anos, não 15,0000001, nem 14,99999999.
+- Mas evidentemente não existe nenhuma pessoa que tenha exatamente 15 anos neste sentido excessivamente restrito.
+- Por isso, o conceito exato de idade não é usado para identificar as idades de pessoas específicas, mas só para delimitar \structure{faixas etárias} (também chamadas "grupos etários") ou para calcular médias.
+    + Por exemplo, quando se fala das \alert{pessoas com menos de 15 anos}, a idade exata de 14,9999 anos é incluída neste grupo, mas a idade exata de 15,0000 anos não. 
+
+\framebreak
+
+- Por outro lado, quando comumente se fala de uma pessoa com a idade de 14 anos, sem algarismos atrás da vírgula, a ideia subjacente é a de \structure{idade em anos completos}.
+- Uma pessoa assim descrita pode ter qualquer idade exata entre 14,0000 e 14,9999 anos, mas não pode ter 15,0000 anos. 
+- A idade média, em termos exatos, destas pessoas não é 14,0, mas 14,5 anos (se estiverem distribuídas uniformemente).
+    + Atenção com a construção de faixas etárias a partir da idade em anos completos.
+
+## Notação para quantidades demográficas {.allowframebreaks}
+
+- A idade é simbolizada por $x$^[Em outros textos também se pode encontrar o símbolo a para idade (de "age", em inglês e "âge", em francês), mas esta convenção parece menos apropriada para a língua portuguesa ou espanhola.];
+- A amplitude de um intervalo etário por $n$.
+- Números absolutos são simbolizados por maiúsculas:
+    + $P$ para população;
+    + $D$ para defunções^[Falecimento. Alguns autores usam $O$ (de "óbitos") para as defunções, mas esta prática distancia-se desnecessariamente da internacional ("deaths", em inglês, "décès", em francês, "defunciones" em espanhol).];
+    + $N$ para nascimentos^[O símbolo $N$ parece mais apropriado do que $B$ (de “births”) que geralmente se usa na literatura de língua inglesa.]. 
+
+## Notação para quantidades demográficas {.allowframebreaks}
+
+- Sendo assim, $_{n}P_x$ denota a população contida no intervalo de $n$ anos que começa na idade exata de $x$ anos
+- Se $n = 5$ e $x = 15$, então a população contida no intervalo de $5$ anos que começa na idade exata de $15$ anos é 
+
+$$
+_{5}P_{15} = \mbox{População de 15 a 19 anos completos (15,0000 a 19,9999 anos exatos)}.
+$$
+
+\framebreak
+
+- Para sinalizar que esta informação se refere à situação num determinado momento $t$ (de "tempo" ou "time", em inglês), acrescenta-se esta informação entre parênteses:
+
+$$
+_{5}P_{50}(2015)
+$$
+representa a __população de 50-54 anos completos existente em 1º de janeiro de 2015__.
+
+- Para o último intervalo, que é aberto para cima, geralmente se usa a notação $x^{+}$, omitindo o
+índice da esquerda, ou então se usa $x$ com um índice $\omega$ na esquerda:
+
+$$
+_{\omega}P_{x}(t) = P_{x^{+}}(t).
+$$
+
+\framebreak
+
+- Quando a quantidade é de fluxo, como nascimentos ou defunções, e não de estoque, é preciso indicar tanto o início como o final do período de observação:
+    + $_{5}D_{50}(2015,2020)$ representa as __defunções ocorridas entre o 1º de janeiro de 2015 e o 31º de dezembro de 2019, de pessoas que no momento da sua morte tinham 50-54 anos completos__.
+- Quando se trata de nascimentos, em vez de defunções, os símbolos $x$ e $n$ \structure{se referem às idades das mães}, não dos filhos. 
+- Ao tratar-se de números proporcionais, taxas ou probabilidades, geralmente se usam letras minúsculas.
+    + Por exemplo $_{5}p_{50}(2015)$ representa a __proporção da população com 50-54 anos completos no 1º de janeiro de 2015__.
+
+## Pirâmide etária {.allowframebreaks}
+
+- Um dos recursos mais conhecidos para representar a \structure{distribuição das idades} numa população é a \structure{pirâmide etária} (que geralmente é específica por sexo também).
+- Trata-se de um diagrama com a população masculina na esquerda e a população feminina na direita.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='40%'}
+
+knitr::include_graphics(here::here('imagens', 'piramide_etaria_pop.png'))
+
+```
+
+\framebreak
+
+- O \structure{tamanho da população} em cada faixa etária, que pode ser em __números absolutos__ ou em __percentuais__, é representado por uma série de \structure{barras horizontais}, com a idade mais baixa em baixo e a idade mais alta em cima.
+- Quando o tamanho das faixas é formulado como porcentagem ou proporção, é importante que tais proporções sejam calculadas sobre a população total, não a população de cada sexo separadamente. 
+    - Este último erro é bastante comum e impossibilita a comparação visual entre os números de homens e mulheres num dado grupo etário. 
+- As idades podem ser representadas em termos de idades simples ou como intervalos quinquenais ou decenais.
+
+\framebreak
+
+É relativamente fácil programar uma pirâmide etária em EXCEL, usando os seguintes passos:
+
+1. Organizar os dados em três colunas: uma com a definição das faixas (0-4, 5-9, 10-14 etc.), uma com as populações masculinas e uma com as populações femininas.
+2. A primeira coluna deve ser formatada como "Texto", para que EXCEL não a leia como datas ou como subtrações de números.
+3. Os números da segunda coluna devem ser postos com sinal negativo. Depois, na lista de opções de formatação de números, se deve escolher "Personalizado" e digitar a seguinte sequência de caracteres: `#####`; `#####`. Se os números são grandes, pode-se acrescentar um ou dois `#`. O efeito desta especificação é que o EXCEL continua tratando estes números como negativos, mas sem mostrar o seu sinal.
+4. Selecionar as três colunas e solicitar a sua representação como gráfico de barras horizontais acumuladas.
+5. Em Selecionar Dados marcar a primeira série como "Homens" e a segunda como "Mulheres".
+6. Escolher um título que representa o país e o ano ao que se referem os dados.
+7. Escolher uma “Largura do Espaçamento” pequena entre as barras, de 5 ou 6%.
+8. Escolher a colocação dos rótulos da primeira coluna na esquerda (“Inferior”) e não no meio.
+9. Eventualmente ajustar a escala horizontal, para melhor usar o espaço disponível.
+
+\framebreak
+
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='70%', fig.cap='Exemplo de uma pirâmide etária com os dados do Censo de Angola, 2014.'}
+
+knitr::include_graphics(here::here('imagens', 'piramide_angola.png'))
+
+```
+
+\framebreak
+
+- Note que a pirâmide etária de Angola, com a sua \alert{base larga e ápice estreito}, é típica de um país com uma \alert{alta taxa de crescimento demográfico}, alimentado por uma \alert{natalidade muito elevada}.
+- A pirâmide do Brasil em 1970 era parecida com o gráfico da Figura 1, mas em 2015 a parte inferior da pirâmide brasileira já era retangular e a parte triangular característica da pirâmide angolana só aparecia a partir dos 35 anos.
+
+\framebreak
+
+- É preciso alertar para uma interpretação equivocada que às vezes se faz de pirâmides como a de Angola, e as diferenças com pirâmides menos triangulares como as do Brasil e especialmente Portugal.
+
+\begin{mybox}{Segundo essa interpretação}
+a forma da pirâmide de Angola seria expressiva de uma mortalidade muito alta, na medida em que nascem muitas pessoas, mas aparentemente poucas chegam às idades mais avançadas. O \textbf{erro} deste tipo de interpretação \textbf{reside em pensar nas diferentes faixas etárias da pirâmide etária como se fossem diferentes fases na vida de um mesmo conjunto de pessoas} (uma \structure{``coorte''}). Mas não é assim. As faixas etárias representam pessoas nascidas em distintas épocas quando a população do país tinha tamanhos diferentes.
+\end{mybox}
+
+\framebreak
+
+- As pessoas na pirâmide de Angola que atualmente têm 60-64 anos, por exemplo, podem ter sofrido um atrito significativo devido à mortalidade elevada, mas a razão principal pelo seu número relativamente reduzido é que já nasceram em números muito menores do que os números atuais de nascimentos, pois 60-65 anos atrás a população como um todo era muito menor do que hoje em dia.
+- Já em Portugal isso não acontece porque não houve tanto crescimento da população entre 1950 e 2011 como houve em Angola devido principalmente a uma natalidade muito mais baixa em Portugal. 
+    - Em realidade o número de nascimentos em Portugal em 1950 era maior do que em 2015. 
+- Portanto, a natalidade e não a mortalidade é o determinante principal da forma da pirâmide.
+
+\framebreak
+
+- Uma situação mais peculiar existe em Macau, cuja pirâmide etária se mostra no Figura 2.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='50%', fig.cap='População por sexo e idade (distribuição relativa): Exemplo de uma pirâmide etária com os dados do Censo de Macau, 2011.'}
+
+knitr::include_graphics(here::here('imagens', 'piramide_macau.png'))
+
+```
+
+\framebreak
+
+- A forma geral da pirâmide é mais ou menos parecida com a de Portugal, no sentido de que a maior parte da população se encontra nas faixas etárias intermédias, entre 20 e 60 anos.
+- Entretanto, esta característica de alargamento no meio é muito mais extrema no caso do Macau do que em Portugal.
+    - Especialmente o número muito reduzido de pessoas de terceira idade, com mais de 65 anos, chama a atenção.
+- Em Portugal, o estreitamento da pirâmide nas idades mais avançadas é muito menos abrupto. 
+- Em parte, os __determinantes da forma da pirâmide etária__ em Macau são os mesmos que em Portugal e no Brasil, o seja, um estreitamento da base devido à queda da natalidade. 
+    - Em 2015, a fecundidade de Macau, em termos do número médio de filhos por mulher, era a segunda mais baixa do mundo, mais baixa ainda do que Portugal.
+    - Mas além disso Macau sofreu uma imigração muito significativa da China que se concentrou nas idades economicamente ativas (15-64), o que levou a uma estrutura etária muito enviesada para estas idades.
+- É notável também o desequilíbrio entre o número de homens e mulheres nas idades mais avançadas, algo que ocorre também na pirâmide de Angola, mas é menos visível.
+
+\framebreak
+
+- Além da sua representação estática, para um determinado momento no tempo, é muito ilustrativo ver o que acontece quando se junta uma sequência de pirâmides etárias para diferentes momentos no tempo, como se fosse um filme [(animação)](https://rdosreis.github.io/2023/02/04/gbdrawer-02-a-carga-de-copd-por-idade-parte-2/).
+    - Isso mostra claramente como a estrutura etária vai se transformando na medida em que diminuem a mortalidade e a natalidade.
+
+## Próxima aula
+
+- Características da distribuição por idade;
+- Determinantes da estrutura etária;
+- Relevância da estrutura etária para as políticas públicas.
+
+## Para casa {.allowframebreaks}
+
+- Explore os resultados do Censo de 2010 no site do SIDRA; escolha uma unidade da federação (UF) e construa a pirâmide etária para esta UF; apresente no Fórum Geral do Moodle os seus resultados.
+- Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras05.jpg'))
+
+```
+
