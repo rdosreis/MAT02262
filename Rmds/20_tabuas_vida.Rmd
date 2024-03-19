@@ -1,0 +1,198 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Tábuas de vida atuariais e populacionais {.allowframebreaks}
+
+- Tábuas de vida são largamente utilizadas em **cálculos atuariais**.
+
+- Estes consideram a probabilidade dos pagamentos acontecerem no decorrer de vários anos futuros para determinar o valor necessário para pagar os benefícios em planos previdenciários, seguros de vida, ou outros tipos de seguros, tanto estatais como privados.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='50%', out.height='35%'}
+
+knitr::include_graphics(here::here('imagens', 'preco_seguro.png'))
+
+```
+
+\framebreak
+
+- Um **benefício previdenciário**, por exemplo, pode durar enquanto o segurado estiver vivo, o que é expresso pela tábua de vida. 
+- Já nos **seguros de vida** o segurado paga prêmios à seguradora enquanto estiver vivo e a seguradora paga aos dependentes do segurado um valor maior quando este vir a falecer. 
+    - Saber a probabilidade de morte do segurado a cada ano, portanto, significa definir com mais certeza o quanto a seguradora poderia aplicar em investimentos de longo ou de curto prazo, e os valores que os segurados precisariam pagar de forma a, para a população de segurados, acumular-se o valor necessário para o pagamento aos dependentes.
+
+\framebreak
+
+- Pela natureza de sua aplicação, as tábuas de vida utilizadas em cálculos atuariais têm algumas particularidades. 
+- Nessas tábuas, a menos que se trate de pagamento de pensões a menores, **os detalhes da mortalidade até os 18 anos de idade geralmente são pouco relevantes**, já que nessas idades a probabilidade de morte é pequena em relação aos demais grupos etários.
+
+- Por outro lado, as tábuas de vida atuariais precisam fornecer **maiores detalhes sobre a população de 65 anos e mais** do que acontece com as tábuas de vida gerais. 
+
+\framebreak
+
+- Em tábuas de vida gerais é comum observarmos grupos etários quinquenais e o último grupo etário aberto englobando uma grande
+quantidade de possibilidades de idade à morte.
+
+- Nas tábuas utilizadas para cálculos atuariais é essencial que as probabilidades de morte sejam definidas para idades simples, inclusive no último grupo etário, que é o que detém maior probabilidade de morte e, portanto, de pagamentos. 
+
+\framebreak
+
+- Isso se dá porque não interessa saber apenas o tempo médio de duração dos benefícios ou pagamentos, mas a distribuição da probabilidade de morte entre as idades, de forma a se determinar, com mais exatidão, o fluxo dos pagamentos esperados. 
+
+- Assim, é comum **tabelas de vida para cálculos atuariais em idades simples que vão de 0 até os 110 ou 115 anos**.
+
+- Considerando essa particularidade, o IBGE divulga anualmente, no site responsável pelas informações previdenciárias oficiais no
+Brasil, uma tábua de vida por idade simples extrapolada até mais de 100 anos, a ser utilizada nos cálculos atuariais, sobretudo nos referentes à previdência de servidores públicos. 
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_final.png'))
+
+```
+
+\framebreak
+
+- Vale ressaltar que, principalmente no caso de **seguros privados**, a **população segurada tem características muito específicas** que geralmente resultam numa esperança de vida consideravelmente maior da que caracteriza a população geral.
+
+- Esta diferença é tão grande que até 2010 as companhias de seguro no Brasil preferiam usar tábuas de vida elaboradas para populações seguradas norte-americanas, por se aproximarem mais do padrão de mortalidade dos seus clientes brasileiros, do que as tábuas de vida calculadas pelo IBGE para a totalidade da população.
+
+\framebreak
+
+- A escolha dessas tábuas se dava por **testes de aderências**, pelos quais se determina, dentre um conjunto de tábuas de vida, qual melhor se adere à população em questão, comparando as mortes observadas na população segurada com as esperadas por cada tábua. 
+
+- Para exemplificar esta diferença nos níveis de mortalidade, o Gráfico 9.10 apresenta o logaritmo das probabilidades
+de mortes pela tábua AT 2000 masculina, a *Annuity Table*, elaborada a partir de contratos de anuidades de companhias de seguros nos EUA. 
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_final.png'))
+
+```
+
+\framebreak
+
+- Como pode-se observar pelo gráfico, para quase todas as idades, em especial as mais avançadas, a AT 2000 **apresenta mortalidade menor** que a tábua IBGE 2016, apresentando, portanto, população mais longeva, razão pela qual ela muitas vezes foi utilizada no mercado segurador.
+
+\framebreak
+
+- **Wilbert, Lima e Gomes (2013)** analisaram o impacto da utilização de diferentes tábuas de mortalidade nas estimativas do pagamento de benefícios no Regime Geral de Previdência Social (RGPS), usando duas tábuas distintas: a do **IBGE**, usada pelo **Ministério da Previdência Social**, e uma elaborada por **Souza (2009)**, com base na mortalidade da população idosa aposentada pelo RGPS, para os anos de 1998-2002.
+    + Com base apenas no número de benefícios concedidos em 2002, a diferença da expectativa de vida entre as tábuas representou um **impacto negativo** de cerca de 4,5% do deficit previdenciário apurado pelo RGPS nesse mesmo ano, evidenciando a necessidade de se calcular tábuas de mortalidade específicas para a massa de segurados do RGPS.
+
+\framebreak
+
+- Outros esforços para construir tábuas de vida para populações previdenciárias específicas incluem o trabalho de **Beltrão e Sugahara (2017)**, que construiu tábuas de vida para funcionários públicos civis do Executivo por sexo e escolaridade entre 1993 e 2014, atendendo a uma demanda da Fundação de Previdência Complementar do Servidor Público Federal, criada em 2013.
+
+- Como se trata de operações comerciais, as bases de dados sobre mortes de assegurados por esquemas privados costumam ser de melhor qualidade do que os registros de mortalidade da população em geral. 
+- Portanto, algumas vezes é possível construir tábuas de vida com os dados próprios dessas populações.
+
+\framebreak
+
+- Um exemplo é a família de tábuas BR-EMS, da Experiência do Mercado Segurador Brasileiro, adotada pela Federação Nacional de Previdência Privada de Vida (FenaPrevi), e agora parâmetro para o mercado segurador brasileiro. 
+- As tábuas BR-EMSsb 2015, por exemplo, foram construídas com dados de sobrevivência de 2007 a 2012 de mais de 39 milhões de
+indivíduos, aproximadamente 80% da população brasileira que possui seguros de vida privados com cobertura de sobrevivência no Brasil, ou seja, que dão direito a benefícios em vida (aposentadoria).
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_final.png'))
+
+```
+
+\framebreak
+
+- É notável que as probabilidades de morte em cada idade da população que tem seguro privado, dada pelas tábuas AT 2000 e BR-EMSsb 2015, são consideravelmente mais baixas do que as probabilidades da população masculina geral, dada pela tábua IGBE 2016.
+- Contudo, a tábua BR-EMSsb 2015 apresenta estrutura de mortalidade mais similar à mortalidade brasileira como um todo, se diferenciando da AT 2000 principalmente nos primeiros grupos etários, o que justifica a elaboração de uma tábua de mortalidade específica para o mercado segurador brasileiro.
+
+- Embora as tábuas BR-EMSsb-V.2015-m e IBGE 2016 apresentem níveis de mortalidade muito diferentes, elas se aproximam nas idades entre 85 e 95 anos. 
+    - Isso se dá pela diferença de metodologia adotada na extrapolação das duas tábuas. 
+
+\framebreak
+
+- Essas metodologias procuram **estimar, da melhor forma possível, a mortalidade nos últimos grupos etários** retirando os efeitos de aleatoriedade pela **pequena quantidade de dados**. 
+- Contudo, ainda pouco se sabe sobre o comportamento da função de mortalidade nas idades mais elevadas, pois é recente a queda da mortalidade a ponto de permitir que uma grande quantidade de indivíduos chegasse até lá.
+
+\framebreak
+
+- À parte dessa discussão, é muito comum, ainda, para os cálculos atuariais, a utilização da metodologia de tábuas de vida para medir outras formas de saída da população que não a morte. 
+
+- Em planos previdenciários, por exemplo, são utilizadas tábuas de saída da população de contribuintes por invalidez, aposentadoria ou demissão. 
+- Como o risco de sair por todas essas causas atuam sobre os mesmos indivíduos num mesmo tempo, utiliza-se a metodologia de Tabelas de Múltiplos Decrementos para considerar a forma de interação entre eles. 
+
+\framebreak
+
+- Em planos previdenciários também é comum o uso de tábuas de mortalidade diferentes para grupos populacionais diferentes. 
+- Aos inválidos, por exemplo, que em geral apresentam alguma doença que acelera sua mortalidade em relação aos não inválidos, geralmente é aplicada uma tábua de mortalidade diferente, construída exclusivamente para esta população **(Pitacco, 2012; Ribeiro et al., 2007; Ribeiro, Reis e Barbosa, 2010)**.
+- **Beltrão et al. (2004)** apresentam uma visão geral das diferentes tábuas de vida atuariais usadas no mercado brasileiro de seguros.
+
+# Aplicações de funções de tábua de vida {.allowframebreaks}
+
+- É importante ressaltar que a diminuição da mortalidade pode afetar a esperança de vida de formas muito diferentes, a depender da idade em que a queda acontece. 
+- No início da queda da mortalidade é comum observar grande diminuição da mortalidade infantil, pois em geral as causas de mortalidade em populações em que a mortalidade é muito alta estão relacionadas à falta de saneamento básico e doenças infectocontagiosas.
+
+\framebreak
+
+- A melhoria dessas condições afeta principalmente as crianças, resultando em grande redução da mortalidade infantil. 
+- Uma vez que essas crianças superam o risco de mortalidade nos primeiros grupos etários, é provável que venham a morrer apenas nas idades adultas ou idosas, de forma que passam a contribuir com uma grande quantidade de anos-pessoa para a tábua de vida.
+- A redução da mortalidade que ocorre nas idades adultas ou idosas causa um aumento do número de anos vividos que é menor do que o efeito de uma redução equivalente na mortalidade das crianças. 
+
+\framebreak
+
+- Uma consequência disso é que quando a redução da mortalidade se dá nas primeiras idades, seu efeito na esperança de vida ao nascer é muito maior que quando se dá nas idades mais avançadas. 
+- Em contrapartida, a queda na mortalidade infantil pode não afetar significativamente a esperança de vida nas idades mais avançadas, pois não representa mudança na intensidade com que as pessoas morrem naquelas idades. 
+- De forma similar, a queda na mortalidade nas idades mais avançadas em decorrência da queda na mortalidade por doenças degenerativas e induzidas pela atuação humana não tem grande efeito na esperança de vida ao nascer, mas pode afetar consideravelmente as esperanças de vida mais avançadas.
+
+\framebreak
+
+- Essa reflexão tem algumas aplicações práticas interessantes, entre elas, a discussão sobre reformas previdenciárias. 
+- Se um benefício previdenciário é recebido vitaliciamente a partir dos 60 anos, por exemplo, o tempo esperado de recebimento deste benefício corresponde à esperança de vida aos 60 anos, função que se altera no tempo de forma diferente da esperança de vida ao nascer, dependendo da forma como se dão as diversas mudanças na função de mortalidade. 
+- Portanto, para analisar a variação no tempo de recebimento deste benefício entre dois períodos distintos, deve-se analisar a diferença na esperança de vida a partir dos 60 anos nesses dois períodos, e não a diferença na esperança de vida ao nascer entre as duas datas.
+
+\framebreak
+
+- Para a análise da população beneficiária em relação à população contribuinte as funções da tábua de vida também são úteis. 
+- Assumindo que as pessoas contribuem para a previdência entre as idades 30 e 60 anos, pode-se dizer que, se a população experimenta a mortalidade dada por certa tábua de vida, a diferença $(T_{30}-T_{60})$ representaria o tempo total vivido pela coorte em idade de realizar contribuição, enquanto a função T60 representaria o tempo recebendo benefícios. 
+- Assim, $T_{60}/(T_{30}-T_{60})$ representa a relação entre o tempo que se passa recebendo benefício e o tempo que se passa contribuindo para a previdência, em média, numa população, assumindo que todos contribuem e recebem benefícios. 
+
+\framebreak
+
+- Pelos dados do Gráfico 9.7, por exemplo, a razão $T_{60}/(T_{30}-T_{60})$ é igual a 0,7 para mulheres e 0,6 para homens, indicando que mulheres passam mais tempo recebendo benefícios em relação a seu tempo de contribuição que homens, assumindo que homens e mulheres têm a mesma condição de ingressar e permanecer no mercado de trabalho, e que todos contribuem durante toda sua vida ativa, e recebem benefícios a partir dos 60 anos.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'tabua_vida_final.png'))
+
+```
+
+## Para casa {.allowframebreaks}
+
+- Verificar os dados disponíveis em: https://www.ibge.gov.br/estatisticas/sociais/populacao/9126-tabuas-completas-de-mortalidade.html
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final06.jpg'))
+
+```
+

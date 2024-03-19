@@ -1,0 +1,262 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2023
+---
+
+# Tabelas de vida de coorte e período {.allowframebreaks}
+
+- O objetivo central da maioria das tabelas de vida é **descrever como o risco de morte** e, às vezes, a fertilidade, **mudam com a idade**.
+- A \structure{tabela de vida}, portanto, faz uma contabilidade do número de indivíduos que entram em um determinado intervalo de idade (ou seja, a população em risco) e o número que morre e o número de descendentes produzidos nesse intervalo para calcular corretamente a mortalidade e a fertilidade.
+ 
+\framebreak
+
+- O cálculo das tabelas de vida pode ser dividido em abordagens:
+    + \structure{baseadas em coorte} e \structure{baseadas em períodos} (também conhecidas como tábuas de vida estáticas ou verticais)
+- Em ambos os casos, as linhas correspondem a intervalos de idade e a primeira coluna indica os intervalos de idade sobre os quais a tábua de vida é calculada.
+    - A escolha do intervalo depende muito das preferências do pesquisador. 
+- Muitas vezes é um ano, mas não necessariamente, e pode variar dentro da tabela de vida. 
+    + Por exemplo, nas tabelas de vida humana, os intervalos de idade no início da vida são geralmente de 1 ano, depois de 4 anos e depois ampliados para 5 anos na vida adulta.
+
+\framebreak
+
+- Como seus nomes indicam, os \structure{métodos baseados em coorte} visam rastrear o destino de um conjunto de indivíduos nascidos em um determinado período de tempo (por exemplo, em um determinado ano), enquanto as \structure{tabelas de vida de período} se concentram no destino de uma população de idades mistas durante um período de tempo específico, como um ano.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+\framebreak
+
+- Essas diferenças podem ser importantes, e devemos esperar que as medidas derivadas das tabelas de vida de coorte e período se alinhem apenas se o ambiente for constante e imutável.
+- Na literatura publicada, dados semelhantes a tabelas de vida são relatados de diversas maneiras: 
+    + às vezes, os dados são apresentados como números de indivíduos entrando em um intervalo de idade e/ou morrendo nesse intervalo, 
+    + enquanto outras vezes os dados podem ser apresentados como a proporção que sobreviveu a um intervalo de idade. 
+- As estreitas relações matemáticas entre as colunas na tabela de vida significam que geralmente uma **tabela de vida atuarial completa** pode ser derivada desses dados iniciais, mas o conhecimento do tamanho da amostra (por exemplo, tamanho inicial da coorte ou o número de indivíduos em um intervalo de idade) pode ser útil para inferir confiança para as quantidades demográficas estimadas.
+
+# Tabelas de vida de coorte {.allowframebreaks}
+
+- As \structure{tabelas de vida de coorte} concentram-se em um grupo de indivíduos nascidos em um determinado intervalo de tempo, por exemplo, um ano, e os acompanham até que (idealmente) todos os indivíduos do grupo estejam mortos.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+\framebreak
+
+- Os **dados brutos** usados para a construção dessas tabelas de vida são, portanto, a idade de morte dos indivíduos, que também pode ser registrada como o número de indivíduos entrando em cada faixa etária, e os métodos assumem que todos os indivíduos da população têm a mesma probabilidade de serem amostrados.
+
+\framebreak
+
+\begin{table}[]
+\caption{Tabela de vida da coorte para uma população hipotética calculada para uma coorte de 320 indivíduos a partir de dados $x$, $l_x$ e ${}_na_x$. Supõe-se que as mortes sejam distribuídas uniformemente durante o intervalo, então ${}_na_x = 0,5$.}
+\begin{tabular}{cccccccccc}
+\hline\\
+$x$ &$l_x$ &${}_nd_x$& ${}_nq_x$& ${}_np_x$& ${}_nL_x$& $T_x$& $e_x$& ${}_nm_x$& ${}_na_x$                  \\
+\hline\\
+0 &320 &253& 0.791& 0.209& 193.5& 272.0& 0.850& 1.308& 0.500 \\
+1 &67 &40& 0.597& 0.403& 47& 78.5& 1.172& 0.851& 0.500       \\
+2 &27& 16& 0.593& 0.407& 19& 31.5& 1.167& 0.842& 0.500       \\
+3& 11& 7& 0.636& 0.364& 7.5& 12.5& 1.136& 0.933& 0.500       \\
+4& 4& 2& 0.500& 0.500& 3& 5.0& 1.250& 0.667& 0.500           \\
+5& 2& 1& 0.500& 0.500& 1.5& 2.0& 1.000& 0.667& 0.500         \\
+6& 1& 1& 1.000& 0.000& 0.5& 0.5& 0.500& 2.000& 0.500        \\
+\hline
+\end{tabular}
+\end{table}
+
+\framebreak
+
+- A primeira coluna $(x)$ representa a \structure{idade exata no início do intervalo} e a \structure{duração do intervalo} $(n)$ é a diferença entre os valores de $x$ em linhas consecutivas.
+- Então, $l_x$ é o \structure{número de indivíduos que entram no intervalo na idade} $x$, sendo a primeira entrada, portanto, o \structure{número de indivíduos em toda a coorte} e as \structure{entradas subsequentes sendo o número sobreviventes a cada idade} $(x)$.
+- A partir dessas informações, podemos calcular o \structure{número de mortos entre as idades} $x$ e $x+n$ $({}_nd_x)$ como a diferença entre $l_x$ e $l_{x+1}$ e a \structure{probabilidade de morrer} $({}_nq_x)$ ou \structure{sobreviver} $({}_np_x)$ ao intervalo como ${}_nd_x/l_x$ e $1 - ({}_nd_x /l_x)$, respectivamente.
+
+\framebreak
+
+\begin{mybox}{Relembrando}
+Na demografia, uma taxa refere-se à ocorrência de um evento em relação à quantidade de exposição ao risco de ocorrência desse evento. O momento do evento durante o intervalo é, portanto, importante: os indivíduos que sobrevivem ao intervalo estão expostos ao risco durante toda a duração do intervalo, enquanto os que morrem ficam expostos ao risco apenas até morrerem. Portanto, calcula-se a taxa de mortalidade como o número de mortes que ocorrem durante um determinado intervalo de tempo (por exemplo, um determinado ano de vida), dividido pelo número de pessoas-anos vividos durante esse intervalo $({}_nL_x)$. A diferença no denominador entre os cálculos de probabilidade de morte e taxa de mortalidade \structure{significa que essas duas quantidades são distintas}.
+\end{mybox}
+
+\framebreak
+
+- O \structure{número de pessoas-anos vividos} durante esse intervalo $({}_nL_x)$ é calculado como o número de indivíduos que entram no intervalo na idade $x$ $(l_x)$, multiplicado por sua probabilidade de sobrevivência $({}_np_x)$, mais o \structure{tempo médio que esses que morrem no intervalo sobrevivem dentro do intervalo} $({}_na_x)$:
+
+$$
+{}_nL_x = ({}_np_x \cdot l_x) + ({}_na_x \cdot {}_nd_x).
+$$
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_2_Lifelines.png'))
+
+```
+
+\framebreak
+
+- A estimativa de ${}_na_x$ requer dados precisos de tempo de morte.
+- Uma **suposição simplificadora** é que as mortes são *distribuídas uniformemente* ao longo do intervalo de idade, de modo que ${}_na_x = 0,5n$.
+- No entanto, se os óbitos estiverem concentrados no início do intervalo, por exemplo, devido à alta mortalidade infantil no primeiro intervalo, um valor de ${}_na_x$ menor pode ser apropriado para esse intervalo.
+- Um valor ${}_na_x$ também pode ser informado por forte sazonalidade nas mortes.
+
+\framebreak
+
+- A partir de ${}_nL_x$ pode-se calcular o \structure{número de anos vividos além da idade} $x$ $(T_x)$ como a soma de ${}_nL_x$ de $x$ em diante (ou seja, $T_x = \sum_{a=x}^{\infty}{{}_nL_a}$).
+- A \structure{taxa de mortalidade específica por idade (risco)} $({}_nm_x)$ é calculada como o número de mortes no intervalo de idade dividido pelo número de pessoas-anos vividos no intervalo de idade (ou seja, $m_x = {}_nd_x/{}_nL_x$).
+
+\framebreak
+
+- Finalmente, a \structure{expectativa de vida a partir da idade} $x$ $(e^0_x)$ é calculada como $T_x/l_x$.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_2_Lifelines.png'))
+
+```
+
+## Exercício
+
+- Reproduzir a tabela de vida de coorte no Excel.
+
+# Tabelas de vida do período {.allowframebreaks}
+
+- Como o próprio nome sugere, as \structure{tabelas de vida de período} concentram-se em um determinado período de tempo, como um ano, e também são conhecidas como **tabelas de vida estáticas** ou **verticais**.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+\framebreak
+
+- Elas visam modelar o que aconteceria com uma **coorte imaginária** \structure{(sintética)} que vivenciou as condições de mortalidade daquele período.
+
+\begin{mybox}{Tabelas de vida do período}
+Às vezes, elas são preferidas em relação às tabelas de vida de coorte porque seguir uma coorte inteira até que todos os membros estejam mortos pode ser impraticável, especialmente para organismos de vida mais longa. 
+\end{mybox}
+
+\framebreak
+
+- Os principais pressupostos desta abordagem são que a **distribuição etária é estacionária** (ou seja, a proporção de indivíduos em cada classe de idade é constante e a **taxa de crescimento populacional é constante**) e que cada indivíduo na população tem uma probabilidade igual de ser amostrado.
+- Estas são **suposições fortes** que provavelmente raramente são encontradas e, embora desvios 'moderados' sejam provavelmente aceitáveis, o uso de tabelas de vida de período em populações flutuantes tem sido fortemente advertido contra.
+
+\framebreak
+
+- No entanto, é útil entender as tabelas de vida dos períodos e sua construção é ilustrada a seguir.
+
+- O **ponto de partida para a construção de uma tabela de vida de período** é o cálculo da \structure{taxa de mortalidade específica por idade (risco)} $({}_nm_x)$ a partir do \structure{número de indivíduos vivos no meio de um intervalo de idade} $({}_nN_x)$ e o \structure{número de indivíduos que morrem no período de observação} $({}_nD_x)$: 
+
+$$
+{}_nm_x = {}_nD_x/{}_nN_x.
+$$
+\framebreak
+
+\scriptsize
+
+\begin{table}[]
+\caption{Tabela de vida do período calculada usando dados $x$, ${}_nN_x$, ${}_nD_x$ e ${}_na_x$ de dados hipotéticos.}
+\begin{tabular}{cccccccccccc}
+\hline
+$x$ & ${}_nN_x$ & ${}_nD_x$ & ${}_na_x$   & ${}_nm_x$   & ${}_nq_x$   & ${}_np_x$   & $l_x$    & ${}_nd_x$   & ${}_nL_x$   & $T_x$    & $e_x$    \\ \hline
+0 & 203 & 99  & 0.500 & 0.488 & 0.392 & 0.608 & 1.000 & 0.392 & 0.804 & 2.051 & 2.051 \\
+1 & 166 & 69  & 0.500 & 0.416 & 0.344 & 0.656 & 0.608 & 0.209 & 0.503 & 1.247 & 2.052 \\
+2 & 97  & 51  & 0.500 & 0.526 & 0.416 & 0.584 & 0.399 & 0.166 & 0.316 & 0.744 & 1.866 \\
+3 & 46  & 27  & 0.500 & 0.587 & 0.454 & 0.546 & 0.233 & 0.106 & 0.180 & 0.428 & 1.840 \\
+4 & 19  & 8   & 0.500 & 0.421 & 0.348 & 0.652 & 0.127 & 0.044 & 0.105 & 0.248 & 1.953 \\
+5 & 11  & 5   & 0.500 & 0.455 & 0.370 & 0.630 & 0.083 & 0.031 & 0.068 & 0.143 & 1.728 \\
+6 & 6   & 4   & 0.500 & 0.667 & 0.500 & 0.500 & 0.052 & 0.026 & 0.039 & 0.076 & 1.450 \\
+7 & 2   & 1   & 0.500 & 0.500 & 0.400 & 0.600 & 0.026 & 0.010 & 0.021 & 0.037 & 1.400 \\
+8 & 1   & 1   & 0.000 & 1.000 & 1.000 & 0.000 & 0.016 & 0.016 & 0.016 & 0.016 & 1.000 \\ \hline
+\end{tabular}
+\end{table}
+
+\normalsize
+
+\framebreak
+
+- Nesse caso existem 203 indivíduos na faixa etária de 0 a 1 ano, e 99 deles morrem; assim, a taxa de mortalidade é 99/203 = 0,488. 
+    <!-- (Observe que estou assumindo que esses valores nNx são para o meio do intervalo de idade.) -->
+- Vale a pena enfatizar novamente aqui que as taxas de mortalidade são distintas das probabilidades de morte e podem exceder 1. 
+- O efeito dessa diferença é melhor ilustrado com um exemplo: em uma população com 1.000 indivíduos vivos no início do intervalo e risco de mortalidade muito alto, pode-se ver 400 morrendo e 600 permanecendo vivos no momento em que atingem o meio do intervalo e depois mais 400 mortes durante a segunda metade do intervalo (um total de 800 mortes), produzindo uma taxa de mortalidade $({}_nm_x)$ de 800/600 = 1,333. 
+
+\framebreak
+
+Mas como podemos calcular a probabilidade de morte específica por idade $({}_nq_x)$ a partir de ${}_nm_x$? 
+
+- Isso depende do conhecimento de como as mortes são distribuídas dentro do intervalo de idade: se as mortes estiverem concentradas no início do intervalo, ${}_nq_x$ é maior.
+- Assim, ${}_na_x$ e ${}_nm_x$ podem ser usados para calcular ${}_nq_x$ da seguinte forma:
+
+$$
+{}_nq_x = (n \cdot {}_nm_x)/(1 + (n - {}_na_x) \cdot {}_nm_x).
+$$
+
+\framebreak
+
+- Por exemplo, usando o exemplo acima, onde ${}_nm_x$ é 1,333, ${}_na_x$ é 0,5 e $n = 1$, podemos verificar se obtemos um resultado sensato: $1,333/(1 + 0,5 \times 1,333) = 0,800$.
+- Isso corresponde perfeitamente ao resultado intuitivo obtido pela divisão do número que morre no intervalo (800) pelo número que entra no intervalo (1.000).
+- A \structure{probabilidade de sobrevivência específica da idade} $({}_np_x)$ é $1 - {}_nq_x$. 
+
+- O intervalo de idade final é um **caso especial** porque se estende de $x$ até o infinito. 
+    + É, portanto, apropriado assumir que todos os indivíduos morrem neste intervalo, ou seja, ${}_{\infty}q_x = 1,000$ e ${}_{\infty}p_x = 0,000$.
+
+\framebreak
+
+- Neste ponto, **podemos escolher** um \structure{tamanho de população} para iniciar nossa coorte sintética $(l_0)$, a 'base', e calcular $l_x+n$ como $l_x \cdot {}_np_x$. 
+- Nas tabelas de vida humana, a raiz é geralmente definida como **1 milhão** ou **100.000**, embora **1.000** também seja conveniente porque os valores de $l_x$ são a sobrevivência ou a probabilidade de sobrevivência até a idade $x$. 
+    + Os valores das colunas subsequentes irão variar proporcionalmente ao valor escolhido para a raiz. 
+- O número de indivíduos que morrem em um intervalo de tempo $({}_nd_x)$ é $l_x - l_{x+1}$, e o número de anos-pessoa vividos no intervalo $({}_nL_x)$ é $n \cdot l_x+n + {}_na_x \cdot {}_nd_x$ para todos, exceto a linha final. 
+
+\framebreak
+
+- Para a linha final, que possui um intervalo aberto, ${}_{\infty}L_x = l_x/{}_{\infty}m_x$. 
+- Pessoas-anos vividos acima da idade $x$ $(T_x)$ é a soma de ${}_nL_x$ de $x$ em diante (ou seja, $T_x = \sum_{a=x}^{\infty}{{}_nL_a}$) e expectativa de vida de idade $x$ $(e^0_x)$ é $T_x/l_x$.
+
+\framebreak
+
+- Além dos métodos de tabela de vida de coorte e período descritos acima, tabelas de vida baseadas em 'instantâneos' da estrutura etária da população ou nas idades de morte de indivíduos em várias coortes têm sido usadas extensivamente em não humanos **(Udevitz e Ballachey 1998 ; Udevitz e Gogan 2012)**.
+- Tal como acontece com os métodos de período descritos acima, essas abordagens normalmente assumem que as populações são estáveis e estacionárias **(Caughley 1977)**, embora essa suposição possa ser relaxada se uma série temporal de estruturas de idade estiver disponível **(Hoenig e Gedamke 2007; Udevitz e Gogan 2012)**.
+
+\framebreak
+
+- Existem outros métodos para estimar tabelas de vida de populações instáveis se a taxa de crescimento populacional **(Udevitz e Ballachey 1998)** ou as taxas de mortalidade **(Fryxell 1986)** forem conhecidas. 
+- Quando as suposições de estacionaridade são atendidas, a estrutura etária da população será a mesma que a sobrevivência padronizada ($l_x$, onde $l_0$ é padronizado para $1$), e é fácil calcular as outras colunas na tabela de vida a partir desse ponto de partida usando as relações matemáticas entre eles.
+
+## Exercício
+
+- Reproduzir a tabela de vida do período no Excel.
+
+## Próxima aula
+
+- Tábuas de vida: continuação.
+
+## Para casa {.allowframebreaks}
+
+- Verificar os dados disponíveis em: https://www.ibge.gov.br/estatisticas/sociais/populacao/9126-tabuas-completas-de-mortalidade.html
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final05.jpg'))
+
+```
+
