@@ -1,0 +1,288 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: | 
+  | Demografia, estatística e outras abordagens do estudo da população
+  | (ou conceitos e definições)
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Delimitação do campo {.allowframebreaks}
+
+- O estudo das \structure{populações humanas}, no que toca ao seu \structure{tamanho}, sua \structure{composição} e \structure{transformações}, é o objetivo de várias disciplinas com orientações um pouco distintas, mas relacionadas entre si.
+\
+
+- O termo \structure{demografia} surgiu na França em meados do século XIX, embora algumas das suas ideias anteriormente eram conhecidas como \structure{aritmética política} ou \structure{estatística humana}.
+- A palavra é derivada do grego: 
+    + $\delta\acute{\eta}\mu o\zeta$ (\structure{demos}, habitantes de uma área);
+    + e $\gamma\rho\acute{\alpha}\varphi\varepsilon\iota\nu$ (\structure{graphein}, escrever/registrar);
+    + ou seja, a \structure{descrição da população de um país ou área}.
+
+\framebreak
+
+- Seja qual for o nome escolhido, existe certo consenso de que a demografia trata do \structure{estudo estatístico das populações humanas}, com maior ênfase nos **conjuntos de pessoas** do que nos indivíduos que as compõem.
+
+\begin{mybox}{População}
+O termo ``população'' é interpretado aqui no sentido estatístico mais amplo de ``coleção de elementos unificados por uma definição comum''.
+\end{mybox}
+
+\framebreak
+
+\begin{mybox}{Aristóteles}
+``O todo é maior do que a soma das partes''.
+\end{mybox}
+
+\begin{mybox}{Durkheim}
+``A sociedade não é simples soma de indivíduos, e, sim, formada por associação, que representa uma realidade específica, com seus caracteres próprios. Sem dúvida, nada se pode produzir de coletivo, se consciências particulares não existem; mas esta condição necessária não é suficiente. É preciso ainda que as consciências estejam associadas, combinadas de determinada maneira; dessa combinação resulta a vida social e, por conseguinte, é esta combinação que a explica. Agregando-se, penetrando-se, fundindo-se, as almas individuais dão nascimento a um ser, psíquico se quisermos, mas que constitui individualidade psíquica de novo gênero''.
+\end{mybox}
+
+\framebreak
+
+\begin{center}
+\Large
+E quais são as características quantitativas das populações humanas que formam o \structure{objeto da demografia}? 
+\end{center}
+
+\framebreak
+\normalsize
+
+Certamente formam parte do **núcleo central da demografia**:
+
++ o **tamanho das populações**;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'tamanho_pop.png'))
+
+```
+   
+\framebreak
+
++ a sua **densidade** e **distribuição geográfica**;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'densidade_e_dist_pop.png'))
+
+```
+
+\framebreak
+
++ a sua **composição por idade e sexo**;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'piramide_etaria_pop.png'))
+
+```
+
+\framebreak
+
++ o seu **ritmo de crescimento**;
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'crescimento_pop.png'))
+
+```
+
+\framebreak
+
++ e a divisão do crescimento por componentes **(óbitos, nascimentos e migrações)**.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'obitos_nascimentos_migracoes_pop.png'))
+
+```
+
+\framebreak
+
+- Para alguns demógrafos, 
+    + o estudo da **mobilidade social da população** e o estudo da sua **composição por níveis de educação e atividade econômica** se encaixam dentro da definição;
+    + enquanto outros consideram que tais temas pertencem à sociologia ou à economia.
+- O estudo da \structure{mortalidade}, que diz respeito à intensidade e às idades típicas de morte das pessoas, claramente **faz parte da demografia**.
+
+\framebreak
+
+- Já o estudo da **morbidade**, ou seja, o estudo quantitativo dos padrões de doenças numa população humana, pode ser feito por \structure{demógrafos}, \structure{epidemiologistas} ou \structure{estatísticos da saúde}.
+- O mesmo ocorre com a **nupcialidade** e a **divorcialidade**, cujo estudo pode ser motivado pelo seu interesse demográfico, como um dos **determinantes da reprodução**, mas que evidentemente tem ramificações que vão muito além desse interesse mais restrito, para a área de \structure{sociologia da família}.
+
+\framebreak
+
+<!-- - Considera-se que um tema/variável merece análise sistemática do ponto de vista da demografia se for diretamente relevante para a determinação do número de nascimentos, óbitos ou migrações que ocorrem numa população ou as suas variações entre subpopulações. -->
+<!-- - Por exemplo, o estado civil ou conjugal de uma pessoa afeta diretamente a sua propensão a ter filhos. -->
+<!-- - A cor ou etnia geralmente não são consideradas variáveis propriamente demográficas, apesar de constar em alguns \alert{censos}, como é o caso do Brasil. -->
+
+\begin{mybox}{O objeto da demografia}
+O \structure{Dicionário Demográfico Multilíngue}\footnote{http://www.demopaedia.org/} define o objeto de estudo da demografia como ``o estudo da população humana'' no que toca a ``sua dimensão, estrutura, evolução e características gerais, analisados principalmente do ponto de vista quantitativo''.
+\end{mybox}
+
+
+<!-- ::: {.block} -->
+<!-- ### O objeto da demografia -->
+
+<!-- O \structure{Dicionário Demográfico Multilíngue}\footnote{http://www.demopaedia.org/} define o objeto de estudo da demografia como "o estudo da população humana" no que toca a "sua dimensão, estrutura, evolução e características gerais, analisados principalmente do ponto de vista quantitativo". -->
+
+<!-- ::: -->
+
+## Delimitação do campo {.allowframebreaks}
+
+- A demografia está amplamente preocupada em responder perguntas sobre:
+    + **como as populações mudam**;
+    + com a **medição da população**;
+    + e com os **componentes da mudança da população**.
+- O campo mais amplo de \structure{estudos de população} abrange questões sobre
+    + por que essas mudanças ocorrem;
+    + e com quais consequências/implicações;
+    + e abrange uma ampla gama de pesquisas multidisciplinares sobre características e comportamento de populações e subgrupos populacionais.
+
+# Usos e especialidades no campo da população {.allowframebreaks}
+
+Podemos dividir a demografia em seis grandes áreas __(Nazareth, 1996)__\footnote{Nazareth, J. Manuel (1996). \emph{Introdução à Demografia: Teoria e Prática}. Lisboa, Editorial Presença.}:
+
+1. Análise Demográfica;
+2. Projeções Demográficas e a Prospectiva;
+3. Demografia Histórica;
+4. Demografia Social;
+5. Políticas Demográficas; e
+6. Ecologia Humana.
+
+## Usos e especialidades no campo da população {.allowframebreaks}
+
+__Zeng (2010)__\footnote{Zeng, Yi (org.) (2010). \emph{Demography}. Oxford UK, EOISS Publ., UNESCO Encyclopedia of Life Support Systems.} inclui especialidades adicionais, como as seguintes:
+
+- Comportamento Sexual e Saúde Reprodutiva;
+- Planejamento Familiar e Saúde Reprodutiva;
+- Demografia da Saúde;
+- Demografia Antropológica;
+- Demografia Econômica;
+- Demografia dos Negócios e Pequenas Áreas;
+- Biodemografia;
+- Demografia do Envelhecimento; e
+- \structure{Ciências Atuariais}.
+
+## Usos e especialidades no campo da população {.allowframebreaks}
+
+- A \structure{demografia atuarial} está focada na **mortalidade** e as suas consequências para os **sistemas de seguro de vida** e **Previdência Social**. 
+    - Além de aspectos demográficos e matemáticos, isso envolve considerações financeiras e jurídicas.
+- Uma questão típica que se coloca neste contexto é, por exemplo:
+    + quantos anos o assegurado médio da Previdência Social ainda vive depois de aposentar-se?
+- Estas questões também são estudadas pelos **demógrafos econômicos**, embora a partir de uma visão econômica mais ampla do que do ponto de vista do **equilíbrio das contas previdenciárias**.
+
+\framebreak
+
+- Sobre a \structure{análise estatística} dos fenômenos relacionados com as **populações humanas** podemos dizer que essa se divide entre várias disciplinas. Além da demografia propriamente dita, certos aspectos do seu estudo pertencem:
+    + à estatística;
+    + ao estudo dos indicadores sociais;
+    + à epidemiologia:
+    + sociologia;
+    + economia;
+    + geografia;
+    + e até mesmo à história.
+    
+\framebreak
+
+- O objeto primário de trabalho da demografia são as populações finitas, o que remonta ao uso da **estatística descritiva**.
+- Contudo, isso não eliminava os problemas de se lidar com populações reconhecidamente finitas, mas desconhecidas.
+    + Esse desconhecimento poderia ser atribuído a questões de ordem prática (população numerosa, dificuldade operacional na contagem, etc.) ou à própria impossibilidade de acesso aos dados precisos (ausência de registros).
+    
+- Por isso, o uso de **amostras** pela demografia faz com que, por meio da avaliação da **representatividade** (homogeneidade) em relação às suas populações de origem, a **inferência estatística** torne-se de amplo uso pelos demógrafos.
+
+\framebreak
+
+Algumas especialidades dentro da demografia têm usos bastante específicos. 
+
+- A \structure{demografia histórica} é um campo onde se desenvolvem técnicas próprias para lidar com as **deficiências dos dados arquivais** que servem de base para a **reconstrução da história da população**.
+- A \structure{demografia matemática} é um campo especializado dentro da demografia, matemática ou estatística que estuda as **relações formais** entre diferentes **variáveis demográficas** usando o **instrumental da matemática** e **teoria da probabilidade**, como **cadeias de Markov** e outros **processos estocásticos**.
+
+\framebreak
+
+- A \structure{demografia dos negócios} é um campo dentro dos estudos de mercado que faz uso intensivo de informação demográfica de \alert{censos} e \alert{inquéritos} especiais para descrever a estrutura dos mercados.
+    - Além das variáveis demográficas típicas, esses estudos fazem muito uso de informação sobre renda, ocupação, composição das famílias, posse de bens de consumo duráveis e dados obtidos de outras fontes sobre temas como consumo de diferentes tipos de produtos e padrões de uso de transporte.
+    - Estes temas também têm relevância para a administração pública, razão pela qual seja preferível usar o termo \structure{demografia aplicada}.
+
+\framebreak
+
+Como é o caso de qualquer \structure{ciência social baseada na observação}, uma das utilidades da demografia é que ela pode ajudar a formar e corrigir percepções sobre o mundo social. 
+
+- Por exemplo, ainda existe uma percepção de que o Brasil, mesmo depois de 2000, continua sendo um **país caracterizado pelo rápido crescimento da sua população**;
+    + o qual causaria **congestionamento**;
+    + e a necessidade de **expansão** constante da **infraestrutura** para fazer frente aos números crescentes de usuários.
+
+\framebreak
+
+- O estudo da demografia demonstra que essa percepção já deixou de ser correta há algum tempo.
+
+- Portanto, o congestionamento das grandes cidades e o desafio da manutenção das infraestruturas se devem à **redistribuição da população**, problemas ligados ao transporte e outros fatores analisados pela **geografia de população** e não a um suposto **crescimento explosivo** da população do país.
+
+Outra utilidade da demografia é que ela ajuda na formulação dos \structure{indicadores sociais} corretos para expressar as dimensões da realidade social que se pretende captar.
+
+\framebreak
+
+- Como as quantidades estudadas na demografia mantêm certas relações quantitativas previsíveis, a demografia pode ser usada em certas circunstâncias para \structure{verificar a consistência dos dados disponíveis}. 
+- O recurso mais conhecido para este propósito é a chamada \structure{Equação de Equilíbrio Demográfico} que será discutida em mais detalhe posteriormente no curso.
+
+\framebreak
+
+- Entretanto, de todas as utilidades potenciais da demografia a de maior repercussão prática provavelmente é a sua contribuição às \structure{projeções} em diferentes áreas que se baseia na previsibilidade maior da **dinâmica demográfica** em comparação com outros fenômenos sociais. 
+    + A aplicação mais direta são \structure{as projeções das populações nacionais}.
+
+- A demografia também oferece subsídios valiosos para os prognósticos em outras áreas. Por exemplo, geralmente existe um elemento demográfico nas projeções:
+    + da **matrícula escolar**;
+    + **do mercado de trabalho**;
+    + da demanda por **serviços médicos**;
+    + ou da evolução no longo prazo da demanda por diferentes produtos de consumo.
+
+# Dados demográficos: estoque/fluxo {.allowframebreaks}
+
+- Embora os estudiosos da população hoje em dia usem uma variedade de informações, o dado propriamente demográfico normalmente pode ser classificado como \structure{estatística de estoque} ou \structure{de fluxo}. 
+
+\begin{mybox}{estatística de estoque}
+características estáticas de uma população num determinado momento -- como se fosse uma fotografia: tamanho da população, a sua distribuição territorial, por sexo, por idade ou por características socioeconômicas.
+
+{\bf Fontes de dados:} censos ou inquéritos amostrais (``\emph{surveys}'').
+
+\end{mybox}
+
+\begin{mybox}{estatística de fluxo}
+trata da dinâmica populacional, ou seja, dos eventos que transformam essas características -- como se fosse um filme: nascimentos, óbitos, migração e mobilidade entre categorias socioeconômicas.
+
+{\bf Fontes de dados:} sistema de registro de eventos ou, mais raramente, um levantamento de passagens repetidas (``\emph{multi-round survey}'').
+
+\end{mybox}
+
+## Para casa
+
++ Ler o capítulo 1 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Uma breve história da demografia.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'historia_demografia.jpeg'))
+
+```
+
+<!-- ## Por hoje é só! -->
+
+<!-- \begin{center} -->
+<!-- {\bf Bons estudos!} -->
+<!-- \end{center} -->
+
+<!-- ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE} -->
+
+<!-- knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-corda-bamba.jpg')) -->
+
+<!-- ``` -->
+

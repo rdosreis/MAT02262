@@ -2,11 +2,7 @@ library(here)
 library(rmarkdown)
 
 pasta <- "Rmds"
-<<<<<<< HEAD
-arquivo <- "00_apresenta_curso"
-=======
-arquivo <- "20_tabuas_vida"
->>>>>>> 6439f3f79cdb7f4b0e2ca3d50863199014e5a064
+arquivo <- "01_conceitos_e_definicoes"
 
 arquivo_rmd <- paste0(arquivo, ".Rmd")
 arquivo_pdf <- paste0(arquivo, ".pdf")
