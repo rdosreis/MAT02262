@@ -1,0 +1,179 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: | 
+  | Uma breve história da demografia
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+## Introdução {.allowframebreaks}
+
+- O advento da \structure{demografia como ciência} ocorreu quando as informações quantitativas sobre as populações passaram a ser tratadas de maneira científica.
+
+- A demografia surgiu no bojo da revolução científica ocorrida no contexto do desenvolvimento do capitalismo, \structure{entre os séculos XVII e XVIII}, quando a contagem da população, feita desde a Antiguidade, recebeu \structure{trato analítico}, científico, nos parâmetros do pensamento iluminista, visando oferecer informações que possibilitassem a elaboração racional de leis e princípios empiricamente testáveis.
+
+- Esse processo ocorreu por meio de atribuição de duas características aos censos: \structure{abrangência} e \structure{periodicidade}.
+
+\framebreak
+
+\begin{mybox}{A abragência,}
+por meio de sua delimitação territorial, conferiu a \structure{diversidade de informações}.
+\end{mybox}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='45%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(path = here::here('imagens', 'abrangencia.jpg'))
+
+```
+
+\framebreak
+
+\begin{mybox}{A periodicidade}
+deu movimento aos instantâneos dos dados obtidos pelos censos, possibilitando que observássemos a \structure{evolução das variáveis} estipuladas em séries temporais.
+\end{mybox}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='35%', paged.print=FALSE}
+
+knitr::include_graphics(path = here::here('imagens', 'razao_sexos_br_rs.png'))
+
+```
+
+^[Fonte: Atlas Socioeconômico do Rio Grande do Sul/Rio Grande do Sul. Secretaria de Planejamento, Governança e Gestão. Departamento de Planejamento Governamental. – 6. Ed. – Porto Alegre: Secretaria de Planejamento, Governança e Gestão. Departamento de Planejamento Governamental, 2021.]
+
+<!-- # Definições e periodização {.allowframebreaks} -->
+
+# Período Pré-Estatístico {.allowframebreaks}
+
+- O período chamado de \structure{pré-estatístico} caracteriza-se por apresentar não apenas a **inexistência**, mas também uma ausência de preocupação específica com o **registro de informações** destinadas à posterioridade.
+- A materialidade encontrada nesse peródo é condsiderada, assim, residual.
+
+## Paleodemografia {.allowframebreaks}
+
+- O \structure{estudo das primeiras populações humanas} caracteriza-se por uma carêcia completa de estatísticas, própria da pré-história e dos povos que não nos legaram testemunhos escritos.
+- A documentação disponível é representada pelos esqueletos humanos (ou parte deles), instrumentos e outros vestígios culturais que informam sobre a extensão do hábitat, estilo de vida, alimentação e outras características, permitindo até algumas estimativas por meio de extrapolação.
+    + É o campo da \structure{paleodemografia}.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='24%', out.height='24%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'homo_habilis.jpg'))
+
+```
+
+\begin{mybox}{Paleodemografia}
+O estudo da demografia humana, de sua origem (hominídeos; há, mais ou menos, \structure{6 milhões de anos}) até a Antiguidade (início da Revolução Agrícola, há cerca de \structure{10 mil anos}). Analisa as mudanças nas populações pré-modernas.
+\end{mybox}
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='24%', out.height='24%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'revolucao-agricola.jpg'))
+
+```
+
+## Primeiras contagens e censos {.allowframebreaks}
+
+A \structure{contagem} e a \structure{descrição das características} de uma população são expedientes antigos, que caminham paralelamente ao estabelecimento dos primeiros Estados.
+
+- As civilizações da antiga \structure{Mesopotâmia} realizavam censos, com a finalidade de cobrar tributos.
+- No \structure{Egito Antigo} e na \structure{civilização greco-romana}, os censos eram essenciais para controle e administração dos impérios.
+- Em outras partes do globo, \structure{civilizações pré-colombianas}, como \structure{maias} e \structure{incas}, faziam contagens periódicas de suas populações.
+- A \structure{administração imperial chinesa} também realizava censos periódicos e os \structure{hindus} também o faziam, à mesma época do Ocidente.
+    + O indício mais remoto do que tenha sido um censo parece ter ocorrido na China, por volta de \structure{2.238 a.C.}, quando o imperador Yao mandou fazer a \structure{contagem da população} e das \structure{lavouras cultivadas}.
+
+\framebreak
+
+-  \structure{Gregos e romanos} deixaram registros de seus primeiros censos entre os séculos VIII e III a.C., com um reconhecido \structure{aperfeiçoamento desses instrumentos}, de maneira correlata às instituições de Estado.
+    + As questões demográficas desempenham papel importante na determinação do  \structure{tamanho} e da  \structure{estrutura da economia da Grécia antiga} e da  \structure{economia romana}.
+
+\framebreak
+
+- De um povo pastoril a centro de um Império em dez séculos,  \structure{os romanos} mostraram, desde os censos de Sérvio Túlio (555 a.C.), uma notável  \structure{evolução na coleta de informações periódicas} junto às familias, com \structure{72 censos registrados} até 72 d.C., apresentando uma média de um censo realizado a pouco menos de sete anos. 
+    + Com os romanos, reconhece-se que o \structure{controle da ocorrência dos fatos vitais} dos indivíduos passou a fazer parte da política de Estado.
+
+\framebreak
+
+A \structure{demografia clássica} refere-se, assim ao estudo da demografia no período clássico.
+
+O denominador comum a todas essas iniciativas baseia-se em \structure{três propósitos} básicos, que persistem até hoje:
+
+(1) coleta de Impostos;
+(2) direitos de propriedade;
+(3) e recrutamento militar.
+
+## Pensamento demográfico medieval {.allowframebreaks}
+
+- A \structure{demografia medieval} é o estudo da demografia humana na Europa e no Mediterrâneo durante a Idade Média.
+- Na Alta Idade Média europeia, há notícia de diversos censos, durante a dominação muçulmana (711-1153), e o império Carolíngio (712-814).
+
+\framebreak
+
+- As \structure{pesquisas senhoriais} foram muito comuns durante a Idade Média, em particular na França e na Inglaterra, mas desapareceram quando a servidão deu lugar a uma economia monetária, dando espaço às \structure{pesquisas fiscais}, sendo a mais famosa e antiga o \structure{Domesday Book} na Inglaterra.
+
+\begin{block}{Domesday Book}
+\begin{columns}[T]
+\begin{column}{0.33\linewidth}
+~\includegraphics[height=0.3\textheight,keepaspectratio]{imagens/domesday}
+\end{column}
+\begin{column}{0.6\linewidth}
+    O Domesday Book \structure{(Livro de Apontamentos)} constituía um levantamento e registro de todos os donos de terras, propriedades, arrendatários e servos da Inglaterra medieval, sendo compilado nos anos 1086-1087, por ordem de Guilherme, o conquistador.
+\end{column}
+\end{columns}
+O registro é único na história européia e está repleto de estatísticas e alguns fragmentos de informação que revelam detalhes da vida na Inglaterra medieval.
+\end{block}
+
+\framebreak
+
+- Como os reis continuaram procurando novas maneiras de aumentar sua arrecadação, essas pesquisas fiscais cresceram em número e escopo ao longo do tempo.
+- No entanto, elas apresentam \structure{limitações:}
+    + são apenas um instantâneo no tempo;
+    + não mostram tendências de longo prazo;
+    + e tendem a excluir elementos da sociedade.
+
+\framebreak
+
+- É importante ressaltar os registros de contagens realizadas a \structure{América pré-colombiana} por \structure{maias} e \structure{incas}.
+- Estes últimos utilizavam um engenhoso sistema de números decimais representados por nós em cordas, chamados \structure{quipus}.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Quipu.png'))
+
+```
+
+# Período Protoestatístico {.allowframebreaks}
+
+## Evoluação dos censos {.allowframebreaks}
+
+## Evoluação nos métodos quantitativos {.allowframebreaks}
+
+# Período Estatístico {.allowframebreaks}
+
+## Primeiras padronizações {.allowframebreaks}
+
+## Padronização das estatísticas da população {.allowframebreaks}
+
+
+
+
+## Para casa
+
+- Pequeno trabalho 01;
+<!-- + Ler o capítulo 1 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}. -->
+
+## Próxima aula
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'teorias_demograficas.jpg'))
+
+```
+
