@@ -151,22 +151,177 @@ knitr::include_graphics(here::here('imagens', 'Quipu.png'))
 
 # Período Protoestatístico {.allowframebreaks}
 
+- É considerada uma fase introdutória à \structure{demografia científica}.
+    + Nela, observa-se a aplicação de \structure{métodos de contagem} e \structure{registro mais sistemáticos} em relação à fase anterior, sem a padronização de caráter universal que lhe sucederia.
+- Fatores ligados à **estruturação do Estado moderno** e de seu aparelho burocrático e fiscal determinaram a transição para a fase protoestatística.
+
 ## Evoluação dos censos {.allowframebreaks}
+
+As categorias de fontes características da fase protoestatística são: 
+
+- **registros paroquiais** - antigos registros civis que possibilitam observar os movimentos naturais da população;
+- **listas de contribuintes de impostos**;
+- **listas eleitorais, militares**, etc.;
+- **relação de fiéis que comungam**; 
+- **correspondência, relatos de viajantes**, etc.
+
+\framebreak
+
+As fontes mais usadas para estudar as migrações são:
+
+- **listas de cidadania, registros de guildas ou ligas cidadãs**;
+- **listas de estrangeiros**;
+- **listas profissionals:** registros de admissões a grêmios ou corporações;
+- **listas administrativas:** de passaportes concedidos, de entrada e saída de portos, etc.
+- **contratos de casamentos, testamentos e demais documentos cartoriais**.
+
+\framebreak
+
+- O desenvolvimento de \structure{cálculos demográficos} teve início nos séculos XVII e XVIII. 
+- Um dos primeiros estudos demográficos no período moderno são as observações naturais e políticas feitas sobre as \structure{contas da mortalidade} (no original em inglês, *Natural and political observations made upon the bills of mortality*, de 1662), de \structure{John Graunt (1620-1674)}, que contém uma forma primitiva de tabela de vida.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'JG.jpg'))
+
+```
 
 ## Evoluação nos métodos quantitativos {.allowframebreaks}
 
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'edmond_halley.jpg'))
+
+```
+
+- Matemáticos, como \structure{Edmond Halley}, desenvolveram a tabela de vida como base para a \structure{matemática do seguro de vida}.
+- \structure{Richard Price} foi creditado com o primeiro livro sobre contingências de vida publicado em 1771, seguido posteriormente, por \structure{Augustus de Morgan}, com a obra *Sobre a aplicação de probabilidades em costingências de vida* (1838).
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'richard_price.jpeg'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'BenFranklinDuplessis.jpg'))
+
+```
+
+- Em 1755, \structure{Benjamin Franklin} publicou seu ensaio *Observations Concerning the Growth of Human Peopling of Countries*, projetando um \structure{crescimento exponencial} nas colônias britânicas.
+    + Seu trabalho tem reconhecida influência sobre o *Ensaio*, de \structure{Thomas Robert Malthus (1799)}, considerado um dos pontos de início do pensamento demográfico moderno.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'MalthusThomas300px.jpg'))
+
+```
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='40%', out.height='30%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'gauss-german-mark.jpg'))
+
+```
+
+- \structure{Carl Gauss} e \structure{Pierre Laplace} desenvolveram, em meados dos anos 1700, a \structure{distribuição normal} de probabilidades, instrumento que deu todo um caráter inovativo à teoria estatística, permitindo que a estimação de dados fosse levada a um nível instrumental superior de utilização.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Laplace.jpg'))
+
+```
+
 # Período Estatístico {.allowframebreaks}
+
+- O início de \structure{registros sistemáticos} e \structure{padronizados}, em caráter comparativo entre unidades distintas no mesmo intervalo de tempo, ou de uma mesma unidade de análise ao longo do tempo, marca o período estatístico.
 
 ## Primeiras padronizações {.allowframebreaks}
 
+- A segunda metade do século XIX recebeu uma \structure{explosão de censos} por todo o planeta, dando início ao \structure{período} conhecido como \structure{estatístico} nos estudos populacionais. 
+
+- \structure{Contagens detalhadas}, com \structure{grande riqueza} e \structure{variedade tipológicas}, foram realizadas nos cinco continentes, permitindo um grau de desagregação de informações até então inédito.
+
+- Dados sobre **etnia**, **gênero**, **idade**, **estado civil**, **grau de escolaridade**, **nível de renda**, **dispersão territorial**, **movimentos migratórios**, etc.
+    - Condição nunca observada na história censitária ou mesmo em registros civis.
+
+\framebreak
+
+Há quatro fatores que explicam esse salto quantitativo:
+
+1. Houve a **consolidação dos estados nacionais**.
+    - Neste período várias colônias procedem com seus processos de emancipação.
+2. Houve, no período, um **aperfeiçoamento da teoria das probabilidades** e **estatística inferencial**, com a aplicação da **teoria da distribuição normal** por \structure{Aldophe Quételet (1796-1874)} no estudo de diversas características das populações humanas: altura, peso, natalidade, mortalidade, renda, etc.
+    - A **teoria da estimação** na estatística também recebeu contribuições nos
+procedimentos de preencher espaços vazios entre os dados coletados, por meio das **técnicas de previsão**, **retrospectiva** e **interpolação**.
+
+\framebreak
+
+3. O debate e a difusão de teorias demográficas.
+    - O *Ensaio*, de \structure{Malthus}, recebeu várias edições ao longo do século XIX incorporando o debate sobre o \structure{princípio da população}, o que mostra sem grande esforço, a grande discussão suscitada pela tese malthusiana.
+
+- Os anos de 1860 a 1910 podem ser caracterizados como um período de transição, em que a demografia emergiu das estatísticas como um **campo de interesse separado**. 
+    + \structure{Adolphe Quételet (1796-1874)}, \structure{William Farr (1807-1883)}, \structure{Louis-Adolphe Bertillon (1821-1883)}, Jacques Bertillon (1851-1922), \structure{Joseph Körösi (1844-1906)}, \structure{Anders Nicolas Kaier (1838-1919)}, \structure{Richard Böckh (1824-1907)}, \structure{Émile Durkheim (1858-1917)}, \structure{Wilhelm Lexis (1837-1914)} e \structure{Luigi Bodio (1840-1920)} contribuíram para o **desenvolvimento de ferramentas de métodos** e **técnicas de análise demográfica**.
+
+\framebreak
+
+4. A criação de **órgãos de pesquisa** e **estatística governamentais**, **acadêmicos**, formados por fundações científicas ou mesmo privados, com o intuito de coletar e analisar dados.
+    - Esses órgãos adquiriram, progressivamente um protagonismo crescente no debate sobre os estudos da população, inclusive no intercâmbio tecnológico que permitiu uma possibilidade de comunicação cada vez maior entre os dados coletados por diversas instituições.
+    
+\framebreak
+
+- É necessário reconhecer que, no que diz respeito a realização de censos, houve notório avanço em relação ao trinômio \structure{impostos-controle social-contingentes militares}.
+- Contudo, o ápice desse desenvolvimento desembocou na chamada \structure{era da catástrofe (1914-1945)}, marcada por **duas guerras mundiais (1914-1918 e 1939-1945)** e a **maior crise econômica** até então **(1929)**.
+
 ## Padronização das estatísticas da população {.allowframebreaks}
 
+<!-- A era da catástrofe (1914-1945) causou certo tipo de hiato no desen- volvimento dos estudos demográficos, no sentido de sua integra- ção e padronização em nível mundial. Iniciativas de coordenação metodológica entre os serviços estatísticos nacionais, tentadas desde o final do século XIX, teriam um breve respiro por meio das diretrizes fundadas pela Liga das Nações em 1912, bruscamente interrompidas pela Guerra de 1914-1918, o que não impediu uma série de censos - multos deles tardios - realizados pelo mundo durante a década de -->
 
+<!-- 1920. A crise de 1929 e a escalada de tensões mundiais que resul ram na Segunda Guerra Mundial (1939-1945) abriram outro hlate  -->
 
+- A fundação da \structure{Organização das Nações Unidas (ONU)}, em 1945, representou um novo esforço, intensificado, de retomar o desenvolvimento em termos mais cooperativos e menos destrutivos.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='50%', out.height='45%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'United-Nations-Poster.jpg'))
+
+```
+
+\framebreak
+
+- Um dos propósitos da ONU foi o de **padronizar as estatísticas socioeconômicas** de seus países-membros, permitindo a elaboração diagnósticos e análises que possibilitassem a criação de políticas para o desenvolvimento.
+    - As \structure{Divisões de Estatística e População} tiveram um papel na criação e no desenvolvimento de **metodologias** e na criação de espeços institucionais de discussão sobre temas ligados à população e ao desenvolvimento.
+    - Os 51 estados-membros fundadores assumiram esse compromisso já na fundação do órgão.
+
+<!-- A Divisão de População foi criada nos primeiros anos da ONU para servir como secretaria da então Comissão de População, criata em 1946. Ao longo dos anos, a Divisão desempenhou um papel ativo no diálogo Intergovernamental sobre população e desenvolv mento, produzindo constantemente estimativas demográficas e pre jeções atualizadas para todos os países, incluindo dados essencias para o monitoramento do progresso na consecução dos Objetivo de Desenvolvimento do Milênio, desenvolvimento e dissemina ção de novas metodologias, liderando os preparativos substantivos para as principals conferências das Nações Unidas sobre população e desenvolvimento, bem como as sessões da  -->
+
+<!-- - A \structure{Comissão de População e Desenvolvimento} A Divisão de População das Nações Unidas aut lla o Departamento de Assuntos Económicos e Sociais no desempe nho de suas funções, como membro do Grupo de Migração Global -->
+
+<!-- O Escritório de Estatística das Nações Unidas, posteriormente, a Divisão de Estatística das Nações Unidas (UNSD), atua sob o Departamento de Assuntos Econômicos e Sociais das Nações Unidas (Desa) como o mecanismo central dentro do Secretariado das Nações Unidas para suprir as necessidades estatísticas e as atividades de coor- denação do sistema estatístico global. A UNSD é supervisionada pela Comissão de Estatística das Nações Unidas, criada em 1947, como a principal entidade do sistema estatístico global e o mais alto órgão de tomada de decisão para coordenar atividades estatísticas interna- cionais, reunindo os principais estatísticos dos estados-membros de todo o mundo. A Divisão de Estatística   -->
+
+\framebreak
+
+- A \structure{Divisão de Estatística das Nações Unidas (UNSD)} reúne e dá publicidade a informações estatísticas de todo o globo, **desenvolvendo metodologias**, **padrões** e **normas** para procedimentos e atividades estatísticas.
+- A UNSD publica atualizações de dados, incluindo o \structure{Anuário Estatístico} e o \structure{Boletim Estatístico Mundial}, disponíveis no site da ONU^[https://unstats.un.org/unsd/demographic-social/products/dyb/index.cshtml].
+
+## Padronização das estatísticas da população {.allowframebreaks}
+
+- Os estudos estatísticos da ONU, disponíveis em suas publicações e relatórios desde 1948, representam um \structure{salto efetivo no papel da demografia} como instrumento de política de Estado.
+- Com a atuação, e mesmo o propósito *per se*, da ONU, **quebrou-se o trinômio milenar** de preeminência de **controle social, fiscal e militar**.
+
+<!-- coleta, compila e divulga estatísticas demográficas e sociais oficiais sobre ampla gama de tópicos. -->
+<!--     + Os dados vêm sendo coletados desde 1948 por meio de um conjunto de questionários enviados anualmente para mais de 230 escritórios nacionais de estatística, publicados na coleção do Demographic Yearbook. O Anuário Demográfico divulga estatísticas sobre tamanho e composição da população, nascimentos, mortes, casamentos e divórcios, bem como as respectivas taxas, anualmente. Os conjuntos de dados do censo do Anuário Demográfico abrangem uma ampla gama de tópicos adicionais, incluindo atividade eco- nômica, escolaridade, características da família, características da -->
+
+<!-- moradia, etnia, idioma, população estrangeira e população estran. geira. Os conjuntos de dados dos Censos de População e Habitação disponíveis relatados ao UNSD para os censos realizados em todo o mundo desde 1995 estão disponíveis no portal da ONU na rede. A atualização mais recente inclui vários conjuntos de dados sobre migrações pelo globo, conforme relatado pelas autoridades nacionais à Divisão de Estatística da ONU para os anos de referência de 2010 até o presente, quando o órgão soma 193 estados-membros. Assim, os estudos estatísticos da ONU, disponíveis em suas publi cações e relatórios desde 1948, representam um salto efetivo no papel da demografia como instrumento de política de Estado. Com a atua- ção, e mesmo o propósito per se, da ONU, quebrou-se o trinômio milenar de preeminência de controle social, fiscal e militar. Isso se deu não apenas pela transparência no processo censitário desde sua coleta - dirigida e coordenada pelo órgão desde seu planejamento-, mas também pela renovação da pauta de debates sobre a morfolo- gia e a dinâmica da população no espaço. Temas como desenvolvi mento, sustentabilidade, equidade social, econômica e de gênero e etnia ocuparam o espaço em um lugar antes inteiramente destinado ás antigas discussões relegadas à estratégia competitiva dos estados nacionais. Isso não quer dizer que tais discussões ou mesmo a estra tégia competitiva tenham desaparecido, mas encontram-se restritas às peculiaridades e aos papéis que esses estados assumem na ordem global. Evidentemente, as preocupações fiscais, militares e de controle social não desapareceram de suas agendas, mas veem-se obrigadas, hoje, a conviver com temas mais propositivos e voltados à construção de um projeto civilizatório mais construtivo, inclusivo e tolerante para com a diversidade da população do planeta. -->
 
 ## Para casa
 
-- Pequeno trabalho 01;
+1. Consulte o portal de população da ONU;
+2. **Pequeno trabalho 01:** atividade para entregar no Moodle.
+
 <!-- + Ler o capítulo 1 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}. -->
 
 ## Próxima aula
