@@ -219,6 +219,7 @@ knitr::include_graphics(here::here('imagens', 'BenFranklinDuplessis.jpg'))
 knitr::include_graphics(here::here('imagens', 'MalthusThomas300px.jpg'))
 
 ```
+
 \framebreak
 
 ```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='40%', out.height='30%', paged.print=FALSE}

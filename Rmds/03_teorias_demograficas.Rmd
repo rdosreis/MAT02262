@@ -1,0 +1,398 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Teorias demográficas"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+## Introdução {.allowframebreaks}
+
+\LARGE
+\begin{center}
+Fatores demográficos $\Rightarrow$ Questões sociais
+\end{center}
+
+\normalsize
+\
+
+Ou seja, questões sociais são influenciadas por fatores demográficos.
+
+- Assim, políticas sociais precisam (deveriam) levar em conta estes fatores.
+    
+\framebreak
+
+Talvez o uso mais comum de informação demográfica seja como \structure{indicador social}, que retrata alguma dimensão das condições de vida da população.
+
+- Os exemplos mais conhecidos são a \structure{mortalidade infantil} e a \structure{expectativa de vida ao nascer}, além da \structure{renda per capita}, que tem o **tamanho da população** como denominador.
+
+- Mais especificamente, a análise demográfica pode fornecer subsídios para dimensionar corretamente qual é a demanda por certos tipos de serviços sociais.
+
+\framebreak
+
+- Um uso mais sofisticado do conhecimento demográfico é a \structure{segmentação de mercados:} 
+    - as características do público alvo são associadas às suas características demográficas.
+
+- Em outros casos se trata do próprio \structure{desenho da política (pública)}, em que a sua viabilidade depende da dinâmica demográfica.
+- É o caso dos regimes de repartição de \structure{Previdência Social};
+    + foram formulados numa época em que o número de contribuintes era muito maior do que o número de beneficiários, mas que gradualmente começaram a enfrentar os efeitos do envelhecimento populacional.
+
+\framebreak
+
+As \structure{projeções demográficas} têm uma importância especial por seu papel central nos exercícios de planejamento. Por exemplo,
+
+- o impacto do crescimento futuro da economia sobre o equilíbrio das contas da Previdência Social é muito difícil de ser previsto;
+- ao passo que o crescente desequilíbrio do número de beneficiários e contribuintes tem um nível de incerteza significativamente menor. 
+
+\framebreak
+
+Esta é uma das razões pelas quais as projeções demográficas costumam ser a espinha dorsal de qualquer exercício de planejamento do futuro, 
+
+- especialmente de políticas públicas formuladas e direcionadas para subgrupos populacionais específicos.
+- Essas projeções são feitas pautadas naquilo que denominamos de \structure{Teorias Demográficas}, que têm uma longa história.
+
+\framebreak
+
+\begin{mybox}{Teorias,}
+em sua concepção cintentífica, são sínteses aceitas em um campo delimitado do conhecimento que consistem em hipóteses passíveis de comprovação e confronto com os fatos e as evidências que as corroboram ou refutam.
+\end{mybox}
+
+Na demografia, elas buscam apresentar uma explicação para a dinâmica do \structure{crescimento populacional}.
+
+\framebreak
+
+\begin{mybox}{Crescimento populacional}
+é a variação positiva em uma população em um dado intervalo de tempo.
+\end{mybox}
+
+\begin{mybox}{Crescimento vegetativo}
+é a diferença entre nascimentos e mortes em uma população, num dado intervalo de tempo.
+\end{mybox}
+
+\begin{mybox}{Crescimento migratório}
+é a diferença entre imigrações e emigrações em uma população, num dado intervalo de tempo.
+\end{mybox}
+
+\scriptsize
+$$
+\color{red}{\Rightarrow \mbox{crescimento populacional} = \mbox{crescimento vegetativo}\ +\ \mbox{crescimento migratório}.}
+$$
+
+\normalsize
+
+\framebreak
+
+Modernamente, as principais \structure{teorias da população} surgiram com base no \structure{princípio da população}, apresentado, no final do século XVIII, por \structure{Thomas Robert Malthus}. Com base no debate, questionamento, refutação e reformulação das proposições *malthusianas*, surgiram outras três:
+
+1. a teoria crítica ao malthusianismo, ou reformista;
+2. a teoria neomalthusiana, também chamada de **teoria da explosão demográfica**;
+3. a teoria da transição demográfica.
+
+# Teorias demográficas: séculos XVII e XVII
+
+## Otimistas e pessimistas  {.allowframebreaks}
+
+Já no **século XVII**, emergiram discussões que podem ser classificadas no âmbito dos **estudos populacionais**. 
+
+- As visões assumiam posições antagônicas a respeito de __como deveria se comportar a população__, resultando na formação de dois grupos de pensadores: \structure{os otimistas} e \structure{os pessimistas} (ou alarmistas).
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'william-godwin-collection.jpg'))
+
+```
+
+O \structure{grupo dos otimistas} foi liderado pelo inglês \structure{Willian Godwin (1756-1836)} e pelo francês marquês de \structure{Condorcet (1743-1794)}, que acreditavam na **perfeição humana** e nos **avanços científicos** como sendo capazes de proverem os meios de subsistência necessários.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'condorcet.jpeg'))
+
+```
+
+\framebreak
+
+- Também acreditavam na racionalidade do indivíduo para regular a sua própria reprodução.
+- Segundo eles, a **condição de pobreza** poderia ser eliminada através de modificações nas instituições sociais, que poriam fim nas barreiras entre as classes sociais e **redistribuiriam a riqueza**.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'MalthusThomas300px.jpg'))
+
+```
+
+Entre \structure{os pessimistas}, o principal expoente foi \structure{Thomas Robert Malthus (1766-1834)}, primeiro escritor a apresentar e desenvolver uma __teoria populacional__ compreensiva e consistente com as condições econômicas existentes na época - _Essay on the Principle of Population_ (__Um Ensaio sobre o Princípio da População__), publicado em 1798.
+
+- Malthus, com o seu \structure{princípio da população}, buscava refutar as teses de Condorcet e Godwin de que o crescimento populacional geraria riqueza.
+
+# A teoria malthusiana
+
+- A tese central enunciada por Malthus ganhou a condição de **"princípio"**.
+- O tema central do **Ensaio** de Malthus diz respetio basicamente a **população**, **produção** e **pobreza**. 
+
+## As proposições da teoria malthusiana {.allowframebreaks}
+
+A teoria populacional de Malthus baseava-se nas seguintes proposições:
+
+1. A capacidade biológica do ser humano para se reproduzir é maior do que a sua capacidade para aumentar a oferta de alimentos;
+
+\begin{mybox}{Princípio da população}
+``A população, quando não controlada cresce numa \structure{progressão geométrica}. Os meios de subsistência crescem numa \structure{progressão aritmética}''. \structure{(Malthus)}
+\end{mybox}
+
+2. As formas de **controlar o crescimento populacional** podem ser \structure{preventiva}, via diminuição do número de nascimentos \structure{(a restrição moral, o celibato voluntário)}, e \structure{positiva}, através do aumento do número de mortes, que se encontram continuamente em operação em uma sociedade dada;
+3. O **controle definitivo** da capacidade reprodutiva do ser humano é dado pela limitação da oferta de alimentos \structure{(a carestia)}.
+
+\framebreak
+
+Malthus apresentou o problema específico de que se o \structure{crescimento da população} não fosse controlado, esta tenderia a dobrar de número a cada 25 anos;
+
+- Isto é, estaria crescendo a uma \structure{taxa geométrica}.
+- Por outro lado, a \structure{produção de alimentos}, na melhor das hipóteses, tenderia a crescer a uma \structure{taxa aritmética}. 
+
+\framebreak
+
+O \structure{princípio da população}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='70%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'teoria-malthusiana.png'))
+
+```
+
+\framebreak
+
+Nesse sentido, a disparidade entre **crescimento populacional** e **crescimento de alimentos** levaria a humanidade a ser envolvida em problemas graves \structure{(a catástrofe malthusiana)}:
+
+- de **fome**;
+- **miséria**;
+- e **barbárie**.
+
+O desafio seria controlar os nascimentos, adequando-os à capacidade produtiva, de maneira que garantisse a sobrevivência da população em uma situação aceitável, condição considerada quase impossível.
+
+\framebreak
+
+Malthus acreditava que a __pobreza__ se constitui um __destino__ do qual o homem (humanidade) não pode fugir, sendo um problema que atinge a sociedade.
+
+- A **inevitabilidade da pobreza** e a futilidade das medidas assistencialistas constituiriam uma suposta **"vontade divina"**.
+    - Dessa perspectiva de pensar, deriva a identificação da Teoria Malthusiana como pessimista.
+
+## O que fazer?
+
+Para Malthus seria necessário:
+
+1. **restringir os programas de assistência** praticados pelos entes públicos \structure{(\emph{poor laws})}^["Leis dos pobres"; legislação social inglesa de amparo aos pobres que perdurou de 1601 a 1929, com modificações significativas no período da Revolução Industrial, algumas das quais revelam **influência** dos escritos de Malthus. As posições do autor a respeito dessas leis compõem três capítulos de seu segundo ensaio sobre a população.], que tenderiam a amenizar os problemas enfrentados pelas populações mais carentes, o que estimularia a natalidade nessas camadas sociais;
+2. e estimular o controle da reprodução humana entre as pessoas das camadas menos abastadas, através da abstinência sexual.
+
+## Contextualizando as ideias de Malthus {.allowframebreaks}
+
+Entre os século XVIII e XIX, a Inglaterra viveu o processo de substituição da manufatura pela maquinaria, chamado por alguns de \structure{Industrialismo}.
+
+- O surgimento de um sistema de produção apoiado em máquinas tornou a fábrica um **espaço revolucionário** $\Rightarrow$ modificou a vida de milhares de trabalhadores $\Rightarrow$ expulsando-os de seus empregos.
+- Esse **novo padrão de produção** levou a **pauperização** de grandes massas que, não sendo imediatamente incorporadas ao proletariado em formação, aparecem para Malthus como um **excendente populacional** mantido e incentivado pelo estado através das _**poor laws**_.
+
+Essas mudanças provocaram desemprego, movimentação do trabalhador de um lugar para outro, transformação de sua vida em família, aumento da mortalidade infantil, entre outros.
+
+\framebreak
+
+Malthus defendia que a __causa verdadeira da miséria humana__ não era a sociedade dividida entre proprietários e trabalhadores, ricos e pobres.
+
+- Na sua visão, a __miséria__ seria um __obstáculo positivo__, que atuou ao longo da história para __reequilibrar a desproporção natural__ entre o crescimento populacional e a produção dos meios de subsistência^[Mais uma vez se observa nas ideias de Malthus a tentativa de uma uma __lei natural__ sobre a qual os humanos tinham ou deviam ter pouca ou nenhuma influência.].
+- O fundamento de sua concepção estaria em uma \structure{lei natural}, segundo a qual o crescimento da população ocorreria em um ritmo geométrico e a dos produtos de subsistência num ritmo aritmético.
+
+## Contextualizando as ideias de Malthus {.allowframebreaks}
+
+- Para ele, a miséria era necessária; aparecia na fome, no desemprego, no rebaixamento dos salários e, assim, provocava a morte, favorecia a doença, reduzia os matrimônios, já que era mais difícil sustentar os filhos.
+- Por outro lado, ela estimula os cultivadores a ampliar o emprego da mão de obra, a abrir novas terras ao cultivo, a re-harmonizar a relação produção/recursos.
+    - A ampliação dos meios de subsistência levaria a população a crescer novamente.
+
+## A teoria de Malthus estava certa? {.allowframebreaks}
+
+Nos dois séculos posteriores à divulgação da Teoria Malthusiana, o que as dinâmicas socioeconômica, cultural e tecnológica revelaram é que __houve uma diminuição do crescimento populacional__ em quase todas as partes do planeta, exceto na África.
+
+- As políticas de bem-estar social voltadas para a saúde, habitação, saneamento e garantias trabalhistas, difundidas mundialmente, com destaque para a Europa, não foram responsáveis pelo crescimento populacional.
+    + Pelo contrário, contribuíram para a sua estabilização e/ou recuo.
+
+\framebreak
+
+A __produção de alimentos__, a partir do desenvolvimento tecnológico, possibilitou o __aumento da produtividade__, de modo que, atualmente, há condições técnicas para se produzir alimentos em quantidade suficiente para suprir as necessidades da população mundial.
+
+- Desse modo, as previsões malthusianas não se confirmaram.
+
+Contudo, características marcantes da época de Malthus ainda permanecem no contexto atual, assumindo as especificidades de seu tempo, dentre as quais se destacam a pobreza, a miséria, as guerras, as desigualdades sociais entre os diversos espaços geográficos.
+
+# Teoria Reformista e as crísticas a Malthus {.allowframebreaks}
+
+- Apesar da grande influcência dos escritos de Malthus, a reação a eles logo se fez sentir.
+- Naquilo que diz especificamente respeito à fecundidade suas ideias sofrem reparos já mesmo de seus contemporâneos da escola econômica clássica.
+
+\framebreak
+
+- Autores da época argumentam assistematicamente que a fecundidade tendia historicamente a cair devido:
+    - ao controle moral \structure{(Hazlitt, 1807)}^[Hazlitt, William. A Reply to the Essay on Population, by the Rev. T. R. Malthus, London: Longman, Hurst, Rees, and Orme, 1807.];
+    - ao "progresso da civilização" \structure{(Hamilton, 1830)}^[Hamilton, Robert. The progress of society. London: J. Murray, 1830.];
+    - à possibilidade de ascensão social aberta às classes baixas \structure{(Moreton, 1836)}^[Moreton, Augustus Henry. Civilization: Or, a Brief Analysis of the Natural Laws That Regulate the Numbers and Condition of Mankind. London: Saunders and Otley, 1836.];
+    - à urbanização \structure{(Weyland, 1816)}^[Weyland, John. The Principles Of Population And Production As They Are Affected By The Progress Of Society: With A View To Moral And Politicial Consequences. London, Baldwin, Cradock and Joy, 1816.];
+    - à superação do capitalismo e à reorganização mais equalitária da sociedade, especialmente à mudança de _status_ da mulher nas sociedades capitalista e socialista \structure{(Blanc, Proudhon, Nitti e Bebel)}.
+
+## Teoria Reformista e as crísticas a Malthus {.allowframebreaks}
+
+Entretanto, os que mais se dedicaram ao problema da fecundidade criticaram Malthus sem abandonar uma postura biológica, procurando as **"verdadeiras" leis naturais da população**, mas usando para isso inúmeros pressupostos sociais.
+
+- \structure{Sadler (1830)}^[Sadler, Michael T. The Law of Population: A Treatise, in Six Books; in Disproof of the Superfecundity of Human Beings, and Developing of the Real Principle of Their Increase. London: J. Murray, 1830.]: a fecundidade varia inversamente com a densidade populacional e diretamente com a mortalidade;
+    + o progresso da riqueza, equivalendo ao aumento da densidade, afetaria adversamente a capacidade biológica de reprodução.
+- \structure{Doubleday (1853)}^[Doubleday, Thomas. The True Law of Population. Shewn as connected with the Food of the People. London: Smith, Elder, 1847.]: as variações da fecundidade refletem variações de fertilidade decorrentes, por sua vez, do tipo de alimentação e do modo de vida mais árduo ou mais confortável, sendo menor com a melhoria dessas condições.
+
+## Teoria Reformista e as crísticas a Malthus {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'karl_marx_cropped.png'))
+
+```
+
+Dentro desse panaroma a crítica mais radical às ideias de Malthus provém de \structure{Karl Marx}, que se não chega a formular uma teoria da população, nem a desenvolver as sugestões que lança sobre o modo de conformação social da fecundidade, assume uma perspectiva histórica ante os fenômenos do homem que destrói os fundamentos da interpretação Malthusiana.
+
+\framebreak
+
+1. Marx refuta a possibilidade de uma lei natural de população para afirmar a existência de leis de população específicas a cada modo histórico de produção.
+    + Isto significa que, embora as causas da fecundidade repousem sempre na produção, suas tendências e seu sentido social podem diferir no tempo e no espaço.
+2. Sob o modo de produção capitalista, Marx aponta diferenças de fecundidade entre as classes, tomadas como setores sociais opostamente situados perante o processo produtivo, o que torna tais diferenças o resultado não apenas das condições de consumo de cada classe mas, principalmente, de suas condições de trabalho.
+3. Subordinando sua teoria de classes à lógica da expansão do capital, Marx indiretamente subordina a esta lógica todo o tratamento da dinâmica populacional moderna, incluindo-se nisto aspectos relativos à fecundidade.
+
+\framebreak
+
+Portanto, o teor das colocações de Marx deixava já bem claro que a \structure{fecundidade} constitui um fenômeno de caráter \structure{social e histórico}.
+
+- Não obstante, foi preciso que a investigação empírica, feita a partir de __dados censitários__ e __estatísticas vitais__, evidenciasse um declínio secular e diferenças intergrupais de fecundidade para que esta passasse a ser vista teoricamente daqueles ângulos.
+
+\framebreak
+
+Assim, a alternativa da crítica ao malthusianismo, ou reformista, estaria fundamentada nos seguintes princípios:
+
+::: {.block}
+
+### Princípios da teoria Reformista:
+
+- Cada modo de produção tem suas próprias leis da população;
+- O choque entre população e meios de subsistência seria uma peculiaridade do modo de produção capitalista;
+- A resolução desse choque estaria na superação ou na reforma dos princípios de produção e distribuição de riqueza do capitalismo.
+:::
+
+Dessa perspectiva, \structure{controlar o crescimento demográfico} __supõe implementar reformas socioeconômicas__ que possibilitem a elevação do padrão de vida da população, através da distribuição de renda, de alimentos e melhoria do nível de escolaridade da população.
+
+# Teoria da Explosão Demográfica {.allowframebreaks}
+
+Surgida ainda no tempo de Malthus, no século XIX, a \structure{teoria da explosão demográfica} ganhou ressonância na comunidade científica por volta de 1950.
+
+- Princípio da população explicado com base na teoria econômica neoclássica.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'population-explosion.jpg'))
+
+```
+
+\framebreak
+
+Autodenominados \structure{neomalthusianos}, os teóricos da explosão demográfica buscaram incorporar ao princípio da população elementos vindos de duas fontes:
+
+(1) a teoria econômica marginalista, desenvolvida a partir de meados da década de 1860 na Europa e nos Estados Unidos;
+(2) os resultados dos debates sobre o controle da natalidade dados nesses locais à mesma época.
+
+\framebreak
+
+- Malthus não era um defensor da contracepção, preferindo recorrer à restrição moral, ou abstinência, como freio à explosão demográfica.
+- Mas o desenvolvimento e a expansão dos métodos contraceptivos em nivel mundial nos últimos dois séculos deram à expressão \structure{planejamento familiar} um verdadeiro caráter de escolha.
+
+## Conceito de "ótimo neoclássico" populacional {.allowframebreaks}
+
+Para os teóricos da corrente neoclássica^[Como Knut Wicksell e Vilfredo Pareto] a relação entre população e riqueza seria dada por relações naturais e sociais, para as quais aplicava-se o mesmo **critério de decisão** da teoria do consumidor: 
+
+- o controle de natalidade representava uma ecolha dos indivíduos, dadas suas condições materiais e sua vuritade de ter filhos.
+
+## Conceito de "ótimo neoclássico" populacional {.allowframebreaks}
+
+- Haveria crescimento da população até um determinado ponto, denominado \structure{ótimo pepulacional}, com base no qual a natalidade seria contida por mecanismos de controle.
+
+- Ao se assumir que, dada uma condição social e econômica, uma família seria capaz de planejar o número de filhos desejados, há uma transposição do pressuposto neoclássico de soberania do consumidor, em que ele é capaz de tomar decisões racionais de otimização de sua satisfação dada uma restrição orçamentária.
+
+\framebreak
+
+Matematicamente, na visão dos neoclássicos, a situação seria a de uma função de uma população $P$, dada em função do tempo $(t)$, em que:
+
+$$
+\frac{\partial P}{\partial t} = aP -bP^2,
+$$
+
+sendo $a$ e $b$, respectivamente, as taxas médias de natalidade e de mortalidade.
+
+\framebreak
+
+- Portanto, o crescimento vegetativo de uma população seria restringido pela redução de $a$, que se daria em escala muito superior à redução de $b$, de acordo com a hipótese logistica dos teóricos neoclássicos.
+
+- O **ponto ótimo** de população resultaria da maximização dos parâmetros $a$ e $b$, estipulados níveis de crescimento do produto e da população.
+    + Nele, a pressão populacional estaria em equilíbrio com os meios de subsistência, sem necessidade de mudança técnica.
+
+## Controle populacional como política de desenvolvimento {.allowframebreaks}
+
+Com a nova aceleração populacional ocorrida após a **Segunda Guerm Mundial (1939-1945)** -- o fenômeno do **_baby boom_** -- surgiram teóricos explicando o **subdesenvolvimento** e a **pobreza** baseados no crescimento demográfico, que causaria pressões nos gastos governamentais com educação e saúde.
+
+- Uma população crescente, na opinião dos neomalthusianos, reduziria a eficiência da transformação dos investimentos em poupança, comprometendo o crescimento econômico.
+    - Em última análise, uma população numerosa levaria à estagnação econômica, ao esgotamento dos recursos naturais, ao desemprego e à carestia.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='50%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'clube_roma.jpg'))
+
+```
+
+^[**Clube de Roma:** grupo de industriais, cientistas, economistas e estadistas de 10 países; examinaram cinco fatores que determinam e limitam o crescimento do planeta; se as "atuais tendências" de crescimento da população mundial continuarem e se a industrialização, poluição, produção de alimentos e o esgotamento de recursos continuarem inalterados, os limites do crescimento neste planeta serão alcançados em 2070; o resultado mais provável será o declínio súbito e incontrolável da população e capacidade industrial.]
+
+## Controle populacional como política de desenvolvimento {.allowframebreaks}
+
+A saída para se evitar esse cenário caótico, na visão dos neomalthusianos, seria a adoção de \structure{políticas de controle de natalidade} por parte dos países que estivessem na iminência de sofrer **"pressões demográficas"**.
+
+- A ideia de um crescimento "geométrico" da população, originalmente proposta por Malthus, seria substituída pela hipótese de \structure{crescimento exponencial}.
+- As pressões e os efeitos "naturais" de tais "excessos demográficos" ganhariam os reforços da guerra e das crises econômicas.
+
+\framebreak
+
+Assim, para essa corrente, a única saída para os problemas expos tos seria o controle de natalidade.
+
+- Nesse ponto, os neomalthusianos **regridem** em relação à forma de abordagem do problema originalmente exposta por Malthus.
+- A questão da \structure{demanda efetiva} como impulso do crescimento econômico é ignorada do ponto de vista neomalthusiano.
+
+\framebreak
+
+A miséria não é um problema predominantemente causado pelo excesso de pobres, mas sim pela concentração da distribuição do produto de uma economia, derivada das relações sociais de produção ali vigentes.
+
+- Os neomalthusianos ignoram, todavia, o papel crucial que uma população crescente exerce no barateamento da mão de obra e na criação de demanda pela produção, fatores que não foram negligenciados em sua época pelo próprio Malthus.
+
+## Para casa
+
++ Ler o capítulo 3 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Próxima aula
+
+- Teoria da transição demográfica.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'Model-of-demographic-transition.png'))
+
+```
+
