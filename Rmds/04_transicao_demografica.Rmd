@@ -10,92 +10,114 @@ institute: |
   | \textsc{Instituto de Matemática e Estatística}
   | \textsc{Departamento de Estatística}
 date: |
-  | Porto Alegre, 2023
+  | Porto Alegre, 2024
 ---
 
 # Introdução e terminologia {.allowframebreaks}
 
-- Nesta aula buscaremos apresentar uma visão geral da \structure{teoria da transição demográfica}. 
+- Nesta aula apresentaremos uma visão geral da \structure{teoria da transição demográfica}. 
 - Para esse fim é preciso usar alguns termos que mais tarde serão explicados em maior detalhe.
 
-- Trata-se dos termos \structure{mortalidade}, \structure{natalidade}, \structure{fecundidade (total)}, \structure{mortalidade infantil} e \structure{esperança de vida}.
+- Trata-se dos termos \structure{mortalidade}, \structure{natalidade}, \structure{fecundidade (total)}, \structure{mortalidade infantil} e \structure{expectativa de vida}.
 
 \framebreak
 
-- A \alert{mortalidade} e \structure{natalidade} se referem respectivamente ao __número__ de \alert{óbitos} e \structure{nascimentos} que ocorrem __anualmente por mil habitantes__ de um país ou região.
-- A diferença entre \structure{natalidade} e \alert{fecundidade} reside no fato de que o primeiro quantifica o \structure{número de nascimentos que ocorrem na população} como um todo enquanto o segundo quantifica o \alert{número médio de nascimentos que ocorrem nas vidas de mulheres individuais}.
-    + Embora haja uma relação, os dois não são iguais pois a natalidade também depende de quantas mulheres em idade de
-reprodução existem na população.
+- A \structure{mortalidade} e \structure{natalidade} se referem respectivamente ao **número de óbitos e nascimentos** que ocorrem anualmente **por mil habitantes** de um país ou região.
+
+- A diferença entre \structure{natalidade} e \structure{fecundidade} reside no fato de que o primeiro quantifica o **número de nascimentos** que ocorrem na população como um todo enquanto o segundo quantifica o **número médio de nascimentos** que ocorrem **nas vidas de mulheres individuais**.
+    + Embora haja uma relação, os dois não são iguais pois a natalidade também depende de quantas mulheres em idade de reprodução existem na população.
 
 \framebreak
 
-- A \structure{mortalidade infantil} se refere ao \structure{número de óbitos de crianças menores de 1 ano}, calculado não por mil habitantes mas \structure{por mil nascimentos ocorridos na população}. 
-- A \structure{esperança de vida} (ou, mais precisamente, a __esperança de vida ao nascer__ ou à nascença) indica o \structure{número médio de anos que cada indivíduo de uma população viveria a partir do seu nascimento}, caso experimentasse os níveis de mortalidade atuais. 
+- A \structure{mortalidade infantil} se refere ao **número de óbitos de crianças menores de 1 ano**, calculado **por mil nascimentos** ocorridos na população (e não por mil habitantes). 
+- A \structure{expectativa de vida}, ou, mais precisamente, a \structure{expectativa de vida ao nascer} indica o **número médio de anos** que cada indivíduo de uma população viveria a partir do seu nascimento, caso experimentasse os níveis de mortalidade atuais. 
 
 # A transição demográfica {.allowframebreaks}
 
-- O conceito da \structure{transição demográfica} é um dos poucos marcos de referência teóricos próprios existentes na demografia.
-- Trata-se do processo histórico de transição do equilíbrio entre uma mortalidade e natalidade elevadas e instáveis nas sociedades chamadas "tradicionais" para um padrão supostamente moderno de níveis baixos e mais estáveis de ambas as componentes da dinâmica demográfica.
-- O esquema "clássico" da transição demográfica se inspira nas transformações ocorridas na Inglaterra entre meados do século
-XVIII e o começo do século XX.
-- A formulação de \structure{Notestein (1945)}^[Notestein, Frank W. (1945). Population — the Long View. Em: Theodore W. Schultz (org.). Food for the World. Chicago, University of Chicago Press.] geralmente é considerada o ponto de partida para trabalhos posteriores.
-    + Existem, na atualidade, diversas versões da teoria^[Ver, por exemplo: _segunda transição demográfica_ (STD) e _terceira transição demográfica_ (TTD).].
+<!-- - O conceito da \structure{transição demográfica} é um dos poucos marcos de referência teóricos próprios existentes na demografia. -->
+<!-- - Trata-se do processo histórico de transição do equilíbrio entre uma mortalidade e natalidade elevadas e instáveis nas sociedades chamadas "tradicionais" para um padrão supostamente moderno de níveis baixos e mais estáveis de ambas as componentes da dinâmica demográfica. -->
+A \structure{teoria da transição demográfica} busca lidar com dois fenômenos observados na história:
 
-## A transição demográfica {.allowframebreaks}
+1. Em dados períodos, ocorre uma explosão demográfica;
+2. Entre os períodos de explosão demográfica, o crescimento vegestativo cai a quase zero.
 
+O esquema "clássico" da transição demográfica se inspira nas transformações ocorridas na Inglaterra entre meados do século XVIII e o começo do século XX \structure{(período da industrialização)}.
+
+- Este esquema, com algumas modificações, pode ser aplicado às demais nanções que passaram por este processo (não necessariamente no mesmo período).
+
+\framebreak
+
+A formulação de \structure{Notestein (1945)}^[Notestein, Frank W. (1945). Population — the Long View. Em: Theodore W. Schultz (org.). Food for the World. Chicago, University of Chicago Press.] geralmente é considerada o ponto de partida para trabalhos posteriores.
+
+- Existem, na atualidade, diversas versões da teoria^[Ver, por exemplo: _segunda transição demográfica_ (STD) e _terceira transição demográfica_ (TTD).].
 - Na sua versão clássica, trata-se de um esquema que consiste de \structure{quatro fases}.
     - Nas suas versões mais modernas, acrescenta-se uma quinta e às vezes até uma sexta fase.
 
 ## Fase 1 {.allowframebreaks}
 
-- É a fase do \structure{equilíbrio "tradicional" entre a mortalidade e a fecundidade}, em que ambas se encontram em níveis _relativamente elevados_.
-    + Número médio típico de filhos por mulher nesta fase pode ser da ordem de 5 a 8; a esperança de vida no Império Romano no período de 70-192 d.C. era aproximadamente 25 anos para mulheres e 23 anos para homens (Frier, 2000)^[Frier, Bruce W. (2000). Demography. Em: Peter Garnsey; Dominic Rathbone e Alan K. Bowman (orgs.). The Cambridge Ancient History, Vol. 11: The High Empire, A.D. 70-192. 2ª edição: Cap. 27.].
-- O equilíbrio entre nascimentos e óbitos é só de longo prazo, já que a curto prazo podem ocorrer oscilações significativas, principalmente da mortalidade, devido a episódios de fome e doenças tais como a Peste Bubônica da Idade Média (1346-1353) ou, em menor medida, a recente epidemia da COVID-19.
-    + O \structure{crescimento da população} também oscila, mas \structure{no longo prazo é nulo} ou ligeiramente positivo.
-    
+É a fase do \structure{equilíbrio ``tradicional''} entre a mortalidade e a fecundidade, em que ambas se encontram em **níveis** relativamente **elevados**.
+
+- A **fecundidade** pode ser da ordem de 5 a 8;
+- A **expectativa de vida** no Império Romano no período de 70-192 d.C. por exemplo, era aproximadamente **25 anos para mulheres** e **23 anos para homens** (Frier, 2000)^[Frier, Bruce W. (2000). Demography. Em: Peter Garnsey; Dominic Rathbone e Alan K. Bowman (orgs.). The Cambridge Ancient History, Vol. 11: The High Empire, A.D. 70-192. 2ª edição: Cap. 27.].
+
+\structure{OBS.:} o equilíbrio entre nascimentos e óbitos é só de longo prazo; a curto prazo podem ocorrer oscilações significativas, principalmente da mortalidade, devido a episódios de fome e doenças tais como a Peste Bubônica da Idade Média (1346-1353) ou, em menor medida, a recente epidemia da COVID-19.
+
 ## Fase 2 {.allowframebreaks}
 
-- \structure{Fase do declínio da mortalidade:} uma das características essenciais e quase universalmente verificadas da teoria é que a mortalidade diminui significativamente antes que ocorra uma diminuição da fecundidade^[Existe um marco teórico secundário chamado teoria da transição epidemiológica, originalmente proposta por Omran (1971), que trata especificamente da queda da mortalidade, suas causas e o seu perfil em termos de doenças.].
-- Como nesta fase a natalidade ainda continua elevada, enquanto a mortalidade cai, o resultado é um rápido crescimento demográfico, da ordem de 1% ao ano no caso das transições históricas dos países europeus, mas podendo chegar a 3% no caso de alguns países em desenvolvimento.
+\structure{Declínio da mortalidade:} uma das características essenciais e quase universalmente verificadas da teoria é que a mortalidade diminui significativamente antes que ocorra uma diminuição da fecundidade^[Existe um marco teórico secundário chamado teoria da transição epidemiológica, originalmente proposta por Omran (1971), que trata especificamente da queda da mortalidade, suas causas e o seu perfil em termos de doenças.].
 
-- Historicamente, a queda da mortalidade, deveu-se, em grande medida, às melhorias nas condições de vida e a tecnologia de saúde pública (melhoria das condições de vida gerais, das políticas de saúde pública, de fatores comportamentais e das intervenções curativas específicas).
+- A natalidade continua elevada, enquanto a \structure{mortalidade cai}, o resultado é um **rápido crescimento demográfico**;
+    + da ordem de 1% ao ano no caso das transições históricas dos países europeus, mas podendo chegar a 3% no caso de alguns países em desenvolvimento.
+
+- Melhorias nas condições de vida, das políticas de saúde pública, de fatores comportamentais e das intervenções curativas específicas.
 
 ## Fase 3 {.allowframebreaks}
 
-- \structure{Fase do declínio da fecundidade:} como foi assinalado no ponto anterior, a teoria estipula que a fecundidade cai depois da mortalidade.
-    - A ideia é que demora certo tempo para que as pessoas se deem conta da diminuição da mortalidade e decidam que já não é necessário ter tantos filhos como antes para garantir um determinado número de sobreviventes.
+\structure{Declínio da fecundidade:} como foi assinalado no ponto anterior, a teoria estipula que a fecundidade cai após a queda da mortalidade.
 
-- Os mecanismos subjacentes à queda da fecundidade que caracteriza esta terceira fase da transição são diferentes daqueles que determinam a queda da mortalidade.
-    + A diminuição da fecundidade requer decisões por parte dos indivíduos baseadas na mudança de percepções sobre o ambiente em que eles vivem.
-    + Portanto, ela é afetada mais fortemente pela cultura e pelas instituições sociais.
+- A ideia é que demora certo tempo para que as pessoas se deem conta da diminuição da mortalidade e decidam que já não é necessário ter tantos filhos como antes para garantir um determinado número de sobreviventes.
+
+- A diminuição da fecundidade requer decisões por parte dos indivíduos baseadas na mudança de percepções sobre o ambiente em que eles vivem.
+    + Portanto, diferente daqueles fatores que determinam a queda da mortalidade.
+- Assim, a queda da fecundidade é afetada mais fortemente pela cultura e pelas instituições sociais.
     
 ## Fase 4 {.allowframebreaks}
 
-- \structure{Fase do novo equilíbrio}, com mortalidade e fecundidade baixas: tradicionalmente, esta __era__ a fase que se projetava como o __fim da transição demográfica__, com um equilíbrio relativamente estável entre taxas de mortalidade e natalidade baixas e aproximadamente iguais.
+O \structure{novo equilíbrio}, com mortalidade e fecundidade baixas: tradicionalmente, esta era a fase que se projetava como o __fim da transição demográfica__, com um equilíbrio relativamente estável entre taxas de mortalidade e natalidade baixas e aproximadamente iguais.
+
 - Isso causaria outra vez um __crescimento nulo__ ou muito pequeno da população. 
 - Vários países desenvolvidos atingiram este equilíbrio aproximado na segunda metade do século XX.
 
 \framebreak
 
-- Mas logo ficou evidente que não havia nenhuma razão intrínseca por que a fecundidade deveria parar de cair quando se equilibrasse com a mortalidade. 
-    - Efetivamente se observou que em vários países europeus, assim como no Japão e na Coreia do Sul, o número médio de filhos por casal caiu significativamente abaixo do número mínimo necessário para repor as gerações.
-    - O mesmo também aconteceu na China, embora por razões um pouco diferentes, já que na China foi o próprio governo que obrigou os casais a ter menos filhos. 
-     - Na América Latina, o principal exemplo de um país onde a fecundidade caiu muito abaixo do nível de reposição (o nível em que cada geração tem um tamanho igual à geração anterior) já faz algum tempo é Cuba.
+Mas logo ficou evidente que não havia nenhuma razão intrínseca por que a fecundidade deveria parar de cair quando se equilibrasse com a mortalidade. 
 
-\framebreak
+- Efetivamente se observou que em \structure{vários países europeus}, assim como no \structure{Japão} e na \structure{Coreia do Sul}, o **número médio de filhos por casal caiu** significativamente abaixo do número mínimo necessário para repor as gerações.
+- O **mesmo também aconteceu** na \structure{China}, embora por razões um pouco diferentes, já que na China foi o próprio governo que obrigou os casais a ter menos filhos. 
+- Na \structure{América Latina}, o principal exemplo de um país onde a fecundidade caiu muito abaixo do **nível de reposição**^[Nível de reposição é o nível em que cada geração tem um tamanho igual à geração anterior.] já faz algum tempo é \structure{Cuba}.
 
-- No que diz respeito à mortalidade, esta fase da transição geralmente se caracteriza por uma maior estabilidade do que a fecundidade. 
+## Fase 4 {.allowframebreaks}
+
+No que diz respeito à mortalidade, esta fase da transição geralmente se caracteriza por uma maior estabilidade do que a fecundidade. 
+
 - Mesmo assim, podem acontecer oscilações importantes, inclusive nos países mais avançados. 
 
-- Uma das mais dramáticas foi a queda da esperança de vida masculina que ocorreu na Rússia por volta de 1990, de 64,83 anos em 1987 para 57,38 anos em 1994.
-- Uma queda que também causou muita preocupação, apesar de ser muito menor, foi a diminuição da esperança de vida para ambos os sexos nos EUA, de 78,9 anos em 2014 para 78,7 anos em 2015 e 78,6 em 2016 e 2017,4 em grande medida devido ao aumento do número de mortes por uso de drogas. 
-    + Mais especificamente, a mortalidade materna nos EUA tem aumentado de forma acentuada, mais do que dobrando
-entre 1987 e 2016.
+- Uma das mais dramáticas foi a **queda da expectativa de vida** masculina que ocorreu na \structure{Rússia} por volta de 1990, de 64,83 anos em 1987 para 57,38 anos em 1994.
+- Uma queda que também causou muita preocupação foi a **diminuição da expectativa de vida** para ambos os sexos nos \structure{EUA},
+    + de 78,9 anos em 2014 
+    + para 78,7 anos em 2015
+    + e 78,6 em 2016 e 2017.
+    
+$\looparrowright$ Mortes por uso de drogas e aumento da mortalidade materna nos EUA.
 
 ## "Fase 5" (STD) {.allowframebreaks}
 
-- Por causa das divergências notadas na Fase 4, se introduziu uma quinta fase na transição demográfica, associada à chamada _"segunda" transição demográfica_.
-- Essa fase tem a ver com o adiamento da reprodução, na medida em que muitas mulheres entram na força de trabalho e querem consolidar as suas carreiras antes de ter filhos, a percepção crescente de que a reprodução é opcional e não obrigatória, um aumento no porcentual de casais que optam por não ter filhos e um aumento das formas não convencionais de coabitação, com ou sem filhos, além do casamento tradicional.
+Por causa das divergências notadas na Fase 4, se introduziu uma \structure{quinta fase} na transição demográfica, associada à chamada \structure{\emph{``segunda'' transição demográfica}}.
+
+- Essa fase tem a relação com:
+    + o adiamento da reprodução, na medida em que muitas mulheres entram na força de trabalho e querem consolidar as suas carreiras antes de ter filhos;
+    + a percepção crescente de que a reprodução é opcional e não obrigatória;
+    + e um aumento no porcentual de casais que optam por não ter filhos.
 
 ## A transição demográfica: esquema de cinco fases
 
@@ -156,7 +178,11 @@ knitr::include_graphics(here::here('imagens', 'tendencias_fecundidade.png'))
 
 # A transição da estrutura etária {.allowframebreaks}
 
-- A transição demográfica tem implicações importantes para a estrutura etária da população.
+A transição demográfica tem implicações importantes para a \structure{estrutura etária} da população.
+
+- Utilizaremos a \structure{pirâmide etária}, gráfico que será discutido futuramente no curso, para representar a distribuição de idade em uma população hipotética em diferentes fases da sua transição demográfica.
+
+\framebreak
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
 
@@ -164,7 +190,9 @@ knitr::include_graphics(here::here('imagens', 'estrutura_etaria_fase1.png'))
 
 ```
 
-- Essas populações têm muitas crianças e poucos velhos devido ao fato de que poucas crianças sobrevivem às idades adultas.
+- Essas populações têm muitas crianças e poucos idosos devido ao fato de que poucas crianças sobrevivem às idades adultas.
+    + Mortalidade alta;
+    + Expectativa de vida é baixa.
 
 \framebreak
 
@@ -174,8 +202,9 @@ knitr::include_graphics(here::here('imagens', 'estrutura_etaria_fase2.png'))
 
 ```
 
-- Na segunda fase, ocorre uma aceleração do crescimento da população, o que também aumenta o número de jovens em relação aos adultos e os maiores de idade.
-
+- Na segunda fase, ocorre uma aceleração do crescimento da população, o que também aumenta o número de jovens em relação aos adultos e os de idades mais elevadas.
+    + Mortalidade cai.
+    
 \framebreak
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
@@ -184,7 +213,7 @@ knitr::include_graphics(here::here('imagens', 'estrutura_etaria_fase3.png'))
 
 ```
 
-- Na terceira fase da transição, a disparidade extrema entre crianças e pessoas de maior idade se reduz e a estrutura etária se torna mais equilibrada.
+- Na terceira fase da transição, a disparidade extrema entre crianças e pessoas de idade mais elevada se reduz e a estrutura etária se torna mais equilibrada.
 
 \framebreak
 
@@ -198,7 +227,7 @@ knitr::include_graphics(here::here('imagens', 'estrutura_etaria_fase4.png'))
 
 \framebreak
 
-- Como consequência destas transformações ocorre um aumento significativo da idade mediana da população, ou seja, da idade que divide a população em duas metades iguais.
+- Como consequência destas transformações ocorre um aumento significativo da \structure{idade mediana} da população, ou seja, da idade que divide a população em duas metades iguais.
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', paged.print=FALSE}
 
@@ -208,13 +237,14 @@ knitr::include_graphics(here::here('imagens', 'idade_mediana.png'))
 
 \framebreak
 
-- Nas fases mais avançadas da transição demográfica ocorre um fenômeno que tem atraído muita atenção desde o início do século. 
-- Quando a fecundidade começa a diminuir de uma forma mais decisiva, o número de crianças e jovens diminui ou cresce mais devagar.
-- Inicialmente a proporção de idosos ainda está pequena, de modo que há um período em que uma parcela grande da população (mais de 70% em alguns casos) se concentra entre as idades de 15 e 65 anos, ou seja, a __população em idade produtiva__. 
-    - Este chamado \structure{bônus demográfico} ou \structure{dividendo demográfico (Bloom, Canning e Sevilla, 2003)}^[Bloom, David E.; David Canning e Jaypee Sevilla (2003). The Demographic Dividend: a New
-Perspective on the Economic Consequences of Change. Santa Monica: The RAND Corporation.] potencialmente constitui um __estímulo ao crescimento econômico__, desde que existam condições complementares para tirar proveito da conjuntura demográfica favorável, particularmente o investimento no capital humano dos jovens.
+Nas fases mais avançadas da transição demográfica ocorre um fenômeno que tem atraído muita atenção desde o início do século. 
 
-## A TD no Brasil: um resumo {.allowframebreaks}
+- Quando a fecundidade começa a diminuir de uma forma mais decisiva, o número de crianças e jovens diminui ou cresce mais devagar.
+- Inicialmente a proporção de idosos ainda está pequena; pop. entre 15 e 65 anos (a __população em idade produtiva__) $\sim$ 70%. 
+    - Este chamado \structure{bônus demográfico} ou \structure{dividendo demográfico (Bloom, Canning e Sevilla, 2003)}^[Bloom, David E.; David Canning e Jaypee Sevilla (2003). The Demographic Dividend: a New
+Perspective on the Economic Consequences of Change. Santa Monica: The RAND Corporation.] potencialmente constitui um __estímulo ao crescimento econômico__^[Desde que existam condições complementares para tirar proveito da conjuntura demográfica favorável, particularmente o investimento no capital humano dos jovens.]. 
+
+# A transição demográfica no Brasil: um resumo {.allowframebreaks}
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
 
@@ -224,8 +254,8 @@ knitr::include_graphics(here::here('imagens', 'td_br.png'))
 
 \framebreak
 
-- Nas décadas de 1950 e 1960, o declínio da mortalidade combinado com a manutenção de níveis elevados de natalidade.
-- Foi a partir de 1970 que o Brasil experimentou uma verdadeira revolução demográfica. Os indicadores de fecundidade e mortalidade para 1980 revelaram essas grandes mudanças: todos eles tiveram seus níveis drasticamente reduzidos.
+- Nas décadas de **1950 e 1960**, o **declínio da mortalidade** combinado com a manutenção de níveis elevados de natalidade.
+- Foi a partir de **1970** que o Brasil experimentou uma verdadeira revolução demográfica. Os **indicadores de fecundidade e mortalidade** para 1980 revelaram essas grandes mudanças: todos eles tiveram seus níveis **drasticamente reduzidos**.
 - Na década de 1980, as tendências de queda da fecundidade e da mortalidade foram ainda mais acentuadas.
 - Nas duas décadas seguintes, entre 1991 e 2010, os níveis de mortalidade e fecundidade reduziram-se ainda mais.
 
@@ -240,26 +270,4 @@ knitr::include_graphics(here::here('imagens', 'td_etaria_br.png'))
 ## Para casa
 
 + Ler o capítulo 2 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
-
-## Próxima aula
-
-- A relevância dos fatores demográficos para a dinâmica social e as políticas públicas.
-
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', paged.print=FALSE}
-
-knitr::include_graphics(here::here('imagens', 'dickens_tempos_difíceis.png'))
-
-```
-
-## Por hoje é só!
-
-\begin{center}
-{\bf Bons estudos!}
-\end{center}
-
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
-
-knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-8.jpg'))
-
-```
 
