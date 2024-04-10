@@ -1,6 +1,6 @@
 ---
 title: "MAT02262 - Estatística Demográfica I"
-subtitle: "Fontes de dados demográficos"
+subtitle: "Fontes de dados demográficos: levantamentos por amostragem"
 fontsize: 10pt
 author: |
   | Rodrigo Citton P. dos Reis
@@ -10,32 +10,36 @@ institute: |
   | \textsc{Instituto de Matemática e Estatística}
   | \textsc{Departamento de Estatística}
 date: |
-  | Porto Alegre, 2023
+  | Porto Alegre, 2024
 ---
 
 # Pesquisas e inquéritos especiais {.allowframebreaks}
 
-- O censo de população, por fundamental que seja, não pode dar conta de todas as necessidades de \structure{informação demográfica} e social que existem \structure{num país}.
+O **censo da população**, por mais fundamental que seja, não consegue dar conta de todas as necessidades de \structure{informação demográfica} e social que existem \structure{num país}.
+
 - Aqueles \structure{dados básicos} que precisam ser conhecidos em detalhe em todas as unidades geográficas do território nacional, na medida em que não sejam captados por registros administrativos, devem ser \structure{recolhidos no censo}.
-- Porém, existem muitos \alert{outros tipos de informação} que não exigem tanto detalhe geográfico, mas que sim, visam uma \alert{compreensão mais aprofundada de processos e causas} ao nível nacional ou regional.
+- Porém, existem muitos **outros tipos de informação** que não exigem tanto detalhe geográfico, mas que sim, visam uma **compreensão mais aprofundada de processos e causas** ao nível nacional ou regional.
 
 \framebreak
 
-- Por exemplo, pode não haver uma boa alternativa para o censo quando se trata de avaliar o \structure{número de crianças} que se encontram \structure{fora do sistema escolar} em todas as unidades administrativas do país.
-- Mas para avaliar em mais detalhe quais são as \alert{razões pelas quais as crianças não frequentam a escola}, talvez não haja necessidade de realizar uma investigação em cada distrito escolar.
-- Uma \structure{pesquisa amostral} (levantamento por amostragem; _sampling survey_) representativa para a variedade de situações socioeconômicas existentes no país pode ser bem mais econômica para administrar e funcionar melhor em termos da qualidade e do grau de detalhe das informações relevantes para a análise do problema.
+Por exemplo, pode não haver uma boa alternativa para o censo quando se trata de avaliar o \structure{número de crianças} que se encontram \structure{fora do sistema escolar} em todas as unidades administrativas do país.
+
+- Mas para avaliar em mais detalhe quais são as **razões pelas quais as crianças não frequentam a escola**, talvez não haja necessidade de realizar uma investigação em cada distrito escolar.
+- Uma \structure{pesquisa amostral} (levantamento por amostragem; _sampling survey_) representativa para a variedade de situações socioeconômicas existentes no país pode ser bem **mais econômica** para administrar e funcionar melhor em termos da qualidade e do grau de detalhe das informações relevantes para a análise do problema.
 
 \framebreak
 
-- Ainda, existem muitos temas que precisam de uma maior frequência de levantamento de dados do que o ritmo decenal dos censos.
-    + Por exemplo, as informações sobre o emprego precisam ser atualizadas mensalmente ou trimestralmente e não se pode esperar o próximo censo para fornecer este dado.
+Ainda, existem muitos temas que precisam de uma **maior frequência** de levantamento de dados do que o **ritmo decenal dos censos**.
+
++ Por exemplo, as informações sobre o emprego precisam ser atualizadas mensalmente ou trimestralmente e não se pode esperar o próximo censo para fornecer este dado.
 
 \framebreak
 
-- Além da __economia de custos__ e da necessidade de __informação__ mais atualizada e __mais aprofundada__ em certos temas, existem outras razões para preferir pesquisas amostrais focalizadas sobre determinados temas.
-    + Por exemplo, a __seleção__ e o __treinamento__ recebido pelos __entrevistadores__ em pesquisas temáticas normalmente são muito mais rigorosos do que na operação censitária, onde o número de entrevistas é muito maior.
+Além da __economia de custos__ e da necessidade de __informação__ mais atualizada e __mais aprofundada__ em certos temas, existem outras razões para preferir pesquisas amostrais focalizadas sobre determinados temas.
 
-\framebreak
++ Por exemplo, a __seleção__ e o __treinamento__ recebido pelos __entrevistadores__ em pesquisas temáticas normalmente são muito mais rigorosos do que na operação censitária, onde o número de entrevistas é muito maior.
+
+## Pesquisas por amostragem {.allowframebreaks}
 
 Dependendo das necessidades específicas de informação e da forma de organização do sistema estatístico de cada país, se realizam uma grande variedade de pesquisas amostrais. Alguns dos exemplos mais comuns são os seguintes:
 
@@ -50,30 +54,33 @@ Dependendo das necessidades específicas de informação e da forma de organiza�
 - Pesquisas de Uso de Tempo;
 - Pesquisas sobre Migrações;
 
-\framebreak
+## Pesquisas por amostragem: o SIPD {.allowframebreaks}
 
 \begin{mybox}{SIPD}
-No Brasil, por exemplo, o IBGE vem promovendo o \structure{Sistema Integrado de Pesquisas Domiciliares (SIPD)} que inclui a \structure{Pesquisa Nacional por Amostra de Domicílios Contínua (PNADc)}, a \structure{Pesquisa Nacional de Saúde (PNS)}, o esquema de pesquisas de orçamentos familiares contínuas, composto pela \structure{Pesquisa de Orçamentos Familiares (POF)} e a POF Simplificada, além de pesquisas sobre outros temas, seja por meio de investigações suplementares ou de pesquisas independentes.
+No Brasil, por exemplo, o IBGE vem promovendo o \structure{Sistema Integrado de Pesquisas Domiciliares (SIPD)} que inclui a \structure{Pesquisa Nacional por Amostra de Domicílios Contínua (PNADc)}, a \structure{Pesquisa Nacional de Saúde (PNS)}, o esquema de pesquisas de orçamentos familiares contínuas, composto pela \structure{Pesquisa de Orçamentos Familiares (POF)} e a \structure{POF Simplificada}, além de pesquisas sobre outros temas, seja por meio de investigações suplementares ou de pesquisas independentes.
 \end{mybox}
 
-\framebreak
+## Riscos e vieses {.allowframebreaks}
 
-- Um dos riscos principais da realização de inquéritos por meio de levantamentos amostrais é que uma amostra enviesada pode distorcer os resultados. 
+Um dos riscos principais da realização de inquéritos por meio de levantamentos amostrais é que uma **amostra enviesada** pode distorcer os resultados. 
+
 - Existem muitos fatores que podem enviesar uma amostra, tanto no desenho como na sua execução, gerando uma sobrerrepresentação de certos grupos.
 
 \framebreak
 
-- Um dos desafios que se enfrenta na condução de inquéritos, (e inclusive nos censos) é a crescente __taxa de não resposta__.
+Um dos desafios que se enfrenta na condução de inquéritos, (e inclusive nos censos) é a crescente __taxa de não resposta__.
+
 - O problema de domicílios (agregados familiares) sem moradores presentes constitui um desafio crescente na organização de inquéritos. 
     - Normalmente a instrução ao entrevistador é que ele ou ela deve voltar em outro horário, mas depois de algumas tentativas fracassadas se permite a substituição por uma outra unidade. 
     Isto significa que a amostra pode ser enviesada – às vezes de forma significativa – na direção de domicílios onde geralmente tem gente em casa, como os de idosos.
 
 \framebreak
 
-- Por exemplo, a Pesquisa Distrital por Amostra de Domicílios \structure{(PDAD)} do \structure{Distrito Federal} do Brasil, de 2015, executada pela Companhia de Planejamento do Distrito Federal (CODEPLAN), encontrou \alert{10,6\% de pessoas com 65 anos ou mais} quando o __Censo de 2010 enumerou apenas 5,0%__.
-    + É pouco provável que a população idosa tenha aumentado tanto em tão pouco tempo; a explicação mais provável é o __viés da PDAD na seleção dos domicílios__ (agregados familiares) entrevistados.
+Por exemplo, a Pesquisa Distrital por Amostra de Domicílios \structure{(PDAD)} do \structure{Distrito Federal} do Brasil, de 2015, executada pela Companhia de Planejamento do Distrito Federal (CODEPLAN), encontrou \alert{10,6\% de pessoas com 65 anos ou mais} quando o __Censo de 2010 enumerou apenas 5,0%__.
 
-\framebreak
++ É pouco provável que a população idosa tenha aumentado tanto em tão pouco tempo; a explicação mais provável é o __viés da PDAD na seleção dos domicílios__ (agregados familiares) entrevistados.
+
+## Inquéritos especiais {.allowframebreaks}
 
 Vale a pena dar certo destaque a três tipos de pesquisa (inquérito), devido à sua importância para a recolha de informação de população.
 
@@ -81,32 +88,37 @@ Vale a pena dar certo destaque a três tipos de pesquisa (inquérito), devido à
 - \structure{Inquéritos Demográficos e de Saúde ou IDS (\emph{Demographic and Health Surveys} ou DHS, em inglês)}
 - \structure{Inquéritos de Indicadores Múltiplos (\emph{Multiple Indicator Cluster Surveys} ou MICS, em inglês)}^[https://mics.unicef.org/], que continuam sendo fundamentais para a obtenção de dados sobre temas de população e saúde reprodutiva.
 
-## Pesquisas e inquéritos especiais {.allowframebreaks}
+## Inquéritos Domiciliares de Propósitos Múltiplos {.allowframebreaks}
 
-- Os Inquéritos Domiciliares de Propósitos Múltiplos levantam informação sobre uma variedade de assuntos, mas que geralmente incluem:
-    + emprego,
-    + renda e pobreza,
-    + assistência escolar,
-    + situação de moradia,
-    + migração,
-    + fecundidade.
+Os **Inquéritos Domiciliares de Propósitos Múltiplos** levantam informação sobre uma variedade de assuntos, mas que geralmente incluem:
 
-- Alguns destes inquéritos, inclusive a PNAD no Brasil, consistem de um núcleo básico de perguntas mais ou menos permanentes e um suplemento especial sobre temas especiais que podem variar.
-
-- O __tamanho amostral__ da maioria dos inquéritos deste tipo tem sido modesto (menos de 10.000 domicílios), mas a PNAD tem um tamanho muito grande, de \alert{mais de 150.000 domicílios} em 2014.
++ emprego,
++ renda e pobreza,
++ assistência escolar,
++ situação de moradia,
++ migração,
++ fecundidade.
 
 \framebreak
 
-- A PNAD^[https://www.ibge.gov.br/novo-portal-destaques/24138-nota-tecnica-sobre-a-pnad-continua.html] começou em 1967 como uma pesquisa trimestral que excluía a Região Norte e Centro-Oeste do Brasil.
+Alguns destes inquéritos, inclusive a \structure{PNAD} no Brasil, consistem de um núcleo básico de perguntas mais ou menos permanentes e um suplemento especial sobre temas especiais que podem variar.
+
+- O __tamanho amostral__ da maioria dos inquéritos deste tipo tem sido modesto (menos de 10.000 domicílios), mas a \structure{PNAD} tem um tamanho muito grande, de \alert{mais de 150.000 domicílios} em 2014.
+
+## A PNAD {.allowframebreaks}
+
+A \structure{PNAD}^[https://www.ibge.gov.br/novo-portal-destaques/24138-nota-tecnica-sobre-a-pnad-continua.html] começou em 1967 como uma pesquisa trimestral que excluía a Região Norte e Centro-Oeste do Brasil.
+
 - A partir de 1971 passou a ser anual e em 1973 passou a ser nacional.
-- No período de 2012 a 2015 mudou-se gradualmente a sistemática da PNAD que passou a ser uma \structure{pesquisa contínua}, realizada trimestralmente com uma amostra rotativa de \alert{211 mil domicílios} que são entrevistados durante 5 trimestres consecutivos antes de serem substituídos.
-- Este novo desenho da pesquisa implica em maior precisão das estimativas e maior capacidade para captar flutuações conjunturais, o que possibilita a incorporação da antiga Pesquisa Mensal de Emprego (PME).
+- No período de 2012 a 2015 mudou-se gradualmente a sistemática da \structure{PNAD} que passou a ser uma \structure{pesquisa contínua}, realizada trimestralmente com uma amostra rotativa de \alert{211 mil domicílios} que são entrevistados durante 5 trimestres consecutivos antes de serem substituídos.
+- Este novo desenho da pesquisa implica em **maior precisão das estimativas** e maior capacidade para captar flutuações conjunturais, o que possibilita a incorporação da antiga Pesquisa Mensal de Emprego (PME).
 
 ## Pesquisas e inquéritos especiais {.allowframebreaks}
 
-- A divulgação da informação recolhida em inquéritos no __formato de microdados__^[https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html] que os pesquisadores podem analisar para os seus próprios objetivos de pesquisa geralmente é menos problemática do que no caso dos censos.
+A divulgação da informação recolhida em inquéritos no __formato de microdados__^[https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html] que os pesquisadores podem analisar para os seus próprios objetivos de pesquisa geralmente é menos problemática do que no caso dos censos.
     <!-- - Como as amostras usadas nestes inquéritos geralmente contemplam só uma fração relativamente pequena da população total, o risco de identificação de pessoas ou domicílios individuais por meio destas bases de dados é muito menor. -->
-- A Fundação IBGE teve um papel pioneiro nos anos 90 ao conceder o acesso de pesquisadores nacionais e internacionais às bases de microdados da PNAD.
+
+- A Fundação IBGE teve um papel pioneiro nos anos 90 ao conceder o acesso de pesquisadores nacionais e internacionais às bases de microdados da \structure{PNAD}.
     - O mesmo vale para as pesquisas DHS e MICS que, com poucas exceções, estão disponíveis nos respectivos sítios web, precisando só de um pedido formal por parte do usuário para indicar que tipo de uso será feito da informação solicitada.
 
 # Fontes não convencionais e bases de informação especiais {.allowframebreaks}
@@ -142,16 +154,3 @@ knitr::include_graphics(here::here('imagens', 'mobilidade.png'))
 
 - Explore no site do IBGE as diferentes pesquisas amostrais e inquéritos (incluindo diferentes censos) realizados pelo IBGE; apresente no Fórum Geral do Moodle os destaques em termos escopo e periodicidade destes levantamentos.
 - Ler o capítulo 5 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
-
-## Por hoje é só!
-
-\begin{center}
-{\bf Bons estudos!}
-\end{center}
-
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
-
-knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras04.jpg'))
-
-```
-
