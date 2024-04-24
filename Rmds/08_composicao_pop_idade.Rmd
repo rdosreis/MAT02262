@@ -10,7 +10,7 @@ institute: |
   | \textsc{Instituto de Matemática e Estatística}
   | \textsc{Departamento de Estatística}
 date: |
-  | Porto Alegre, 2023
+  | Porto Alegre, 2024
 ---
 
 # A idade como conceito demográfico central
@@ -27,43 +27,56 @@ quantificam os processos que mudam tal situação.
 
 \framebreak
 
-- A maior parte da análise demográfica se ocupa com a \structure{dinâmica da população}.
-    + Como as variáveis de fluxo, tais como \structure{nascimentos, óbitos e migrações}, afetam as variáveis de estoque.
+A maior parte da análise demográfica se ocupa com a \structure{dinâmica da população}.
+
++ Como as variáveis de fluxo, tais como \structure{nascimentos, óbitos e migrações}, afetam as variáveis de estoque.
 - Mas antes de entrar nesta análise, vale a pena primeiro olhar alguns \structure{conceitos descritivos de população} que se baseiam nas variáveis de estoque.
 
 ## A centralidade do conceito de "idade" {.allowframebreaks}
 
-- Quase não existe qualquer indicador na demografia cujo significado não seja condicionado pelo fator idade.
-- A pergunta \alert{``qual é a probabilidade de que uma pessoa atualmente viva continue viva por mais 10 anos?''} tem pouco sentido sem saber a idade (e o sexo) atual da pessoa.
-- Da mesma forma, a pergunta \alert{``qual é a probabilidade de que uma mulher tenha um filho durante o próximo ano?''} é difícil de responder sem saber a sua idade.
+Quase não existe qualquer indicador na demografia cujo significado não seja condicionado pelo **fator idade**.
+
+- A pergunta: \textbf{\alert{``qual é a probabilidade de que uma pessoa atualmente viva continue viva por mais 10 anos?''}} tem pouco sentido sem saber a idade (e o sexo) atual da pessoa.
+
+- Da mesma forma, a pergunta: \textbf{\alert{``qual é a probabilidade de que uma mulher tenha um filho durante o próximo ano?''}} é difícil de responder sem saber a sua idade.
 
 \framebreak
 
-- O conceito de \structure{idade exata} se refere a um número matemático que não permite nenhuma ambiguidade.
-    + 15 anos __é exatamente__ 15,0000000 anos, não 15,0000001, nem 14,99999999.
-- Mas evidentemente não existe nenhuma pessoa que tenha exatamente 15 anos neste sentido excessivamente restrito.
+O conceito de \structure{idade exata} se refere a um número matemático que não permite nenhuma ambiguidade.
+
+- 15 anos __é exatamente__ 15,0000000 anos; 
+    + não 15,0000001, nem 14,99999999.
+
+\framebreak
+
+Mas evidentemente não existe nenhuma pessoa que tenha exatamente 15 anos neste sentido excessivamente restrito.
+
 - Por isso, o conceito exato de idade não é usado para identificar as idades de pessoas específicas, mas só para delimitar \structure{faixas etárias} (também chamadas "grupos etários") ou para calcular médias.
-    + Por exemplo, quando se fala das \alert{pessoas com menos de 15 anos}, a idade exata de 14,9999 anos é incluída neste grupo, mas a idade exata de 15,0000 anos não. 
+    + Por exemplo, quando se fala das \textbf{\alert{pessoas com menos de 15 anos}}, \underline{a idade exata de 14,9999 anos é incluída} neste grupo, mas a \underline{idade exata de 15,0000 anos não}. 
 
 \framebreak
 
-- Por outro lado, quando comumente se fala de uma pessoa com a idade de 14 anos, sem algarismos atrás da vírgula, a ideia subjacente é a de \structure{idade em anos completos}.
-- Uma pessoa assim descrita pode ter qualquer idade exata entre 14,0000 e 14,9999 anos, mas não pode ter 15,0000 anos. 
-- A idade média, em termos exatos, destas pessoas não é 14,0, mas 14,5 anos (se estiverem distribuídas uniformemente).
-    + Atenção com a construção de faixas etárias a partir da idade em anos completos.
+Por outro lado, quando comumente se fala de \underline{uma pessoa com a idade de 14 anos}, sem algarismos atrás da vírgula, a ideia subjacente é a de \structure{idade em anos completos}.
 
-## Notação para quantidades demográficas {.allowframebreaks}
+- Uma pessoa assim descrita pode ter \underline{qualquer idade exata entre 14,0000 e 14,9999 anos}, mas \underline{não pode ter 15,0000 anos}. 
+- A idade média, em termos exatos, destas pessoas não é 14,0, mas 14,5 anos (se estiverem distribuídas uniformemente).
+    <!-- + Atenção com a construção de faixas etárias a partir da idade em anos completos. -->
+
+# Notação para quantidades demográficas {.allowframebreaks}
 
 - A idade é simbolizada por $x$^[Em outros textos também se pode encontrar o símbolo a para idade (de "age", em inglês e "âge", em francês), mas esta convenção parece menos apropriada para a língua portuguesa ou espanhola.];
 - A amplitude de um intervalo etário por $n$.
 - Números absolutos são simbolizados por maiúsculas:
     + $P$ para população;
-    + $D$ para defunções^[Falecimento. Alguns autores usam $O$ (de "óbitos") para as defunções, mas esta prática distancia-se desnecessariamente da internacional ("deaths", em inglês, "décès", em francês, "defunciones" em espanhol).];
-    + $N$ para nascimentos^[O símbolo $N$ parece mais apropriado do que $B$ (de “births”) que geralmente se usa na literatura de língua inglesa.]. 
+    + $D$ para defunções^[**Falecimento**. Alguns autores usam $O$ (de "óbitos") para as defunções, mas esta prática distancia-se desnecessariamente da internacional ("*deaths*", em inglês, "*décès*", em francês, "*defunciones*" em espanhol).];
+    + $N$ para nascimentos^[O símbolo $N$ parece mais apropriado do que $B$ (de “*births*”) que geralmente se usa na literatura de língua inglesa.]. 
 
 ## Notação para quantidades demográficas {.allowframebreaks}
 
-- Sendo assim, $_{n}P_x$ denota a população contida no intervalo de $n$ anos que começa na idade exata de $x$ anos
+Sendo assim, $_{n}P_x$ denota:
+
+- a população contida no intervalo de $n$ anos que começa na idade exata de $x$ anos;
+
 - Se $n = 5$ e $x = 15$, então a população contida no intervalo de $5$ anos que começa na idade exata de $15$ anos é 
 
 $$
@@ -72,12 +85,11 @@ $$
 
 \framebreak
 
-- Para sinalizar que esta informação se refere à situação num determinado momento $t$ (de "tempo" ou "time", em inglês), acrescenta-se esta informação entre parênteses:
+- Para sinalizar que esta informação se refere à situação num determinado momento $t$ (de "tempo" ou "*time*", em inglês), acrescenta-se esta informação entre parênteses:
 
-$$
-_{5}P_{50}(2015)
-$$
-representa a __população de 50-54 anos completos existente em 1º de janeiro de 2015__.
+- A notação $_{5}P_{50}(2015)$ representa a __população de 50-54 anos completos existente em 1º de janeiro de 2015__.
+
+\framebreak
 
 - Para o último intervalo, que é aberto para cima, geralmente se usa a notação $x^{+}$, omitindo o
 índice da esquerda, ou então se usa $x$ com um índice $\omega$ na esquerda:
@@ -86,18 +98,26 @@ $$
 _{\omega}P_{x}(t) = P_{x^{+}}(t).
 $$
 
+- **EX.:** $_{\omega}P_{70}(2010) = P_{70^{+}}(2010)$ é a população de 70 anos ou mais no ano de 2010.
+- **Sua vez:** $_{\omega}P_{65}(2010) = P_{65^{+}}(2010)$ $\ldots$.
+
 \framebreak
 
-- Quando a quantidade é de fluxo, como nascimentos ou defunções, e não de estoque, é preciso indicar tanto o início como o final do período de observação:
-    + $_{5}D_{50}(2015,2020)$ representa as __defunções ocorridas entre o 1º de janeiro de 2015 e o 31º de dezembro de 2019, de pessoas que no momento da sua morte tinham 50-54 anos completos__.
-- Quando se trata de nascimentos, em vez de defunções, os símbolos $x$ e $n$ \structure{se referem às idades das mães}, não dos filhos. 
-- Ao tratar-se de números proporcionais, taxas ou probabilidades, geralmente se usam letras minúsculas.
-    + Por exemplo $_{5}p_{50}(2015)$ representa a __proporção da população com 50-54 anos completos no 1º de janeiro de 2015__.
+Quando a quantidade é de fluxo, como nascimentos ou defunções, e não de estoque, é preciso indicar tanto o início como o final do período de observação:
 
-## Pirâmide etária {.allowframebreaks}
+- $_{5}D_{50}(2015,2020)$ representa as __defunções ocorridas entre o 1º de janeiro de 2015 e o 31º dia de dezembro de 2019, de pessoas que no momento da sua morte tinham entre 50 e 54 anos completos__.
+- Quando se trata de nascimentos, em vez de defunções, os símbolos $x$ e $n$ \structure{se referem às idades das mães}, não dos filhos. 
+
+\framebreak
+
+Ao tratar-se de números proporcionais, taxas ou probabilidades, geralmente se usam letras minúsculas.
+
++ Por exemplo $_{5}p_{50}(2015)$ representa a __proporção da população com 50-54 anos completos no 1º de janeiro de 2015__.
+
+# Pirâmide etária {.allowframebreaks}
 
 - Um dos recursos mais conhecidos para representar a \structure{distribuição das idades} numa população é a \structure{pirâmide etária} (que geralmente é específica por sexo também).
-- Trata-se de um diagrama com a população masculina na esquerda e a população feminina na direita.
+- Trata-se de um diagrama, mais especificamente um gráfico de barras, com a população masculina na esquerda e a população feminina na direita.
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='40%'}
 
@@ -107,18 +127,24 @@ knitr::include_graphics(here::here('imagens', 'piramide_etaria_pop.png'))
 
 \framebreak
 
-- O \structure{tamanho da população} em cada faixa etária, que pode ser em __números absolutos__ ou em __percentuais__, é representado por uma série de \structure{barras horizontais}, com a idade mais baixa em baixo e a idade mais alta em cima.
+- O \structure{tamanho da população} em cada faixa etária, que pode ser em __números absolutos__ ou em __percentuais__, é representado por uma série de \structure{barras horizontais} ordenado por faixa etária, em que o grupo de idade mais jovem é apresentado na base da pirâmide, enquanto a idade mais alta é apresentada no topo do gráfico.
+
+\framebreak
+
 - Quando o tamanho das faixas é formulado como porcentagem ou proporção, é importante que tais proporções sejam calculadas sobre a população total, não a população de cada sexo separadamente. 
     - Este último erro é bastante comum e impossibilita a comparação visual entre os números de homens e mulheres num dado grupo etário. 
-- As idades podem ser representadas em termos de idades simples ou como intervalos quinquenais ou decenais.
+- As idades podem ser representadas em termos de **idades simples** ou como **intervalos quinquenais** ou **decenais**.
 
 \framebreak
 
 É relativamente fácil programar uma pirâmide etária em EXCEL, usando os seguintes passos:
 
 1. Organizar os dados em três colunas: uma com a definição das faixas (0-4, 5-9, 10-14 etc.), uma com as populações masculinas e uma com as populações femininas.
-2. A primeira coluna deve ser formatada como "Texto", para que EXCEL não a leia como datas ou como subtrações de números.
+2. A primeira coluna deve ser formatada como "Texto", para que o EXCEL não a leia como datas ou como subtrações de números.
 3. Os números da segunda coluna devem ser postos com sinal negativo. Depois, na lista de opções de formatação de números, se deve escolher "Personalizado" e digitar a seguinte sequência de caracteres: `#####`; `#####`. Se os números são grandes, pode-se acrescentar um ou dois `#`. O efeito desta especificação é que o EXCEL continua tratando estes números como negativos, mas sem mostrar o seu sinal.
+
+\framebreak
+
 4. Selecionar as três colunas e solicitar a sua representação como gráfico de barras horizontais acumuladas.
 5. Em Selecionar Dados marcar a primeira série como "Homens" e a segunda como "Mulheres".
 6. Escolher um título que representa o país e o ano ao que se referem os dados.
@@ -151,6 +177,9 @@ a forma da pirâmide de Angola seria expressiva de uma mortalidade muito alta, n
 \framebreak
 
 - As pessoas na pirâmide de Angola que atualmente têm 60-64 anos, por exemplo, podem ter sofrido um atrito significativo devido à mortalidade elevada, mas a razão principal pelo seu número relativamente reduzido é que já nasceram em números muito menores do que os números atuais de nascimentos, pois 60-65 anos atrás a população como um todo era muito menor do que hoje em dia.
+
+\framebreak
+
 - Já em Portugal isso não acontece porque não houve tanto crescimento da população entre 1950 e 2011 como houve em Angola devido principalmente a uma natalidade muito mais baixa em Portugal. 
     - Em realidade o número de nascimentos em Portugal em 1950 era maior do que em 2015. 
 - Portanto, a natalidade e não a mortalidade é o determinante principal da forma da pirâmide.
@@ -170,37 +199,175 @@ knitr::include_graphics(here::here('imagens', 'piramide_macau.png'))
 - A forma geral da pirâmide é mais ou menos parecida com a de Portugal, no sentido de que a maior parte da população se encontra nas faixas etárias intermédias, entre 20 e 60 anos.
 - Entretanto, esta característica de alargamento no meio é muito mais extrema no caso do Macau do que em Portugal.
     - Especialmente o número muito reduzido de pessoas de terceira idade, com mais de 65 anos, chama a atenção.
+
+\framebreak
+
 - Em Portugal, o estreitamento da pirâmide nas idades mais avançadas é muito menos abrupto. 
 - Em parte, os __determinantes da forma da pirâmide etária__ em Macau são os mesmos que em Portugal e no Brasil, o seja, um estreitamento da base devido à queda da natalidade. 
     - Em 2015, a fecundidade de Macau, em termos do número médio de filhos por mulher, era a segunda mais baixa do mundo, mais baixa ainda do que Portugal.
     - Mas além disso Macau sofreu uma imigração muito significativa da China que se concentrou nas idades economicamente ativas (15-64), o que levou a uma estrutura etária muito enviesada para estas idades.
-- É notável também o desequilíbrio entre o número de homens e mulheres nas idades mais avançadas, algo que ocorre também na pirâmide de Angola, mas é menos visível.
 
 \framebreak
 
+- É notável também o desequilíbrio entre o número de homens e mulheres nas idades mais avançadas, algo que ocorre também na pirâmide de Angola, mas é menos visível.
+
 - Além da sua representação estática, para um determinado momento no tempo, é muito ilustrativo ver o que acontece quando se junta uma sequência de pirâmides etárias para diferentes momentos no tempo, como se fosse um filme [(animação)](https://rdosreis.github.io/2023/02/04/gbdrawer-02-a-carga-de-copd-por-idade-parte-2/).
     - Isso mostra claramente como a estrutura etária vai se transformando na medida em que diminuem a mortalidade e a natalidade.
+
+# Pirâmides etárias no `R` {.allowframebreaks}
+
+\footnotesize
+
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sidrar)
+
+# para RS
+# https://apisidra.ibge.gov.br/values/t/6706/n3/50/v/606/p/all/c2/allxt/c58/all
+piramide_RS <- get_sidra(x = 6706, 
+                         variable = 606,
+                         period = "last", # em 22abr2024 = 2022
+                         geo = "State",
+                         geo.filter = list("State" = 43)) %>%  # RS = 50
+  filter(Sexo != "Total") %>% # retirei os que são do Total
+  mutate(`Grupo de idade` = ifelse(`Grupo de idade` == "5 a 9 anos",
+                                 "05 a 9 anos",
+                                 `Grupo de idade`),
+         Valor = ifelse(Sexo == "Mulheres",-Valor, Valor))
+
+```
+
+\framebreak
+
+```{r, eval=FALSE, echo=TRUE, message=FALSE, warning=FALSE, fig.align='center', out.width="90%"}
+
+p <- ggplot(data = piramide_RS, 
+            aes(y = Valor * 1000,
+                x = `Grupo de idade`,
+                fill = Sexo, color = I("white"))) +
+  geom_bar(stat = "identity", alpha = 0.4, width = 1) +
+  scale_fill_manual(values = c("Mulheres" = "red", 
+                               "Homens" = "blue")) +
+  coord_flip() +
+  theme_bw() +
+  ggtitle("Pirâmide etária da população no RS, 2022") +
+  labs(y = "Número de pessoas",
+       caption = "Fonte: SIDRA/IBGE", 
+       size = 8) +
+  scale_y_continuous(labels = abs) +
+  theme(legend.position = "bottom")
+p  
+
+```
+
+\framebreak
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="90%"}
+
+p <- ggplot(data = piramide_RS, 
+            aes(y = Valor * 1000,
+                x = `Grupo de idade`,
+                fill = Sexo, color = I("white"))) +
+  geom_bar(stat = "identity", alpha = 0.4, width = 1) +
+  scale_fill_manual(values = c("Mulheres" = "red", 
+                               "Homens" = "blue")) +
+  coord_flip() +
+  theme_bw() +
+  ggtitle("Pirâmide etária da população no RS, 2022") +
+  labs(y = "Número de pessoas",
+       caption = "Fonte: SIDRA/IBGE", 
+       size = 8) +
+  scale_y_continuous(labels = abs) +
+  theme(legend.position = "bottom")
+p  
+
+```
+
+\framebreak
+
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+
+piramide_RS_todos <- get_sidra(x = 6706,
+                               variable = 606,
+                               period = "all", # em 22abr2024 = 2022
+                               geo = "State",
+                               geo.filter = list("State" = 43)) %>%  # RS = 50
+  filter(Sexo != "Total") %>% # retirei os que são do Total
+  mutate(`Grupo de idade` = ifelse(`Grupo de idade` == "5 a 9 anos",
+                                   "05 a 9 anos",
+                                   `Grupo de idade`),
+         Valor = ifelse(Sexo == "Mulheres",-Valor, Valor))
+
+```
+
+\framebreak
+
+```{r, eval=FALSE, echo=TRUE, message=FALSE, warning=FALSE, fig.align='center', out.width="90%"}
+
+p <- ggplot(data = piramide_RS_todos, 
+            aes(y = Valor * 1000,
+                x = `Grupo de idade`,
+                fill = Sexo, color = I("white"))) +
+  geom_bar(stat = "identity", alpha = 0.4, width = 1) +
+  scale_fill_manual(values = c("Mulheres" = "red", 
+                               "Homens" = "blue")) +
+  coord_flip() +
+  theme_bw() +
+  ggtitle("Pirâmide etária da população no RS, 2022") +
+  labs(y = "Número de pessoas",
+       caption = "Fonte: SIDRA/IBGE", 
+       size = 8) +
+  scale_y_continuous(labels = abs) +
+  theme(legend.position = "bottom") +
+  facet_wrap(~Ano)
+p
+
+```
+
+\framebreak
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width="90%"}
+
+p <- ggplot(data = piramide_RS_todos, 
+            aes(y = Valor * 1000,
+                x = `Grupo de idade`,
+                fill = Sexo, color = I("white"))) +
+  geom_bar(stat = "identity", alpha = 0.4, width = 1) +
+  scale_fill_manual(values = c("Mulheres" = "red", 
+                               "Homens" = "blue")) +
+  coord_flip() +
+  theme_bw() +
+  ggtitle("Pirâmide etária da população no RS, 2022") +
+  labs(y = "Número de pessoas",
+       caption = "Fonte: SIDRA/IBGE", 
+       size = 8) +
+  scale_y_continuous(labels = abs) +
+  theme(legend.position = "bottom") +
+  facet_wrap(~Ano)
+p
+
+```
 
 ## Próxima aula
 
 - Características da distribuição por idade;
 - Determinantes da estrutura etária;
-- Relevância da estrutura etária para as políticas públicas.
+<!-- - Relevância da estrutura etária para as políticas públicas. -->
 
 ## Para casa {.allowframebreaks}
 
 - Explore os resultados do Censo de 2010 no site do SIDRA; escolha uma unidade da federação (UF) e construa a pirâmide etária para esta UF; apresente no Fórum Geral do Moodle os seus resultados.
 - Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
 
-## Por hoje é só!
+<!-- ## Por hoje é só! -->
 
-\begin{center}
-{\bf Bons estudos!}
-\end{center}
+<!-- \begin{center} -->
+<!-- {\bf Bons estudos!} -->
+<!-- \end{center} -->
 
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE}
+<!-- ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%', paged.print=FALSE} -->
 
-knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras05.jpg'))
+<!-- knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-barras05.jpg')) -->
 
-```
+<!-- ``` -->
 

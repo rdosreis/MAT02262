@@ -15,9 +15,3 @@ knitr::include_graphics(here::here('imagens', 'idade_mediana_tab.png'))
 knitr::include_graphics(here::here('imagens', 'idade_indices.png'))
 
 
-
-## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'----
-
-knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-bolha.jpg'))
-
-
