@@ -1,0 +1,253 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Considerações gerais {.allowframebreaks}
+
+A vida extra-uterina apresenta uma **sequência cronológica esperada**:
+
+- inicia-se com o nascimento e, através da infância, adolescência e maturidade, chega à velhice, em estágios razoavelmente definidos.
+- Entretanto, **algumas vidas são truncadas** repentinamente, por acidentes ou episódios mórbidos, não prosseguindo na trajetória esperada.
+
+\framebreak
+
+- A vida humana apresenta um **limite biológico**.
+- Há necessidade, então, de se distinguirem dois conceitos fundamentais:
+    + **Duração da vida** e **Vida média**.
+
+\framebreak
+
+\structure{Relembrando}
+
+\begin{mybox}{Coorte}
+
+é um conjunto de indivíduos tendo um fator temporal comum, por exemplo, a coorte de indivíduos nascidos em 1980, no Município de São Paulo. A análise por coorte objetiva o estudo dos eventos que ocorram nesse grupo, com o transcorrer do tempo.
+
+\end{mybox}
+
+\framebreak
+
+\structure{Relembrando (coorte)}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='60%', fig.cap="Diagrama de Lexis."}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+\framebreak
+
+\begin{mybox}{Duração da vida}
+
+O conceito tenta estabelecer o limite extremo de idade do ser humano; para alguns autores, este seria a idade ultrapassada por menos de 0,1\% de uma coorte original. 
+
+\end{mybox}
+
+\framebreak
+
+- Há exemplos de longevos que atingiram 146 anos, 130 anos.
+- Ainda que haja interesse sobre a **duração individual de vida**, é forçoso reconhecer que, para a Demografia, a Estaística Populacional e a Saúde Pública, a manifestação média de vida de um subgrupo populacional de uma cidade, estado ou país é mais importante. 
+
+\framebreak
+
+\begin{mybox}{Vida média}
+ou \structure{esperança de vida (expectativa de vida)} representa o número esperado de anos a serem vividos, em média, por uma coorte.
+\end{mybox}
+
+- A forma mais usual de calculá-la é por meio de uma metodologia chamada \structure{tábua de vida} ou \structure{tábua de sobrevivência}.
+
+\framebreak
+
+Em análise temporal, é importante ressaltar que, em termos de anos ganhos, há diferenças entre a **duração individual da vida** e a **vida média de populações**. 
+
+- Não há evidências de que, no decorrer dos séculos, tenha havido extensão da longevidade.
+- Mas, em contraste, a vida média não somente aumentou bastante, no tempo, mas também variou largamente entre diferentes grupos populacionais vivendo na mesma época.
+
+
+## Breve histórico do método {.allowframebreaks}
+
+A humanidade sempre se preocupou com a medida da duração de vida.
+
+- Mesmo antes das modernas **teorias de probabilidades** e **estatística**, procurou usar métodos quantitativos para estimá-la, surgindo a ideia de \structure{tábuas de sobrevivência}, que são um instrumento pelo qual se calculam as **probabilidades de vida e morte de uma geração**.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='25%', out.height='30%'}
+
+knitr::include_graphics(here::here('imagens', 'ulpiano.jpg'))
+
+```
+
+- \structure{Ulpiano}, no século III, construiu a primeira tábua de mortalidade.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='50%', out.height='30%'}
+
+knitr::include_graphics(here::here('imagens', 'john_graunt.jpg'))
+
+```
+
+- \structure{John Graunt}, porém, em 1662, foi o precursor dos métodos modemos.
+- No seu livro *__Natural and Political Observations Made upon the Bills of Mortality__*, \structure{Graunt} apresentou o cálculo de uma coorte inicial de 100 pessoas, de que 64 chegaram à idade de 6 anos, 40 à idade de 16 e apenas 25 à idade de 26 anos exatos. 
+
+\framebreak
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='25%', out.height='30%'}
+
+knitr::include_graphics(here::here('imagens', 'William_Farr.jpg'))
+
+```
+
+- Na Inglaterra, a primeira tábua de vida oficial apareceu com \structure{William Farr}, em 1843, que a chamou de **biômetro da população**.
+
+\framebreak
+
+
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='20%', out.height='30%'}
+
+knitr::include_graphics(here::here('imagens', 'Bulhoes_Carvalho.png'))
+
+```
+
+- No Brasil, \structure{Bulhões de Carvalho} utilizou os dados do **Censo Demográfico de 1920** e os óbitos registrados desse ano para construir a primeira tábua de vida para o Distrito Federal e treze capitais brasileiras.
+
+\framebreak
+
+- Avanços em **Estatística teórica** e **processos estocásticos** fizeram com que, sob enfoque probabilístico, as tábuas de vida se tornassem instrumento analítico valioso e essencial para medir mortalidade.
+
+# Tipos de tábuas de vida {.allowframebreaks}
+
+As tábuas de sobrevivência permitem responder às seguintes indagações:
+
+- da totalidade de nascidos vivos, num determinado local e ano, quantos viverão o primeiro ano de vida?
+- Quantos chegarão ao décimo ou enésimo aniversário?
+- Quando o último desses indivíduos tiver morrido, isto é, quando a coorte se extinguir, qual terá sido a vida média desse grupo analisado?
+
+## Tábua de Vida de uma Geração {.allowframebreaks}
+
+- A tábua que permite respostas a essas indagações é a \structure{Tábua de Vida de uma Geração}.
+- Ela mostra a verdadeira experiência de morte da coorte, do nascimento até o desaparecimento do seu último membro.
+- Entretanto, sua elaboração para a população humana, dada a necessidade de existirem, em cem anos, estatísticas vitais fidedignas e registros adequados dos movimentos migratórios, é muito difícil.
+
+\framebreak
+
+- Outro ponto a ser considerado é que, nesse longo período, os padrões de mortalidade dessa população podem sofrer mudanças radicais.
+- É muito utilizada em Zoologia, em espécies de vida muito curta.
+
+## Tábua de Vida de Coorte Sintética {.allowframebreaks}
+
+- Outro tipo é a \structure{Tábua de Vida de Coorte Sintética}.
+- É construída relacionando-se geralmente a média dos óbitos ocorridos, num período calendário (anos pré-censitário, censitário e pós-censitário), aos dados da população recenseada de uma área específica.
+- Obtidos esses dados, são calculadas as probabilidades de morte em cada idade.
+
+\framebreak
+
+Esta tábua considera a experiência de mortalidade de uma dada população, num período curto de tempo (ano), e projeta a duração de vida, de cada indivíduo, baseada nas probabilidades reais de morte, numa **coorte hipotética** de nascidos vivos.
+
+- Há, então, um padrão fictício de condições de mortalidade, dado que nenhuma coorte realmente experimentou ou experimentará este modelo particular de mortalidade.
+
+\framebreak
+
+- Este tipo de tábua responde também às indagações mencionadas anteriormente, levando-se em conta as seguintes pressuposições:
+    + a **mortalidade**, em cada idade, mantém-se **constante** e igual à do ano-calendário, no qual a tábua é baseada;
+    + a **população** exposta é **estacionária**, isto é, o número anual de nascidos vivos é igual ao número de mortes; o saldo migratório é nulo, ano após ano.
+
+## Formas de apresentação {.allowframebreaks}
+
+Quanto à apresentação, pode-se ter \structure{tábua de vida completa} ou \structure{tábua de vida abreviada}.
+
+- A diferença está no tamanho dos grupos etários considerados.
+    + Na **tábua completa**, os grupos etários representam **um ano**, enquanto nas **abreviadas** ter-se-ão grupos de **cinco ou dez anos** de idade.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='80%', paged.print=FALSE, fig.cap="Exemplo de tábua de vida completa."}
+
+knitr::include_graphics(here::here('imagens', 'tabua_sobrevida.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='80%', paged.print=FALSE, fig.cap="Exemplo de tábua de vida abreviada."}
+
+knitr::include_graphics(here::here('imagens', 'tabua_sobrevida-02.png'))
+
+```
+
+# Análise de sobrevivência - conceitos básicos {.allowframebreaks}
+
+- A variável aleatória não negativa $T$, que representa o tempo de falha, é usualmente especificada em análise de sobrevivência pela sua \structure{função de sobrevivência} ou pela \structure{função de taxa de falha (ou risco)}.
+
+## Função de sobrevivência {.allowframebreaks}
+
+- A **função de sobrevivência** é definida como a \structure{probabilidade de uma observação não falhar até um certo tempo $t$}, ou seja, a __probabilidade de uma observação sobreviver ao tempo__ $t$.
+- Em termos probabilísticos, isto é escrito como
+
+$$
+S(t) = \Pr(T > t).
+$$
+
+- Logo, a função de distribuição de probabilidade pode ser expressa como $F(t) = 1 - S(t)$ (probabilidade de uma observação não sobreviver ao tempo $t$).
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'funcao_sobrevida.png'))
+
+```
+
+\framebreak
+
+- A probabilidade da falha ocorrer em um intervalo de tempo $[t_1,t_2)$ pode ser expressa em termos da função de sobrevivência como
+
+$$
+\Pr[T\in [t_1,t_2)] = \Pr(t_1 \leq T < t_2)] = S(t_1) - S(t_2).
+$$
+
+\framebreak
+
+- A probabilidade da falha ocorrer em um intervalo de tempo $[t_1,t_2)$ dado que a falha não ocorreu até o tempo $t_1$ também pode ser expressa em termos da função de sobrevivência:
+
+$$
+\Pr(t_1 \leq T < t_2 | T > t_1) = \frac{\Pr(t_1 \leq T < t_2)}{\Pr(T > t_1)} = \frac{S(t_1) - S(t_2)}{S(t_1)}.
+$$
+\framebreak
+
+- Para a construção das tábuas de vida, geralmente, a escala de tempo utilizada é a idade.
+- Discutiremos como estimar $S(t)$ e as demais probabilidades de interesse.
+
+## Próxima aula
+
+- Tábuas de vida (continuação).
+
+## Para casa {.allowframebreaks}
+
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final05.jpg'))
+
+```
+

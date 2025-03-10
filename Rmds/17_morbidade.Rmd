@@ -1,0 +1,384 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Medidas de morbidade"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Considerações gerais {.allowframebreaks}
+
+As \structure{estatísticas de morbidade} são importantes uma vez que permitem determinar a \structure{incidência} e \structure{prevalência} de doenças, **invalidez** e **traumatismos** em uma população, constituindo-se em valiosa fonte de informação para o estudo de numerosos problemas.
+
+\begin{mybox}{Morbidade}
+ou, \structure{morbilidade}, é a medida que mostra o número de pessoas que adoecem em um determinado período e local.
+\end{mybox}
+
+\framebreak
+
+- A introdução de **novos hábitos** (direitos trabalhistas, modos de trabalho, etc.), nas últimas décadas, levando a população a um **novo estilo de vida**, assim como os **progressos das ciências médicas** e o emprego de **novos medicamentos** e **técnicas cirúrgicas** têm modificado de tal modo a estrutura da morbidade, que o volume maior de doenças tem se transferido para as idades mais avançadas, de forma mais intensa em alguns países do que em outros.
+
+\framebreak
+
+- Dessa maneira, a morbidade está substituindo a mortalidade como índice de saúde e doença.
+    - Populações mais longevas e morrendo em consequência de doenças cardíacas, acidentes vasculares cerebrais, ou câncer, ou em consequência da ação combinada dessas doenças.
++ A mortalidade (sozinha) não é um índice de grande utilidade para a investigação médica.
+    
+\framebreak
+
+- Isso obriga a que se disponha de **informações a respeito de morbidade**, as mais completas e atuais possíveis.
+- Não se pode esquecer que o estudo da morbidade **é** muito **mais complexo* que o de mortalidade.
++ Isto se deve ao fato de ser a doença não um evento único, e sim múltiplo, que pode afetar o ser humano em um momento de sua vida, ou durante toda a sua existência;
+    <!-- + que a atitude das pessoas frente às doenças é muito variável e, inclusive, há problemas conceituais a respeito. -->
+
+\framebreak
+
+- A doença possui uma **gradação de intensidade** bastante ampla, indo desde distúrbios leves, até o estado mórbido^[Estado ou condição doentia; enfermidade.] mais grave, que é a morte, podendo passar por fases de **incapacidade** parcial ou total, temporária ou permanente.
+
+## Considerações gerais {.allowframebreaks}
+
+- Os **sanitaristas**^[Os sanitaristas atuam na dimensão coletiva da saúde, seja na elaboração e implementação de políticas públicas, no planejamento, na gestão e monitoramento das ações de saúde, além de avaliarem riscos sanitários e epidemiológicos de caráter coletivo.], que antigamente tinham como principal preocupação a prevenção de doenças infecciosas, já perceberam que, a fim de desempenhar melhor a sua função na comunidade, necessitam possuir maior informação sobre muitas outras doenças.
+
+## Considerações gerais {.allowframebreaks}
+
+É de suma importância para o administrador hospitalar o conhecimento da incidência e natureza das doenças existentes na sua zona de trabalho, a fim de poder **prover os serviços adequados**.
+
+- É preciso dispor de **estatísticas de morbidade**, ao elaborar, desenvolver e dirigir os programas que se relacionam com todos os **aspectos do seguro social**, em seu sentido mais amplo. 
+
+\framebreak
+
+- As empresas, indústrias e outras organizações produtoras necessitam de estatísticas de morbidade, com o objetivo de reduzir os efeitos das doenças sobre a mão-de-obra. 
+
+- Aqueles que se dedicam a investigação médica utilizam as estatísticas de morbidade.
+- Através delas, estudam os **fatores de risco** e a patogenia^[modo de origem ou de evolução de qualquer processo mórbido] das doenças e investigam os métodos de prevenção e cura.
+
+## Considerações gerais {.allowframebreaks}
+
+- Os cientistas sociais estabelecem, com elas, a relação entre doenças de gravidade e duração;
++ Variáveis e os fatores sócio-econômicos que, por sua vez, estão estreitamente ligados com o modo como reagem os pacientes às suas doenças.
+
+<!-- - Não é possível esquecer, finalmente, a importância dos dados de morbidade na Educação Médica, são: no sentido da adequação dessa educação às situações específicas de saúde. -->
+
+\framebreak
+
+Os usos das estatísticas de morbidade podem ser assim esquematizados:
+
+a) controle das doenças transmissíveis;
+b) planejamento de serviços preventivos;
+c) verificação da relação com os fatores sociais;
+d) planejamento de serviços adequados de tratamento;
+e) avaliação da importância econômica das doenças;
+f) investigação da etiologia e patogenia;
+g) investigação da eficácia das medidas preventivas e terapêuticas;
+h) estudo nacional e internacional da distribuição das doenças.
+
+\framebreak
+
+- Embora as informações de morbidade provenham de várias fontes, todas elas apresentam algum grau de incompletude ou inexatidão. 
+
+- Dessa forma, ainda que se somem todos os dados de morbidade de uma área, é complexo estimar de maneira completa e global a morbidade.
+
+# Fontes de dados para estudo da morbidade {.allowframebreaks}
+
+São conhecidas fontes de morbidade:
+
+1. Notificação compulsória de doenças
+2. Estatísticas hospitalares
+3. Estatísticas de serviços de assistência médica (pacientes de ambulatórios)
+4. Registros médicos de indústrias e escolas
+5. Registros especiais de doenças
+6. Registros de óbitos
+7. Inquéritos de morbidade **(levantamentos por amostragem)**
+8. Estudos epidemiológicos
+9. **Outras fontes:** Registros de médicos particulares; Seguro Social e de Saúde; Inclusão de perguntas sobre doenças no Censo de população.
+
+## PNS {.allowframebreaks}
+
+- A \structure{Pesquisa Nacional de Saúde (PNS)} é um inquérito domiciliar de base populacional com abrangência nacional.
+    - É conduzida pelo __Ministério da Saúde__ em parceria com a __Fiocruz__ e o __IBGE__.
+    - É a __pesquisa mais ampla__ já realizada no país __sobre a situação de saúde__ e os seus determinantes.
+    - A \structure{população alvo} da PNS é composta pelas pessoas residentes em domicílios particulares permanentes.
+- A PNS permite o dimensionamento do \structure{acesso ao diagnóstico e à atenção à saúde}, em especial, às \structure{doenças crônicas não transmissíveis}, como o \structure{diabetes} e as \structure{doenças cardiovasculares}, e a produção de dados dos estilos de vida da população brasileira.
+
+\framebreak
+
+- A PNS utilizou um \structure{delineamento de amostragem probabilística} por __conglomerados em três estágios__ de seleção e __estratificação__ das \structure{unidades primárias de amostragem (UPAs)}. 
+    - As UPAs são formadas por __setores censitários__ ou uma composição de setores censitários; as \structure{unidades do segundo estágio} são os __domicílios__, selecionados de um número fixo de domicílios particulares permanentes para cada UPA; as \structure{unidades do terceiro estágio} são os __moradores com 18 anos ou mais__, selecionados a partir de uma lista de moradores construída no momento da entrevista.
+- Com base neste delineamento, \structure{pesos básicos} foram calculados e disponibilizados para uso nas análises dos dados da PNS.
+
+\framebreak
+
+- O \structure{questionário básico da PNS} foi dividido em três partes: 
+    + __Características do domicílio__;
+    + __Entrevista domiciliar__, respondida pelo representante do domicílio que forneceu informações sobre todos os moradores do domicílio;
+    + __Entrevista individual__, respondida pelo morador selecionado no domicílio.
+- Este último incluiu informações sobre percepção do estado de saúde, violência e acidentes, estilo de vida e doenças crônicas.
+    + Medidas de peso, altura, circunferência da cintura e pressão arterial foram aferidas.
+
+\framebreak
+
+- Até o momento, foram realizadas duas edições da PNS.
+    - Em \structure{2013} foram visitados __69.994 domicílios__, realizadas __64.348 entrevistas domiciliares__ e __60.202 entrevistas individuais__.
+    - Em \structure{2019}, foram visitados __100.541 domicílios__, realizadas __94.114 entrevistas domiciliares__, além de __90.846 entrevistas individuais__.
+
+\framebreak
+
+```{r, cache=TRUE, message=FALSE, echo=FALSE, out.width="100%", purl=FALSE, fig.align='center'}
+
+knitr::include_graphics(here::here('imagens', 'pubmed_pns.png'))
+
+```
+
+\framebreak
+
+- A edição de 2013 incluiu, para uma \structure{subamostra} ($n = 8.952$), a __coleta de material biológico__ (amostras de sangue e urina dos participantes), entre os anos de 2014 e 2015.
+- Por meio desta coleta foram realizados \structure{Exames Laboratoriais}: __hemoglobina glicada__, __colesterol__, __contagem de glóbulos vermelhos__ e __de glóbulos brancos__, entre outros.
+- Estes dados vêm permitindo, pela primeira vez com abrangência nacional, a elaboração de estudos referentes a \structure{prevalência de anemia, colesterol total, insuficiência renal e controle do diabetes}.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='25%', paged.print=FALSE}
+knitr::include_graphics(here('imagens','pns-logo.jpg'))
+```
+
+### Observações
+
+- Os \structure{dados da PNS são publicamente disponibilizados}.
+    + [PNS - Fiocruz - Bases de Dados](https://www.pns.icict.fiocruz.br/bases-de-dados/).
+    + [PNS - IBGE - Microdados](https://www.ibge.gov.br/estatisticas/sociais/saude/9160-pesquisa-nacional-de-saude.html?=&t=microdados).
+- Os dados da PNS são obtidos a partir de um \structure{delineamento de amostragem probabilística} (plano complexo).
+    + Na análise dos dados, devem ser considerados aspectos do delineamento, como, por exemplo, os pesos de amostragem.
+    + Softwares adequados devem ser utilizados para a análise destes dados.
+
+## ELSA-Brasil {.allowframebreaks}
+
+- O **[Estudo Longitudinal de Saúde do Adulto (ELSA Brasil)](http://elsabrasil.org/)** é uma investigação multicêntrica de coorte composta por 15 mil funcionários de seis instituições públicas de ensino superior e pesquisa das regiões Nordeste, Sul e Sudeste do Brasil. 
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='45%', paged.print=FALSE}
+knitr::include_graphics(here('imagens','elsa-brasil-map.png'))
+```
+
+\framebreak
+
+- A pesquisa tem o propósito de investigar a incidência e os fatores de risco para doenças crônicas, em particular, as cardiovasculares e o diabetes.
+- Em cada centro integrante do estudo, os sujeitos da pesquisa – com idade entre 35 e 74 anos – fazem exames e entrevistas nas quais são avaliados aspectos como condições de vida, diferenças sociais, relação com o trabalho, gênero e especificidades da dieta da população brasileira.
+- Além de fomentar o desenvolvimento de novas investigações, o estudo será fundamental para a adequação de políticas públicas de saúde às necessidades nacionais.
+
+## SINAN {.allowframebreaks}
+
+- O \structure{Sistema de Informação de Agravos de Notificação (Sinan)} é alimentado, principalmente, pela notificação e investigação de casos de doenças e agravos que constam da lista nacional de doenças de notificação compulsória (Portaria de Consolidação nº 4, de 28 de Setembro de 2017, Anexo), mas é facultado a estados e municípios incluir outros problemas de saúde importantes em sua região, difilobotríase no município de São Paulo.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='25%', paged.print=FALSE}
+knitr::include_graphics(here('imagens','sinan.png'))
+```
+
+\framebreak
+
+- Sua utilização efetiva permite a realização do **diagnóstico dinâmico** da **ocorrência de um evento** na população, podendo fornecer subsídios para explicações causais dos agravos de notificação compulsória, além de vir a indicar **riscos** aos quais as pessoas estão sujeitas, contribuindo assim, para a identificação da realidade epidemiológica de determinada área geográfica.
+
+- O seu uso sistemático, de forma descentralizada, contribui para a democratização da informação, permitindo que todos os profissionais de saúde tenham acesso à informação e as tornem disponíveis para a comunidade.
+
+- É, portanto, um instrumento relevante para auxiliar o planejamento da saúde, definir **prioridades de intervenção**, além de permitir que seja avaliado o impacto das intervenções.
+
+## GBD {.allowframebreaks}
+
+Segundo o próprio site do [GBD](https://www.healthdata.org/gbd/2019):
+
+> "O *Global Burden of Disease* (GBD) é uma ferramenta que fornece um quadro abrangente de **mortalidade e incapacidade** em todos os **países, tempo, idade e sexo**".
+
+- Utilizando uma [abordagem de carga de doenças](https://extranet.who.int/kobe_centre/en/what_we_do/health-emergencies/research-methods/sections-and-chapters/chapter2-3-disease-burden#:~:text=A%20burden%20of%20disease%20approach,that%20integrates%20mortality%20and%20disability.), o GBD quantifica a perda de saúde de centenas de **doenças, lesões e fatores de risco**, para que os sistemas de saúde possam ser melhorados e as disparidades eliminadas. 
+
+\framebreak
+
+- O [*Institute for Health Metrics and Evaluation* (IHME)](https://www.healthdata.org/) da [*University of Washington*](https://www.washington.edu/) atua como centro coordenador do GBD. 
+- Pesquisadores individuais com especialidades em várias áreas temáticas também fazem parte de uma [rede de colaboradores do estudo GBD](https://www.healthdata.org/gbd/call-for-collaborators).
+- [Atualizações das estimativas](https://www.healthdata.org/gbd/about/history) são feitas periodicamente e diversos [artigos e relatórios de políticas](https://www.healthdata.org/gbd/publications) vem sendo produzidos a partir dos achados do estudo GBD.
+
+\framebreak
+
+- Para produzir **estimativas globais de mortalidade e incapacidade** de tantas doenças, ao longo do tempo e para diferentes localidades, o GBD combina uma grande **variedade de fontes** e **tipos de dados**, tais como:
+    + censos e levantamentos por amostragem;
+    + registros vitais;
+    + autópsias verbais;
+    + registros de agravos;
+    + literatura científica, entre outros.
+- Os diferentes conjuntos de dados utilizados pelo GBD são catalogados e a informação é compartilhada pelo [*Global Health Data Exchange* (GHDx)](https://ghdx.healthdata.org/).
+
+\framebreak
+
+- O estudo GBD também utiliza diversos métodos e modelos estatísticos para harmonizar os dados e obter estimativas (pontuais e intervalares) para diferentes métricas de mortalidade e incapacidade, tais como $DALYs$, $YLLs$, $YLDs$, $HALE$, **expectativa de vida**, entre outras.
+- Ferramentas para a [visualização de dados](https://www.healthdata.org/gbd/data-visualizations) são disponibilizadas pelo GBD para que pesquisadores e tomadores de decisão possam acompanhar as estimativas produzidas pelo estudo.
+    + Entre estas, destaca-se o [*GBD Compare*](https://vizhub.healthdata.org/gbd-compare/), uma ferramenta interativa que produz uma variedade de gráficos e mapas.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="90%", out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','gbd-compare.png'))
+```
+
+# Coeficientes usados para medir morbidade {.allowframebreaks}
+
+Existem vários tipos de coeficientes para medir a morbidade numa população.
+
+- Esses tipos se referem à frequência e à gravidade das doenças.
+- Quanto à frequência, há necessidade de distinguir os conceitos de \structure{incidência} e \structure{prevalência}.
+
+## Coeficiente de incidência {.allowframebreaks}
+
+\begin{mybox}{Incidência}
+é o número de \structure{casos novos} de uma doença, isto é, aqueles que se iniciaram num determinado período.
+\end{mybox}
+
+\framebreak
+
+- Assim, como exemplo, imagine que, numa área A, com população P, num determinado ano, foram diagnosticados:
+    - 5 casos de poliomielite em janeiro
+    - 10 em fevereiro;
+    - e 2 em cada mês, de março a dezembro, inclusive.
+- Diz-se que a incidência foi 5 em janeiro, 10 em fevereiro e 2 nos meses seguintes até dezembro.
+- A incidência, naquele ano, foi a soma das incidências mensais, isto é, 35.
+
+\framebreak
+
+- Esse valor é a incidência medida em **número absoluto**;
+    + não mede o risco de um indivíduo da população vir a adquirir a doença.
+- O **risco** é medido pelo \structure{coeficiente de incidência} que é dado pela relação:
+
+$$
+\frac{\mbox{Nº de casos novos (iniciados), na área A, período t}}{\mbox{População da área A, no meio do período t}} \times 10 000
+$$
+
+\framebreak
+
+- No exemplo hipotético referido, onde houve 35 casos de poliomielite, supondo que a
+população da área fosse de 150 000 habitantes, o **_coeficiente de incidência da poliomielite_**, no ano, seria: 
+
+$$
+\frac{35}{150 000} \times 10 000 = \mbox{2,33 por 10 000 hab.}
+$$
+
+\framebreak
+
+Quando se calcula um coeficiente de incidência, a unidade de tempo pode ser o ano, o mês ou a semana que constitui o coeficiente de incidência no período.
+
+- Muitas vezes, há interesse em calcular para um período mais curto (principalmente para doenças infecciosas agudas).
+- Mede-se, então, a **incidência em um dia**.
+    + Isto é o que se costuma chamar \structure{coeficiente de incidência momentânea} (instantânea).
+
+\framebreak
+
+- O coeficiente de incidência, como está descrito, é também chamado \structure{coeficiente de ataque}, nome geralmente utilizado quando a doença é de natureza infecciosa.
+
+## Coeficiente de incidência exemplo
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics(here('imagens','incidencia-exemplo.png'))
+```
+
+## Coeficiente de prevalência {.allowframebreaks}
+
+\begin{mybox}{Prevalência}
+de uma doença o \structure{número de casos existentes} em um determinado período de tempo, independentemente do fato de serem casos novos ou antigos.
+\end{mybox}
+
+\framebreak
+
+O **coeficiente de prevalência** é dado pela relação:
+
+$$
+\frac{\mbox{Nº de casos existentes (novos + antigos), na área A, período t}}{\mbox{População da área A, no meio do período t}} \times 10 000.
+$$
+
+- A prevalência, assim como a incidência, pode ser calculada para um período (ano, mês) ou para um determinado momento (dia).
+
+## Coeficiente de prevalência: exemplo {.allowframebreaks}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','prevalencia_02.jpg'))
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','prevalencia_03.jpg'))
+```
+
+## Coeficiente de letalidade {.allowframebreaks}
+
+Além da frequência (incidência e prevalência), as doenças podem ser medidas quanto à sua **gravidade**.
+
+- Existem várias maneiras de se medir gravidade, tais como:
+    + proporção de sequelas;
+    + proporção de complicações;
+    + absenteísmo^[Um fenômeno que se refere à ausência ou o afastamento não programado de funcionários de seus locais de trabalho.];
+    + gastos.
+
+## Coeficiente de letalidade {.allowframebreaks}
+
+Dentre todas as medidas, uma das mais usadas é a chamada \structure{letalidade} ou \structure{fatalidade}
+
+O \structure{coeficiente de letalidade} é dado pela relação:
+
+$$
+\frac{\mbox{Nº de óbitos pela doença D, na área A, período t}}{\mbox{Nº de casos da doença D, na área A, período t}} \times 100.
+$$
+
+\framebreak
+
+Suponha que, num determinado período, em uma determinada área, existiram 182 casos de sarampo, dos quais 21 morreram.
+
+Diz-se que a letalidade foi igual a:
+
+$$
+\frac{21}{182} \times 100 = 11,5\%.
+$$
+
+\framebreak
+
+É preciso **não confundir** letalidade com mortalidade.
+
+- A **mortalidade** é sempre medida pela relação entre o número de óbitos de uma determinada doença e a população. 
+    + Representa, portanto, o risco, numa população, de morrer por essa doença, sem especificação de população sadia ou doente.
+- A **letalidade**, por sua vez, mede o risco de morrer na população que apresenta essa doença.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','letalidade-01.png'))
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','letalidade-02.png'))
+```
+
+## Próxima aula
+
+- Medidas Básicas de Natalidade.
+
+## Para casa {.allowframebreaks}
+
+- Refaça o exemplo da padronização direta considerando Rondônia como a população padrão.
+
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-mickey.jpg'))
+
+```
+

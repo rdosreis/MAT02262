@@ -9,7 +9,11 @@ knitr::include_graphics(here::here('imagens','ctanlion.png'))
 
 
 ## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE----
-knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-01.png'))
+
+knitr::include_graphics(here::here('imagens',
+                                   'crise-demografica-europa',
+                                   'noticia-01.png'))
+
 
 
 ## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE----
@@ -37,9 +41,25 @@ knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'notic
 
 
 ## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='50%', out.width='80%', paged.print=FALSE----
-knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-08.png'))
+
+knitr::include_graphics(here::here('imagens',
+                                   'crise-demografica-europa',
+                                   'noticia-08.png'))
 
 
-## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='50%', out.width='80%', paged.print=FALSE----
-knitr::include_graphics(here::here('imagens', 'crise-demografica-europa', 'noticia-09.png'))
+
+## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='60%', out.width='80%', paged.print=FALSE----
+
+knitr::include_graphics(here::here('imagens',
+                                   'crise-demografica-europa',
+                                   'Life-expectancy-and-retirement-age-in-Finland-1970-2012.png'))
+
+
+
+## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='70%', out.width='90%', paged.print=FALSE----
+
+knitr::include_graphics(here::here('imagens',
+                                   'crise-demografica-europa',
+                                   'noticia-09.png'))
+
 

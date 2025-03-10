@@ -1,0 +1,294 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Mortalidade por causa específica e taxas por anos-pessoas"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Mortalidade por causas {.allowframebreaks}
+
+Como foi discutido na **_Área 1_**, todos os países do mundo passaram (ou ainda estão passando) por um processo de __Transição Epidemiológica__^[Como parte da **transição demográfica**.].
+
+- Ou seja, a melhoria das condições de vida fez com que as pessoas deixassem de morrer por determinadas causas que eram comuns no passado, sobrevivessem por mais tempo e passassem a morrer em idades mais avançadas em razão de outras causas.
+    <!-- + **Exemplo:** diminuição das mortes por doenças infecciosas; aumento das mortes por doenças cardiovasculares, e/ou cânceres. -->
+
+## Mortalidade por causas {.allowframebreaks}
+
+À medida que as condições de vida melhoram, a morte devido a causas relacionadas à **fome**, **desnutrição** e às **doenças infecciosas** se torna menos frequente e começam a predominar as mortes por **doenças do aparelho** **circulatório** e **neoplasias**. 
+
+\framebreak
+
+- Medindo a distribuição dos \structure{óbitos por causas de morte}, é possível analisar as condições de saúde, condições socioeconômicas da população e a qualidade dos serviços públicos, entre outros fatores, permitindo a elaboração de políticas públicas para prevenção e tratamento voltadas especificamente para enfermidades que mais levam a óbito.
+
+\framebreak
+
+- Só é possível fazer uma análise dos óbitos por causas porque existe uma \structure{Classificação Internacional de Doenças (CID)}.
+
+\begin{mybox}{CID}
+
+A \structure{Classificação Internacional de Doenças} determina a classificação e codificação das doenças e uma ampla variedade de sinais, sintomas, achados anormais, denúncias, circunstâncias sociais e causas externas de danos e/ou doença.
+
+\end{mybox}
+
+\framebreak
+
+- Sob responsabilidade da \structure{Organização Mundial de Saúde (OMS)} desde 1948, a CID é revisada periodicamente.
+- Atualmente, **no Brasil**, está em vigor a 10ª versão da CID, a \structure{CID-10}.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height='85%'}
+
+knitr::include_graphics(here::here('imagens', 'cid-01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height='85%'}
+
+knitr::include_graphics(here::here('imagens', 'cid-02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height='30%'}
+
+knitr::include_graphics(here::here('imagens', 'cid-03.png'))
+
+```
+
+\framebreak
+
+- A __primeira possibilidade de análise__ para se mensurar o impacto de determinada causa de mortalidade numa população é realizar o cálculo de \structure{taxas específicas de mortalidade por essa causa}, usando-se a **população no meio do período estudado como denominador**. 
+- Essas taxas são calculadas por 100.000 habitantes. 
+- **Alguns exemplos são:**
+    + taxa de mortalidade específica por AIDS (SIDA);
+    + taxa de mortalidade específica por acidentes de trânsito;
+    + taxa de mortalidade específica por doenças do aparelho circulatório.
+
+\framebreak
+
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_causas-02.png'))
+
+```
+
+\framebreak
+
+- Outra possibilidade é a mensuração da **mortalidade proporcional** por grupos de causas.
+- Para o cálculo da **mortalidade proporcional por causas** deve-se **dividir o número de óbitos de residentes por causas definidas pelo número total de residentes**, sendo excluídas as mortes por causas mal definidas. 
+
+\framebreak
+
+- O resultado é multiplicado por 100.
+
+\footnotesize
+
+$$
+\mbox{Mort. proporcional} = \frac{\mbox{Número de óbitos de residentes por grupo de causas definidas}}{\mbox{Total de óbidos de residentes}} \times 100.
+$$
+\normalsize
+
+- É indicado que o cálculo seja feito separadamente para homens e mulheres.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_causas.png'))
+
+```
+
+## Taxas de mortalidade calculados em relação a anos-pessoas {.allowframebreaks}
+
+- Foi visto, anteriormente, que no cálculo de coeficientes, habitualmente, se coloca, no denominador do quociente, o número de pessoas ou a população exposta ao risco de morrer (mortalidade).
+
+- Quando essas medidas dizem respeito, especificamente, a uma área geográfica definida **(Município, Estado ou País)**, essa população é conhecida pelo **recenseamento** ou, mais frequentemente, por estimativas para um determinado período, geralmente o ano calendário.
+- Admite-se, então, que toda a população esteve exposta ao risco de morrer, durante todo aquele período considerado.
+
+\framebreak
+
+- Muitas vezes, pretende-se calcular coeficientes, em determinado período e para um grupo populacional específico, por exemplo, estudantes de uma escola ou operários de uma indústria, onde nem todas as pessoas estiveram presentes, **durante todo o período** em questão.
+- Assim sendo, se colocarmos, no denominador, o total de pessoas existentes, e se nem todas estiverem expostas ao risco durante um período igual de tempo, estaremos **subestimando** aquele risco.
+    + Isto é, o coeficiente calculado será menor que o real.
+
+\framebreak
+
+- A maneira correta de calcular coeficientes, nesses casos, é por meio do que se convencionou chamar **"anos-pessoas"**.
+
+- Suponha, como exemplo, que se queira calcular o coeficiente de mortalidade por infarto de miocárdio, em um grupo de 100 indivíduos, durante o ano de 2023, durante uma internação em uma determinada clínica.
+
+- Ainda, como exemplo, imagine que tenham ocorrido 20 óbitos. A tendência natural do observador seria calcular o quociente:
+
+$$
+\frac{10}{100} = 10\%,
+$$
+
+como sendo o coeficiente de mortalidade por infarto.
+
+\framebreak
+
+- Isso só estaria correto se todos os 100 casos tivessem tido o mesmo tempo de permandência na clínica.
+    + Por exemplo, entrada em 1º de janeiro, e fossem sendo **seguidos (acompanhados)** até 31 de dezembro.
+- Nem todas as entradas e altas, provavelmente, não ocorreram nestas datas.
+
+\framebreak
+
+- Assim sendo, cada caso teve um **período diferente de observação** e um período exposto ao risco;
+
+- A **soma de todos os períodos de observação**, experimentados em cada indivíduo (no caso, frações do ano), será a que se deve colocar no denominador.
+
+- A essa somatória é que se denomina \structure{anos-pessoas}.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='75%'}
+
+knitr::include_graphics(here::here('imagens', 'anos-pessoas.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='85%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'anos-pessoas-2.png'))
+
+```
+
+\framebreak
+
+- Assim, se no exemplo acima a soma total do tempo de observação dos 100 casos, no ano de 2023, fosse 31 anos^[$20 \times 0.1 + 30 \times 0.2 + 20 \times 0.3 + 10 \times 0.4 + 5 \times 0.5 + 5 \times 0.6 + 5 \times 0.7 + 5 \times 0.8$], o cálculo do coeficiente seria:
+
+$$
+\frac{10}{31} = 32.3\quad\mbox{por}\quad 100\quad\mbox{anos-pessoas},
+$$
+
+e não 10%, como calculado antes.
+
+## Taxas de mortalidade calculados em relação a anos-pessoas {.allowframebreaks}
+
+Outro exemplo do uso de **anos-pessoas** pode ser visto na \structure{Tábua de Vida} (Sobrevivência; próximas aulas).
+
+- A coluna $L_x$ representa o número de anos-pessoas vividos pelo conjunto de pessoas de idade $x$, durante aquele ano;
+- A coluna $T_x$ representa a soma dos anos vividos pelas pessoas, desde o início da idade $x$, até se extinguir a coorte.
+
+Essa é a noção de anos-pessoas utilizada na \structure{Tábua de Vida}.
+
+\framebreak
+
+- Se um indivíduo trabalhou, por exemplo, um ano completo em uma indústria, pode-se dizer que se trata de um ano-pessoa.
+
+- Da mesma maneira, se fossem 500 indivíduos, seriam 500 anos-pessoas. 
+
+- Se, por outro lado, um indivíduo trabalhou 6 meses, tem-se 0,5 ano-pessoa, e se 500 indivíduos trabalharam seis meses, pode-se dizer que cada um contribuiu com 0,5 ano de trabalho;
+    + em conjunto, os 500 trabalharam 250 anos-pessoas $(500 \times 0.5)$. 
+
+\framebreak
+
+Embora tenham existido na indústria, naquele ano, 500 operários, teve-se somente 250 anos-pessoas, ou o mesmo que 250 trabalhando o ano todo.
+
+- Se fosse de interesse calcular o **coeficiente de mortalidade por acidente de trabalho**, para o ano considerado, seria mais correto calcular por meio de anos-pessoas, pois, desta maneira, seria levado em consideração o **tempo de exposição**, isto é, o tempo que permaneceram trabalhando.
+
+## Anos-pessoas (mais um exemplo) {.allowframebreaks}
+
+- Imagine o caso de duas indústrias, A e B, com 1000 operários cada uma, que trabalham com as mesmas substâncias químicas.
+
+- Estas produzem, frequentemente, intoxicação aguda, quando não são tomadas as devidas medidas de proteção.
+
+\framebreak
+
+- Na indústria A, no ano de 1983, ocorreram 20 casos e, na B, 40 casos.
+- Se fosse calculado o coeficiente de incidência, relacionando o número de casos que ocorreram, pelo número de empregados que trabalharam naquele ano, teríamos que, em B, o risco foi o dobro do observado em A, visto que em ambas as indústrias havia 1 000 operários.
+
+\framebreak
+
+- Admitindo-se, porém, que nem todos os operários trabalharam durante o ano todo, obviamente refletindo tempos variados de exposição ao risco, os coeficientes devem ser calculados segundo esses tempos de exposição, isto é, segundo anos-pessoas.
+
+\framebreak
+
+*__Indústria A:__*
+
+- número de operários que trabalharam: 1000
+- número dos que trabalharam durante todo o ano: 50
+- número dos que trabalharam meio ano (seis meses): 450
+- número dos que trabalharam um quarto de ano (3 meses): 500
+
+\framebreak
+
+*__Indústria A:__*
+
+- Total de anos-pessoas: 400
+- Número de casos de intoxicação aguda: 20
+
+\footnotesize
+
+\begin{eqnarray*}
+\mbox{Taxa de incidência em A} &=& \frac{\mbox{Nº de casos ocorridos no período}}{\mbox{Nº de anos-pessoas}} \times 1 000\\
+&=& \frac{20}{400} \times 1000 = 50\ \mbox{casos por 1 000 anos-pessoas}.
+\end{eqnarray*}
+
+\normalsize
+
+\framebreak
+
+*__Indústria B:__*
+
+- número de operários que trabalharam: 1000
+- número de operários que trabalharam durante todo o ano: 1000
+
+- Total de anos-pessoas = 1000
+- Nº de casos de intoxicação aguda = 40
+
+\footnotesize
+
+$$
+\mbox{Coeficiente de incidência em B} = \frac{40}{1000}\times 1000 = \mbox{40 casos por 1000 anos-pessoas}.
+$$
+
+\normalsize
+
+\framebreak
+
+- Como se verifica, o risco de intoxicação foi maior em A do que em B, o que não era mostrado calculando-se somente pelo número de expostos (número de operários que trabalharam).
+
+## Anos-pessoas: comentários finais
+
+- É interessante lembrar que, algumas vezes, em vez de anos-pessoas, a unidade pode ser referida como **meses-pessoas**, **dias-pessoas** e mesmo **horas-pessoas**.
+
+## Próxima aula
+
+- Medidas de morbidade: prevalência e incidência;
+- Medidas Básicas de Natalidade.
+
+## Para casa {.allowframebreaks}
+
+- Refaça o exemplo da padronização direta considerando Rondônia como a população padrão.
+- Pequeno Trabalho 02: postado no Moodle (última dia).
+
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-corda-bamba.jpg'))
+
+```
+

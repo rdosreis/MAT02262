@@ -1,0 +1,255 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Fecundidade e reprodução"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Introdução {.allowframebreaks}
+
+Do ponto de vista dos **métodos de análise**, cada processo demográfico tem as suas particularidades.
+
+- A **mortalidade**, de certa forma é o mais simples.
+    + É um processo claramente definido, não renovável (só ocorre uma vez na vida de cada pessoa), que envolve uma única pessoa e que é, na grande maioria dos casos, involuntário.
+
+\framebreak
+
+Já a **fecundidade** apresenta desafios maiores, na medida em que
+
+1. Há alguma ambiguidade relativa àquilo que constitui um nascimento, principalmente se a criança morre pouco antes ou logo depois de nascer.
+2. Para certos propósitos, é preciso distinguir entre os nascimentos de cada sexo.
+3. Os nascimentos podem ser classificados segundo as características da mãe, do pai ou, em certos aspectos, da própria criança.
+
+\framebreak
+
+4. Do ponto de vista da mãe e do pai, a fecundidade é um processo renovável que pode ocorrer várias vezes dentro de um período de tempo dado. Inclusive existe a possibilidade de nascimentos múltiplos (gêmeos).
+5. O número de filhos e o momento em que cada nascimento ocorre até certo ponto são opções voluntárias dos pais, o que os torna mais dependentes de fatores conjunturais do que a mortalidade, cujos determinantes são mais biológicos e mudam mais lentamente.
+6. Enquanto a mortalidade é um risco que existe para todos, o ato de dar à luz se limita a mulheres de certas idades e (dependendo da cultura) condições sociais.
+
+\framebreak
+
+A fecundidade e natalidade tratam dos \structure{nascimentos vivos} que ocorrem dentro de uma população. Segundo as normas internacionais da OMS, um 
+
+\begin{mybox}{nascimento vivo}
+é definido como ``a expulsão ou extração completa, do corpo da mãe, independentemente da duração da gestação, de um produto de concepção, o qual, depois da separação, respire ou dê qualquer outro sinal de vida, tal como batimentos do coração, pulsações do cordão umbilical ou movimentos efetivos dos músculos de contração voluntária, estando ou não cortado o cordão umbilical e estando ou não desprendida a placenta''. 
+\end{mybox}
+
+\framebreak
+
+- Portanto, a definição inclui crianças nascidas com defeitos graves que levam à sua
+morte dentro de instantes depois da sua extração do útero, mas exclui fetos extraídos que nunca apresentaram qualquer sinal de vida.
+
+\framebreak
+
+Os termos \structure{fecundidade} e \structure{natalidade} até agora foram usados de uma forma relativamente imprecisa,  além de um terceiro, a \structure{fertilidade}, que frequentemente é usado incorretamente. 
+
+- A \structure{natalidade} quantifica o número de nascimentos que ocorrem na população como um todo e \structure{fecundidade} quantifica os nascimentos que ocorrem nas vidas de mulheres individualmente.
+
+- Ou seja, a natalidade é o produto da proporção de mulheres aptas para ter filhos e da fecundidade de cada uma delas. 
+- A \structure{fertilidade} (esterilidade) se refere à **capacidade biológica** das mulheres para ter filhos, independentemente de elas realizarem este potencial ou não. 
+
+# Taxa bruta de natalidade e fecundidade geral {.allowframebreaks}
+
+## Taxa bruta de natalidade {.allowframebreaks}
+
+- Assim como no caso da mortalidade, para eliminar o efeito do tamanho da população, se define a \structure{Taxa Bruta de Natalidade} $(TBN)$:
+
+$$
+TBN = \frac{\mbox{Número de nascidos vivos na área A, no período t}}{\mbox{População da área A, no meio do período t}} \times 1000.
+$$
+
+\framebreak
+
+- Assim como na **taxa bruda de mortalidade**, a população do meio do período é, geralmente, calculada como uma média das populações no início e do fim do período.
+- Da mesma forma, é usual considerar no numerador a média do número de nascimentos de três anos consecutivos $(t-1, t\ \mbox{e}\ t+1)$, em que $t$ é o ano de referência da $TBN$.
+    + Essa estratégia tem como finalidade obter uma estimativa mais estável e robusta, evitando-se assim flutuações aleatórias no número de nascimentos observados num dado período.
+
+\framebreak
+
+A $TBN$ é uma boa medida do ponto de vista da decomposição do crescimento da população em componentes de natalidade, mortalidade e migração líquida.
+
+- Especificamente, a \structure{Equação de Equilíbrio Demográfico} pode ser escrita da seguinte forma:
+
+$$
+\frac{P(t+n) - P(t)}{\overline{P}} = TBN - TBM + \frac{I(t,t+n) - E(t, t+n)}{\overline{P}},
+$$
+
+em que o terceiro termo será identificado como a \structure{Taxa Líquida de Migração}.
+
+\framebreak
+
+- Entretanto, do ponto de vista da intensidade do ato de dar à luz, a $TBN$ é uma medida bastante inadequada, pois a maioria das pessoas que aparecem no seu denominador em realidade não está exposta ao risco de engravidar.
+
+## Taxa de fecundidade geral {.allowframebreaks}
+
+- Portanto, para um primeiro refinamento do conceito de $TBN$, é conveniente a exclusão do denominador dos homens e das mulheres fora das idades reprodutivas, que são as categorias principais de pessoas com risco zero.
+- O resultado dessa redefinição é conhecido como a \structure{Taxa de Fecundidade Geral} $(TFG)$:
+
+\footnotesize
+
+$$
+TFG = \frac{\mbox{Número de nascidos vivos na área A, no período t}}{\mbox{População freminina de 15 a 49 anos, da área A, no meio do período t}} \times 1000.
+$$
+
+\normalsize
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="60%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','tbn_tfg.png'))
+```
+
+\framebreak
+
+- Importante **padronizar** estas medidas ($TBN$ e $TFG$) para fazer uma comparação mais rigorosa quando se trata de populações com composição etária diferentes.
+
+## Taxas específicas de fecundidade por idade {.allowframebreaks}
+
+- Outra vez repetindo os procedimentos adotados no caso da mortalidade, para o cálculo das \structure{Taxas Específicas de Fecundidade (TEFs) por idade} $({}_nf_x)$, relaciona-se o número de nascimentos ocorridos entre mulheres de uma determinada idade ou grupo etário com o tempo total de exposição das mesmas ao risco de terem filhos naquele mesmo período ou o número total de anos-pessoa vividos em exposição ao risco no período.
+
+\framebreak
+
+- Mais especificamente, pode-se escrever a fórmula de cálculo das $TEFs$ por idade como:
+
+\footnotesize
+
+\begin{eqnarray*}
+{}_nf_x &=& \frac{\mbox{Número de nascidos vivos de  mulheres entre}\ x\ \mbox{e}\ x+n,\ \mbox{na área A, no período t}}{\mbox{População freminina }\ x\ \mbox{e}\ x+n\ \mbox{, da área A, no meio do período t}}\\
+&& \times 1000 \\
+&=& \frac{{}_nN_x}{{}_n\overline{P}_x} \times 1000.
+\end{eqnarray*}
+
+\normalsize
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="90%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','tbn_tfg_02.png'))
+```
+
+\framebreak
+
+- Igualmente, é comum calcular as $TEFs$ por idade, considerando no numerador a média aritmética do número de nascimentos em três anos consecutivos a fim de evitar **oscilações aleatórias** nos casos em que se trata de populações relativamente pequenas ou com escasso volume de eventos.
+
+\framebreak
+
+- A Tabela 10.2 permite construir o indicador mais usado e mais relevante para caracterizar o nível da fecundidade **somando as taxas** mostradas na última coluna e multiplicando por $5$.
+    - A multiplicação por $5$ é necessária porque os intervalos são quinquenais.
+    + Se a informação fosse apresentada por idade simples, este fator não se aplicaria.
+
+$$
+TFT = n\sum_{x=\alpha}^{\beta}{{}_nf_x},
+$$
+
+em que $\alpha$ e $\beta$ indicam o início e o fim do intervalo reprodutivo feminino.
+
+- A escolha mais comum é $\alpha = 15$ e $\beta = 50$.
+
+\framebreak
+
+No caso da Tabela 10.2 o resultado é \structure{1,743 filhos por mulher}, contando todos os grupos etários.
+
+- Se as taxas na última coluna da Tabela 10.2 são interpretadas como as taxas que caracterizam uma coorte sintética, a sua soma, multiplicada por 5, quantifica o **número médio acumulado de filhos nascidos vivos** que uma mulher teria no final da sua vida reprodutiva caso ela fosse exposta a estas taxas em cada grupo etário dos 10 até 70 anos.
+
+- Supondo que $n=5$, a soma geralmente é feita só de $\alpha=15$ até $\beta=45$ anos, usando intervalos quinquenais, o que neste caso daria um resultado de $5 \times ({}_5f_{15} + {}_5f_{20} + {}_5f_{25} + {}_5f_{30} + {}_5f_{35} + {}_5f_{40} + {}_5f_{45}) = 1,726$ filhos por mulher.
+
+# Reprodutividade {.allowframebreaks}
+
+A \structure{reprodutividade} analisa a reprodução do ponto de vista das relações de **tamanho entre uma geração e outra**.
+
++ A próxima geração será maior ou menor do que a atual?
+    
+Mais especificamente, o conceito estabelece uma relação entre o número de mulheres na geração atual e o número de filhas que elas terão.
+
+- Esse processo pode ser visto a partir de dois ângulos diferentes, se a mortalidade
+das filhas é considerada ou não.
+
+\framebreak
+
+A \structure{Taxa Bruta de Reprodução} $(TBR)$ simplesmente contabiliza o \structure{número médio de filhas nascidas vivas} que cada mulher terá ao longo da sua vida, sem considerar a sua sobrevivência.
+
+- Essa medida é fácil de calcular pois simplesmente requer calcular a $TFT$ limitada a nascimentos do sexo feminino.
+- Se as $TEFs$ se baseiam em nascimentos registrados por sexo, o cálculo pode ser feito diretamente, contando apenas os nascimentos do sexo feminino.
+- A alternativa é dividir a $TFT$ por $1+RS_0$ ou, na ausência de $RS_0$, por $2,05$:
+
+$$
+TBR = TFT/(1 + RS_0).
+$$
+
+\framebreak
+
+A \structure{Taxa Líquida de Reprodução} $(TLR)$ requer um pouco mais trabalho. 
+
+- Conceitualmente o significado desta medida é: o \structure{número médio de filhas
+que cada mulher terá ao longo da sua vida multiplicado pela probabilidade de sobrevivência de cada filha até a idade que a sua mãe tinha quando ela nasceu}.
+
+\framebreak
+
+- Na prática, isso significa que cada termo no cálculo de $TFT$ em leva um fator ${}_nL_x/\ell_0$ em vez do fator $n$:
+
+$$
+TLR = \left(\sum_{x=\alpha}^{\beta}{({}_nL_x/\ell_0){}_nf_x}\right)/(1 + RS_0),
+$$
+
+em que 
+
+- $\ell_0$ é o número de nascidos vivos em uma coorte;
+- ${}_nL_x$ é o número de anos-pessoa vivido pela coorte de $\ell_0$ pessoas nascidas vivas e ainda vivas na idade de $x$ anos no intervalo de $x$ até $x+n$ anos exatos.
+
+\framebreak
+
+- O termo \structure{fecundidade de reposição}, descreve uma situação em que o **tamanho de cada geração é igual à anterior**, formalmente pode ser caracterizada como uma situação onde $TLR = 1$.
+- Uma $TLR > 1$ indica uma tendência de **crescimento no longo prazo**;
+- enquanto uma $TLR < 1$ indica uma **tendência decrescente**.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width="66%", paged.print=FALSE}
+knitr::include_graphics(here('imagens','tbn_tfg_03.png'))
+```
+
+\framebreak
+
+- Como é esperado, as duas são praticamente iguais nos países de baixa mortalidade, mas em países como Angola, Guiné-Bissau e Moçambique há uma diferença significativa devido ao alto nível de mortalidade na infância e nas idades reprodutivas.
+
+- O Brasil, e principalmente Portugal e Macau são exemplos de tendência decrescente. 
+- Talvez mais surpreendente é a estimativa da **Revisão das Estimativas e Projeções da População** feita pelas **Nações Unidas em 2019** de que mais de dois terços (68,2%) da população mundial em 2020 já viverá em países com $TLR$ abaixo de 1. 
+    - Esta cifra inclui os três países mais populosos: China, Índia e EUA.
+
+## Comentários finais
+
+- É importante notar que populações com $TLR$ menor de 1 podem efetivamente crescer no curto prazo, mesmo sem imigração, se possuem uma estrutura etária favorável ao crescimento, com muitas mulheres em idade reprodutiva.
+    + O oposto também é possível. 
+- A $TLR$ depende só da **mortalidade** e da **fecundidade** por idade e não considera qual é a **estrutura etária** da população e como ela pode influenciar o **ritmo de crescimento**. 
+    + Ela também não considera a migração. 
+
+## Próxima aula
+
+- Começo da **Área 3:** tábuas de vida.
+
+## Para casa {.allowframebreaks}
+
+- Refaça o exemplo da **padronização direta** considerando Rondônia como a população padrão.
+
+- Ler o capítulo 10 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final04.jpg'))
+
+```
+

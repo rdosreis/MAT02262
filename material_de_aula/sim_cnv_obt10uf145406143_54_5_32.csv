@@ -1,0 +1,42 @@
+ Mortalidade - Brasil
+Óbitos p/Residênc por Unidade da Federação
+Unidade da Federação: Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Distrito Federal, Espírito Santo, Goiás, Maranhão, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rio Grande do Sul, Rondônia, Roraima, Santa Catarina, São Paulo, Sergipe, Tocantins
+Período:2019-2021
+"Unidade da Federação";"Óbitos_p/Residênc"
+"11 Rondônia";32658
+"12 Acre";14454
+"13 Amazonas";72172
+"14 Roraima";10665
+"15 Pará";144408
+"16 Amapá";12891
+"17 Tocantins";28806
+"21 Maranhão";123053
+"22 Piauí";70386
+"23 Ceará";199775
+"24 Rio Grande do Norte";73212
+"25 Paraíba";93163
+"26 Pernambuco";221586
+"27 Alagoas";69525
+"28 Sergipe";45941
+"29 Bahia";315951
+"31 Minas Gerais";483235
+"32 Espírito Santo";86343
+"33 Rio de Janeiro";506017
+"35 São Paulo";1087441
+"41 Paraná";269745
+"42 Santa Catarina";148624
+"43 Rio Grande do Sul";299751
+"50 Mato Grosso do Sul";60915
+"51 Mato Grosso";70361
+"52 Goiás";150095
+"53 Distrito Federal";48101
+"Total";4739274
+ Fonte: MS/SVS/CGIAE - Sistema de Informações sobre Mortalidade - SIM
+ Nota:
+ 
+ Em 2011, houve uma mudança no conteúdo da Declaração de Óbito, com maior detalhamento das informações coletadas. Para este ano, foram
+ utilizados simultaneamente os dois formulários. Para mais detalhes sobre as mudanças ocorridas e os seus efeitos, veja o documento
+ "Sistema de Informações sobre Mortalidade - SIM. Consolidação da base de dados de 2011".
+ No dia 13/06/2019, os arquivos do SIM referentes ao ano de notificação 2017 foram atualizados, com alteração das causas básicas de 2 registros e exclusão de 1 registro.
+ No dia 01/04/2020, os arquivos do SIM referentes ao ano de notificação 2019 foram atualizados, com alteração das causas básicas de 4 registros e exclusão de 1 registro.
+ 

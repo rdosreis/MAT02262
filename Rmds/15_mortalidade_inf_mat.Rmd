@@ -1,0 +1,354 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Taxas de mortalidade infantil e materna"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Coeficiente de mortalidade infantil {.allowframebreaks}
+
+- Tido como um dos mais sensíveis indicadores de saúde, é, talvez, o mais utilizado dentre os coeficientes de mortalidade.
+- É calculado por meio da seguinte relação
+
+$$
+TMI = \frac{\mbox{Número de óbitos em menores de 1 ano na área A, no período t}}{\mbox{Número de nascidos vivos na área A, no período t}} \times 1000.
+$$
+
+\framebreak
+
+- Diferindo da maioria dos outros coeficientes de mortalidade, o de mortalidade infantil não apresenta, no denominador, o número de habitantes menores de um ano (dado por censo ou por estimativa) mas, sim, o **número de nascidos vivos**.
+- Isso se deve ao fato de que, no censo, o número de menores de um ano é **sempre subestimado**;
+    + daí ser preferível utilizar-se o número de nascidos vivos registrados.
+- Portanto, para o cálculo desse coeficiente, os dados, quer do numerador quer do denominador, são obtidos por meio do **Registro Civil**.
+
+\framebreak
+
+- Esse coeficiente está sujeito a erros que podem ocorrer quer no numerador, quer no denominador.
+- Deve-se destacar como principais:
+    + subregistro de óbitos de menores de um ano;
+    + subregistro de nascimentos;
+    + e definição incorreta de nascido vivo e nascido morto.
+
+\framebreak
+
+- Outros fatores podem ser apontados, como:
+    + evasão e invasão de óbitos de menores de um ano;
+    + definição de nascido vivo no ano:
+    + e declaração errada da idade.
+
+\framebreak
+
+\begin{mybox}{Coeficiente de mortalidade infantil}
+(ou a \structure{taxa de mortalidade infantil}) mede o risco que tem, um nascido vivo, de morrer antes de completar um ano de idade.
+\end{mybox}
+
+\framebreak
+
+- À medida que, em uma área, vão melhorando as condições de vida e de saúde da população, vai diminuindo a mortalidade infantil.
+- A **morte de menores de um ano** é diretamente influenciada por:
+    + condições de saneamento;
+    - nutrição;
+    - educação;
+    + habitação;
+    + assistência pré-natal e ao parto.
+- Pode-se dizer que está ligada diretamente às condições sócio-econômicas da população.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'tmi-01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'tmi-02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'tmi-03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'tmi-04.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'tmi-05.png'))
+
+```
+
+## Valores "normais" do coeficiente de mortalidade infantil {.allowframebreaks}
+
+- É claro que, idealmente, o coeficiente de mortalidade infantil "normal" deveria ser zero, isto é, não deveria morrer nenhuma criança menor de um ano de idade.
+- Tal fato é praticamente inexistente, pois, mesmo que se eliminassem todos os **fatores ambientais**, restariam **fatores biológicos** responsáveis por algumas mortes.
+- Assim sendo não se diz existir mortalidade infantil "normal", mas sim **mortalidade infantil baixa**.
+    - E será tanto mais baixa quanto mais se aproximar do valor zero.
+
+\framebreak
+
+- Há alguns anos, era comum a utilização de uma classificação do coeficiente de mortalidade infantil, de maneira arbitrária:
+    + **baixo** (inferior a 30 por mil nascidos vivos);
+    + **médio** (de 30 a 60);
+    + **alto** (de 60 a 80);
+    + **muito alto** (acima de 80 por mil nascidos vivos).
+    
+\framebreak
+
+- Evidentemente, para os anos mais recentes, ess classificação tornou-se um tanto quanto obsoletą.
+ -A maioria dos países de alto nível de saúde apresenta um coeficiente de mortalidade infantil próximo, ou inferior, a **15 por mil**. 
+    - Alguns já passaram a barreira de 10 por mil nascidos vivos.
+- Portanto, atualmente, se se desejar classificar a mortalidae infantil, tem-se que dizer que ela é baixa quando for inferior a 20 por mil e que acima de 60 por mil nascidos vivos, pode ser considerada muito alta.
+
+# Componentes do coeficiente de mortalidade infantil {.allowframebreaks}
+
+Por definição, a mortalidade infantil é composta de duas partes:
+
+1. \structure{mortalidade neonatal}, ou **infantil precoce**;
+2. e \structure{mortalidade pós-neonatal}, ou **infantil tardia**.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', out.height="40%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil.png'))
+
+```
+
+## Taxa de mortalidade neonatal {.allowframebreaks}
+
+- A \structure{mortalidade neonatal} compreende os casos de crianças falecidas durante os **primeiros 28 dias** vida (< 1 dia, 1 dia, 2, 3, 4,..... 27 dias) e é medida pela relação:
+
+\footnotesize
+
+$$
+TMNeo = \frac{\mbox{Número de óbitos de crianças de 0 a 27 dias, na área A, no período t}}{\mbox{Número de nascidos vivos, na área A, no período t}} \times 1000.
+$$
+\normalsize
+
+## Taxa de mortalidade pós-neonatal {.allowframebreaks}
+
+- A \structure{mortalidade pós-neonatal} é aquela que corresponde aos óbitos ocorridos entre o 28º dia de vida e um ano de idade. É medida pela relação: 
+
+\footnotesize
+
+$$
+TMPos = \frac{\mbox{Número de óbitos de crianças de 28 dias a 1 ano, na área A, no período t}}{\mbox{Número de nascidos vivos, na área A, no período t}} \times 1000.
+$$
+
+\normalsize
+
+\framebreak
+
+A __mortalidade neonatal__ é, por sua vez, __decomposta em__:
+
+- \structure{Taxa de mortalidade neonatal precoce} $(TMNeoPrec)$
+
+\footnotesize
+
+$$
+TMNeoPrec = \frac{\mbox{Número de óbitos de crianças de 0 a 6 dias no período}}{\mbox{Número de nascidos vivos, na área A, no período t}} \times 1000.
+$$
+\normalsize
+
+- \structure{Taxa de mortalidade neonatal tardia} $(TMNeoTar)$
+
+\footnotesize
+
+$$
+TMNeoTar = \frac{\mbox{Número de óbitos de crianças de 7 a 28 dias no período}}{\mbox{Número de nascidos vivos, na área A, no período t}} \times 1000.
+$$
+\normalsize
+
+\framebreak
+
+$\looparrowright$ Para o cálculo da TMI e das suas componentes, recorre-se aos __dados das estatísticas vitais__, com o detalhamento do tempo vivido no primeiro ano para os óbitos infantis. 
+
+- No Brasil, os dados provenientes do \structure{Sistema de Informações de Mortalidade (SIM)} e do \structure{Sistema de Nascidos Vivos (SINASC)} permitem calcular de maneira direta as medidas da mortalidade na infância para algumas Unidades da Federação e municípios.
+- A cobertura deficiente das estatísticas vitais implica na necessidade de correção dos dados de óbitos e nascimentos para a obtenção de estimativas mais fidedignas.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'minfantil03.png'))
+
+```
+
+## Componentes do coeficiente de mortalidade infantil {.allowframebreaks}
+
+Esta subdivisão **neonatal** e **infantil tardia** prende-se, principalmente, à observação, bastante antiga, de que esses períodos apresentam causas ou grupos de causas de morte bastante específicos.
+
+- Assim, as causas das **mortes neonatais** são, na quase totalidade, devidas às chamadas **causas perinatais** e às **anomalias congênitas**.
+- São, por tanto, ligadas a **problemas de gestação**, **de parto**, **fatores maternos vários** e **problemas congênitos** e **genéticos**.
+    + Causas endógenas.
+
+\framebreak
+
+- A **mortalidade infantil tardia** depende fundamentalmente, de causas ligadas a **fatores ambientais** (causas exógenas), tais como **doenças infecciosas** e **desnutrição**.
+
+- Os componentes neonatal e infantil tardio têm comportamentos diferentes, em áreas de **alto nível de saúde** (com mortalidade infantil baixa) e **baixo nível de saúde** (com mortalidade infantil alta).
+- O que se observa é o seguinte:
+    + quando o coeficiente de **mortalidade infantil é baixo**, ele é quase totalmente representado pela **mortalidade neonatal (60 a 80%)**;
+    + e quando o coeficiente de **mortalidade infantil é alto**, observa-se o inverso, isto é, ele é quase totalmente representado pela **mortalidade infantil tardia**.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'tmi-06.png'))
+
+```
+
+# Coeficiente de natimortalidade {.allowframebreaks}
+
+\begin{mybox}{Natimorto} 
+é o produto do nascimento de um feto morto. No Brasil, considera-se feto morto aquele que nasce pesando mais de 500 g e que não tem evidência de vida depois de nascer.
+\end{mybox}
+
+\framebreak
+
+- No caso brasileiro, o __Conselho Federal de Medicina__ determinou, mediante a **Resolução 1601 de 2000**, que "em caso de morte fetal os médicos que prestaram assistência à mãe ficam obrigados a fornecer a __declaração de óbito do feto__, quando a gestação tiver __duração igual ou superior a 20 semanas__ ou o feto tiver __peso corporal igual ou superior a 500 gramas__ e/ou __estatura igual ou superior a 25 cm__".
+    - Entretanto, nem todos os países adotam a mesma definição. 
+- Prazos de 22, 24 e particularmente 28 semanas também são comuns e alguns países adotam o critério de 1000 gramas, em vez de 500 gramas.
+
+\framebreak
+
+Só o Brasil e Portugal têm condições de usar estes dados para publicar estimativas diretas da \structure{taxa de natimortalidade} ou \structure{taxa de mortalidade fetal} $(TMF)$, que é definida da seguinte forma:
+
+\footnotesize
+
+$$
+TMF = \frac{\mbox{Número de natimortos, na área A, no período t}}{\mbox{Número de nascidos vivos + número de natimortos, na área A, no período t}} \times 1000.
+$$
+\normalsize
+
+\framebreak
+
+$\looparrowright$ Como o conceito usado no Brasil é relativamente abrangente, a sua $TMF$ tende a aumentar em comparação com outros países que usam definições mais restritivas.
+
+- Fora do âmbito dos países mais desenvolvidos, onde existem boas estatísticas a respeito, as estimativas existentes geralmente se baseiam em informação obtida por meio de **pesquisas amostrais**.
+- Em 2016, a revista \structure{Lancet} publicou um levantamento das melhores estimativas disponíveis com base nos dados existentes.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height="70%"}
+
+knitr::include_graphics(here::here('imagens', 'natimortalidade.png'))
+
+```
+
+\framebreak
+
+- A natimoratalidade é alta ou baixa, dependendo, principalmente, da assistência pré-natal, das condições de saúde e nutrição da mãe, além de fatores fetais (anomalias congênitas).
+- Nas áreas de bom nível de saúde, a natimortalidade é da ordem de 5 a 10 por mil nascimentos.
+- Nas áreas de baixo nível de saúde varia entre 20 e 40, por mil nascimentos.
+
+# Coeficiente de mortalidade materna {.allowframebreaks}
+
+\begin{mybox}{Mortalidade materna}
+Segundo a definição da Organização Mundial de Saúde (OMS), a morte materna é ``a morte de uma mulher durante a gestação ou em até 42 dias após o término da gestação (puerpério), independentemente da duração e da localização da gravidez, por causas relacionadas ou agravadas pela gravidez ou por medidas relacionadas a ela, mas não por causas acidentais ou incidentais''.
+\end{mybox}
+
+\framebreak
+
+- Trata-se se de um importante indicador de qualidade da saúde de um país, pois grande parte desses óbitos pode ser evitada com adequada atenção durante o período pré-natal, cuidados durante o parto e acompanhamento adequado durante o período de puerpério (período de 42 dias após o nascimento do bebê). 
+- Entretanto, em termos puramente numéricos se trata de um evento muito raro. Por exemplo, Cabo Verde só teve 1 morte materna em 2014, 5 em 2015 e 2 em 2016.
+- O número mundial de mortes maternas em 2017 foi 295.000, sendo que 196.000 ocorreram na África Subsaariana e apenas 7.800 na América Latina e 740 na Europa \structure{(WHO / UNICEF / UNFPA / World Bank Group / Population Division, 2019)}.
+
+\framebreak
+
+- Existem vários indicadores para a mortalidade materna, mas o principal é a \structure{Razão de Mortalidade Materna} $(RMM)$.
+- Nos países onde existe informação adequada, esta razão é calculada como o quociente entre o **total de óbitos maternos** (classificados de acordo com os códigos referidos) e o **número de nascidos vivos**;
+    + a $RMM$ é sempre expressa por 100.000. 
+
+\framebreak
+
+\footnotesize
+
+$$
+RMM = \frac{\mbox{Número de óbitos por causas maternas, na área A, no período t}}{\mbox{Número de nascidos vivos, na área A, no período t}} \times 100000.
+$$
+
+\normalsize
+
+- A informação sobre crianças nascidas vivas é uma aproximação do número de mulheres grávidas e que, portanto, estariam expostas ao risco de morrer em razão da gravidez, parto e puerpério.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'rmm-01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'rmm-02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'rmm-03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'rmm-04.png'))
+
+```
+
+## Próxima aula
+
+- Medidas Básicas de Natalidade.
+
+## Para casa {.allowframebreaks}
+
+- Refaça o exemplo da padronização direta considerando Rondônia como a população padrão.
+- Pequeno Trabalho 02: postado no Moodle.
+
+- Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-corda-bamba.jpg'))
+
+```
+

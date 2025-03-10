@@ -1,0 +1,281 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Crescimento e distribuição da população"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Razões, proporções, taxas e índices {.allowframebreaks}
+
+- Antes de entrar propriamente na aplicação conceito de taxa, convém refletir por um momento sobre o uso da palavra \structure{``taxa''} e sua diferença de outros termos parecidos como __"proporção"__, __"razão"__, __"índice"__ e __"probabilidade"__.
+    - O que estes termos têm em comum é que geralmente são o resultado de uma __divisão entre dois números__. 
+- Entretanto, os demógrafos tendem a ser bastante cuidadosos com o uso apropriado de cada termo, dependendo daquilo que está no numerador e no denominador.
+
+\begin{mybox}{Razão de Sexos}
+
+que foi introduzida nas aulas anteriores, \textbf{é uma razão e não uma proporção porque o numerador não faz parte do denominador. Também seria possível (embora pouco usual) definir a proporção de homens ou de mulheres, dividindo o número de homens ou mulheres pela população total. Já que tanto os
+homens como as mulheres fazem parte da população total, estas efetivamente são proporções.}
+
+\end{mybox}
+
+\begin{mybox}{grau de urbanização de uma população}
+
+o número de habitantes urbanos dividido pela população total (eventualmente vezes 100). Embora não seja o termo usual, esta quantidade pode ser legitimamente chamada a \textbf{``proporção de urbanização''}. Também não seria incorreto chamá-la de \textbf{``razão de urbanização''} porque cada proporção é também uma razão. Mas é definitivamente incorreto chamá-la de \textbf{``taxa de urbanização''}, como se faz frequentemente.
+
+\end{mybox}
+
+\framebreak
+
+- As __taxas e as probabilidades são quantidades dinâmicas__ que envolvem tanto variáveis de fluxo como de estoque.
+    + Este não é o caso nem do grau de urbanização nem da percentagem de pessoas não alfabetizadas numa população, muitas vezes erroneamente chamada de "taxa de analfabetismo", ou da proporção de desemprego, que geralmente é chamada "taxa de desemprego", embora formalmente não seja uma taxa.
+
+\framebreak
+
+- Na demografia, para que uma quantidade seja chamada uma "taxa", ela precisa ter um __numerador que quantifica um número de eventos__ e um
+__denominador que descreve o número de pessoas que em alguma medida podem ser expostas a este evento__.
+- O uso da terminologia nem sempre é consistente, nem mesmo dentro da demografia. 
+    + Por exemplo, o número médio de filhos nascidos vivos que as mulheres têm ao longo das suas vidas na literatura norte-americana e brasileira geralmente é chamada a Taxa de Fecundidade Total.
+    
+\framebreak
+
+- Ainda existe o termo __"índice"__ que é o mais geral de todos. 
+    + Qualquer número que quantifica uma relação observada no mundo natural ou social pode ser considerado um "índice".
+- Neste sentido não seria errado falar do "Índice de Sexos" (Razão de sexos, $RS_t$), embora este não seja o termo habitual.
+
+# O crescimento da população {.allowframebreaks}
+
+## Relembrando {.allowframebreaks}
+
+\begin{mybox}{Crescimento populacional}
+é a variação positiva em uma população em um dado intervalo de tempo.
+\end{mybox}
+
+\framebreak
+
+\begin{mybox}{Crescimento vegetativo}
+é a diferença entre nascimentos e mortes em uma população, num dado intervalo de tempo.
+\end{mybox}
+
+\begin{mybox}{Crescimento migratório}
+é a diferença entre imigrações e emigrações em uma população, num dado intervalo de tempo.
+\end{mybox}
+
+\framebreak
+
+\footnotesize
+
+$$
+\color{red}{\Rightarrow \mbox{crescimento populacional} = \mbox{crescimento vegetativo}\ +\ \mbox{crescimento migratório}.}
+$$
+
+\framebreak
+
+## O crescimento da população {.allowframebreaks}
+
+As populações e as suas componentes __mudam ao longo do tempo__.
+
+- Esta mudança pode ser tanto __positiva__ como __negativa__ (para mais e para menos) e em ambos os casos se usa o termo __crescimento da população__.
+- É importante ressaltar como se caracteriza o __ritmo de crescimento__ de uma população.
+
+\framebreak
+
+O ponto de partida para qualquer medição do crescimento é a comparação do **tamanho de uma população** ou subpopulação **em dois momentos do tempo**:
+
+$$
+t\quad \mbox{e}\quad t + \Delta t.
+$$
+
+\framebreak
+
+- Para padronizar a taxa, de modo que não dependa diretamente de $\Delta t$, usam-se dois conceitos: o de \structure{taxa anual} e \structure{taxa instantânea} (ou contínua), com as seguintes definições:
+
+\begin{eqnarray*}
+\mbox{Anual:}\quad && r = \left(\frac{P(t + \Delta t)}{P(t)}\right)^{1/\Delta t} - 1,\\
+\mbox{Instantânea:}\quad && r = \frac{\mbox{ln}\left(P(t + \Delta t)/P(t)\right)}{\Delta t}.
+\end{eqnarray*}
+
+\framebreak
+
+- A contraparte das fórmulas anteriores no cálculo de $P(t + \Delta t)$ a partir de $P(t)$, usando $r$, é a seguinte:
+
+\begin{eqnarray*}
+\mbox{Anual:}\quad && P(t + \Delta t) = P(t) \times (1 + r)^{\Delta t},\\
+\mbox{Instantânea:}\quad && P(t + \Delta t) = P(t) \times e^{r\Delta t}.
+\end{eqnarray*}
+
+\framebreak
+
+- Note que no caso da taxa anual, temos $\Delta t = 1$, e portanto,
+
+$$
+r = \frac{P(t + 1)}{P(t)} - 1 = \frac{P(t + 1) - P(t)}{P(t)},
+$$
+geralmente expressa em termos percentuais. E consequentemente, temos que
+
+$$
+P(t + 1) = P(t) \times (1 + r).
+$$
+
+\framebreak
+
+- Os dois conceitos de $r$ se relacionam da seguinte forma:
+
+$$
+r_{inst.} = \mbox{ln}(1 + r_{anual}).
+$$
+
+\framebreak
+
+A razão porque existem estes dois conceitos distintos é que existem as duas fórmulas distintas para a __projeção do crescimento__ que são identificadas às vezes como a __fórmula geométrica__ ($r_{anual}$) e a __fórmula exponencial__ ($r_{inst.}$), respectivamente. 
+
+- Por esta razão, a taxa anual também é conhecida como __taxa geométrica__ e a instantânea como __taxa exponencial__ de crescimento. 
+- Por enquanto será usado só o conceito de __crescimento anual__. 
+
+\framebreak
+
+De qualquer modo, a diferença entre as duas variantes de $r$ é pequena.
+
++ Por exemplo, se espera que a população da América Latina aumentará de 634 milhões em 2015 para 784 milhões em 2050. Se os valores de 634 e 784 são substituídos para $P(t)$ e $P(t+ \Delta t)$ nas fórmulas $r$, com $\Delta t = 35$, o resultado para a taxa anual é 0,006086 (0,6086%) e para a taxa instantânea 0,006067.
+
+\framebreak
+
+- __Exercício:__ calcule a taxa anual de crescimento dos países a seguir. Identifique os países com taxas de crescimento negativo.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_crescimento.png'))
+
+```
+
+## Tempo de duplicação {.allowframebreaks}
+
+- Para ajudar a visualizar as implicações de uma determinada taxa de crescimento a mais **longo prazo** às vezes se calcula o chamado \structure{tempo de duplicação}.
+- Ou seja, o tempo necessário para que uma população que cresce com certa taxa alcance o dobro do seu tamanho inicial. 
+
+\framebreak
+
+- Como existem efeitos de acumulação (crescimento sobre crescimento), o tempo que uma população que cresce a 2% por ano leva para duplicar não é 50 anos, mas só 35 anos.
+- Uma população que cresce a 4% por ano duplica em apenas 17,7 anos.
+
+- As respectivas fórmulas são as seguintes:
+
+$$
+\mbox{Tempo de Duplicação} = \frac{\log(2)}{\log(1 + r_{anual})} \approx \frac{\mbox{ln}(2)}{r_{inst.}} = 0,6931/r_{inst.}
+$$
+\framebreak
+
+- __Exercício:__ com base no resultado do exercício anterior, calcule o __tempo de duplicação__ para o Brasil.
+
+# A fórmula básica da contabilidade demográfica e o conceito de coorte
+
+## A fórmula básica da contabilidade demográfica {.allowframebreaks}
+
+As populações podem ser descritas em termos de __variáveis de estoque__ como __de fluxo__, mas \structure{estes dois aspectos não são independentes}. 
+
+- As mudanças que ocorrem tanto no tamanho como na composição da população ao longo do tempo devem ser consistentes com os processos de mudança aos quais a população está exposta, descritos pelas variáveis de fluxo.
+
+\framebreak
+
+Existem várias __fórmulas de consistência__ que descrevem as relações que precisam ser satisfeitas.
+
+- A mais conhecida e mais simples, que se aplica ao conjunto da população, é a \structure{Fórmula Básica da Contabilidade Demográfica}, também conhecida por vários outros nomes como:
+    + Equação de Equilíbrio/Balanço Demográfico/Populacional;
+    + Equação Compensadora;
+    + Equação de Concordância;
+    + _"Growth Balance Equation"_, em inglês
+    
+\framebreak
+
+\begin{mybox}{Fórmula Básica da Contabilidade Demográfica}
+Afirma que a diferença entre o tamanho total de uma população em dois momentos diferentes deve ser igual ao número de nascimentos ocorridos durante o período intermediário, menos o número de óbitos, mais o número de imigrantes e menos o número de emigrantes.
+\end{mybox}
+
+\framebreak
+
+Em termos mais formais, temos a seguinte expressão para \structure{Fórmula Básica da Contabilidade Demográfica}:
+
+$$
+P(t+n) = P(t) + N(t,t+n) - D(t,t+n) + I(t,t+n) - E(t,t+n),
+$$
+
+em que $P(t)$ e $P(t+n)$ são as populações existentes nos momentos $t$ e $t+n$, e $N(t,t+n)$, $D(t,t+n)$, $I(t,t+n)$ e $E(t,t+n)$ se referem, respectivamente, aos __nascimentos__, __óbitos__, __imigração__ e __emigração__ ocorridos entre $t$ e $t+n$.
+
+\framebreak
+
+Qualquer divergência desta fórmula pode indicar uma de duas coisas:
+
+1. Uma ou mais quantidades que constam da fórmula podem ter sido medidas incorretamente; ou
+2. As unidades territoriais correspondentes às populações em $t$ e $t+n$ podem não ser as mesmas, por exemplo porque se trata de um município ou uma província cujos limites foram modificados durante o período.
+
+\framebreak
+
+- Populações que não têm migração ($I(t,t+n) - E(t,t+n) = 0$) são conhecidas como \structure{populações fechadas}.
+    + A componente de crescimento da população que não envolve migração (ou seja, nascimentos menos óbitos) é chamada \structure{vegetativo} (em inglês, _"natural growth"_).
+    + A terminologia __"crescimento natural"__ às vezes é usada em português também, mas o termo __"vegetativo”__ merece preferência.
+  
+\framebreak
+
+\begin{mybox}{Um método para estimação da migração}
+A Fórmula Básica da Contabilidade Demográfica é usada frequentemente para estimar $E(t,t+n)$ ou $I(t,t+n)-E(t,t+n)$ em circunstâncias em que todas as componentes da equação são conhecidas, com a exceção da migração.
+\end{mybox}
+
+## O conceito de coorte {.allowframebreaks}
+
+- Mas não é só a evolução da população que precisa cumprir com certos requisitos de consistência.
+- O mesmo acontece também com várias __subpopulações__. 
+
+\framebreak
+
+Por exemplo, o número de __mulheres solteiras de 20-24 anos em 2010__ foi diferente do __número de solteiras de 25-29 anos em 2015__,
+
++ mas estes dois números têm algo em comum: a grande maioria das mulheres que fizeram parte do segundo grupo também já fazia parte do primeiro (5 anos antes). 
+- São as __mulheres nascidas entre 1985 e 1989__ cujo número de solteiras vai diminuindo no tempo na medida em que elas: (1) se casam; (2) ou se unem; (3) e algumas morrem ou migram.
+- Estas mulheres compõem __uma geração__ ou, em linguagem propriamente demográfica, \structure{uma coorte}.
+
+\framebreak
+
+\begin{mybox}{Uma coorte}
+é um grupo de pessoas que passaram por um mesmo evento demográfico durante o mesmo período.
+\end{mybox}
+
+\framebreak
+
+- Neste caso, o evento é o nascimento e o período 1985-1989. 
+- Uma coorte de nascimentos é o mesmo daquilo que comumente se chama uma geração. 
+- Mas a palavra "coorte" pode ser usada também para descrever, por exemplo:
+    + o conjunto de __pessoas que se graduaram da escola secundária em 2008__; 
+    + o conjunto de __mulheres que tiveram o seu primeiro filho entre 2010 e 2014__.
+
+## Próxima aula
+
+- Densidade demográfica;
+- Medidas básicas de mortalidade.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Refaça o exemplo da padronização direta considerando Rondônia como a população padrão. -->
+- Pequeno Trabalho 02: será postado no Moodle.
+- Ler o capítulo 7 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-errorbar.jpg'))
+
+```
+

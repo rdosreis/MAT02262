@@ -1,0 +1,363 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Comparação de taxas de mortalidade: métodos de padronização"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+## Relembrando {.allowframebreaks}
+
+\footnotesize
+
+| **Unidade da Federação** | **População Média** | **Óbitos Média 3 anos** | **TBM - 2020** |
+|---|:---:|:---:|:---:|
+| **11 Rondônia** | 1805869,0 | 10886,0 | 6,0 |
+| **12 Acre** | 900673,0 | 4818,0 | 5,3 |
+| **13 Amazonas** | 4238854,5 | 24057,3 | 5,7 |
+| **14 Roraima** | 641947,0 | 3555,0 | 5,5 |
+| **15 Pará** | 8733934,5 | 48136,0 | 5,5 |
+| **16 Amapá** | 869693,0 | 4297,0 | 4,9 |
+| **17 Tocantins** | 1598805,5 | 9602,0 | 6,0 |
+| **21 Maranhão** | 7133930,0 | 41017,7 | 5,7 |
+| **22 Piauí** | 3285385,0 | 23462,0 | 7,1 |
+| **23 Ceará** | 9213841,5 | 66591,7 | 7,2 |
+| **24 Rio Grande do Norte** | 3547534,0 | 24404,0 | 6,9 |
+| **25 Paraíba** | 4049591,0 | 31054,3 | 7,7 |
+| **26 Pernambuco** | 9645707,0 | 73862,0 | 7,7 |
+| **27 Alagoas** | 3358447,0 | 23175,0 | 6,9 |
+| **28 Sergipe** | 2328648,0 | 15313,7 | 6,6 |
+| **29 Bahia** | 14957959,0 | 105317,0 | 7,0 |
+| **31 Minas Gerais** | 21352294,5 | 161078,3 | 7,5 |
+| **32 Espírito Santo** | 4086280,0 | 28781,0 | 7,0 |
+| **33 Rio de Janeiro** | 17414769,0 | 168672,3 | 9,7 |
+| **35 São Paulo** | 46469232,5 | 362480,3 | 7,8 |
+| **41 Paraná** | 11557162,0 | 89915,0 | 7,8 |
+| **42 Santa Catarina** | 7295487,5 | 49541,3 | 6,8 |
+| **43 Rio Grande do Sul** | 11444801,5 | 99917,0 | 8,7 |
+| **50 Mato Grosso do Sul** | 2824291,0 | 20305,0 | 7,2 |
+| **51 Mato Grosso** | 3546727,0 | 23453,7 | 6,6 |
+| **52 Goiás** | 7160064,5 | 50031,7 | 7,0 |
+| **53 Distrito Federal** | 3074737,0 | 16033,7 | 5,2 |
+| **Total** | 212536665,5 | 1579758,0 | 7,4 |
+
+## Taxas brutas {.allowframebreaks}
+
+Como vimos anteriormente, a \structure{Taxa Bruta de Mortalidade} $(TBM)$ é o quociente entre o total de óbitos num dado período e a população exposta ao risco de morrer durante este período.
+
+- População exposta (aproximada): estimativa da população total no meio do ano.
+- As taxas brutas são afetadas pela __composição demográfica__ da população em estudo.
+- Para a taxa bruta de mortalidade, a __composição etária__ é fator importante na determinação de seu nível.
+
+A não ser que duas populações tenham estruturas etárias idênticas, taxas brutas não são bons indicadores para análise dos diferenciais de níveis de mortalidade.
+
+\framebreak
+
+Duas __taxas brutas não podem ser comparadas__ sem antes eliminar o efeito das diferenças entre as estruturas etárias das duas populações:
+
+- duas populações com \structure{Taxas Específicas de Mortalidade} $(TEMs)$ iguais e distribuições etárias diferentes podem gerar taxas brutas de mortalidade distintas;
+- a $TBM$ de uma população pode ser relativamente alta apenas porque sua população apresenta grande proporção de idosos (idade em que as taxas de mortalidade são altas);
+- num cenário de **envelhecimento populacional**, a $TBM$ de um país pode se elevar mesmo que suas $TEMs$ permaneçam inalteradas.
+
+\framebreak
+
+A Taxa Bruta de Mortalidade é uma **média ponderada** das Taxas Específicas de Mortalidade $\color{black}{\rightarrow}$ os **pesos** são dados pela **distribuição etária** da população (estrutura etária ou proporção por idade).
+
+- A $TBM$ __é influenciada__ pela estrutura etária -- não pode ser usada para comparações diretas;
+- As $TEMs$ __não são influenciadas__ pela estrutura etária;
+    - **vantagem:** pode ser usada para comparações entre populações;
+    - **desvantagem:** um conjunto grande de números para ser comparado;
+
+\framebreak
+
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%'}
+
+knitr::include_graphics(here::here('imagens', 'tem_sp.png'))
+
+```
+
+# Técnicas de padronização {.allowframebreaks}
+
+\structure{Método de Padronização:} A padronização é um **_procedimento de ajuste_** das taxas brutas, que permite eliminar o efeito da composição populacional (por idade ou por outra variável de interesse).
+
+- __Em estudos de mortalidade:__ padronização por idade é a mais comum $\color{black}{\rightarrow}$ a idade é um dos fatores mais importantes na determinação dos riscos de morte/probabilidades de sobrevivência.
+- __Taxas brutas padronizadas por idade:__ permitem comparar níveis de mortalidade entre populações, pois utiliza uma única __distribuição etária padrão__.
+
+\framebreak
+
+Taxas padronizadas por idade podem ser interpretadas como a **_taxa de mortalidade hipotética_** que ocorreria se as taxas específicas observadas fossem associadas a uma população cuja distribuição etária fosse idêntica à da **população padrão**.
+
+Importante ressaltar que essas **taxas padronizadas não possuem significado _por si só_**, sendo **úteis** somente **para** fins de **comparação** com outras taxas.
+
+# A padronização direta
+
+## Passo a passo da padronização direta {.allowframebreaks}
+
+Antes de comparar diferenciais de níveis entre Taxas Brutas de Mortalidade é preciso eliminar o efeito da composição etária:
+
+- Uma **população padrão** é escolhida;
+- As *taxas específicas por idade* das populações em estudo são ponderadas pela *distribuição etária* da população definida como padrão.
+
+Como uma mesma população padrão é utilizada, todas as taxas padronizadas são diretamente comparáveis.
+
+\framebreak
+
+::: {.block}
+
+### Informações necessárias:
+
+- __total de óbitos__ em cada população;
+- distribuição dos __óbitos por grupos de idade__ em cada população;
+- __distribuição etária__ de cada população.
+
+:::
+
+A partir destas informações, é possível calcular tanto a $TBM$ quanto as $TEMs$.
+
+\framebreak
+
+A padronização é feita escolhendo-se uma __única distribuição etária__ populacional (padrão) $\color{black}{\rightarrow}$ os __diferentes conjuntos das__ $TEMs$ das populações que se deseja comparar são aplicados nesta população padrão $\color{black}{\rightarrow}$ calcula-se as **Taxas Brutas padronizadas por idade**.
+
+- Utiliza o conjunto das taxas específicas de cada população que se pretende comparar e uma única _distribuição etária padrão_.
+
+\framebreak
+
+Assim, temos:
+
+$$
+TBM_{pd} = \frac{\sum_x{{}_{n}M_{x} {}_{n}P_{x}}}{\sum_x{ _{n}P_{x}}},
+$$
+em que:
+
+- $TBM_{pd}$ é a taxa padronizada por pelo método direto;
+- $_nM_x$ representa as taxas específicas por idade $x$;
+- $_{n}P_{x}$ corresponde à população padrão, número ou proporção ($_{n}p_{x}$) de pessoas na idade $x$.
+
+## Sobre a escolha da população padrão {.allowframebreaks}
+
+Pode-se afirmar que a escolha da população padrão para os cálculos das taxas ajustadas
+
+- influencia os resultados;
+- __pode até afetar a direção__ da diferença entre as taxas;
+- recomenda-se que o padrão escolhido seja __semelhante__ às estruturas das populações observadas;
+- geralmente, a estrutura etária de uma das populações em estudo é selecionada como padrão - outra alternativa é utilizar a __média das distribuições etárias__;
+- quanto mais distantes são as __estruturas etárias__, mais importante é fazer a comparação com base em dados padronizados.
+
+__Casos extremos:__ se as funções de mortalidade são muito diferentes, pode ser preferível comparar as taxas de mortalidade específicas por idade, ao invés das taxas brutas padronizadas - a escolha de uma população padrão mais rejuvenescida ou mais envelhecida pode alterar completamente o resultado.
+
+## Interpretação das taxas padronizadas por idade
+
+- É a taxa bruta de mortalidade (_hipotética_) que seria observada se as taxas específicas de mortalidade de populações reais fossem aplicadas a uma população padrão;
+- Permite a comparação das __taxas brutas__ de várias populações como se elas tivessem exatamente a __mesma distribuição etária__, mas cada uma mantendo suas __próprias taxas específicas__.
+
+## Exemplo de padronização direta {.allowframebreaks}
+
+- Comparação das Taxas Brutas de Mortalidade para 2010 da população feminina de **Rondônia** e __Santa Catarina__
+- Informações utilizadas - população feminina RO e SC:
+    - __estimativa da população__ do meio do ano de __2010__ de Rondônia e Santa Catarina. Fonte: Censo Demográfico de 2010.
+        + _Obs.:_ estimativa para 1 de julho de 2010, considera crescimento geométrico da população entre 2000 e 2010;
+    - óbitos por grupo etário ocorridos em 2010 em RO e SC.
+        + _Obs.:_ distribuição uniforme dos óbitos com **idade ignorada** entre os óbitos com idade conhecida (fator de correção = razão entre todos os óbitos e os óbitos com idade conhecida);
+
+\framebreak
+
+\structure{Relembrando}
+
+- __taxas específicas de mortalidade (TEMs):__
+
+\small
+
+$$
+TEM = \frac{\mbox{óbitos ocorridos em cada grupo etário}}{\mbox{população do meio do ano de cada grupo}}.
+$$
+
+\normalsize
+
+- __taxas brutas de mortalidade (TBM):__
+
+\small
+
+$$
+TBM = \frac{\mbox{total de óbitos em todas as idades}}{\mbox{população total do meio do ano}}.
+$$
+\normalsize
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_02.png'))
+
+```
+
+\framebreak
+
+- **Pergunta:** as duas TBMs podem ser comparadas?
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='95%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_03.png'))
+
+```
+
+\framebreak
+
+- Apesar da $TBM$ de Rondônia (3,28 óbitos por mil hab) ser menor que a $TBM$ de Santa Catarina (4,66 óbitos por mil hab), as taxas específicas de Rondônia são ligeiramente superiores às taxas apresentadas por Santa Catarina na maioria dos grupos etários.
+
+\framebreak
+
+__Padronização direta - Santa Catarina como população padrão:__
+
+- distribuição etária relativamente mais envelhecida (Santa Catarina);
+- utiliza as taxas específicas de Rondônia e a população de Santa Catarina;
+- __óbitos esperados em Rondônia se sua população fosse igual à catarinense:__
+
+\small
+
+$$
+\mbox{óbitos esperados em RO} = \mbox{TEMs de RO} \times \mbox{população padrão [SC]}
+$$
+
+\normalsize
+
+- total dos óbitos femininos esperados em Rondônia dividido pelo total da população de Santa Catarina origina uma __TBM padronizada de 4,89 óbitos por mil habitantes para RO em 2010__.
+
+$\color{black}{\rightarrow}$ _Obs.: $TBM$ de SC igual a 4,66 por mil hab._
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%', out.height='80%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_04.png'))
+
+```
+
+\framebreak
+
+__Comparação entre os resultados da padronização direta - RO ou SC como população padrão:__
+
+- antes da padronização, $TBM$ de Rondônia era menor que a $TBM$ de Santa Catarina - seria um equívoco concluir que a mortalidade em RO é menor com base nestas taxas brutas;
+- após a padronização, $TBM$ de Rondônia sempre maior que a $TBM$ de Santa Catarina - qualquer que seja a população padrão escolhida;
+
+$\color{black}{\rightarrow}$ _Obs.: também poderia ter utilizado a distribuição etária média das duas populações._
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='75%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_05.png'))
+
+```
+
+# A padronização indireta {.allowframebreaks}
+
+- Se a __população em estudo__ possui o total de eventos e a distribuição etária, mas __não possui informação sobre a distribuição dos eventos por idade__ $\color{black}{\rightarrow}$ *não se tem disponível informações sobre a distribuição de taxas específicas*.
+
+- __Padronização indireta__ $\color{black}{\rightarrow}$ usa a distribuição de __taxas específicas de uma população padrão__ (cuja função é conhecida) $\color{black}{\rightarrow}$ supõe que a população em estudo (cuja função é desconhecida) tem distribuição de taxas específicas com o **_mesmo formato/estrutura_** da população padrão.
+    - Supõe mesma forma/estrutura da função conhecida, mas **_não o mesmo nível_**.
+
+## Exemplo de Padronização Indireta {.allowframebreaks}
+
+Dois estados americanos: *Maine* (mais desenvolvido) e *Carolina do Sul* (menos desenvolvido).
+
+- Maine: distribuição de óbitos por idade é conhecida;
+- Carolina do Sul: distribuição de óbitos por idade não é conhecida - apenas total de óbitos (situação hipotética);
+
+$\color{black}{\rightarrow}$ Para ambos, há informação sobre a distribuição da população por idade (estrutura etária).
+
+\framebreak
+
+Com os dados disponíveis, é possível calcular a $TBM$ do Maine (13,9 óbitos por mil) e da Carolina do Sul (12,9 óbitos por mil):
+
+- Apenas com as taxas brutas, não é possível concluir sobre os diferenciais de nível de mortalidade entre os dois estados;
+
+Como a distribuição de óbitos por idade da Carolina do Sul não é conhecida, não é possível estimar suas $TEMs$ $\color{black}{\rightarrow}$ não é possível fazer a padronização direta.
+
+A solução é a padronização indireta!
+
+## Estratégia para padronização indireta {.allowframebreaks}
+
+Toma emprestado o conjunto das $TEMs$ do Maine e calcula os **óbitos esperados** na Carolina do Sul, dada sua estrutura etária $\color{black}{\rightarrow}$ compara óbitos observados e óbitos esperados na Carolina do Sul, gerando uma constante $K$.
+
+- __Pressuposto:__ função de mortalidade da Carolina do Sul (desconhecida) tem a mesma forma que a função de mortalidade do Maine (conhecida).
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'taxa_padronizada_06.png'))
+
+```
+
+\framebreak
+
+**Carolina do Sul:**
+
+- Total **_observado_** de óbitos = 22.401;
+- Total **_esperado_** de óbitos = 15.568;
+- Seriam esperados 15.568 óbitos na Carolina do Sul se sua função de mortalidade tivesse o **_mesmo formato e mesmo nível_** que a do Maine;
+- Entretanto, os óbitos observados são maiores que os esperados, ou seja, os __níveis de mortalidade são diferentes__ entre os dois estados;
+- Calculando a razão entre os níveis:
+
+$$
+\frac{TO}{\sum_x{\overline{O}_{x}}} = K = \frac{22041}{15568} = 1,44.
+$$
+
+- A diferença de mortalidade é de 44%, assumindo que a forma das funções de mortalidade é a mesma, mas que o nível é diferente.
+
+\framebreak
+
+- Dividindo o número de óbitos esperados pela população real, teríamos uma taxa bruta de mortalidade ajustada
+
+$$
+\frac{15568}{1738173} = 8,96\quad \mbox{por mil hab.}
+$$
+- O significado desta taxa é: qual seria o risco dessa população (da Carolina do Sul) se estivesse sujeita às taxas de mortalidade da população do Maine?
+
+## Padronização Direta ou Indireta?
+
+Depende das informações disponíveis.
+
+- Geralmente, resultados das padronizações diretas e indiretas são diferentes;
+- A padronização direta emprega uma população padrão;
+- A padronização indireta emprega um conjunto de taxas específicas padrão;
+- Não existe um método perfeito para comparar experiências de mortalidade de duas populações distintas;
+- sempre que houver informação suficiente, é preferível utilizar a padronização direta.
+
+- Medidas Básicas de Mortalidade **(continuação)**.
+
+## Para casa {.allowframebreaks}
+
+- Refaça o exemplo da padronização direta considerando Rondônia como a população padrão.
+- Pequeno Trabalho 02: postado no Moodle.
+
+- Ler o capítulo 6 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-corda-bamba.jpg'))
+
+```
+

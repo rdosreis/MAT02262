@@ -1,0 +1,361 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Medidas básicas de mortalidade"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Frequências relativas: coeficientes ou taxas {.allowframebreaks}
+
+\structure{Coeficiente} ou \structure{taxa} é uma relação (quociente) entre dois valores numéricos, que estimaria uma probabilidade ou determinado risco:
+
+$$
+\mbox{Coeficiente} = \frac{n}{P},
+$$ em que:
+
+- $n$ é o número de vezes em que ocorre determinado evento;
+- $P$ é o número de pessoas expostas ao risco de apresentar o determinado evento.
+
+\framebreak
+
+::: {.block}
+
+### Exemplo
+
+- Óbitos ocorridos na área A ($n$) = 200;
+- População da área ($P$) = 25000;
+
+$$
+\mbox{Coeficiente} = \frac{200}{25000} = 0.008.
+$$
+
+:::
+
+\framebreak
+
+É usual multiplicar-se o resultado por um número múltiplo de 10 (1 000, 10 000, ou 1 000 000), que constitui a chamada **base do coeficiente** à qual deve, obrigatoriamente, ser acrescentada a unidade de referência usada no denominador (habitantes, mulheres, homens, nascidos vivos, etc.).
+
+- No exemplo anterior teríamos $0.008 \times 1 000 =$ **8 por mil**.
+    - Isto é, o risco de óbito, ou **coeficiente de mortalidade** na área A, é **8 por mil habitantes**.
+
+\framebreak
+
+Sempre que se calcula um coeficiente, está implícita, além da noção de risco (no caso, risco de morrer), a noção de **tempo** e **espaço**.
+
+- Assim, um coeficiente é sempre calculado para determinado **período** de tempo bem especificado **(geralmente, o ano calendário)**, e para uma área delimitada (distrito, município, estado ou país), para os quais se tenham dados de população e do evento cujo risco de ocorrência se deseja medir.
+
+\framebreak
+
+Com relação à população, é importante frisar que deve ser sempre utilizado o valor referente ao **número de habitantes estimado para o meio do período**. Isso se deve, pois:
+
+1. ao se utilizar a população referente ao início do período (1º de janeiro, por exemplo), deixariam de ser levados em conta todos os nascimentos ocorridos no mesmo, que também estariam expostos ao risco de morrer;
+2. ao se utilizar a população relativa ao fim do período (31 de dezembro, por exemplo), não estariam incluídos os habitantes que vieram a falecer (óbitos ocorridos no período) e que também cunstituíram a população exposta.
+
+\framebreak
+
+- Pressupondo-se que os nascimentos e as mortes apresentem uma distribuição homogênea, no decorrer do ano calendário, a melhor estimativa de população exposta ao risco é a correspondente a 1º de julho;
+    - nessa data, admite-se que haja uma compensação entre as situações descritas anteriormente.
+- Em geral, isso feito tomando-se a média das estimativas da população para início e fim do período especificado.
+    - Exemplo: $\overline{P}= (P_{\mbox{início}} + P_{\mbox{fim}}) / 2 \approx P_{\mbox{meio do período}}$.
+
+## Coeficientes gerais e específicos {.allowframebreaks}
+
+Os coeficientes (taxas) podem ser classificados em dois tipos:
+
+1. coeficientes (taxas) **gerais** (ou globais);
+2. e coeficientes (taxas) **específicas**.
+
+## Coeficientes gerais {.allowframebreaks}
+
+Coeficiente geral ou global é aquele para o qual não existe nenhuma especicação, além de tempo e espaço.
+
+- Um exemplo é o coeficiente geral de mortalidade, que chamaremos de \structure{taxa bruta de mortalidade} $(TBM)$
+
+$$
+TBM = \frac{\mbox{Número de óbitos ocorridos na área A, no período t}}{\mbox{População da área A, no meio do período t}} \times 1000.
+$$
+
+\framebreak
+
+Assim, no Estado de São Paulo, em 1980:
+
+\begin{eqnarray*}
+TBM &=& \frac{\mbox{Número de óbitos do Estado de SP, em 1980}}{\mbox{População do Estado de SP em 01/07/1980}} \times 1000\\
+&=& \frac{172844}{24881001} \times 1000\\
+&=& 0.00695 \times 1000\\
+&=& 6.95\quad \mbox{por mil habitantes}.
+\end{eqnarray*}
+
+\framebreak
+
+::: {.block}
+
+### Comentário
+
+$\looparrowright$ É usual considerar no numerador a **média aritmética do número de óbitos de três anos consecutivos** $(t-1, t\ \mbox{e}\ t+1)$, onde $t$ é o ano de referência da $TBM$.
+
+- Essa estratégia tem como finalidade obter uma estimativa mais estável e robusta para o indicador, evitando-se assim flutuações aleatórias no número de óbitos observados num dado período.
+
+$$
+TBM = \frac{D(t-1,t) + D(t, t+1) + D(t+1, t+2)}{3\overline{P}} \times 1000.
+$$
+
+:::
+
+## Coeficientes específicos {.allowframebreaks}
+
+Coeficientes específicos são aqueles que, ao serem calculados, apresentam, quer no numerador, quer no denominador, ou em ambos, outras especificações além de área e do tempo.
+
+- Essas especificações dizem respeito a:
+    - sexo;
+    - idade;
+    - causa;
+    - residência;
+    - profissão;
+    - estado civil, entre outras.
+- As mesmas especificações, quando necessário, devem ser usadas tanto para o evento, quanto para a população exposta ao risco de apresentar esse evento.
+
+## Coeficientes específicos: exemplos {.allowframebreaks}
+
+a. Coeficiente específico de mortalidade por causa
+
+\footnotesize
+
+$$
+\frac{\mbox{Número de óbitos pela causa X, na área A, no período t}}{\mbox{População da área A, no meio do período t}} \times 10000.
+$$ 
+
+\normalsize
+
+b. Coeficiente específico de mortalidade segundo sexo
+
+\footnotesize
+
+$$
+\frac{\mbox{Número de óbitos do sexo masculino (feminino) na área A, no período t}}{\mbox{População do sexo masculino (feminino) da área A, no meio do período t}} \times 1000.
+$$
+
+\normalsize
+
+c. Coeficiente específico de mortalidade segundo idades
+
+\footnotesize
+
+$$
+\frac{\mbox{Número de óbitos de determinada idade(grupo etário)  na área A, no período t}}{\mbox{População da mesma idade, da área A, no meio do período t}} \times 10000.
+$$
+
+\normalsize
+
+## TBM: exemplo {.allowframebreaks}
+
+Suponha que estamos interessados em estimar a $TBM$ para o Estado do Rio Grande do Sul, em 2020.
+
+- Vamos considerar as populações de 2020 (início do período) e 2021 (fim do período);
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%'}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_rs_02.png'))
+
+```
+
+\framebreak
+
+- Além disso, vamos considerar os óbitos dos anos 2019, 2020 e 2021.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%'}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade_rs_01.png'))
+
+```
+
+\framebreak
+
+\footnotesize
+
+\begin{eqnarray*}
+TBM_{RS,2020} &=& \frac{D(2019) + D(2020) + D(2021)}{3\overline{P}} \times 1000\\
+&=& \frac{99917}{11444802} \times 1000 = 0.009 \times 1000,
+\end{eqnarray*}
+
+\normalsize
+
+ou seja, o coeficiente de mortalidade no Estado do RS em 2020 foi de **9 por mil habitantes**.
+
+\framebreak
+
+::: {.block}
+
+### Fontes de dados
+
+Os dados utilizados no exemplo são provenientes do \structure{Sistema de Informações sobre Mortalidade (SIM)} do **Ministério da Saúde** e de estimativas populacionais do \structure{Instituto Brasileiro de Geografia e Estatística (IBGE)} e são disponibilizados pelo \structure{Departamento de Informação e Informática do Sistema Único de Saúde (DATASUS)} em [Informações de saúde](https://datasus.saude.gov.br/informacoes-de-saude-tabnet/).
+
+:::
+
+\framebreak
+
+\footnotesize
+
+| **Unidade da Federação** | **População Média** | **Óbitos Média 3 anos** | **TBM - 2020** |
+|---|:---:|:---:|:---:|
+| **11 Rondônia** | 1805869,0 | 10886,0 | 6,0 |
+| **12 Acre** | 900673,0 | 4818,0 | 5,3 |
+| **13 Amazonas** | 4238854,5 | 24057,3 | 5,7 |
+| **14 Roraima** | 641947,0 | 3555,0 | 5,5 |
+| **15 Pará** | 8733934,5 | 48136,0 | 5,5 |
+| **16 Amapá** | 869693,0 | 4297,0 | 4,9 |
+| **17 Tocantins** | 1598805,5 | 9602,0 | 6,0 |
+| **21 Maranhão** | 7133930,0 | 41017,7 | 5,7 |
+| **22 Piauí** | 3285385,0 | 23462,0 | 7,1 |
+| **23 Ceará** | 9213841,5 | 66591,7 | 7,2 |
+| **24 Rio Grande do Norte** | 3547534,0 | 24404,0 | 6,9 |
+| **25 Paraíba** | 4049591,0 | 31054,3 | 7,7 |
+| **26 Pernambuco** | 9645707,0 | 73862,0 | 7,7 |
+| **27 Alagoas** | 3358447,0 | 23175,0 | 6,9 |
+| **28 Sergipe** | 2328648,0 | 15313,7 | 6,6 |
+| **29 Bahia** | 14957959,0 | 105317,0 | 7,0 |
+| **31 Minas Gerais** | 21352294,5 | 161078,3 | 7,5 |
+| **32 Espírito Santo** | 4086280,0 | 28781,0 | 7,0 |
+| **33 Rio de Janeiro** | 17414769,0 | 168672,3 | 9,7 |
+| **35 São Paulo** | 46469232,5 | 362480,3 | 7,8 |
+| **41 Paraná** | 11557162,0 | 89915,0 | 7,8 |
+| **42 Santa Catarina** | 7295487,5 | 49541,3 | 6,8 |
+| **43 Rio Grande do Sul** | 11444801,5 | 99917,0 | 8,7 |
+| **50 Mato Grosso do Sul** | 2824291,0 | 20305,0 | 7,2 |
+| **51 Mato Grosso** | 3546727,0 | 23453,7 | 6,6 |
+| **52 Goiás** | 7160064,5 | 50031,7 | 7,0 |
+| **53 Distrito Federal** | 3074737,0 | 16033,7 | 5,2 |
+| **Total** | 212536665,5 | 1579758,0 | 7,4 |
+
+\normalsize
+
+\framebreak
+
+```{r, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE, fig.align='center', out.width='90%'}
+
+TBM_RS <- c(
+6.540582837,
+6.545468494,
+6.641319697,
+6.607756317,
+6.671693126,
+6.715335931,
+6.891416998,
+6.999286608,
+7.021750179,
+7.332619804,
+7.328984601,
+7.584481655,
+7.495873161,
+7.816884774,
+7.932452601,
+8.62228533,
+8.801681228,
+10.33177169,
+10.54503164,
+17.49404468,
+18.29127942
+)
+
+df <- data.frame(Ano = 2000:2020, TBM_RS)
+
+library(ggplot2)
+
+p <- ggplot(data = df, mapping = aes(x = Ano, y = TBM_RS)) +
+  geom_line(color = I("red"), size = 2) +
+  geom_point() +
+  scale_x_continuous(breaks = seq(2000, 2020, by = 2)) +
+  scale_y_continuous(breaks = seq(6, 18, by = 2)) +
+  labs(y = "Taxa Bruta de Mortalidade (por mil habitantes)", title = "Estado do Rio Grande do Sul - 2000-2020", caption = "Fonte: IBGE e SIM.") +
+  theme_bw()
+p
+
+```
+
+## TEMs por sexo e idade {.allowframebreaks}
+
+- Como o risco de morte varia segundo a idade e o sexo dos indivíduos, é fundamental obter medidas que descrevam esse comportamento.
+    - O cálculo das \structure{taxas específicas de mortalidade} $(TEMs)$ por idade e sexo $({}_{n}M_{x,s})$.
+
+\footnotesize
+
+$$
+{}_{n}M_{x,s} = \frac{\mbox{Número de óbitos com idades entre}\ x\ \mbox{e}\ x+n\ \mbox{ocorridos no período}}{\mbox{População média com idades entre}\ x\ \mbox{e}\ x+n\ \mbox{do sexo}\ s\ \mbox{no período}} = \frac{{}_{n}D_{x,s}}{{}_{n}\overline{P}_{x,s}},
+$$
+
+\normalsize
+
+em que ${}_{n}D_{x,s}$ é o número de óbitos com idades entre $x$ e $x+n$ e sexo $s$ ocorridos no período; e ${}_{n}\overline{P}_{x,s}$ é a população média com idades entre $x$ e $x+n$ e sexo $s$ no período.
+
+<!-- - É comum calcular as TEMs por idade e sexo, considerando no numerador a média aritmética do número de óbitos em três anos consecutivos. -->
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade02.png'))
+
+```
+
+\framebreak
+
+- A Tabela 8.2 apresenta os dados de óbitos por sexo e idade para o Brasil em 2014, 2015 e 2016, captados pelo \structure{Sistema de Informações sobre Mortalidade (SIM)} do __Ministério da Saúde__, que serão utilizados para o cálculo das $TEMs$ por idade e sexo, __em 2015__.
+- É importante ressaltar que a taxa de mortalidade específica em menores de um ano __não é equivalente à taxa de mortalidade infantil__, como pode ser visto mais à frente neste capítulo.
+
+\framebreak
+
+- Além dos óbitos, necessita-se dos dados sobre a população por sexo e idade para o ano de referência. 
+- Os dados populacionais para o Brasil em 2015 foram extraídos da __projeção de população feita pelo IBGE em 2013__.
+- A __Tabela 8.3__ traz os dados populacionais e os resultados para o cálculo das Taxas Específicas de Mortalidade.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='65%', out.height="80%"}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade03.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='90%', out.height='85%'}
+
+knitr::include_graphics(here::here('imagens', 'mortalidade04.png'))
+
+```
+
+\framebreak
+
+- O risco de morte decresce nas primeiras idades até o grupo etário de 5-9 anos, e a partir de então aumenta até a idade aberta final. 
+- O risco de morte é mais elevado entre homens do que entre mulheres.
+- O comportamento do risco de morte por idade apresenta um formato em U ou J.
+
+## Próxima aula
+
+- Medidas Básicas de Mortalidade **(continuação)**.
+
+## Para casa {.allowframebreaks}
+
+- Pequeno Trabalho 02: postado no Moodle.
+- Ler o capítulo 8 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+- Visite o site do DATASUS e obtenha dados de mortalidade e população para uma UF (diferente do RS) em diferentes períodos e calcule a TBM para este estado.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final02.jpg'))
+
+```

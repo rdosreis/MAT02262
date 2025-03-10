@@ -1,0 +1,144 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Retomada das atividades"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+# header-includes:
+#   - \titlegraphic{\hfill\includegraphics[height=1.5cm]{logos/Logo-40-anos-estatistica.png}}
+---
+
+# Relembrando {.allowframebreaks}
+
+
+## Conteúdo programático {.allowframebreaks}
+
+\color{darkgreen}
+
+**Área 1**
+
+1. \textcolor{darkgreen}{Conceitos e definições}
+2. \textcolor{darkgreen}{Uma breve história da demografia}
+    + \textcolor{darkgreen}{Períodos pré-estatístico, protoestatístico e estatístico}
+3. \textcolor{darkgreen}{Algumas teorias}
+    + \textcolor{darkgreen}{Malthusiana, reformista, da explosão demográfica e da transição demográfica}
+4. \textcolor{darkgreen}{Fontes de dados demográficos}
+    + \textcolor{darkgreen}{Censo, registro civil e levantamentos por amostragem}
+
+\framebreak
+
+\color{black}
+
+**Área 2**
+
+5. \textcolor{darkgreen}{Fatores estáticos}
+    + \textcolor{darkgreen}{Estrutura por sexo, idade, sexo e idade (pirâmides etárias), indicadores de envelhecimento}
+
+6. \textcolor{yellow}{Fatores dinâmicos}
+    + \textcolor{yellow}{Crescimento e distribuição populacionais}
+
+7. \textcolor{red}{Medidas de mortalidade}
+    + \textcolor{red}{Taxas de mortalidade geral e específica por idade}
+8. \textcolor{red}{Medidas de fecundidade}
+    + \textcolor{red}{Taxas de fecundidade, natalidade e reprodução}
+9. \textcolor{red}{Técnicas de padronização}
+    + \textcolor{red}{Métodos de padronização direta e indireta}
+
+\framebreak
+
+\color{red}
+
+**Área 3**
+
+10. \textcolor{red}{Tábuas de vida}
+    + \textcolor{red}{Construção e interpretação de tábuas de vida, indicadores derivados da tábua de vida}
+11. \textcolor{red}{Métodos de projeção}
+    + \textcolor{red}{Linear, exponencial e logístico}
+    
+# Calendário acadêmico, aulas e avaliações {.allowframebreaks}
+
+- A proposta de calendário para o semestre 2024/1 está tramitando e prevê **15 semanas** letivas **(9 restantes)**.
+- Em virtude da redução do número de semanas, o cronograma original **deve ser reajustado**, disponibilizando no Moodle **atividades não presenciais assíncronas** em complemento à carga-horária não cumprida presencialmente.
+
+- ~ 60 minutos de aulas não presenciais assíncronas por semana.
+    + Videoaula gravada no Moodle da disciplina.
+
+\framebreak
+
+<!-- Exemplo: Novo calendário com 15 semanas e disciplina de 60 horas (3600 minutos). As 6 semanas já cumpridas equivalem a 6x200=1200 minutos, restando 3600-1200=2400 -->
+<!-- minutos. Em 9 semanas restantes, podemos cumprir 9x200=1800 minutos presenciais. -->
+<!-- Então, 2400-1800=600 minutos devem ser cumpridos com atividades complementares não -->
+<!-- presenciais assíncronas. Estes 600 minutos de atividades remotas podem ser distribuídos -->
+<!-- nas 9 semanas de maneira uniforme (66,7 minutos em cada semana), o que dá um pouco -->
+<!-- mais de uma hora relógio. -->
+
+## Relembrando: avaliação {.allowframebreaks}
+
+- Serão realizadas quatro atividades de avaliação:
+    + três provas ($P_1$, $P_2$ e $P_3$) presenciais e individuais;
+    + serão realizados pequenos trabalhos ao longo do semestre (pelo menos um por área), de tal forma que a média destes trabalhos será considerada como a quarta atividade de avaliação ($M_T$).
+- Cada atividade de avaliação vale 10 pontos.
+- Será realizada uma prova presencial e individual como atividade de recuperação ($PR$):
+    + Para os(as) alunos(as) que não atingirem o conceito mínimo;
+    + __Esta prova abrange todo o conteúdo da disciplina__.
+
+\framebreak
+
+$$
+MF = \frac{P_1 + P_2 + P_3 + M_T}{4}
+$$
+
++ __A:__ $9 \leq MF \leq 10$
++ __B:__ $7,5 \leq MF < 9$
++ __C:__ $6 \leq MF < 7,5$
++ __D:__ $MF < 6$
+
++ \textcolor{gray}{{\bf FF:} se o(a) aluno(a) tiver frequência inferior a 75\% da carga horária prevista no plano da disciplina}
+
+\framebreak
+
+\color{black}
+
++ Se $MF < 6$ \textcolor{gray}{e frequência mínima de 75\%}, o(a) aluno(a) poderá realizar a prova de recuperação e neste caso
+
+$$
+MF' = MF \times 0,4 + PR \times 0,6
+$$
+
+- __C:__ $MF' \geq 6$
+- __D:__ $MF' < 6$
+
+## Avaliação: proposta
+
+- Já realizamos um **pequeno trabalho** e uma **prova**.
+
+**Cronograma de avaliações**
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%'}
+
+knitr::include_graphics(here::here('imagens', 'cronograma-avaliacao.png'))
+
+```
+
+## Próxima aula
+
++ Crescimento e distribuição populacionais.
+
+## Por hoje é só!
+
+\begin{center}
+\structure{Sejam bem-vindos novamente!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-corda-bamba.jpg'))
+
+```

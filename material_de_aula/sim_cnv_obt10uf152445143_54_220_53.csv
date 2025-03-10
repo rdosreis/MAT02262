@@ -1,0 +1,16 @@
+ Mortalidade - Brasil
+Óbitos p/Residênc por Unidade da Federação e Ano do Óbito
+Unidade da Federação: Rio Grande do Sul
+Período:2000-2022
+"Unidade da Federação";"2000";"2001";"2002";"2003";"2004";"2005";"2006";"2007";"2008";"2009";"2010";"2011";"2012";"2013";"2014";"2015";"2016";"2017";"2018";"2019";"2020";"2021";"2022";"Total"
+"43 Rio Grande do Sul";67953;68296;69357;70534;72242;71229;72357;75305;73996;76788;77985;80148;79456;83016;82166;82349;87583;86241;88618;89238;92791;117722;104096;1869466
+"Total";67953;68296;69357;70534;72242;71229;72357;75305;73996;76788;77985;80148;79456;83016;82166;82349;87583;86241;88618;89238;92791;117722;104096;1869466
+ Fonte: MS/SVS/CGIAE - Sistema de Informações sobre Mortalidade - SIM
+ Nota:
+ 
+ Em 2011, houve uma mudança no conteúdo da Declaração de Óbito, com maior detalhamento das informações coletadas. Para este ano, foram
+ utilizados simultaneamente os dois formulários. Para mais detalhes sobre as mudanças ocorridas e os seus efeitos, veja o documento
+ "Sistema de Informações sobre Mortalidade - SIM. Consolidação da base de dados de 2011".
+ No dia 13/06/2019, os arquivos do SIM referentes ao ano de notificação 2017 foram atualizados, com alteração das causas básicas de 2 registros e exclusão de 1 registro.
+ No dia 01/04/2020, os arquivos do SIM referentes ao ano de notificação 2019 foram atualizados, com alteração das causas básicas de 4 registros e exclusão de 1 registro.
+ 

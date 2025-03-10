@@ -1,0 +1,438 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida: a estrutura (continuação)"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Relembrando {.allowframebreaks}
+
+\structure{Tábua de Vida de uma Geração} vs. \structure{Tábua de Vida de Coorte Sintética}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='60%', fig.cap="Diagrama de Lexis."}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+## Tábua de Vida de Coorte Sintética {.allowframebreaks}
+
+Esta tábua considera a experiência de mortalidade de uma dada população, num período curto de tempo (ano), e projeta a duração de vida, de cada indivíduo, baseada nas probabilidades reais de morte, numa **coorte hipotética** de nascidos vivos.
+
+- Há, então, um padrão fictício de condições de mortalidade, dado que nenhuma coorte realmente experimentou ou experimentará este modelo particular de mortalidade.
+
+\framebreak
+
+- Este tipo de tábua responde também às indagações mencionadas anteriormente, levando-se em conta as seguintes pressuposições:
+    + a **mortalidade**, em cada idade, mantém-se **constante** e igual à do ano-calendário, no qual a tábua é baseada;
+    + a **população** exposta é **estacionária**, isto é, o número anual de nascidos vivos é igual ao número de mortes; o saldo migratório é nulo, ano após ano.
+    
+
+
+## Tábuas de vida: a estrutura {.allowframebreaks}
+
+Até o momento, os coeficientes específicos de mortalidade foram considerados como uma das melhores **medidas de mortalidade**, pois estimam o **risco de morrer**.
+
+- No entanto, esses coeficientes não respondem à indagação:
+
+\begin{mybox}{Qual a probabilidade}
+de uma pessoa com idade exata $x$, no início de um determinado ano, vir a falecer neste mesmo ano?
+\end{mybox}
+
+\framebreak
+
+Assim, para o cálculo da probabilidade de morrer $(q_{x})$ adotam-se as seguintes estimativas:
+
+a) para indivíduos com **idade igual ou superior a dois anos**:
+
+$$
+q_{x} = \frac{D_{x}}{P_{x} + \frac{D_{x}}{2}}.
+$$
+
+\framebreak
+
+b) para indivíduos com **idade inferior a dois anos**:
+
+\structure{b1)} **menores de um ano**, **sexo masculino**
+
+$$
+q_0 = \frac{D_{0}}{P_{0} + 0,863D_{0}};
+$$
+
+\structure{b2)} **menores de um ano**, **sexo feminino**
+
+$$
+q_0 = \frac{D_{0}}{P_{0} + 0,826D_{0}};
+$$
+
+\framebreak
+
+\structure{b3)} indivíduos com **um ano de idade**
+
+$$
+q_1 = \frac{D_{1}}{P_{1} + 0,70D_{1}}.
+$$
+
+\framebreak
+
+- Quando se constrói uma tábua de sobrevivência do **tipo abreviada**, isto é, os grupos  etários são de tamanho igual a cinco ou dez  anos, há necessidade de modificações, pois  o que se pretende é estimar a probabilidade de um indivíduo do grupo etário $x \vdash x + n$  vir a falecer, durante o período que estaria nesse grupo (período de $n$ anos).
+
+\framebreak
+
+- Portanto, deve-se multiplicar o número de óbitos $(D_{x})$ por $n$.
+- Tal probabilidade será, então:
+
+$$
+{}_nq_{x} = \frac{{}_nO_{x}}{{}_nP_{x} + \frac{{}_nO_{X}}{2}},
+$$
+
+em que:
+
+$$
+{}_nO_{x} = n\times {}_nD_{x}.
+$$
+
+- As estimativas das probabilidades de morrer, para os residentes masculinos no Município de São Paulo, em 1970, estão apresentadas na tabela a seguir.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width='80%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'tabua_sobrevida-a02.png'))
+
+```
+
+# A estrutura da tábua de vida: os elementos {.allowframebreaks}
+
+A tábua de vida é formada por sete colunas, onde estão dispostas as variáveis de estudo e os respectivos resultados.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='60%', out.width='80%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'tabua_sobrevida-a03.png'))
+
+```
+
+## Elementos {.allowframebreaks}
+
+- \structure{Coluna 1:} $(x, x + n)$ - \structure{\emph{Intervalo de idade ou grupo etário.}}
+
+Cada intervalo é definido por duas idades exatas, exceto o último grupo etário, que é aberto à direita.
+
+\framebreak
+
+- \structure{Coluna 2:} $\ell_x$ - \structure{\emph{Número de sobreviventes que iniciam a idade $x$.}}
+
+O primeiro valor desta variável é **uma raiz arbitrária** $(\ell_{0})$ e, no presente caso, é utilizada a raiz, **cem mil nascidos vivos** \structure{(tamanho da coorte hipotética)}, que serão submetidos às probabilidades de morte calculadas anteriormente **(tabela 8.1)**.
+
+Os demais valores desta coluna (todos $\ell_{x}$) representam os sobreviventes em cada idade $x$, de acordo com a mortalidade existente no período considerado.
+
+- A obtenção destes valores está explicada no item "coluna 4".
+
+\framebreak
+
+- \structure{Coluna 3:} ${}_nq_x$ - \structure{\emph{Probabilidades de morte no intervalo etário $(x, x + n)$.}}
+
+Como foi visto, é a estimativa do risco de um indivíduo na idade $x$ vir a morrer no intervalo $(x, x + n)$.
+
+\framebreak
+
+- \structure{Coluna 4:} ${}_nd_x$ - \structure{\emph{Número de mortes no intervalo $(x, x + n)$.}}
+
+Representa o número de mortes da tábua de vida, no intervalo etário.
+
+Os valores são obtidos aplicando-se as probabilidades de morte $({}_nq_x)$ aos sobreviventes que iniciam o grupo $(\ell_{x})$.
+
+\framebreak
+
+- Assim, se a raiz era igual a 100.000 nascidos vivos, e estes estiverem expostos a uma probabilidade de morrer $(q_{0})$ de $0,09157$, virão a morrer $9157$ indivíduos $(d_0 = 100.000 \times 0,09157)$.
+- Com isto, restarão $90.843$ sobreviventes $(100.000 - 9157)$.
+- Estes $90.843$ indivíduos $(\ell_{1})$ que iniciam a idade de um ano, estariam expostos a um risco de morrer $(q_{1})$ igual a $0,00559$.
+    + Portanto, morreriam $508$ indivíduos $(d_{1} = 90.843\times 0,00559)$, e sobreviveriam $(\ell_{2})$ $90.335$ indivíduos $(90.843 - 508)$.
+
+\framebreak
+
+Então:
+
+\begin{eqnarray*}
+{}_nd_x &=& \ell_x \times {}_nq_x\\
+\ell_{x+n} &=& \ell_x - {}_nd_x.
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\mbox{Se:} \quad && \ell_0 = 100.000 \quad \mbox{nascidos vivos}\\
+\mbox{então,} \quad && \ell_1 = 100.000 - 9167 = 90.843\\
+&& \ell_2 = 90.843 - 508 = 90.335\\
+&& \ell_3 = 90.335 - 254 = 90.081\\
+&& \ell_{85\ \mbox{e}\ +} = 18.274 - 8914 = 9360
+\end{eqnarray*}
+
+\framebreak
+
+- \structure{Coluna 5:} ${}_nL_x$ - \structure{\emph{Número de anos vividos no intervalo $(x, x + n)$.}}
+
+Cada indivíduo da coorte que sobrevive ao ano contribui com um ano completo, e cada um dos que morrem também contribui com uma parcela de tempo em termos de anos vividos, dado que não morreram todos no início do período.
+
+- A pergunta a ser respondida é: quantos __anos viverão em conjunto__ os indivíduos desse grupo etário, antes de passarem para o grupo etário seguinte?
+
+\framebreak
+
+Para tanto, há necessidade de considerar duas situações:
+
+a. **Idades inferiores a dois anos**
+
+Como foi visto no cálculo da probabilidade de morrer, grande proporção dos óbitos de menores de dois anos ocorre na primeira metade do ano calendário (0,826 e 0,863 em menores de um ano e 0,70 em crianças de 1 ano).
+
+- Portanto, a contribuição, em anos vividos, dos que vierem a falecer, será:
+    + $(1 - 0,826)\ \mbox{ano}$ para as meninas menores de um ano;
+    + $(1 - 0,863)\ \mbox{ano}$ para os meninos menores de um ano;
+    + e $(1 - 0,70)\ \mbox{ano}$ para os indivíduos que vierem a falecer com um ano de idade.
+
+\framebreak
+
+Então, para o cálculo dos anos vividos no intervalo de menores de um ano, no sexo masculino, Município de São Paulo, leva-se em consideração:
+
+- a contribuição de um ano para cada um dos que sobreviveram $(\ell_1)$, isto é, 90.843 **anos-pessoas**^[**Anos-pessoas** representam a totalidade de anos vividos pelo conjunto de indivíduos deste grupo etário.] $(90.843\times 1)$;
+- e a contribuição de $0,137\ \mbox{ano}\ (1-0,863)$ para cada um dos que faleceram com esta idade.
+
+## Elementos {.allowframebreaks}
+
+Portanto:
+
+\begin{eqnarray*}
+L_0 &=& \ell_1 + (0,137 \times d_0)\\
+L_0 &=& 90.843 + (0,137\times 9157) = 92.098\ \mbox{anos-pessoas}.
+\end{eqnarray*}
+
+O mesmo raciocínio acontece para os anos vividos pelos indivíduos de um ano. Ou seja:
+
+\begin{eqnarray*}
+L_1 &=& \ell_2 + (0,137 \times d_1)\\
+L_1 &=&  90.335 + (0,30\times 508) = 90.487\ \mbox{anos-pessoas}.
+\end{eqnarray*}
+
+\framebreak
+
+b. **Idades iguais ou superiores a dois anos**
+
+Admitindo-se que os óbitos tenham distribuição homogênea no decorrer do ano, deve-se levar em conta, para o cálculo do número de anos vividos, a contribuição de meio ano, em média, para cada um dos indivíduos que faleceram, e agregar a contribuição de um ano para cada sobrevivente. Assim,
+
+$$
+L_x = \ell_{x + 1} + \frac{1}{2}d_x.
+$$
+\framebreak
+
+No caso da tábua apresentada na tabela 8.2, os valores foram obtidos da seguinte maneira:
+
+\begin{eqnarray*}
+L_2 &=& \ell_{3} + \frac{1}{2}d_2 = 90.081 + (0,5\times 254) = 90.208\ \mbox{anos-pessoas},\\
+L_3 &=& \ell_{4} + \frac{1}{2}d_3 = 89.923 + (0,5\times 158) = 90.002\ \mbox{anos-pessoas},\\
+L_4 &=& \ell_{5} + \frac{1}{2}d_4 = 89.820 + (0,5\times 153) = 89.872\ \mbox{anos-pessoas}.
+\end{eqnarray*}
+
+\framebreak
+
+No caso dos grupos etários de tamanho $n$, surge a **pergunta:** quantos anos viveriam, em conjunto, os indivíduos deste grupo etário, antes de passarem para o grupo etário seguinte?
+
+- Se iniciam $\ell_{x}$ sobreviventes e nenhum falece, eles viveriam $n\times \ell_{x}$ **anos em conjunto**;
+- Mas, como alguns falecem $({}_nd_{x})$, tem-se que levar em conta a contribuição desses falecidos, em termos de anos-pessoas, e dos que sobrevivem $(\ell_{x + n})$.
+
+\framebreak
+
+- Os que falecem contribuem de formas diversas, isto é, alguns falecem no início do período, outros no meio do período $(n/2\ \mbox{anos})$, e outros, praticamente, vivem os $n$ anos, podendo-se admitir, então, que, em média, contribuem com anos $n/2 \ \mbox{anos}$. O cálculo dos anos vividos se resume 
+
+$$
+{}_nL_x = (n \times \ell_{x + n}) + \left(\frac{n}{2} \times {}_nd_x\right).
+$$
+
+\framebreak
+
+Exemplificando os valores da tábua na tabela 8.2:
+
+\begin{eqnarray*}
+{}_5L_5 &=& (5 \times \ell_{10}) + \left(\frac{5}{2} \times {}_5d_5\right) = (5 \times 89.477) + (2,5 \times 343)\\
+&=& 448.243\ \mbox{anos-pessoas},\\
+{}_5L_{10} &=& (5 \times \ell_{15}) + \left(\frac{5}{2} \times {}_5d_{10}\right) = (5 \times 89.148) + (2,5 \times 329)\\
+&=& 446.563\ \mbox{anos-pessoas}.
+\end{eqnarray*}
+
+\framebreak
+
+- Para o último grupo etário é recomendado que
+
+$$
+L_x = \frac{d_{x}}{D_{x}} \times P_x,
+$$
+
+em que:
+
+- $d_x$ é número de mortes (na coorte sintética) no intervalo etário;
+- $D_x$ é número de óbitos na população, no intervalo etário final;
+- $P_x$ é a população recenseada ou estimada para o último intervalo etário.
+
+Então:
+
+$$
+L_{85\ \mbox{e}\ +} = \frac{9360}{650} \times 4717 = 67.925\quad \mbox{anos-pessoas}.
+$$
+
+\framebreak
+
+- \structure{Coluna 6:} $T_x$ - \structure{\emph{Total de anos vividos além da idade $x$.}}
+
+Este total representa a **soma dos anos vividos** em cada intervalo etário, a partir do intervalo $(x, x + n)$.
+
+Os valores são obtidos acumulando-se os números da *coluna 5*, começando pelo **último grupo etário**.
+
+\framebreak
+
+Assim:
+
+\begin{eqnarray*}
+T_{85\ \mbox{e}\ +} = L_{85\ \mbox{e}\ +},\\
+T_{80} = T_{85\ \mbox{e}\ +} + {}_5L_{80},\\
+T_{75} = T_{80} + {}_5L_{75}.
+\end{eqnarray*}
+
+\framebreak
+
+Para o cálculo dos valores da tabela 8.2, procedeu-se da seguinte forma:
+
+\begin{eqnarray*}
+T_{85\ \mbox{e}\ +} &=& 67.925\quad \mbox{anos-pessoas},\\
+T_{80} &=& T_{85\ \mbox{e}\ +} + {}_5L_{80} = 67.925 + 69.085 = 137.010\quad \mbox{anos-pessoas},\\
+T_{75} &=& T_{80} + {}_5L_{75} = 137.010 + 123.033 = 260.043\quad \mbox{anos-pessoas},\\
+T_0 &=& T_1 + L_0 = 5.919.950 + 92.098 = 6.012.014\quad \mbox{anos-pessoas}.
+\end{eqnarray*}
+
+\framebreak
+
+- Então, a coorte de 100.000 nascidos vivos, do Município de São Paulo, em 1970, **sujeita às condições de mortalidade desta época**, viveriam, em conjunto, um total de 6.012.014 anos-pessoas.
+
+\framebreak
+
+- \structure{Coluna 7:} $e_x$ - \structure{\emph{Esperança de vida observada na idade $x$.}}
+
+É o número médio de anos a serem vividos pelas pessoas nas idades $(x, x + n)$.
+
+- É a **coluna de maior interesse prático** da tábua de vida.
+- É obtida, dividindo-se os números da coluna 6 $({}_nT_x)$ por aqueles encontrados na coluna 2 $(\ell_{x})$.
+
+\framebreak
+
+- Cada $e_{x}$ resume a experiência de mortalidade dos indivíduos além da idade $x$, na população em estudo.
+
+- As esperanças de vida decrescem com o aumento da idade;
+    + a única exceção é a esperança de vida à idade zero **(também chamada de esperança de vida ao nascer)** que, devido à influência da alta mortalidade infantil, apresenta valor menor do que a esperança de vida a um ano de idade.
+- A esperança de vida também é conhecida como \structure{vida média}.
+
+\framebreak
+
+Os valores da tabela 8.2 foram obtidos por meio dos seguintes cálculos:
+
+\begin{eqnarray*}
+e_0 &=& \frac{T_0}{\ell_0} = \frac{6.012.014}{100.000} = 60,12\ \mbox{anos},\\
+e_1 &=& \frac{T_1}{\ell_1} = \frac{5.919.950}{90.843} = 65,17\ \mbox{anos},\\
+e_{85\ \mbox{e}\ +} &=& \frac{T_{85\ \mbox{e}\ +}}{\ell_{85\ \mbox{e}\ +}} = \frac{67.925}{9.360} = 7,26\ \mbox{anos},
+\end{eqnarray*}
+
+\framebreak
+
+- O significado desses valores é que os meninos nascidos no Município de São Paulo, em 1970, viveriam, em média, 60,12 anos se as condições de mortalidade permanecessem as mesmas.
+- Os indivíduos com idade de um ano viveriam, em média, mais 65,17 anos.
+- E os de 85 anos e mais viveriam, em média, mais 7,26 anos.
+
+## Aplicações da tábua de vida
+
+- Esperança de vida como indicador de nível de saúde.
+- Avaliação da magnitude de agravos de saúde.
+- Em demografia, para a projeção do tamanho de populações.
+- Estatística hospitalares.
+- Estimativas de probabilidades.
+
+# Estimativas de probabilidades {.allowframebreaks}
+
+Baseando-se na tábua de vida, podem ser estimadas as seguintes relações:
+
+- **Probabilidade** de um indivíduo morrer entre os $x, x + n$ aniversários, por meio de: 
+
+$$
+\frac{{}_nd_x}{\ell_0}.
+$$
+
+Recorrendo-se à tabela 8.2, pode-se dizer que a probabilidade do homem paulistano, em 1970, morrer entre o 50º e 55º aniversários é de: 
+
+$$
+\frac{{}_5d_{50}}{\ell_{0}} = \frac{5241}{100.000} = 0,05241 = 5,24\%.
+$$
+
+\framebreak
+
+- **Probabilidade** de um indivíduo morrer entre $x \vdash x + n$ aniversários, dado que ele sobreviva até os $x \vdash x + n$ aniversários, medida por: 
+
+$$
+\frac{{}_nd_{x}}{\ell_{x}}.
+$$
+
+No exemplo do homem paulistano, a probabilidade de morrer entre 50 e 55 anos, dado que ele sobreviva até este mesmo grupo etário será:
+
+$$
+\frac{524}{76.254} = 0,687 = 6,87\%.
+$$
+
+\framebreak
+
+- **Probabilidade** de um indivíduo morrer, por exemplo, entre 50 e 55 anos, dado que ele sobreviva ao primeiro aniversário; medida pela relação
+
+$$
+\frac{{}_5d_{50}}{\ell_{1}}.
+$$
+
+Com os dados da tabela 0.2,
+
+$$
+\frac{5241}{90.844} = 0,577 = 5,77\%.
+$$
+\framebreak
+
+- **Proporção dos sobreviventes** no início do grupo etário 50 a 55 anos, que atingirão a idade de 70 anos, medida por:
+
+$$
+\frac{\ell_{70}}{\ell_{50}}.
+$$
+
+Para os paulistanos:
+
+$$
+\frac{43.998}{76.254} = 0,5770 = 57,7\%.
+$$
+
+## Próxima aula
+
+- Métodos de projeção populacional: uma introdução.
+
+## Para casa {.allowframebreaks}
+
+- Atividade de avaliação da Área 2.
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-girafa.jpg'))
+
+```
+

@@ -1,0 +1,298 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Tábuas de vida: a estrutura"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Relembrando {.allowframebreaks}
+
+\structure{Tábua de Vida de uma Geração} vs. \structure{Tábua de Vida de Coorte Sintética}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='60%', fig.cap="Diagrama de Lexis."}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+## Tábua de Vida de Coorte Sintética {.allowframebreaks}
+
+Esta tábua considera a experiência de mortalidade de uma dada população, num período curto de tempo (ano), e projeta a duração de vida, de cada indivíduo, baseada nas probabilidades reais de morte, numa **coorte hipotética** de nascidos vivos.
+
+- Há, então, um padrão fictício de condições de mortalidade, dado que nenhuma coorte realmente experimentou ou experimentará este modelo particular de mortalidade.
+
+\framebreak
+
+- Este tipo de tábua responde também às indagações mencionadas anteriormente, levando-se em conta as seguintes pressuposições:
+    + a **mortalidade**, em cada idade, mantém-se **constante** e igual à do ano-calendário, no qual a tábua é baseada;
+    + a **população** exposta é **estacionária**, isto é, o número anual de nascidos vivos é igual ao número de mortes; o saldo migratório é nulo, ano após ano.
+    
+## Formas de apresentação {.allowframebreaks}
+
+Quanto à apresentação, pode-se ter \structure{tábua de vida completa} ou \structure{tábua de vida abreviada}.
+
+- A diferença está no tamanho dos grupos etários considerados.
+    + Na **tábua completa**, os grupos etários representam **um ano**, enquanto nas **abreviadas** ter-se-ão grupos de **cinco ou dez anos** de idade.
+
+## Análise de sobrevivência - conceitos básicos {.allowframebreaks}
+
+- A variável aleatória não negativa $T$, que representa o tempo de falha, é usualmente especificada em análise de sobrevivência pela sua \structure{função de sobrevivência} ou pela \structure{função de taxa de falha (ou risco)}.
+
+## Função de sobrevivência {.allowframebreaks}
+
+- A **função de sobrevivência** é definida como a \structure{probabilidade de uma observação não falhar até um certo tempo $t$}, ou seja, a __probabilidade de uma observação sobreviver ao tempo__ $t$.
+- Em termos probabilísticos, isto é escrito como
+
+$$
+S(t) = \Pr(T > t).
+$$
+
+- Logo, a função de distribuição de probabilidade pode ser expressa como $F(t) = 1 - S(t)$ (probabilidade de uma observação não sobreviver ao tempo $t$).
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%', out.height='60%', fig.cap="Diagrama de Lexis."}
+
+knitr::include_graphics(here::here('imagens', 'Figure_1_Lexis.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='60%'}
+
+knitr::include_graphics(here::here('imagens', 'Figure_2_Lifelines.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'funcao_sobrevida.png'))
+
+```
+
+\framebreak
+
+- A probabilidade da falha ocorrer em um intervalo de tempo $[t_1,t_2)$ pode ser expressa em termos da função de sobrevivência como
+
+$$
+\Pr[T\in [t_1,t_2)] = \Pr(t_1 \leq T < t_2)] = S(t_1) - S(t_2).
+$$
+
+\framebreak
+
+- A probabilidade da falha ocorrer em um intervalo de tempo $[t_1,t_2)$ dado que a falha não ocorreu até o tempo $t_1$ também pode ser expressa em termos da função de sobrevivência:
+
+$$
+\Pr(t_1 \leq T < t_2 | T > t_1) = \frac{\Pr(t_1 \leq T < t_2)}{\Pr(T > t_1)} = \frac{S(t_1) - S(t_2)}{S(t_1)}.
+$$
+
+
+# Tábuas de vida: a estrutura {.allowframebreaks}
+
+## Considerações gerais {.allowframebreaks}
+
+Até o momento, os coeficientes específicos de mortalidade foram considerados como uma das melhores **medidas de mortalidade**, pois estimam o **risco de morrer**.
+
+- No entanto, esses coeficientes não respondem à indagação:
+
+\begin{mybox}{Qual a probabilidade}
+de uma pessoa com idade exata $x$, no início de um determinado ano, vir a falecer neste mesmo ano?
+\end{mybox}
+
+\framebreak
+
+Para a estimativa dessa probabilidade, há necessidade de lembrar que a probabilidade de ocorrência de um dado evento $E$ é 
+
+- a relação entre o número de casos que compõem o evento $E$ e o número total de casos possíveis, desde que cada caso possível seja igualmente provável de ocorrer.
+
+\framebreak
+
+Para o cálculo da \structure{probabilidade de morte (na idade $x$)} dos indivíduos de diversas idades $(q_x)$, há necessidade de se conhecer o total de casos possíveis $(E_x)$ e o total de casos que compõem o evento $E$ $(D_x)$. 
+
+\framebreak
+
+Para tanto, há de ser considerado:
+
+- $D_x$: número de casos que compõem o evento **"vir a falecer durante o período"**;
+    + ou seja, aproximadamente, o **número de óbitos**, ocorridos naquele período, das pessoas com idade $x$ no início do período.
+- $E_x$: número de casos possíveis;
+    + ou seja, número de indivíduos com exata idade $x$, no início do período, isto é, **expostos ao risco de morrer**.
+    
+\framebreak
+
+Para o conhecimento destas duas quantidades, há de se refletir sobre os seguintes fatos: 
+
+- Os **dados oficiais** mostram, para cada ano calendário, o número de óbitos registrados para cada idade $x$.
+- Entretanto, $D_x$ deve representar os óbitos das pessoas que tinham idade $x$ no início do período (ano), e não sua idade ao morrer.
+
+\framebreak
+
+- Assim, se uma pessoa completar 20 anos ($x$ anos) em março e falecer em setembro, seu óbito será registrado e classificado como sendo de uma pessoa com 20 anos ($x$ anos).
+- Da mesma maneira, ocorre que pessoas que tenham 20 anos ($x$ anos) no início do período venham a completar 21 anos ($x + 1$ ano) em março, vindo a falecer em setembro.
+    + O óbito, também aqui, será registrado como o de uma pessoa com $x + 1$ anos (21 anos): não será levado em conta nos cálculos de óbitos de pessoas com $x$ anos (20 anos).
+
+\framebreak
+
+- Portanto, ao se usar os dados oficiais no cálculo das probabilidades de morrer, por exemplo, aos 20 anos, ter-se-á um caso a mais no número de óbitos de pessoas que faleceram aos 20 anos ($x$ anos), tendo $x - 1$ anos (19 anos) no início do referido período;
+    + e um a menos, no número de óbitos de pessoas que tinham 20 anos ($x$ anos) no início do período, mas vieram a falecer com 21 anos ($x + 1$ anos) no período considerado.
+
+A pressuposição necessária é que estes dois fatos **se compensem** e, portanto, o valor $D_x$ seja, em média, o mesmo valor fornecido pelo Registro Civil.
+
+\framebreak
+
+- A **população exposta ao risco** $(E_x)$ deverá ser composta por indivíduos cujas idades, em média, sejam iguais a $x$ anos, no início do período.
+    + Para tanto, tem-se, como fonte de informação, a **população recenseada** e estimada para a **metade do ano (1º de julho)**.
+- Essa população terá, em média, $x + 0,5$ anos $(P_x)$ e corresponderá à população que terá, em média, $x$ anos no **início do período (1º de janeiro)**.
+
+Diz-se *corresponderá* e não *será igual*, pois há indivíduos com exata idade $x$, no começo do ano, qua falecem no primeiro semestre e não serão, portanto, recenseados. 
+
+\framebreak
+
+Para se estimar $E_x$, há necessidade da seguinte aproximação:
+
+$$
+E_x = P_x +\ \mbox{óbitos de idade}\ x\ \mbox{ocorridos na primeira metade do período}.
+$$
+
+\framebreak
+
+Para se conhecer o número de óbitos ocorridos na primeira metade, basta pressupor que os óbitos estejam **igualmente *(uniformemente)* distribuídos** durante o período, isto é, que **a metade dos óbitos ocorra na primeira metade do período**.
+
+- Esta pressuposição é válida somente para os óbitos de indivíduos com idade igual, ou superior, a dois anos.
+- Nas idades abaixo de dois anos, sabe-se que grande parte dos óbitos ocorre no início da vida. 
+
+\framebreak
+
+A pressuposição anteriormente mencionada não poderá ser aplicada. 
+
+- É uso corrente adotar-se a pressuposição de que, em menores de um ano, 2/3 (0,667) dos óbitos ocorrem na primeira metade do período e que, dos óbitos de crianças de um ano completo de idade, 3/5 (0,60) ocorrem na primeira metade.
++ \structure{Oya}^[OYA, D. R. T. *Estudo da distribuição do fator de separação* $f^t_x$ *na tábua de sobrevivência*. São Paulo, 1970. Dissertação de Mestrado — Faculdade de Saúde Pública da USP.], observando tal fato para o Município de São Paulo, em 1968/1969, recomenda que estas proporções sejam, para menores de um ano, iguais a 0,863 e 0,826, respectivamente, nos sexos masculino e feminino, e, para os óbitos de um ano, seja igual a 0,70.
+
+## Considerações gerais {.allowframebreaks}
+
+Assim, para o cálculo da probabilidade de morrer $(q_{x})$ adotam-se as seguintes estimativas:
+
+a) para indivíduos com **idade igual ou superior a dois anos**:
+
+$$
+q_{x} = \frac{D_{x}}{P_{x} + \frac{D_{x}}{2}}.
+$$
+
+\framebreak
+
+b) para indivíduos com **idade inferior a dois anos**:
+
+\structure{b1)} **menores de um ano**, **sexo masculino**
+
+$$
+q_0 = \frac{D_{0}}{P_{0} + 0,863D_{0}};
+$$
+
+\structure{b2)} **menores de um ano**, **sexo feminino**
+
+$$
+q_0 = \frac{D_{0}}{P_{0} + 0,826D_{0}};
+$$
+
+\framebreak
+
+\structure{b3)} indivíduos com **um ano de idade**
+
+$$
+q_1 = \frac{D_{1}}{P_{1} + 0,70D_{1}}.
+$$
+
+\framebreak
+
+- Quando se constrói uma tábua de sobrevivência do **tipo abreviada**, isto é, os grupos  etários são de tamanho igual a cinco ou dez  anos, há necessidade de modificações, pois  o que se pretende é estimar a probabilidade de um indivíduo do grupo etário $x \vdash x + n$  vir a falecer, durante o período que estaria nesse grupo (período de $n$ anos).
+
+\framebreak
+
+- Portanto, deve-se multiplicar o número de óbitos $(D_{x})$ por $n$.
+- Tal probabilidade será, então:
+
+$$
+{}_nq_{x} = \frac{{}_nO_{x}}{{}_nP_{x} + \frac{{}_nO_{X}}{2}},
+$$
+
+em que:
+
+$$
+{}_nO_{x} = n\times {}_nD_{x}.
+$$
+
+- As estimativas das probabilidades de morrer, para os residentes masculinos no Município de São Paulo, em 1970, estão apresentadas na tabela a seguir.
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height='80%', out.width='80%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'tabua_sobrevida-a02.png'))
+
+```
+
+\framebreak
+
+Alguns exemplos dos cálculos são mostrados a seguir:
+
+\begin{eqnarray*}
+q_0 &=& \frac{6578}{66163 + (0,863\times 6578)} = 0,091565;\\
+q_1 &=& \frac{338}{60 223 + (0,70\times 338)} =0,005591;\\
+q_2 &=& \frac{183}{65.101 + (1/2\times 183)} = 0 ,002807;
+\end{eqnarray*}
+
+\framebreak
+
+$$
+{}_5q_{5} = \frac{5 \times 256}{334692 + (1/2 \times 5 \times 256)} = 0,003817.
+$$
+
+- A probabilidade de morrer, no **último grupo etário**, é igual a $1,0$, pois a coorte se extingue.
+
+## Comentários finais {.allowframebreaks}
+
+1. Note que ao multiplicar o numerador e o denominador de $q_x$ por $1/P_x$, temos que
+
+\begin{eqnarray*}
+q_{x} &=& \frac{D_{x}/P_{x}}{P_{x}/P_{x} + \frac{D_{x}/P_{x}}{2}}\\
+&=& \frac{m_{x}}{1 + \frac{m_{x}}{2}},
+\end{eqnarray*}
+
+em que $m_x$ são as taxas de mortalidade específicas por idade.
+
+\framebreak
+
+2. O valor 0,5 que multiplica $D_x$ é um **fator de separação** que expressa o número médio de anos vividos entre as idades $x$ e $x+n$ por pessoas vivas em $x$, mas que morrem antes de $x+n$. Normalmente este número é aproximadamente $n/2$, mas pode se afastar deste valor se há variações fortes da intensidade da mortalidade ao longo do intervalo.
+
+## Próxima aula
+
+- Tábuas de vida (continuação).
+
+## Para casa {.allowframebreaks}
+
+
+- Ler o capítulo 9 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final03.jpg'))
+
+```
+

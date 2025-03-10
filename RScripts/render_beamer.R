@@ -2,7 +2,7 @@ library(here)
 library(rmarkdown)
 
 pasta <- "Rmds"
-arquivo <- "10_composicao_pop_sexo"
+arquivo <- "00_apresenta_curso"
 
 arquivo_rmd <- paste0(arquivo, ".Rmd")
 arquivo_pdf <- paste0(arquivo, ".pdf")
@@ -27,7 +27,6 @@ knitr::purl(input = input,
             output = here::here("RScripts", arquivo_r),
             documentation = 1,
             encoding = "UTF-8")
-
 
 # rmarkdown::render(input = input, 
 #                   output_format = "powerpoint_presentation")

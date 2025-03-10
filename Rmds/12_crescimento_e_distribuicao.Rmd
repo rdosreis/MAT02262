@@ -1,0 +1,149 @@
+---
+title: "MAT02262 - Estatística Demográfica I"
+subtitle: "Crescimento e distribuição da população (continuação)"
+fontsize: 10pt
+author: |
+  | Rodrigo Citton P. dos Reis
+  | `citton.padilha@ufrgs.br`
+institute: |
+  | \textsc{Universidade Federal do Rio Grande do Sul}
+  | \textsc{Instituto de Matemática e Estatística}
+  | \textsc{Departamento de Estatística}
+date: |
+  | Porto Alegre, 2024
+---
+
+# Densidade demográfica {.allowframebreaks}
+
+O volume de uma população adquire sentido quando comparado com o \structure{espaço} em que ela vive.
+
++ A \structure{dispersão populacional} no território pode informar aspectos de uma relevância no que diz respeito às **relações produtivas**, às **redes** e **fluxos de bens e serviços**, às simples decisões ligadas ao bem-estar básico, como:
+    - moradia;
+    - saneamento;
+    - segurança;
+    - e deslocamento.
+
+\framebreak
+
+\begin{mybox}{Populoso vs. povoado}
+
+Uma região \structure{populosa}, ou seja, como população elevada, pode ou não ser \structure{povoada}, de acordo com sua extensão territorial.
+
+\end{mybox}
+
+\framebreak
+
+Para se medir a concentração de pessoas em uma área territorial, existe o conceito de \structure{densidade demográfica}.
+
+- Ele é obtido pela razão entre a população absoluta e a área de um território, como na seguinte fórmula:
+
+$$
+D = \frac{P}{A},
+$$
+
+em que $D$ é a densidade demográfica, $P$ é a população absoluta e $A$ é a área do território.
+
+## Comentários {.allowframebreaks}
+
+A alta densidade demográfica está mais relacionada à migração do que ao crescimento vegetativo.
+
+O determinante desses movimentos está na existência de:
+
++ fatores atrativos, tais como:
+    + melhores condições de vida;
+    + melhores salários;
+    + maior disponibilidade de bens de consumo;
+    + melhores oportunidades de emprego;
+    + melhor rede de serviços públicos.
+
+\framebreak
+
+- e fatores repulsivos:
+    + poluição;
+    + desemprego;
+    + ineficácia dos serviços públicos;
+    + encarecimento do custo de vida;
+    + escassez de recursos;
+    + restrições de consumo e bem-estar.
+
+\framebreak
+
+- Tais fatores interferem na concentração ou na dispersão populacional por um território.
+- Estes movimentos parecem obedecer à lógica do custo de oportunidade, ou seja, movimentos de concentração populacional em áreas urbanas se dão de maneira mais rápida e em maior magnitude do que, salvo exceções (catástrofes naturais e guerras, por exemplo), movimentos de desconcentração populacional.
+
+## Densidade no mundo {.allowframebreaks}
+
+- Índia e China, os países mais populosos do mundo, concentravam quase 40% da população total do planeta em 2017.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='40%', out.height='50%', fig.cap="Percentagens da população mundial por país, em estimativa de 2017."}
+
+knitr::include_graphics(here::here('imagens', 'densidade_02.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%'}
+
+knitr::include_graphics(here::here('imagens', 'densidade_03.png'))
+
+```
+
+\framebreak
+
+- A situação muda de figura quando a população é analisada em sua densidade territorial.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%'}
+
+knitr::include_graphics(here::here('imagens', 'densidade_06.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='60%'}
+
+knitr::include_graphics(here::here('imagens', 'densidade_01.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%'}
+
+knitr::include_graphics(here::here('imagens', 'densidade_04.png'))
+
+```
+
+\framebreak
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='80%', fig.cap="A densidade populacional (habitantes por km²) por país (2006)."}
+
+knitr::include_graphics(here::here('imagens', 'densidade_05.png'))
+
+```
+
+## Considerações finais {.allowframebreaks}
+
+- O **crescimento** e a **densidade** são aspectos de tempo e espaço da dinâmica das populações.
+- O crescimento diz respeito ao volume da população e a densidade mostra sua dispersão pelo espaço.
+- O volume demográfico  e sua dispersão dependem de variáveis endógenas, vegetativas, ligadas a nascimentos e óbitos, e de variáveis exógenas, ligadas, por sua vez, aos movimentos migratórios, os quais têm as mais diversas causas.
+
+## Para casa {.allowframebreaks}
+
+<!-- - Refaça o exemplo da padronização direta considerando Rondônia como a população padrão. -->
+- Pequeno Trabalho 02: postado no Moodle.
+- Ler o capítulo 7 do livro "Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa"\footnote{FOZ, Grupo de. \emph{Métodos Demográficos Uma Visão Desde os Países de Língua Portuguesa}. São Paulo: Blucher, 2021. \url{https://www.blucher.com.br/metodos-demograficos-uma-visao-desde-os-paises-de-lingua-portuguesa_9786555500837}}.
+
+## Por hoje é só!
+
+\begin{center}
+{\bf Bons estudos!}
+\end{center}
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='50%', out.height='50%'}
+
+knitr::include_graphics(here::here('imagens', 'Statistically-Insignificant-final07.jpg'))
+
+```
+
