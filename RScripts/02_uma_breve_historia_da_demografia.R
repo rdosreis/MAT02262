@@ -22,6 +22,18 @@ knitr::include_graphics(here::here('imagens', 'revolucao-agricola.jpg'))
 
 
 
+## ----echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE----
+
+knitr::include_graphics(here::here('imagens', 'servio_tulio.jpg'))
+
+
+
+## ----echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='30%', out.height='23%', paged.print=FALSE----
+
+knitr::include_graphics(here::here('imagens', 'imperio_romano.png'))
+
+
+
 ## ----echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%', paged.print=FALSE----
 
 knitr::include_graphics(here::here('imagens', 'Quipu.png'))

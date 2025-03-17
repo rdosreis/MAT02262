@@ -11,14 +11,19 @@ institute: |
   | \textsc{Instituto de Matemática e Estatística}
   | \textsc{Departamento de Estatística}
 date: |
-  | Porto Alegre, 2024
+  | Porto Alegre, 2025
 ---
 
-## Introdução {.allowframebreaks}
+## Roteiro
 
-- O advento da \structure{demografia como ciência} ocorreu quando as informações quantitativas sobre as populações passaram a ser tratadas de maneira científica.
 
-- A demografia surgiu no bojo da revolução científica ocorrida no contexto do desenvolvimento do capitalismo, \structure{entre os séculos XVII e XVIII}, quando a contagem da população, feita desde a Antiguidade, recebeu \structure{trato analítico}, científico, nos parâmetros do pensamento iluminista, visando oferecer informações que possibilitassem a elaboração racional de leis e princípios empiricamente testáveis.
+\tableofcontents
+
+# Introdução {.allowframebreaks}
+
+O advento da \structure{demografia como ciência} ocorreu quando as informações quantitativas sobre as populações passaram a ser tratadas de maneira científica.
+
+- A demografia surgiu no bojo da **revolução científica** ocorrida no contexto do desenvolvimento do capitalismo, \structure{entre os séculos XVII e XVIII}, quando a contagem da população, feita desde a Antiguidade, recebeu \structure{trato analítico}, científico, nos parâmetros do pensamento iluminista, visando oferecer informações que possibilitassem a elaboração racional de leis e princípios empiricamente testáveis.
 
 - Esse processo ocorreu por meio de atribuição de duas características aos censos: \structure{abrangência} e \structure{periodicidade}.
 
@@ -52,14 +57,14 @@ knitr::include_graphics(path = here::here('imagens', 'razao_sexos_br_rs.png'))
 
 # Período Pré-Estatístico {.allowframebreaks}
 
-- O período chamado de \structure{pré-estatístico} caracteriza-se por apresentar não apenas a **inexistência**, mas também uma ausência de preocupação específica com o **registro de informações** destinadas à posterioridade.
+- O período chamado de \structure{pré-estatístico} caracteriza-se por apresentar não apenas a **inexistência**, mas também uma ausência de preocupação específica com o **registro de informações** destinadas à posteridade.
 - A materialidade encontrada nesse peródo é condsiderada, assim, residual.
 
 ## Paleodemografia {.allowframebreaks}
 
-- O \structure{estudo das primeiras populações humanas} caracteriza-se por uma carêcia completa de estatísticas, própria da pré-história e dos povos que não nos legaram testemunhos escritos.
+- O \structure{estudo das primeiras populações humanas} caracteriza-se por uma carência completa de estatísticas, própria da pré-história e dos povos que não nos legaram testemunhos escritos.
 - A documentação disponível é representada pelos esqueletos humanos (ou parte deles), instrumentos e outros vestígios culturais que informam sobre a extensão do hábitat, estilo de vida, alimentação e outras características, permitindo até algumas estimativas por meio de extrapolação.
-    + É o campo da \structure{paleodemografia}.
++ Esse é o campo da \structure{paleodemografia}.
 
 \framebreak
 
@@ -83,21 +88,33 @@ knitr::include_graphics(here::here('imagens', 'revolucao-agricola.jpg'))
 
 A \structure{contagem} e a \structure{descrição das características} de uma população são expedientes antigos, que caminham paralelamente ao estabelecimento dos primeiros Estados.
 
-- As civilizações da antiga \structure{Mesopotâmia} realizavam censos, com a finalidade de cobrar tributos.
-- No \structure{Egito Antigo} e na \structure{civilização greco-romana}, os censos eram essenciais para controle e administração dos impérios.
+- As civilizações da antiga \structure{Mesopotâmia} \underline{realizavam censos}, com a finalidade de \underline{cobrar tributos}.
+- No \structure{Egito Antigo} e na \structure{civilização greco-romana}, os censos eram essenciais para \underline{controle} e \underline{administração dos impérios}.
 - Em outras partes do globo, \structure{civilizações pré-colombianas}, como \structure{maias} e \structure{incas}, faziam contagens periódicas de suas populações.
-- A \structure{administração imperial chinesa} também realizava censos periódicos e os \structure{hindus} também o faziam, à mesma época do Ocidente.
-    + O indício mais remoto do que tenha sido um censo parece ter ocorrido na China, por volta de \structure{2.238 a.C.}, quando o imperador Yao mandou fazer a \structure{contagem da população} e das \structure{lavouras cultivadas}.
 
 \framebreak
 
+- A \structure{administração imperial chinesa} também realizava censos periódicos e os \structure{hindus} também o faziam, à mesma época do Ocidente.
+    + O indício mais remoto do que tenha sido um censo parece ter ocorrido na China, por volta de \structure{2.238 a.C.}, quando o imperador Yao mandou fazer a \structure{contagem da população} e das \structure{lavouras cultivadas}.
 -  \structure{Gregos e romanos} deixaram registros de seus primeiros censos entre os séculos VIII e III a.C., com um reconhecido \structure{aperfeiçoamento desses instrumentos}, de maneira correlata às instituições de Estado.
     + As questões demográficas desempenham papel importante na determinação do  \structure{tamanho} e da  \structure{estrutura da economia da Grécia antiga} e da  \structure{economia romana}.
 
 \framebreak
 
-- De um povo pastoril a centro de um Império em dez séculos,  \structure{os romanos} mostraram, desde os censos de Sérvio Túlio (555 a.C.), uma notável  \structure{evolução na coleta de informações periódicas} junto às familias, com \structure{72 censos registrados} até 72 d.C., apresentando uma média de um censo realizado a pouco menos de sete anos. 
+```{r echo=FALSE, fig.align='left', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'servio_tulio.jpg'))
+
+```
+
+- De um povo pastoril a centro de um Império em dez séculos, \structure{os romanos} mostraram, desde os censos de Sérvio Túlio (555 a.C.), uma notável  \structure{evolução na coleta de informações periódicas} junto às famílias, com \structure{72 censos registrados} até 72 d.C., apresentando uma média de um censo realizado a pouco menos de sete anos. 
     + Com os romanos, reconhece-se que o \structure{controle da ocorrência dos fatos vitais} dos indivíduos passou a fazer parte da política de Estado.
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='30%', out.height='23%', paged.print=FALSE}
+
+knitr::include_graphics(here::here('imagens', 'imperio_romano.png'))
+
+```
 
 \framebreak
 
@@ -113,10 +130,9 @@ O denominador comum a todas essas iniciativas baseia-se em \structure{três prop
 
 - A \structure{demografia medieval} é o estudo da demografia humana na Europa e no Mediterrâneo durante a Idade Média.
 - Na Alta Idade Média europeia, há notícia de diversos censos, durante a dominação muçulmana (711-1153), e o império Carolíngio (712-814).
+- As \structure{pesquisas senhoriais} foram muito comuns durante a Idade Média, em particular na \underline{França} e na \underline{Inglaterra}, mas desapareceram quando a servidão deu lugar a uma economia monetária, dando espaço às \structure{pesquisas fiscais}, sendo a mais famosa e antiga o \structure{Domesday Book} na Inglaterra.
 
 \framebreak
-
-- As \structure{pesquisas senhoriais} foram muito comuns durante a Idade Média, em particular na França e na Inglaterra, mas desapareceram quando a servidão deu lugar a uma economia monetária, dando espaço às \structure{pesquisas fiscais}, sendo a mais famosa e antiga o \structure{Domesday Book} na Inglaterra.
 
 \begin{block}{Domesday Book}
 \begin{columns}[T]
@@ -140,7 +156,7 @@ O registro é único na história européia e está repleto de estatísticas e a
 
 \framebreak
 
-- É importante ressaltar os registros de contagens realizadas a \structure{América pré-colombiana} por \structure{maias} e \structure{incas}.
+- É importante ressaltar os registros de contagens realizadas na \structure{América pré-colombiana} por \structure{maias} e \structure{incas}.
 - Estes últimos utilizavam um engenhoso sistema de números decimais representados por nós em cordas, chamados \structure{quipus}.
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='70%', out.height='50%', paged.print=FALSE}
@@ -161,9 +177,9 @@ As categorias de fontes características da fase protoestatística são:
 
 - **registros paroquiais** - antigos registros civis que possibilitam observar os movimentos naturais da população;
 - **listas de contribuintes de impostos**;
-- **listas eleitorais, militares**, etc.;
+- **listas eleitorais e militares**;
 - **relação de fiéis que comungam**; 
-- **correspondência, relatos de viajantes**, etc.
+- **correspondência e relatos de viajantes**.
 
 \framebreak
 
@@ -172,13 +188,13 @@ As fontes mais usadas para estudar as migrações são:
 - **listas de cidadania, registros de guildas ou ligas cidadãs**;
 - **listas de estrangeiros**;
 - **listas profissionals:** registros de admissões a grêmios ou corporações;
-- **listas administrativas:** de passaportes concedidos, de entrada e saída de portos, etc.
+- **listas administrativas:** de passaportes concedidos, de entrada e saída de portos.
 - **contratos de casamentos, testamentos e demais documentos cartoriais**.
 
 \framebreak
 
 - O desenvolvimento de \structure{cálculos demográficos} teve início nos séculos XVII e XVIII. 
-- Um dos primeiros estudos demográficos no período moderno são as observações naturais e políticas feitas sobre as \structure{contas da mortalidade} (no original em inglês, *Natural and political observations made upon the bills of mortality*, de 1662), de \structure{John Graunt (1620-1674)}, que contém uma forma primitiva de tabela de vida.
+- Um dos primeiros estudos demográficos no período moderno são as observações naturais e políticas feitas sobre as \structure{contas da mortalidade} (no original em inglês, *Natural and political observations made upon the bills of mortality*, de 1662), de \structure{John Graunt (1620-1674)}, que contém uma \colorbox{yellow}{forma primitiva de tabela de vida}.
 
 ```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, out.width='15%', out.height='23%', paged.print=FALSE}
 
@@ -246,7 +262,7 @@ knitr::include_graphics(here::here('imagens', 'Laplace.jpg'))
 
 - \structure{Contagens detalhadas}, com \structure{grande riqueza} e \structure{variedade tipológicas}, foram realizadas nos cinco continentes, permitindo um grau de desagregação de informações até então inédito.
 
-- Dados sobre **etnia**, **gênero**, **idade**, **estado civil**, **grau de escolaridade**, **nível de renda**, **dispersão territorial**, **movimentos migratórios**, etc.
+- Dados sobre **etnia**, **gênero**, **idade**, **estado civil**, **grau de escolaridade**, **nível de renda**, **dispersão territorial** e **movimentos migratórios**.
     - Condição nunca observada na história censitária ou mesmo em registros civis.
 
 \framebreak
@@ -255,17 +271,17 @@ Há quatro fatores que explicam esse salto quantitativo:
 
 1. Houve a **consolidação dos estados nacionais**.
     - Neste período várias colônias procedem com seus processos de emancipação.
-2. Houve, no período, um **aperfeiçoamento da teoria das probabilidades** e **estatística inferencial**, com a aplicação da **teoria da distribuição normal** por \structure{Aldophe Quételet (1796-1874)} no estudo de diversas características das populações humanas: altura, peso, natalidade, mortalidade, renda, etc.
+2. Houve, no período, um **aperfeiçoamento da teoria das probabilidades** e **estatística inferencial**, com a aplicação da **teoria da distribuição normal** por \structure{Aldophe Quételet (1796-1874)} no estudo de diversas características das populações humanas: altura, peso, natalidade, mortalidade, renda, entre outras.
     - A **teoria da estimação** na estatística também recebeu contribuições nos
 procedimentos de preencher espaços vazios entre os dados coletados, por meio das **técnicas de previsão**, **retrospectiva** e **interpolação**.
 
 \framebreak
 
 3. O debate e a difusão de teorias demográficas.
-    - O *Ensaio*, de \structure{Malthus}, recebeu várias edições ao longo do século XIX incorporando o debate sobre o \structure{princípio da população}, o que mostra sem grande esforço, a grande discussão suscitada pela tese malthusiana.
+    - O *Ensaio*, de \structure{Malthus}, recebeu várias edições ao longo do século XIX incorporando o debate sobre o \structure{princípio da população}, o que mostra sem grande esforço, a grande discussão suscitada pela _**tese malthusiana**_.
 
 - Os anos de 1860 a 1910 podem ser caracterizados como um período de transição, em que a demografia emergiu das estatísticas como um **campo de interesse separado**. 
-    + \structure{Adolphe Quételet (1796-1874)}, \structure{William Farr (1807-1883)}, \structure{Louis-Adolphe Bertillon (1821-1883)}, Jacques Bertillon (1851-1922), \structure{Joseph Körösi (1844-1906)}, \structure{Anders Nicolas Kaier (1838-1919)}, \structure{Richard Böckh (1824-1907)}, \structure{Émile Durkheim (1858-1917)}, \structure{Wilhelm Lexis (1837-1914)} e \structure{Luigi Bodio (1840-1920)} contribuíram para o **desenvolvimento de ferramentas de métodos** e **técnicas de análise demográfica**.
+    + \structure{Adolphe Quételet (1796-1874)}, \structure{William Farr (1807-1883)}, \structure{Louis-Adolphe Bertillon (1821-1883)}, \structure{Jacques Bertillon (1851-1922)}, \structure{Joseph Körösi (1844-1906)}, \structure{Anders Nicolas Kaier (1838-1919)}, \structure{Richard Böckh (1824-1907)}, \structure{Émile Durkheim (1858-1917)}, \structure{Wilhelm Lexis (1837-1914)} e \structure{Luigi Bodio (1840-1920)} contribuíram para o **desenvolvimento de ferramentas de métodos** e **técnicas de análise demográfica**.
 
 \framebreak
 
@@ -274,7 +290,12 @@ procedimentos de preencher espaços vazios entre os dados coletados, por meio da
     
 \framebreak
 
-- É necessário reconhecer que, no que diz respeito a realização de censos, houve notório avanço em relação ao trinômio \structure{impostos-controle social-contingentes militares}.
+- É necessário reconhecer que, no que diz respeito a realização de censos, houve notório avanço em relação ao trinômio 
+
+\begin{center}
+\structure{impostos - controle social - contingentes militares}.
+\end{center}
+
 - Contudo, o ápice desse desenvolvimento desembocou na chamada \structure{era da catástrofe (1914-1945)}, marcada por **duas guerras mundiais (1914-1918 e 1939-1945)** e a **maior crise econômica** até então **(1929)**.
 
 ## Padronização das estatísticas da população {.allowframebreaks}
@@ -293,7 +314,7 @@ knitr::include_graphics(here::here('imagens', 'United-Nations-Poster.jpg'))
 
 \framebreak
 
-- Um dos propósitos da ONU foi o de **padronizar as estatísticas socioeconômicas** de seus países-membros, permitindo a elaboração diagnósticos e análises que possibilitassem a criação de políticas para o desenvolvimento.
+- Um dos propósitos da ONU foi o de **padronizar as estatísticas socioeconômicas** de seus países-membros, permitindo a elaboração de diagnósticos e análises que possibilitassem a criação de políticas para o desenvolvimento.
     - As \structure{Divisões de Estatística e População} tiveram um papel na criação e no desenvolvimento de **metodologias** e na criação de espeços institucionais de discussão sobre temas ligados à população e ao desenvolvimento.
     - Os 51 estados-membros fundadores assumiram esse compromisso já na fundação do órgão.
 
